@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Set NBA Planner</title>
+<style>
+:root {
+  --bg: #f6f5f2; --card: #ffffff; --ink: #1c1b1a; --muted: #6b6862; --line: #e4e1db;
+  --accent: #5b3fd1; --accent-ink: #ffffff; --good: #1f8a4c; --warn: #b26a00; --bad: #b3261e;
+  --chip: #ece9e3; --star: #c28a00;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141317; --card: #1e1d23; --ink: #f1eff4; --muted: #a39fab; --line: #2f2d36;
+    --accent: #9b85ff; --accent-ink: #141317; --good: #4cc27f; --warn: #e3a33b; --bad: #ff7a70;
+    --chip: #2a2831; --star: #f0c040;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141317; --card: #1e1d23; --ink: #f1eff4; --muted: #a39fab; --line: #2f2d36;
+  --accent: #9b85ff; --accent-ink: #141317; --good: #4cc27f; --warn: #e3a33b; --bad: #ff7a70;
+  --chip: #2a2831; --star: #f0c040;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+body { padding: 0 16px calc(24px + env(safe-area-inset-bottom)); max-width: 640px; margin: 0 auto; }
+header { padding: 18px 0 8px; }
+h1 { font-size: 20px; margin: 0; }
+.sub { color: var(--muted); font-size: 13px; }
+nav { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; display: flex; gap: 6px; }
+nav button { flex: 1; border: 0; border-radius: 10px; padding: 9px 4px; background: var(--chip); color: var(--ink);
+  font: inherit; font-size: 14px; font-weight: 600; }
+nav button.on { background: var(--accent); color: var(--accent-ink); }
+.paliers { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 10px; }
+.paliers button { flex: 0 0 auto; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 13px; }
+.paliers button.on { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin: 10px 0; }
+.row { display: flex; align-items: center; gap: 10px; }
+.grow { flex: 1; min-width: 0; }
+.big { font-size: 26px; font-weight: 700; }
+.pct-good { color: var(--good); } .pct-mid { color: var(--warn); } .pct-low { color: var(--bad); }
+.muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+.stars { color: var(--star); font-weight: 600; white-space: nowrap; }
+.name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.badge { font-size: 11px; padding: 1px 7px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+.badge.up { color: var(--good); } .badge.down { color: var(--bad); } .badge.hot { color: var(--accent); font-weight: 600; }
+.plist .pl { padding: 9px 0; border-top: 1px solid var(--line); }
+.plist .pl:first-child { border-top: 0; }
+.num { text-align: right; white-space: nowrap; }
+.num b { font-size: 16px; }
+button.act { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 10px;
+  padding: 7px 12px; font: inherit; font-size: 13px; font-weight: 600; }
+button.act.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button.icon { border: 0; background: var(--chip); color: var(--ink); width: 32px; height: 32px; border-radius: 50%;
+  font-size: 18px; line-height: 1; flex: 0 0 auto; }
+input[type=search] { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font: inherit; }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
+.filters button { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
+  padding: 5px 11px; font: inherit; font-size: 13px; }
+.filters button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+table.pal { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+table.pal td { padding: 4px 0; border-top: 1px solid var(--line); }
+.warn { color: var(--warn); font-size: 13px; margin-top: 6px; }
+.hidden { display: none; }
+footer { color: var(--muted); font-size: 12px; margin-top: 24px; line-height: 1.5; }
+.slot-empty { color: var(--muted); font-style: italic; padding: 8px 0; border-top: 1px solid var(--line); }
+.tap { cursor: pointer; }
+.tap .name::after { content: " ›"; color: var(--muted); font-weight: 400; }
+#sheet { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.45); display: none; }
+#sheet.open { display: block; }
+#sheet .panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 88vh; overflow-y: auto;
+  background: var(--bg); border-radius: 18px 18px 0 0; padding: 14px 16px calc(24px + env(safe-area-inset-bottom));
+  max-width: 640px; margin: 0 auto; }
+#sheet h2 { font-size: 18px; margin: 0; }
+#sheet h3 { font-size: 14px; margin: 16px 0 4px; }
+table.t { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.t th { text-align: left; color: var(--muted); font-weight: 500; padding: 4px 4px 4px 0; }
+table.t td { padding: 5px 4px 5px 0; border-top: 1px solid var(--line); vertical-align: top; }
+table.t td.r, table.t th.r { text-align: right; }
+.formula { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.src { font-size: 11.5px; color: var(--muted); }
+nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 2px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Set NBA Planner</h1>
+  <div class="sub" id="meta"></div>
+</header>
+<div class="paliers" id="paliers"></div>
+<nav id="tabs">
+  <button data-tab="teams" class="on">Équipes</button>
+  <button data-tab="mine">Mon équipe</button>
+  <button data-tab="players">Joueurs</button>
+  <button data-tab="games">Matchs</button>
+  <button data-tab="method">Méthode</button>
+</nav>
+<main>
+  <section id="teams"></section>
+  <section id="mine" class="hidden"></section>
+  <section id="players" class="hidden"></section>
+  <section id="games" class="hidden"></section>
+  <section id="method" class="hidden"></section>
+</main>
+<div id="sheet"><div class="panel" id="sheetbody"></div></div>
+<footer>
+  Lecture seule : rien n'est envoyé à Sorare. Sources : API publique Sorare, ESPN, RotoWire, Pinnacle, Bovada.
+  Projections = estimations, pas des garanties. Probabilités par simulation (écart final tiré par match,
+  minutes ajustées au blowout, rythme selon le total).
+</footer>
+<script>
+const D = /*__DATA__*/null;
+const P = D.players, byId = Object.fromEntries(P.map(p => [p.id, p]));
+const G = Object.fromEntries(D.games.map(g => [g.key, g]));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+let target = store.get("target", D.defaultTarget);
+if (!D.targets.includes(target)) target = D.defaultTarget;
+let mine = store.get("mine", []).filter(id => byId[id]);
+let nightFilter = "all", query = "";
+
+const fmtP = x => x >= 0.995 ? "99 %" : x < 0.005 ? "<1 %" : Math.round(x * 100) + " %";
+const pClass = x => x >= 0.25 ? "pct-good" : x >= 0.1 ? "pct-mid" : "pct-low";
+const stars = s => s.toFixed(1).replace(".0", "") + "★";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const palierOf = t => D.targets.indexOf(t) + 1;
+
+function badges(p) {
+  const out = [];
+  for (const r of p.reasons) {
+    let cls = "";
+    if (r.startsWith("PROMU")) cls = "hot";
+    else if (r.startsWith("props")) cls = r.includes("+") ? "up" : "down";
+    else if (r.includes("Out") || r.includes("Day") || r.includes("RotoWire")) cls = "down";
+    out.push(`<span class="badge ${cls}">${esc(r)}</span>`);
+  }
+  if (p.pct < 1) out.push(`<span class="badge down">joue ${Math.round(p.pct * 100)} %</span>`);
+  if (p.bonus > 0) out.push(`<span class="badge">carte +${Math.round(p.bonus * 100)} %</span>`);
+  return out.length ? `<div class="badges">${out.join("")}</div>` : "";
+}
+
+// ---- Simulation (même modèle que le script Python) ----
+function gauss() { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random();
+  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+function bucket(m) { const b = D.calib.buckets; for (let i = 0; i < b.length; i++) if (m >= b[i][0] && m < b[i][1]) return i; return b.length - 1; }
+function simulate(team, n) {
+  const hits = Object.fromEntries(D.targets.map(t => [t, 0]));
+  const keys = [...new Set(team.map(p => p.game))];
+  const league = D.calib.league_team_pts, slope = D.calib.pace_slope;
+  let sum = 0;
+  for (let s = 0; s < n; s++) {
+    const margin = {};
+    for (const k of keys) margin[k] = Math.abs(gauss() * D.sigmaMargin - G[k].spreadUsed);
+    let total = 0;
+    for (const p of team) {
+      if (Math.random() > p.pct) continue;
+      const g = G[p.game];
+      const tp = p.home ? g.homePts : g.awayPts;
+      const pace = 1 + slope * (tp / league - 1);
+      const ratio = D.calib.minutes[p.role][bucket(margin[p.game])];
+      const m = Math.min(48, Math.max(0, p.estMin * ratio + gauss() * p.sdMin));
+      total += p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale;
+    }
+    sum += total;
+    for (const t of D.targets) if (total >= t) hits[t]++;
+  }
+  const out = Object.fromEntries(D.targets.map(t => [t, hits[t] / n]));
+  out.mean = sum / n;
+  return out;
+}
+const lockOf = team => team.reduce((a, p) => (!a || p.tip < a.tip) ? p : a, null);
+
+// ---- Rendu ----
+function renderMeta() {
+  const nights = [...new Set(D.games.map(g => g.night))].length;
+  document.getElementById("meta").textContent =
+    `Mis à jour le ${D.generated} · ${nights} soir${nights > 1 ? "s" : ""} · ${D.games.length} matchs`;
+  document.getElementById("paliers").innerHTML = D.targets.map(t =>
+    `<button data-t="${t}" class="${t === target ? "on" : ""}">Palier ${palierOf(t)} · ${t}</button>`).join("");
+  const on = document.querySelector("#paliers button.on");
+  if (on) on.scrollIntoView({ inline: "center", block: "nearest" });
+}
+
+function playerLine(p, action) {
+  return `<div class="pl row">
+    <div class="grow tap" data-detail="${p.id}">
+      <div class="name">${esc(p.name)} <span class="stars">${stars(p.stars)}</span></div>
+      <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}</div>
+      ${badges(p)}
+    </div>
+    <div class="num"><b>${p.exp.toFixed(0)}</b><div class="small muted">${(p.exp / p.stars).toFixed(1)}/★</div></div>
+    ${action || ""}
+  </div>`;
+}
+
+function renderTeams() {
+  const next = D.targets[D.targets.indexOf(target) + 1];
+  const list = [...D.teams].sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
+  document.getElementById("teams").innerHTML =
+    `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points.</p>` +
+    list.map((t, i) => {
+      const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
+      const lock = lockOf(ps);
+      const st = ps.reduce((a, p) => a + p.stars, 0);
+      return `<div class="card">
+        <div class="row">
+          <div class="grow"><span class="big ${pClass(t.p[target])}">${fmtP(t.p[target])}</span>
+            <span class="muted small"> pour ${target}${next ? ` · ${fmtP(t.p[next])} pour ${next}` : ""}</span></div>
+          <button class="act" data-load="${i}">Charger</button>
+        </div>
+        <div class="small muted">Moyenne ${t.mu.toFixed(0)} pts · ${stars(st)} · figée ${lock.when}</div>
+        <div class="plist">${ps.map(p => playerLine(p)).join("")}</div>
+      </div>`;
+    }).join("");
+  document.querySelectorAll("[data-load]").forEach(b => b.onclick = () => {
+    mine = list[+b.dataset.load].ids.slice(); store.set("mine", mine); show("mine");
+  });
+}
+
+let simToken = 0;
+function renderMine() {
+  const el = document.getElementById("mine");
+  const team = mine.map(id => byId[id]);
+  const st = team.reduce((a, p) => a + p.stars, 0);
+  const slots = [];
+  for (let i = 0; i < 5; i++) {
+    const p = team[i];
+    slots.push(p ? playerLine(p, `<button class="icon" data-rm="${p.id}" aria-label="Retirer">×</button>`)
+      : `<div class="slot-empty">Place libre : ajoute un joueur depuis l'onglet Joueurs</div>`);
+  }
+  const lock = lockOf(team);
+  el.innerHTML = `<div class="card">
+      <div class="row"><div class="grow"><b>Mon équipe</b>
+        <div class="small muted">${stars(st)} / ${D.starCap}★${lock ? ` · figée ${lock.when}` : ""}</div></div>
+        ${team.length ? `<button class="act" id="clear">Vider</button>` : ""}</div>
+      ${st > D.starCap ? `<div class="warn">Plafond dépassé de ${stars(st - D.starCap)}</div>` : ""}
+      <div class="plist">${slots.join("")}</div>
+    </div>
+    <div class="card" id="result">${team.length === 5 ? "Calcul…" : `<span class="muted">Choisis 5 joueurs pour voir tes chances.</span>`}</div>
+    <div id="swaps"></div>`;
+  el.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => {
+    mine = mine.filter(id => id !== +b.dataset.rm); store.set("mine", mine); renderMine();
+  });
+  const c = document.getElementById("clear"); if (c) c.onclick = () => { mine = []; store.set("mine", mine); renderMine(); };
+  if (team.length !== 5) return;
+  const token = ++simToken;
+  setTimeout(() => {
+    if (token !== simToken) return;
+    const r = simulate(team, 20000);
+    document.getElementById("result").innerHTML = `
+      <div><span class="big ${pClass(r[target])}">${fmtP(r[target])}</span>
+        <span class="muted small"> de chances d'atteindre ${target} · moyenne ${r.mean.toFixed(0)} pts</span></div>
+      <table class="pal">${D.targets.map(t => `<tr><td>Palier ${palierOf(t)} · ${t} pts</td>
+        <td class="num ${pClass(r[t])}">${fmtP(r[t])}</td></tr>`).join("")}</table>
+      <div style="margin-top:10px"><button class="act primary" id="swapbtn">Chercher un meilleur remplaçant</button></div>`;
+    document.getElementById("swapbtn").onclick = () => findSwaps(team, r);
+  }, 30);
+}
+
+function findSwaps(team, base) {
+  const box = document.getElementById("swaps");
+  box.innerHTML = `<div class="card muted">Recherche…</div>`;
+  setTimeout(() => {
+    const live = P.filter(p => p.pct > 0 && !team.includes(p));
+    const tries = [];
+    team.forEach((out, i) => {
+      const rest = team.filter((_, j) => j !== i);
+      const budget = D.starCap - rest.reduce((a, p) => a + p.stars, 0);
+      live.filter(c => c.stars <= budget).sort((a, b) => b.exp * b.pct - a.exp * a.pct).slice(0, 12)
+        .forEach(c => tries.push({ out, c, team: [...rest, c] }));
+    });
+    for (const t of tries) t.r = simulate(t.team, 4000);
+    const best = tries.filter(t => t.r[target] > base[target] + 0.01).sort((a, b) => b.r[target] - a.r[target]).slice(0, 5);
+    box.innerHTML = `<div class="card"><b>Un seul changement</b>${best.length ? best.map((t, k) => `
+      <div class="pl row" style="border-top:1px solid var(--line);padding:8px 0">
+        <div class="grow small"><span class="muted">${esc(t.out.name)}</span> → <b>${esc(t.c.name)}</b> ${stars(t.c.stars)}
+          <div class="muted">${t.c.when}</div></div>
+        <div class="num ${pClass(t.r[target])}"><b>${fmtP(t.r[target])}</b></div>
+        <button class="act" data-sw="${k}">Prendre</button></div>`).join("")
+      : `<div class="small muted" style="margin-top:6px">Aucun remplacement simple ne fait mieux.</div>`}</div>`;
+    box.querySelectorAll("[data-sw]").forEach(b => b.onclick = () => {
+      const t = best[+b.dataset.sw]; mine = t.team.map(p => p.id); store.set("mine", mine); renderMine();
+    });
+  }, 30);
+}
+
+function renderPlayers() {
+  const el = document.getElementById("players");
+  const nights = [...new Set(P.map(p => p.night))].sort();
+  const nightLabel = n => { const p = P.find(x => x.night === n); return p ? p.when.split(" · ")[0] : n; };
+  const q = query.trim().toLowerCase();
+  const list = P.filter(p => p.pct > 0 && (nightFilter === "all" || p.night === nightFilter)
+      && (!q || p.name.toLowerCase().includes(q) || p.team.toLowerCase() === q))
+    .sort((a, b) => b.exp / b.stars - a.exp / a.stars).slice(0, 80);
+  const full = mine.length >= 5;
+  el.innerHTML = `<input type="search" id="q" placeholder="Rechercher un joueur ou une équipe (ex. SAS)" value="${esc(query)}">
+    <div class="filters">${["all", ...nights].map(n =>
+      `<button data-n="${n}" class="${n === nightFilter ? "on" : ""}">${n === "all" ? "Tous les soirs" : nightLabel(n)}</button>`).join("")}</div>
+    <p class="small muted">Classés par points estimés par étoile. Le chiffre en gras est le score estimé, bonus de carte compris.</p>
+    <div class="card plist">${list.map(p => playerLine(p, mine.includes(p.id)
+      ? `<button class="icon" disabled aria-label="Déjà pris">✓</button>`
+      : `<button class="icon" data-add="${p.id}" ${full ? "disabled" : ""} aria-label="Ajouter">+</button>`)).join("")}</div>`;
+  const qi = document.getElementById("q");
+  qi.oninput = () => { query = qi.value; renderPlayers(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
+  el.querySelectorAll("[data-n]").forEach(b => b.onclick = () => { nightFilter = b.dataset.n; renderPlayers(); });
+  el.querySelectorAll("[data-add]").forEach(b => b.onclick = () => {
+    if (mine.length < 5) { mine.push(+b.dataset.add); store.set("mine", mine); renderPlayers(); }
+  });
+}
+
+function renderGames() {
+  document.getElementById("games").innerHTML = `<div class="card plist">${D.games.map(g => `
+    <div class="pl row"><div class="grow"><div class="name">${g.away} @ ${g.home}</div>
+      <div class="small muted">${g.when}</div></div>
+      <div class="num small">${g.spreadHome !== null
+        ? `${g.spreadHome > 0 ? g.away : g.home} favori de ${Math.abs(g.spreadHome)}<div class="muted">total ${g.total} · ${esc(g.book || "")}</div>`
+        : `<span class="muted">pas encore de cotes</span>`}</div></div>`).join("")}</div>
+    <p class="small muted">Sans cotes, le match est simulé comme serré, avec un total moyen de la ligue.</p>`;
+}
+
+const n1 = x => (Math.round(x * 10) / 10).toLocaleString("fr-FR");
+const n2 = x => (Math.round(x * 100) / 100).toLocaleString("fr-FR");
+const odd = a => { const s = String(a).trim(); return s.toUpperCase() === "EVEN" ? "+100" : (+s > 0 && !s.startsWith("+") ? "+" + s : s); };
+
+function openDetail(id) {
+  const p = byId[id], g = G[p.game];
+  const raw = p.comps.reduce((a, c) => a + c.pts, 0);
+  const formula = p.usesProps
+    ? `${n1(raw)} brut (cotes, contexte du match déjà inclus) × ${n2(1 + p.bonus)} carte = <b>${n1(p.exp)}</b>`
+    : `${n1(raw)} brut × ${n2(p.pace)} rythme × ${n2(p.blow)} blowout × ${n2(1 + p.bonus)} carte = <b>${n1(p.exp)}</b>`;
+  const lines = p.comps.filter(c => c.lines.length).map(c => `
+    <tr><td colspan="3"><b>${c.label}</b> → moyenne ajustée ${n2(c.val)}</td></tr>
+    ${c.lines.map(l => `<tr><td>plus de ${n1(l.h)}</td><td class="r">${odd(l.over)} / ${odd(l.under)}</td>
+      <td class="r">${Math.round(l.p * 100)} %</td></tr>`).join("")}`).join("");
+  const teamPts = p.home ? g.homePts : g.awayPts;
+  document.getElementById("sheetbody").innerHTML = `
+    <div class="row"><div class="grow"><h2>${esc(p.name)} <span class="stars">${stars(p.stars)}</span></h2>
+      <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}${p.bonus ? ` · carte ${esc(p.edition)} +${Math.round(p.bonus * 100)} %` : ""}</div></div>
+      <button class="icon" id="close" aria-label="Fermer">×</button></div>
+    <div class="card"><div><span class="big">${p.exp.toFixed(0)}</span>
+      <span class="muted small"> pts estimés · ${(p.exp / p.stars).toFixed(1)} par étoile</span></div>
+      <div class="formula">${formula}</div>
+      <div class="formula">Historique seul : ${n1(p.hist)} pts${p.usesProps ? " (la projection retenue vient des cotes)" : ""}</div></div>
+
+    <h3>Composantes du score Sorare</h3>
+    <table class="t"><tr><th>Stat</th><th class="r">Estimé</th><th class="r">Barème</th><th class="r">Pts</th></tr>
+      ${p.comps.map(c => `<tr><td>${c.label}<div class="src">${esc(c.src)}</div></td><td class="r">${n2(c.val)}</td>
+        <td class="r">${c.w > 0 ? "+" : ""}${n1(c.w)}</td><td class="r">${n1(c.pts)}</td></tr>`).join("")}
+      <tr><td><b>Total brut</b></td><td></td><td></td><td class="r"><b>${n1(raw)}</b></td></tr></table>
+    <div class="src" style="margin-top:4px">Bonus double-double non compté (1 point au plus).</div>
+
+    ${lines ? `<h3>Cotes Bovada utilisées</h3>
+      <div class="src">Cote « plus » / cote « moins », puis probabilité « plus » une fois la marge du bookmaker retirée.
+        Points : loi normale ajustée sur ces seuils. Rebonds, passes, 3 pts : loi de Poisson.</div>
+      <table class="t">${lines}</table>` : `<h3>Cotes joueur</h3><div class="small muted">Pas de props publiées pour ce joueur : estimation sur l'historique.</div>`}
+
+    <h3>Minutes</h3>
+    <div class="small">${n1(p.estMin)} min estimées (écart-type ${n1(p.sdMin)}). ${esc(p.minRule)}.</div>
+    <div class="src">Profil « ${p.role} » pour l'effet blowout${p.usesProps ? "" : ` : × ${n2(p.blow)} en moyenne vu le spread`}.</div>
+
+    <h3>Va-t-il jouer ?</h3>
+    <div class="small"><b>${Math.round(p.pct * 100)} %</b> · ${esc(p.pctSrc)}</div>
+
+    <h3>Match</h3>
+    <div class="small">${g.spreadHome !== null
+      ? `${g.spreadHome > 0 ? g.away : g.home} favori de ${Math.abs(g.spreadHome)} pts, total ${g.total} (${esc(g.book || "")})`
+      : "Pas encore de cotes : match supposé serré, total moyen de la ligue"}.
+      Points attendus de ${p.team} : ${n1(teamPts)}${p.usesProps ? "" : `, d'où × ${n2(p.pace)} de rythme`}.</div>
+
+    <h3>15 derniers matchs (score Sorare recalculé)</h3>
+    <table class="t"><tr><th>Date</th><th class="r">Min</th><th class="r">Score</th></tr>
+      ${p.last.map(m => `<tr><td>${m.d.split("-").reverse().slice(0, 2).join("/")}</td><td class="r">${m.min}</td>
+        <td class="r">${n1(m.s)}</td></tr>`).join("")}</table>
+    <div class="src" style="margin-top:6px">Source : API publique Sorare (stats officielles des matchs), barème Sorare appliqué.</div>`;
+  document.getElementById("sheet").classList.add("open");
+  document.getElementById("close").onclick = closeDetail;
+}
+function closeDetail() { document.getElementById("sheet").classList.remove("open"); }
+document.getElementById("sheet").onclick = e => { if (e.target.id === "sheet") closeDetail(); };
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-detail]");
+  if (t) openDetail(+t.dataset.detail);
+});
+
+function renderMethod() {
+  const c = D.calib;
+  const labels = c.buckets.map(([lo, hi]) => hi >= 99 ? `${lo}+` : `${lo}-${hi - 1}`);
+  document.getElementById("method").innerHTML = `
+    <div class="card"><b>Barème Sorare NBA</b>
+      <div class="small">Point +1 · panier à 3 pts +1 · rebond +1,2 · passe +1,5 · interception +3 · contre +3 ·
+        balle perdue −2 · double-double +1 · triple-double +1.</div></div>
+    <div class="card"><b>D'où vient chaque information</b>
+      <table class="t">
+        <tr><td>Cartes, étoiles du Set, stats des matchs</td><td>API publique Sorare, sans connexion</td></tr>
+        <tr><td>Calendrier, blessures (Out, Day-To-Day)</td><td>ESPN</td></tr>
+        <tr><td>Compos probables du soir, incertains</td><td>RotoWire</td></tr>
+        <tr><td>Spread et total des matchs</td><td>Pinnacle, sinon Bovada, ESPN, RotoWire</td></tr>
+        <tr><td>Props points, rebonds, passes, 3 pts</td><td>Bovada</td></tr>
+        <tr><td>Interceptions, contres, balles perdues</td><td>historique du joueur (10 derniers matchs)</td></tr>
+        <tr><td>Bonus des cartes</td><td>ta galerie + barème confirmé (Shiny 5 %, Holo 10 %, variante 15 %)</td></tr>
+      </table></div>
+    <div class="card"><b>Comment un score est estimé</b>
+      <div class="small">1. Chaque stat est estimée : par les cotes Bovada quand elles existent, sinon par la production
+        par minute du joueur sur ses 10 derniers matchs × ses minutes estimées.<br>
+        2. Sans cotes, on ajuste au contexte : rythme (points attendus de l'équipe) et blowout (minutes perdues
+        si le match se plie). Avec cotes, le contexte est déjà dans la ligne.<br>
+        3. On applique le bonus de la carte.<br>
+        4. Pour une équipe, on simule 20 000 soirées : écart final tiré par match (commun aux joueurs du même match),
+        minutes et production tirées dans l'historique de chacun, absences selon la probabilité de jouer.</div></div>
+    <div class="card"><b>Mesuré sur les vrais matchs récents de tes joueurs</b>
+      <div class="small muted">Minutes jouées / minutes habituelles selon l'écart final</div>
+      <table class="t"><tr><th>Écart</th><th class="r">Titulaire</th><th class="r">Milieu</th><th class="r">Remplaçant</th></tr>
+        ${labels.map((l, i) => `<tr><td>${l}</td><td class="r">${n2(c.minutes.titulaire[i])}</td>
+          <td class="r">${n2(c.minutes.milieu[i])}</td><td class="r">${n2(c.minutes["remplaçant"][i])}</td></tr>`).join("")}</table>
+      <div class="small" style="margin-top:6px">Rythme : +10 % de points pour l'équipe = ${n1(c.pace_slope * 10)} % de production par minute.
+        Moyenne ligue : ${n1(c.league_team_pts)} pts par équipe.</div></div>
+    <div class="card"><b>Hypothèses non mesurées</b>
+      <table class="t">${Object.entries(D.hypotheses).map(([k, v]) => `<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("")}</table>
+      <div class="src" style="margin-top:6px">À recalibrer avec le suivi des soirs joués.</div></div>`;
+}
+
+function show(tab) {
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
+  document.querySelectorAll("main section").forEach(s => s.classList.toggle("hidden", s.id !== tab));
+  ({ teams: renderTeams, mine: renderMine, players: renderPlayers, games: renderGames, method: renderMethod })[tab]();
+  window.scrollTo(0, 0);
+}
+document.getElementById("tabs").onclick = e => { if (e.target.dataset.tab) show(e.target.dataset.tab); };
+document.getElementById("paliers").onclick = e => {
+  if (!e.target.dataset.t) return;
+  target = +e.target.dataset.t; store.set("target", target); renderMeta();
+  const cur = document.querySelector("#tabs button.on").dataset.tab; show(cur);
+};
+renderMeta(); show("teams");
+</script>
+</body>
+</html>
