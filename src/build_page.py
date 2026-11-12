@@ -12,6 +12,7 @@ import random
 from datetime import datetime
 from pathlib import Path
 
+import journal
 import model
 from model import SIGMA_MARGIN
 from soirs import PARIS, STAR_CAP, best_teams, load_pool
@@ -44,6 +45,11 @@ def main():
     live = [p for p in pool if p["pct"] > 0]
     print("Recherche des meilleures équipes...")
     results = best_teams(live, contexts, calib, TARGETS, random.Random(5), top_k=300)
+    results.sort(key=lambda t: -t[0][DEFAULT_TARGET])
+    try:  # le journal ne doit jamais empêcher la page de sortir
+        journal.record(pool, results[:40], TARGETS)
+    except Exception as e:
+        print(f"Journal non écrit : {e!r}")
 
     ids = {p["slug"]: i for i, p in enumerate(pool)}
     players = []
