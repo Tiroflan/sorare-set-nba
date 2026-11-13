@@ -85,7 +85,8 @@ table.t td { padding: 5px 4px 5px 0; border-top: 1px solid var(--line); vertical
 table.t td.r, table.t th.r { text-align: right; }
 .formula { font-size: 13px; color: var(--muted); margin-top: 4px; }
 .src { font-size: 11.5px; color: var(--muted); }
-nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 2px; }
+nav { overflow-x: auto; scrollbar-width: none; }
+nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 8px; flex: 1 0 auto; }
 </style>
 </head>
 <body>
@@ -99,6 +100,7 @@ nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 2px; }
   <button data-tab="mine">Mon équipe</button>
   <button data-tab="players">Joueurs</button>
   <button data-tab="games">Matchs</button>
+  <button data-tab="bilan">Bilan</button>
   <button data-tab="method">Méthode</button>
 </nav>
 <main>
@@ -106,6 +108,7 @@ nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 2px; }
   <section id="mine" class="hidden"></section>
   <section id="players" class="hidden"></section>
   <section id="games" class="hidden"></section>
+  <section id="bilan" class="hidden"></section>
   <section id="method" class="hidden"></section>
 </main>
 <div id="sheet"><div class="panel" id="sheetbody"></div></div>
@@ -390,6 +393,105 @@ document.addEventListener("click", e => {
   if (t) openDetail(+t.dataset.detail);
 });
 
+
+// ---- Bilan : projections figées avant match contre vrais scores ----
+let bilanNight = "all";
+const nightLabel = n => { const d = new Date(n + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + 1);
+  return `nuit du ${n.slice(8, 10)} au ${String(d.getUTCDate()).padStart(2, "0")}/${n.slice(5, 7)}`; };
+const sgn = x => (x >= 0 ? "+" : "−") + n1(Math.abs(x));
+const mean = a => a.length ? a.reduce((s, x) => s + x, 0) / a.length : NaN;
+const STAT = [["pts", "Points", 1], ["tpm", "Paniers à 3", 1], ["reb", "Rebonds", 1.2], ["ast", "Passes", 1.5],
+  ["stl", "Interceptions", 3], ["blk", "Contres", 3], ["tov", "Balles perdues", -2]];
+const SHORT = { pts: "pts", tpm: "3pts", reb: "reb", ast: "pas", stl: "int", blk: "ctr", tov: "bp" };
+
+function renderBilan() {
+  const el = document.getElementById("bilan");
+  const B = D.bilans || [];
+  if (!B.length) { el.innerHTML = `<div class="card muted">Pas encore de bilan : il arrive le matin, après la première nuit enregistrée.</div>`; return; }
+  if (bilanNight !== "all" && !B.some(b => b.night === bilanNight)) bilanNight = "all";
+  const sel = bilanNight === "all" ? B : B.filter(b => b.night === bilanNight);
+  const rows = sel.flatMap(b => b.rows), pl = rows.filter(r => r.pl);
+  const err = pl.map(r => r.a - r.e), z = pl.filter(r => r.sd > 0).map(r => Math.abs(r.a - r.e) / r.sd <= 1 ? 1 : 0);
+  const chips = [["all", B.length > 1 ? `Cumul (${B.length} nuits)` : "Cumul"], ...B.map(b => [b.night, nightLabel(b.night)])];
+
+  const groups = [["Sûr (100 %)", r => r.pct >= 1], ["Probable (70 à 99 %)", r => r.pct >= 0.7 && r.pct < 1],
+    ["Incertain (1 à 69 %)", r => r.pct > 0 && r.pct < 0.7], ["Annoncé absent", r => r.pct === 0]];
+  const presence = groups.map(([l, f]) => { const g = rows.filter(f);
+    return g.length ? `<tr><td>${l}</td><td class="r">${g.length}</td><td class="r">${fmtP(mean(g.map(r => r.pct)))}</td>
+      <td class="r"><b>${fmtP(mean(g.map(r => r.pl ? 1 : 0)))}</b></td></tr>` : ""; }).join("");
+
+  const wp = pl.filter(r => r.pr);
+  const propsBetter = wp.filter(r => Math.abs(r.a - r.e) < Math.abs(r.a - r.h)).length;
+
+  const xs = pl.filter(r => r.st);
+  const stats = STAT.map(([k, l, w]) => {
+    const pr = mean(xs.map(r => r.c[k] || 0)), re = mean(xs.map(r => r.st[k]));
+    const ab = mean(xs.map(r => Math.abs(r.st[k] - (r.c[k] || 0))));
+    return `<tr><td>${l}</td><td class="r">${n1(pr)}</td><td class="r">${n1(re)}</td><td class="r">${n1(ab)}</td>
+      <td class="r">${n1(ab * Math.abs(w))}</td></tr>`; }).join("");
+
+  // Équipes : les 8 meilleures pour le palier choisi, chaque nuit.
+  const teams = sel.flatMap(b => [...b.teams].sort((a, c) => c.p[target] - a.p[target]).slice(0, 8)
+    .map(t => ({ ...t, night: b.night })));
+  const fin = teams.filter(t => t.score !== null);
+  const teamHtml = teams.map(t => {
+    const passed = t.score !== null && t.score >= target;
+    return `<div class="pl row"><div class="grow"><div class="name" style="white-space:normal">${t.names.map(esc).join(", ")}</div>
+      <div class="small muted">${bilanNight === "all" ? nightLabel(t.night) + " · " : ""}figée ${esc(fr_lock(t.lock))} · prévu ${fmtP(t.p[target])}</div>
+      <div class="src">${t.pts.map((x, i) => `${esc(t.names[i].split(" ").slice(-1)[0])} ${x === null ? "…" : n1(x)}`).join(" · ")}</div></div>
+      <div class="num">${t.score === null ? `<span class="muted small">en attente</span>` :
+        `<b class="${passed ? "pct-good" : "pct-low"}">${n1(t.score)}</b><div class="small muted">${passed ? "passé" : "raté"}</div>`}</div></div>`; }).join("");
+
+  const sorted = [...pl].sort((a, c) => Math.abs(c.a - c.e) - Math.abs(a.a - a.e));
+  const dnp = rows.filter(r => !r.pl && r.pct > 0).sort((a, c) => c.pct - a.pct);
+  const line = r => `<div class="pl row"><div class="grow"><div class="name">${esc(r.n)} <span class="stars">${stars(r.s)}</span></div>
+      <div class="small muted">${r.t} contre ${r.o} · ${n1(r.em)} → ${r.m} min · ${r.pr ? "props" : "historique"}${r.b ? ` · carte +${Math.round(r.b * 100)} %` : ""}</div>
+      <div class="src">prévu → réel : ${STAT.map(([k]) => `${SHORT[k]} ${n1(r.c[k] || 0)}→${r.st[k]}`).join(" · ")}</div></div>
+      <div class="num"><b>${n1(r.a)}</b><div class="small muted">prévu ${n1(r.e)}</div>
+      <div class="small ${r.a >= r.e ? "pct-good" : "pct-low"}">${sgn(r.a - r.e)}</div></div></div>`;
+
+  el.innerHTML = `
+    <div class="paliers">${chips.map(([k, l]) => `<button data-bn="${k}" class="${k === bilanNight ? "on" : ""}">${l}</button>`).join("")}</div>
+    <div class="card"><b>Projection contre score réel</b>
+      <div class="small muted">Dernière projection faite avant chaque match (bonus de carte compris), comparée au score marqué.</div>
+      <table class="pal">
+        <tr><td>Joueurs projetés / ont joué</td><td class="num">${rows.length} / ${pl.length}</td></tr>
+        <tr><td>Biais (réel − prévu, en moyenne)</td><td class="num"><b>${sgn(mean(err))}</b> pts</td></tr>
+        <tr><td>Écart moyen par joueur</td><td class="num"><b>${n1(mean(err.map(Math.abs)))}</b> pts</td></tr>
+        <tr><td>Dans la fourchette ±1 écart-type</td><td class="num"><b>${fmtP(mean(z))}</b> <span class="small muted">(68 % attendu)</span></td></tr>
+      </table>
+      <div class="src" style="margin-top:6px">Biais proche de 0 : le modèle n'est ni trop optimiste ni trop prudent.
+        Fourchette proche de 68 % : les probabilités d'équipe partent d'une dispersion juste.
+        ${pl.length < 200 ? "Moins de 200 joueurs : à lire comme une tendance, pas une preuve." : ""}</div></div>
+    <div class="card"><b>Équipes proposées par la page</b>
+      <div class="small muted">Les 8 meilleures pour ${target} pts (palier ${palierOf(target)}), avec leur score réel.
+        ${fin.length ? `${fin.filter(t => t.score >= target).length} sur ${fin.length} finies ont passé, ${n1(fin.reduce((s, t) => s + t.p[target], 0))} attendues d'après les probas.` : ""}</div>
+      <div class="plist">${teamHtml || `<div class="muted small">Pas d'équipe enregistrée.</div>`}</div></div>
+    <div class="card"><b>Qui a joué</b>
+      <table class="t"><tr><th>Annoncé</th><th class="r">Joueurs</th><th class="r">Prévu</th><th class="r">Ont joué</th></tr>${presence}</table></div>
+    <div class="card"><b>Props ou historique ?</b>
+      ${wp.length ? `<table class="pal">
+        <tr><td>Joueurs avec props</td><td class="num">${wp.length}</td></tr>
+        <tr><td>Écart moyen avec les props</td><td class="num"><b>${n1(mean(wp.map(r => Math.abs(r.a - r.e))))}</b></td></tr>
+        <tr><td>Écart moyen avec l'historique seul</td><td class="num"><b>${n1(mean(wp.map(r => Math.abs(r.a - r.h))))}</b></td></tr>
+        <tr><td>Props plus proches du réel</td><td class="num">${propsBetter} sur ${wp.length}</td></tr></table>`
+        : `<div class="small muted">Aucun joueur avec props.</div>`}</div>
+    <div class="card"><b>Stat par stat</b>
+      <div class="small muted">Moyenne par joueur ayant joué. Dernière colonne : l'écart moyen converti en points Sorare.</div>
+      <table class="t"><tr><th>Stat</th><th class="r">Prévu</th><th class="r">Réel</th><th class="r">Écart</th><th class="r">En pts</th></tr>${stats}
+        <tr><td>Minutes</td><td class="r">${n1(mean(pl.map(r => r.em)))}</td><td class="r">${n1(mean(pl.map(r => r.m)))}</td>
+        <td class="r">${n1(mean(pl.map(r => Math.abs(r.m - r.em))))}</td><td></td></tr></table></div>
+    <div class="card"><b>Joueur par joueur</b> <span class="small muted">plus gros écarts en premier</span>
+      <div class="plist">${sorted.map(line).join("")}</div></div>
+    ${dnp.length ? `<div class="card"><b>N'ont pas joué</b> <span class="small muted">alors qu'on leur donnait une chance</span>
+      <div class="plist">${dnp.map(r => `<div class="pl"><div class="name">${esc(r.n)} <span class="stars">${stars(r.s)}</span></div>
+        <div class="small muted">prévu ${n1(r.e)} pts s'il jouait, ${fmtP(r.pct)} de chances</div>
+        <div class="src">${esc(r.src)}</div></div>`).join("")}</div></div>` : ""}`;
+  el.querySelector(".paliers").onclick = e => { if (e.target.dataset.bn) { bilanNight = e.target.dataset.bn; renderBilan(); } };
+}
+const fr_lock = iso => { const d = new Date(iso.replace("Z", ":00Z"));
+  return d.toLocaleString("fr-FR", { weekday: "short", day: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }); };
+
 function renderMethod() {
   const c = D.calib;
   const labels = c.buckets.map(([lo, hi]) => hi >= 99 ? `${lo}+` : `${lo}-${hi - 1}`);
@@ -430,7 +532,7 @@ function renderMethod() {
 function show(tab) {
   document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
   document.querySelectorAll("main section").forEach(s => s.classList.toggle("hidden", s.id !== tab));
-  ({ teams: renderTeams, mine: renderMine, players: renderPlayers, games: renderGames, method: renderMethod })[tab]();
+  ({ teams: renderTeams, mine: renderMine, players: renderPlayers, games: renderGames, bilan: renderBilan, method: renderMethod })[tab]();
   window.scrollTo(0, 0);
 }
 document.getElementById("tabs").onclick = e => { if (e.target.dataset.tab) show(e.target.dataset.tab); };

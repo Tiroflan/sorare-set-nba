@@ -9,7 +9,7 @@ Usage : python src/build_page.py [--nuits 2]
 import argparse
 import json
 import random
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import journal
@@ -103,7 +103,48 @@ def main():
     render(data)
 
 
+def bilans():
+    """Bilans des soirs joués, avec le score réel des équipes proposées par la page."""
+    jdir = ROOT / "journal"
+    out, actual = [], {}
+    files = sorted(jdir.glob("bilan-*.json"))
+    for f in files:
+        b = json.loads(f.read_text(encoding="utf-8"))
+        rows = []
+        for r in b["joueurs"]:
+            actual[(b["night"], r.get("slug"))] = r["actual"] or 0.0
+            rows.append({"n": r["name"], "t": r["team"], "o": r["opp"], "s": r["stars"], "b": r["bonus"],
+                         "pct": r["pct"], "src": r["pctSrc"], "e": r["exp"], "sd": r["sd"], "h": r["hist"],
+                         "pr": r["usesProps"], "em": r["estMin"], "m": r.get("min"), "a": r["actual"],
+                         "c": r["comps"], "st": r.get("stats"), "pl": r["played"]})
+        out.append({"night": b["night"], "rows": rows, "pending": b.get("pending", [])})
+    done = {b["night"] for b in out}
+    for b in out:
+        j = jdir / f"{b['night']}.json"
+        teams = (json.loads(j.read_text(encoding="utf-8")).get("teams") or {}).get("list", []) if j.exists() else []
+        nxt = (datetime.fromisoformat(b["night"]) + timedelta(days=1)).date().isoformat()
+        b["teams"] = []
+        for t in teams:
+            pts, ok = [], True
+            for slug in t["slugs"]:
+                if (b["night"], slug) in actual:
+                    pts.append(actual[(b["night"], slug)])
+                elif nxt in done:
+                    pts.append(actual.get((nxt, slug), 0.0))
+                else:
+                    ok = False
+                    pts.append(None)
+            b["teams"].append({"names": t["names"], "p": t["p"], "lock": t["lock"], "pts": pts,
+                               "score": round(sum(pts), 1) if ok else None})
+    return sorted(out, key=lambda b: b["night"], reverse=True)
+
+
 def render(data):
+    try:
+        data["bilans"] = bilans()
+    except Exception as e:  # le bilan ne doit jamais empêcher la page de sortir
+        print(f"Bilans non chargés : {e!r}")
+        data["bilans"] = []
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False))
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(html, encoding="utf-8")

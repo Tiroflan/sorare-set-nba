@@ -76,7 +76,7 @@ def run(night):
         e["joue"] += r["played"]
     out["presence"] = buckets
     out["joueurs"] = sorted(
-        ({k: r.get(k) for k in ("name", "team", "opp", "stars", "bonus", "pct", "pctSrc", "exp", "sd", "hist",
+        ({k: r.get(k) for k in ("slug", "tip", "name", "team", "opp", "stars", "bonus", "pct", "pctSrc", "exp", "sd", "hist",
                                 "usesProps", "estMin", "min", "actual", "comps", "stats", "reasons", "played")}
          for r in rows), key=lambda r: -(r["actual"] or 0))
     (DIR / f"bilan-{night}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

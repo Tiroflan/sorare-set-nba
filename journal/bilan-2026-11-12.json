@@ -91,6 +91,8 @@
  },
  "joueurs": [
   {
+   "slug": "ausar-thompson-20030130",
+   "tip": "2026-11-13T00:00Z",
    "name": "Ausar Thompson",
    "team": "DET",
    "opp": "WAS",
@@ -129,6 +131,8 @@
    "played": true
   },
   {
+   "slug": "anthony-davis-19930311",
+   "tip": "2026-11-13T00:00Z",
    "name": "Anthony Davis",
    "team": "WAS",
    "opp": "DET",
@@ -168,6 +172,8 @@
    "played": true
   },
   {
+   "slug": "rj-barrett-20000614",
+   "tip": "2026-11-13T00:00Z",
    "name": "RJ Barrett",
    "team": "TOR",
    "opp": "PHI",
@@ -207,6 +213,8 @@
    "played": true
   },
   {
+   "slug": "alex-sarr-20050426",
+   "tip": "2026-11-13T00:00Z",
    "name": "Alex Sarr",
    "team": "WAS",
    "opp": "DET",
@@ -246,6 +254,8 @@
    "played": true
   },
   {
+   "slug": "vj-edgecombe-20050730",
+   "tip": "2026-11-13T00:00Z",
    "name": "VJ Edgecombe",
    "team": "PHI",
    "opp": "TOR",
@@ -284,6 +294,8 @@
    "played": true
   },
   {
+   "slug": "immanuel-quickley-19990617",
+   "tip": "2026-11-13T00:00Z",
    "name": "Immanuel Quickley",
    "team": "TOR",
    "opp": "PHI",
@@ -323,6 +335,8 @@
    "played": true
   },
   {
+   "slug": "bones-hyland-20000914",
+   "tip": "2026-11-13T01:00Z",
    "name": "Bones Hyland",
    "team": "MIN",
    "opp": "DAL",
@@ -359,6 +373,8 @@
    "played": true
   },
   {
+   "slug": "zaccharie-risacher-20050408",
+   "tip": "2026-11-13T01:00Z",
    "name": "Zaccharie Risacher",
    "team": "DAL",
    "opp": "MIN",
@@ -397,6 +413,8 @@
    "played": true
   },
   {
+   "slug": "daniss-jenkins-20010817",
+   "tip": "2026-11-13T00:00Z",
    "name": "Daniss Jenkins",
    "team": "DET",
    "opp": "WAS",
@@ -435,6 +453,8 @@
    "played": true
   },
   {
+   "slug": "collin-murray-boyles-20050610",
+   "tip": "2026-11-13T00:00Z",
    "name": "Collin Murray-Boyles",
    "team": "TOR",
    "opp": "PHI",
@@ -475,6 +495,8 @@
    "played": true
   },
   {
+   "slug": "naz-reid-19990826",
+   "tip": "2026-11-13T02:00Z",
    "name": "Naz Reid",
    "team": "CHA",
    "opp": "PHX",
@@ -513,6 +535,8 @@
    "played": true
   },
   {
+   "slug": "jonathan-kuminga-20021006",
+   "tip": "2026-11-13T01:00Z",
    "name": "Jonathan Kuminga",
    "team": "MIN",
    "opp": "DAL",
@@ -551,6 +575,8 @@
    "played": true
   },
   {
+   "slug": "joel-embiid-19940316",
+   "tip": "2026-11-13T00:00Z",
    "name": "Joel Embiid",
    "team": "PHI",
    "opp": "TOR",
@@ -589,6 +615,8 @@
    "played": true
   },
   {
+   "slug": "joan-beringer-20061111",
+   "tip": "2026-11-13T01:00Z",
    "name": "Joan Beringer",
    "team": "MIN",
    "opp": "DAL",
@@ -625,6 +653,8 @@
    "played": true
   },
   {
+   "slug": "miles-bridges-19980321",
+   "tip": "2026-11-13T02:00Z",
    "name": "Miles Bridges",
    "team": "PHX",
    "opp": "CHA",
@@ -663,6 +693,8 @@
    "played": true
   },
   {
+   "slug": "paul-reed-19990614",
+   "tip": "2026-11-13T00:00Z",
    "name": "Paul Reed",
    "team": "DET",
    "opp": "WAS",
@@ -701,6 +733,8 @@
    "played": true
   },
   {
+   "slug": "anfernee-simons-19990608",
+   "tip": "2026-11-13T00:00Z",
    "name": "Anfernee Simons",
    "team": "PHI",
    "opp": "TOR",
@@ -739,6 +773,8 @@
    "played": true
   },
   {
+   "slug": "ayo-dosunmu-20000117",
+   "tip": "2026-11-13T01:00Z",
    "name": "Ayo Dosunmu",
    "team": "MIN",
    "opp": "DAL",
@@ -777,6 +813,8 @@
    "played": true
   },
   {
+   "slug": "cooper-flagg-20061221",
+   "tip": "2026-11-13T01:00Z",
    "name": "Cooper Flagg",
    "team": "DAL",
    "opp": "MIN",
@@ -815,6 +853,8 @@
    "played": true
   },
   {
+   "slug": "grayson-allen-19951008",
+   "tip": "2026-11-13T02:00Z",
    "name": "Grayson Allen",
    "team": "CHA",
    "opp": "PHX",
@@ -853,6 +893,8 @@
    "played": true
   },
   {
+   "slug": "kyshawn-george-20031212",
+   "tip": "2026-11-13T00:00Z",
    "name": "Kyshawn George",
    "team": "WAS",
    "opp": "DET",
@@ -892,6 +934,8 @@
    "played": true
   },
   {
+   "slug": "dillon-brooks-19960122",
+   "tip": "2026-11-13T02:00Z",
    "name": "Dillon Brooks",
    "team": "PHX",
    "opp": "CHA",
@@ -930,6 +974,8 @@
    "played": true
   },
   {
+   "slug": "jamison-battle-20010510",
+   "tip": "2026-11-13T00:00Z",
    "name": "Jamison Battle",
    "team": "TOR",
    "opp": "PHI",
@@ -969,6 +1015,8 @@
    "played": true
   },
   {
+   "slug": "rudy-gobert-19920626",
+   "tip": "2026-11-13T01:00Z",
    "name": "Rudy Gobert",
    "team": "MIN",
    "opp": "DAL",
@@ -1007,6 +1055,8 @@
    "played": true
   },
   {
+   "slug": "naji-marshall-19980124",
+   "tip": "2026-11-13T01:00Z",
    "name": "Naji Marshall",
    "team": "DAL",
    "opp": "MIN",
@@ -1045,6 +1095,8 @@
    "played": true
   },
   {
+   "slug": "jordan-goodwin-19981023",
+   "tip": "2026-11-13T02:00Z",
    "name": "Jordan Goodwin",
    "team": "PHX",
    "opp": "CHA",
@@ -1083,6 +1135,8 @@
    "played": true
   },
   {
+   "slug": "moussa-diabate-20020121",
+   "tip": "2026-11-13T02:00Z",
    "name": "Moussa Diabaté",
    "team": "CHA",
    "opp": "PHX",
@@ -1121,6 +1175,8 @@
    "played": true
   },
   {
+   "slug": "coby-white-20000216",
+   "tip": "2026-11-13T02:00Z",
    "name": "Coby White",
    "team": "CHA",
    "opp": "PHX",
@@ -1160,6 +1216,8 @@
    "played": true
   },
   {
+   "slug": "collin-gillespie-19990625",
+   "tip": "2026-11-13T02:00Z",
    "name": "Collin Gillespie",
    "team": "PHX",
    "opp": "CHA",
@@ -1198,6 +1256,8 @@
    "played": true
   },
   {
+   "slug": "jakob-poeltl-19951015",
+   "tip": "2026-11-13T00:00Z",
    "name": "Jakob Poeltl",
    "team": "TOR",
    "opp": "PHI",
@@ -1237,6 +1297,8 @@
    "played": true
   },
   {
+   "slug": "duncan-robinson-19940422",
+   "tip": "2026-11-13T00:00Z",
    "name": "Duncan Robinson",
    "team": "DET",
    "opp": "WAS",
@@ -1275,6 +1337,8 @@
    "played": true
   },
   {
+   "slug": "caleb-martin-19950928",
+   "tip": "2026-11-13T01:00Z",
    "name": "Caleb Martin",
    "team": "DAL",
    "opp": "MIN",
@@ -1314,6 +1378,8 @@
    "played": true
   },
   {
+   "slug": "bilal-coulibaly-20040726",
+   "tip": "2026-11-13T00:00Z",
    "name": "Bilal Coulibaly",
    "team": "WAS",
    "opp": "DET",
@@ -1353,6 +1419,8 @@
    "played": true
   },
   {
+   "slug": "aj-dybantsa-20070129",
+   "tip": "2026-11-13T00:00Z",
    "name": "AJ Dybantsa",
    "team": "WAS",
    "opp": "DET",
@@ -1392,6 +1460,8 @@
    "played": true
   },
   {
+   "slug": "jaylen-clark-20011013",
+   "tip": "2026-11-13T01:00Z",
    "name": "Jaylen Clark",
    "team": "MIN",
    "opp": "DAL",
@@ -1428,6 +1498,8 @@
    "played": true
   },
   {
+   "slug": "oso-ighodaro-20020714",
+   "tip": "2026-11-13T02:00Z",
    "name": "Oso Ighodaro",
    "team": "PHX",
    "opp": "CHA",
@@ -1467,6 +1539,8 @@
    "played": true
   },
   {
+   "slug": "jalen-green-20020209",
+   "tip": "2026-11-13T02:00Z",
    "name": "Jalen Green",
    "team": "PHX",
    "opp": "CHA",
@@ -1505,6 +1579,8 @@
    "played": true
   },
   {
+   "slug": "dean-wade-19961120",
+   "tip": "2026-11-13T00:00Z",
    "name": "Dean Wade",
    "team": "PHI",
    "opp": "TOR",
@@ -1544,6 +1620,8 @@
    "played": true
   },
   {
+   "slug": "sion-james-20021204",
+   "tip": "2026-11-13T02:00Z",
    "name": "Sion James",
    "team": "CHA",
    "opp": "PHX",
@@ -1582,6 +1660,8 @@
    "played": true
   },
   {
+   "slug": "alijah-martin-20011226",
+   "tip": "2026-11-13T00:00Z",
    "name": "Alijah Martin",
    "team": "TOR",
    "opp": "PHI",
@@ -1620,6 +1700,8 @@
    "played": true
   },
   {
+   "slug": "kevin-huerter-19980827",
+   "tip": "2026-11-13T00:00Z",
    "name": "Kevin Huerter",
    "team": "DET",
    "opp": "WAS",
@@ -1658,6 +1740,8 @@
    "played": true
   },
   {
+   "slug": "john-collins-19970923",
+   "tip": "2026-11-13T00:00Z",
    "name": "John Collins",
    "team": "DET",
    "opp": "WAS",
@@ -1696,6 +1780,8 @@
    "played": true
   },
   {
+   "slug": "jamal-shead-20020724",
+   "tip": "2026-11-13T00:00Z",
    "name": "Jamal Shead",
    "team": "TOR",
    "opp": "PHI",
@@ -1735,6 +1821,8 @@
    "played": true
   },
   {
+   "slug": "ryan-kalkbrenner-20020117",
+   "tip": "2026-11-13T02:00Z",
    "name": "Ryan Kalkbrenner",
    "team": "CHA",
    "opp": "PHX",
@@ -1773,6 +1861,8 @@
    "played": true
   },
   {
+   "slug": "javonte-green-19930723",
+   "tip": "2026-11-13T00:00Z",
    "name": "Javonte Green",
    "team": "DET",
    "opp": "WAS",
@@ -1809,6 +1899,8 @@
    "played": true
   },
   {
+   "slug": "jakobe-walter-20040904",
+   "tip": "2026-11-13T00:00Z",
    "name": "Ja'Kobe Walter",
    "team": "TOR",
    "opp": "PHI",
@@ -1848,6 +1940,8 @@
    "played": true
   },
   {
+   "slug": "daniel-gafford-19981001",
+   "tip": "2026-11-13T01:00Z",
    "name": "Daniel Gafford",
    "team": "DAL",
    "opp": "MIN",
@@ -1887,6 +1981,8 @@
    "played": true
   },
   {
+   "slug": "ron-holland-20050707",
+   "tip": "2026-11-13T00:00Z",
    "name": "Ronald Holland II",
    "team": "DET",
    "opp": "WAS",
@@ -1923,6 +2019,8 @@
    "played": true
   },
   {
+   "slug": "santi-aldama-20010110",
+   "tip": "2026-11-13T01:00Z",
    "name": "Santi Aldama",
    "team": "DAL",
    "opp": "MIN",
@@ -1961,6 +2059,8 @@
    "played": true
   },
   {
+   "slug": "deandre-ayton-19980723",
+   "tip": "2026-11-13T00:00Z",
    "name": "Deandre Ayton",
    "team": "WAS",
    "opp": "DET",
@@ -1999,6 +2099,8 @@
    "played": true
   },
   {
+   "slug": "max-christie-20030210",
+   "tip": "2026-11-13T01:00Z",
    "name": "Max Christie",
    "team": "DAL",
    "opp": "MIN",
@@ -2035,6 +2137,8 @@
    "played": true
   },
   {
+   "slug": "tobi-lawal-20030501",
+   "tip": "2026-11-13T01:00Z",
    "name": "Tobi Lawal",
    "team": "DAL",
    "opp": "MIN",
@@ -2071,6 +2175,8 @@
    "played": true
   },
   {
+   "slug": "will-riley-20060210",
+   "tip": "2026-11-13T00:00Z",
    "name": "Will Riley",
    "team": "WAS",
    "opp": "DET",
@@ -2107,6 +2213,8 @@
    "played": true
   },
   {
+   "slug": "isaiah-evans-20051206",
+   "tip": "2026-11-13T01:00Z",
    "name": "Isaiah Evans",
    "team": "MIN",
    "opp": "DAL",
@@ -2143,6 +2251,8 @@
    "played": true
   },
   {
+   "slug": "carlton-carrington-20050721",
+   "tip": "2026-11-13T00:00Z",
    "name": "Bub Carrington",
    "team": "WAS",
    "opp": "DET",
@@ -2181,6 +2291,8 @@
    "played": true
   },
   {
+   "slug": "moussa-cisse-20020910",
+   "tip": "2026-11-13T01:00Z",
    "name": "Moussa Cisse",
    "team": "DAL",
    "opp": "MIN",
@@ -2217,6 +2329,8 @@
    "played": true
   },
   {
+   "slug": "marcus-sasser-20000921",
+   "tip": "2026-11-13T01:00Z",
    "name": "Marcus Sasser",
    "team": "DAL",
    "opp": "MIN",
@@ -2253,6 +2367,8 @@
    "played": true
   },
   {
+   "slug": "jaden-bradley-20030914",
+   "tip": "2026-11-13T00:00Z",
    "name": "Jaden Bradley",
    "team": "TOR",
    "opp": "PHI",
@@ -2289,6 +2405,8 @@
    "played": true
   },
   {
+   "slug": "allen-graves-20060728",
+   "tip": "2026-11-13T00:00Z",
    "name": "Allen Graves",
    "team": "TOR",
    "opp": "PHI",
@@ -2327,6 +2445,8 @@
    "played": true
   },
   {
+   "slug": "adem-bona-20030328",
+   "tip": "2026-11-13T00:00Z",
    "name": "Adem Bona",
    "team": "PHI",
    "opp": "TOR",
@@ -2357,6 +2477,8 @@
    "played": false
   },
   {
+   "slug": "anthony-edwards-20010805",
+   "tip": "2026-11-13T01:00Z",
    "name": "Anthony Edwards",
    "team": "MIN",
    "opp": "DAL",
@@ -2387,6 +2509,8 @@
    "played": false
   },
   {
+   "slug": "anthony-gill-19921017",
+   "tip": "2026-11-13T00:00Z",
    "name": "Anthony Gill",
    "team": "WAS",
    "opp": "DET",
@@ -2415,6 +2539,8 @@
    "played": false
   },
   {
+   "slug": "duop-reath-19960626",
+   "tip": "2026-11-13T02:00Z",
    "name": "Duop Reath",
    "team": "PHX",
    "opp": "CHA",
@@ -2443,6 +2569,8 @@
    "played": false
   },
   {
+   "slug": "ebuka-okorie-20070410",
+   "tip": "2026-11-13T00:00Z",
    "name": "Ebuka Okorie",
    "team": "DET",
    "opp": "WAS",
@@ -2471,6 +2599,8 @@
    "played": false
   },
   {
+   "slug": "elijah-harkless-20000203",
+   "tip": "2026-11-13T00:00Z",
    "name": "Elijah Harkless",
    "team": "DET",
    "opp": "WAS",
@@ -2499,6 +2629,8 @@
    "played": false
   },
   {
+   "slug": "felix-okpara-20040420",
+   "tip": "2026-11-13T00:00Z",
    "name": "Felix Okpara",
    "team": "WAS",
    "opp": "DET",
@@ -2527,6 +2659,8 @@
    "played": false
   },
   {
+   "slug": "hannes-steinbach-20060501",
+   "tip": "2026-11-13T02:00Z",
    "name": "Hannes Steinbach",
    "team": "CHA",
    "opp": "PHX",
@@ -2555,6 +2689,8 @@
    "played": false
   },
   {
+   "slug": "isaac-jones-19990711",
+   "tip": "2026-11-13T00:00Z",
    "name": "Isaac Jones",
    "team": "DET",
    "opp": "WAS",
@@ -2583,6 +2719,8 @@
    "played": false
   },
   {
+   "slug": "isaiah-joe-19990702",
+   "tip": "2026-11-13T00:00Z",
    "name": "Isaiah Joe",
    "team": "DET",
    "opp": "WAS",
@@ -2613,6 +2751,8 @@
    "played": false
   },
   {
+   "slug": "jamaree-bouyea-19990627",
+   "tip": "2026-11-13T02:00Z",
    "name": "Jamaree Bouyea",
    "team": "PHX",
    "opp": "CHA",
@@ -2641,6 +2781,8 @@
    "played": false
   },
   {
+   "slug": "kawhi-leonard-19910629",
+   "tip": "2026-11-13T00:00Z",
    "name": "Kawhi Leonard",
    "team": "TOR",
    "opp": "PHI",
@@ -2671,6 +2813,8 @@
    "played": false
   },
   {
+   "slug": "koa-peat-20070120",
+   "tip": "2026-11-13T02:00Z",
    "name": "Koa Peat",
    "team": "PHX",
    "opp": "CHA",
@@ -2699,6 +2843,8 @@
    "played": false
   },
   {
+   "slug": "labaron-philon-jr-20051124",
+   "tip": "2026-11-13T00:00Z",
    "name": "Labaron Philon Jr.",
    "team": "PHI",
    "opp": "TOR",
@@ -2735,6 +2881,8 @@
    "played": true
   },
   {
+   "slug": "liam-mcneeley-20051010",
+   "tip": "2026-11-13T02:00Z",
    "name": "Liam McNeeley",
    "team": "CHA",
    "opp": "PHX",
@@ -2763,6 +2911,8 @@
    "played": false
   },
   {
+   "slug": "malachi-smith-19991206",
+   "tip": "2026-11-13T00:00Z",
    "name": "Malachi Smith",
    "team": "TOR",
    "opp": "PHI",
@@ -2799,6 +2949,8 @@
    "played": true
   },
   {
+   "slug": "michael-ajayi-20030523",
+   "tip": "2026-11-13T02:00Z",
    "name": "Michael Ajayi",
    "team": "CHA",
    "opp": "PHX",
@@ -2827,6 +2979,8 @@
    "played": false
   },
   {
+   "slug": "pat-spencer-19960704",
+   "tip": "2026-11-13T02:00Z",
    "name": "Pat Spencer",
    "team": "PHX",
    "opp": "CHA",
@@ -2855,6 +3009,8 @@
    "played": false
   },
   {
+   "slug": "pj-hall-20020221",
+   "tip": "2026-11-13T02:00Z",
    "name": "PJ Hall",
    "team": "CHA",
    "opp": "PHX",
@@ -2883,6 +3039,8 @@
    "played": false
   },
   {
+   "slug": "rasheer-fleming-20040710",
+   "tip": "2026-11-13T02:00Z",
    "name": "Rasheer Fleming",
    "team": "PHX",
    "opp": "CHA",
@@ -2911,6 +3069,8 @@
    "played": false
   },
   {
+   "slug": "rayan-rupert-20040531",
+   "tip": "2026-11-13T00:00Z",
    "name": "Rayan Rupert",
    "team": "PHI",
    "opp": "TOR",
@@ -2939,6 +3099,8 @@
    "played": false
   },
   {
+   "slug": "reece-beekman-20011008",
+   "tip": "2026-11-13T00:00Z",
    "name": "Reece Beekman",
    "team": "WAS",
    "opp": "DET",
@@ -2969,6 +3131,8 @@
    "played": false
   },
   {
+   "slug": "tarik-biberovic-20010128",
+   "tip": "2026-11-13T01:00Z",
    "name": "Tarik Biberovic",
    "team": "DAL",
    "opp": "MIN",
@@ -2999,6 +3163,8 @@
    "played": false
   },
   {
+   "slug": "taurean-prince-19940322",
+   "tip": "2026-11-13T00:00Z",
    "name": "Taurean Prince",
    "team": "DET",
    "opp": "WAS",
@@ -3027,6 +3193,8 @@
    "played": false
   },
   {
+   "slug": "trayce-jackson-davis-20000222",
+   "tip": "2026-11-13T00:00Z",
    "name": "Trayce Jackson-Davis",
    "team": "TOR",
    "opp": "PHI",
@@ -3057,6 +3225,8 @@
    "played": false
   },
   {
+   "slug": "tre-mann-20010203",
+   "tip": "2026-11-13T00:00Z",
    "name": "Tre Mann",
    "team": "WAS",
    "opp": "DET",
@@ -3085,6 +3255,8 @@
    "played": false
   },
   {
+   "slug": "zyon-pullin-20010303",
+   "tip": "2026-11-13T01:00Z",
    "name": "Zyon Pullin",
    "team": "MIN",
    "opp": "DAL",
@@ -3113,6 +3285,8 @@
    "played": false
   },
   {
+   "slug": "kyle-anderson-19930920",
+   "tip": "2026-11-13T00:00Z",
    "name": "Kyle Anderson",
    "team": "TOR",
    "opp": "PHI",
@@ -3151,6 +3325,8 @@
    "played": true
   },
   {
+   "slug": "cody-williams-20041120",
+   "tip": "2026-11-13T01:00Z",
    "name": "Cody Williams",
    "team": "MIN",
    "opp": "DAL",
@@ -3187,6 +3363,8 @@
    "played": true
   },
   {
+   "slug": "morez-johnson-20060125",
+   "tip": "2026-11-13T01:00Z",
    "name": "Morez Johnson Jr.",
    "team": "DAL",
    "opp": "MIN",

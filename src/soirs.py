@@ -54,7 +54,11 @@ def load_pool(nights: int):
     calib = json.loads((DATA / "calibration.json").read_text(encoding="utf-8"))
 
     print("Calendrier ESPN...")
-    sched = [g for g in espn.schedule(espn.us_tonight(), nights) if g["status"] == "STATUS_SCHEDULED"]
+    # Le matin, la nuit US d'hier est finie : on prend un jour de plus et on garde
+    # les `nights` premiers soirs qui ont encore des matchs à venir.
+    sched = [g for g in espn.schedule(espn.us_tonight(), nights + 1) if g["status"] == "STATUS_SCHEDULED"]
+    keep = sorted({g["night"] for g in sched})[:nights]
+    sched = [g for g in sched if g["night"] in keep]
     print("Compos RotoWire du soir...")
     try:
         rw = rotowire.fetch()
@@ -89,7 +93,7 @@ def load_pool(nights: int):
     for g in sorted(sched, key=lambda g: g["tip_utc"]):
         for team in (g["away"], g["home"]):
             first_game.setdefault(team, g)
-    tonight = espn.us_tonight().isoformat()
+    tonight = min((g["night"] for g in sched), default="")  # soir des compos RotoWire
     played_night_before = {(t, g["night"]) for g in sched for t in (g["away"], g["home"])}
 
     in_window = [p for p in players if (p.get("activeClub") or {}).get("code") in first_game]
