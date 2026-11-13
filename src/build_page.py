@@ -91,6 +91,9 @@ def main():
             "Joueur Day-To-Day chez ESPN, sans autre info": f"{model.P_PLAY_DAY_TO_DAY:.0%} de chances de jouer",
             "Statuts RotoWire Prob / Ques / Doubt sans pourcentage": ", ".join(
                 f"{k} {v:.0%}" for k, v in model.P_PLAY_ROTOWIRE.items()),
+            "Fin de banc (pas titulaire, moins de 20 min d'habitude)": (
+                "chance de jouer = part de ses 10 derniers matchs où il est entré en jeu "
+                "(vérifié le 12/11 : 56 % prévu, 55 % ont joué)"),
             "Remplaçant promu": f"titulaire ce soir et moins de {model.PROMO_MAX_USUAL_MIN} min d'habitude",
             "Match sans cotes": "joué serré, total = 2 x moyenne de la ligue",
             "Double-double et triple-double": "bonus ignorés dans l'estimation (1 point chacun au plus)",

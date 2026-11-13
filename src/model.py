@@ -17,6 +17,8 @@ P_PLAY_DAY_TO_DAY = 0.6   # blessé "Day-To-Day" sans autre info
 P_PLAY_ROTOWIRE = {"prob": 0.85, "ques": 0.5, "doubt": 0.2}
 PROMO_MAX_USUAL_MIN = 24  # titulaire ce soir mais moins de 24 min d'habitude = promu
 MIN_SD_FLOOR = 3.0        # incertitude minimale sur les minutes
+# --- Mesuré avec le journal des soirs ---
+BENCH_MAX_USUAL_MIN = 20  # sous 20 min d'habitude et pas titulaire : chance de jouer = taux d'apparition récent
 # -------------------------------------------------------------------------
 
 
@@ -86,6 +88,16 @@ def build_player(p, games_hist, bonus, edition, game, lineup, inj_espn, now_utc)
         pct = 1.0
         pct_src = ("Aucune blessure signalée (RotoWire, ESPN, Sorare)" if not lineup
                    else "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN")
+        # Fin de banc : même en bonne santé, il ne rentre pas à chaque match.
+        # Mesuré le 12/11 : taux d'apparition récent 56 %, ont joué 55 %.
+        recent_games = [g for g in games_hist
+                        if (g.get("basketballGame") or {}).get("statusTyped") == "played"][:10]
+        if not starter and usual < BENCH_MAX_USUAL_MIN and recent_games:
+            seen = sum((g.get("minsPlayed") or 0) > 0 for g in recent_games)
+            if seen < len(recent_games):
+                pct = seen / len(recent_games)
+                pct_src += f". Fin de banc : entré en jeu {seen} fois sur ses {len(recent_games)} derniers matchs, compté {pct:.0%}"
+                reasons.append(f"banc, joue {pct:.0%} des matchs")
 
     promoted = bool(starter) and usual < PROMO_MAX_USUAL_MIN
     top3 = st.mean(sorted(mins, reverse=True)[:3])

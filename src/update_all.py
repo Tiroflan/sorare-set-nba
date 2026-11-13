@@ -37,6 +37,16 @@ def main():
     if age_h(DATA / "calibration.json") > 24 * 7:
         run("src/history.py")
         run("src/calibrate.py")
+    # Bilan du soir qui vient de finir, une fois (passage du matin).
+    sys.path.insert(0, str(ROOT / "src"))
+    import espn
+    night = espn.us_tonight()
+    if time.localtime().tm_hour < 12 and (ROOT / "journal" / f"{night}.json").exists() \
+            and not (ROOT / "journal" / f"bilan-{night}.json").exists():
+        try:
+            run("src/bilan.py", night)
+        except subprocess.CalledProcessError as e:
+            print(f"Bilan non fait : {e}")
     run("src/build_page.py", "--nuits", a.nuits)
 
 
