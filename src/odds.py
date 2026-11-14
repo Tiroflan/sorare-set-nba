@@ -213,6 +213,12 @@ def fetch_all():
             print(f"  Bovada indisponible ({e})")
         if props:
             break
+        try:  # diagnostic : que renvoie Bovada quand il n'y a pas de props ?
+            descs = [m.get("description", "") for e in events for dg in e.get("displayGroups", []) for m in dg.get("markets", [])]
+            print(f"  essai {attempt + 1} : {len(events)} matchs, {len(descs)} marchés, "
+                  f"{sum(d.startswith('Total Points - ') for d in descs)} marchés points joueur")
+        except Exception:
+            pass
         time.sleep(20)
     if props:
         PROPS_CACHE.parent.mkdir(exist_ok=True)
