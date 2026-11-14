@@ -7,7 +7,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -53,7 +53,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -99,7 +99,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -145,7 +145,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -191,7 +191,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.1,
@@ -237,7 +237,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -281,7 +281,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.7,
@@ -327,7 +327,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -374,7 +374,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -418,7 +418,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -464,7 +464,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -510,7 +510,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 4.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -556,7 +556,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -603,7 +603,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -649,7 +649,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 0.6,
@@ -695,7 +695,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -742,7 +742,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -788,7 +788,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.4,
@@ -834,7 +834,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -880,7 +880,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -926,7 +926,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.1,
@@ -972,7 +972,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1018,7 +1018,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.4,
@@ -1064,7 +1064,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.4,
@@ -1110,7 +1110,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -1156,7 +1156,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1200,7 +1200,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.9,
@@ -1246,7 +1246,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1290,7 +1290,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1336,7 +1336,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1382,7 +1382,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.8,
@@ -1428,7 +1428,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1474,7 +1474,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1520,7 +1520,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1564,7 +1564,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1610,7 +1610,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.8,
@@ -1656,7 +1656,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1700,7 +1700,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.25,
@@ -1744,7 +1744,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.75,
@@ -1790,7 +1790,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.75,
@@ -1834,7 +1834,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -1880,7 +1880,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1926,7 +1926,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1970,7 +1970,7 @@
    "opp": "MEM",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 0.75,
@@ -2016,7 +2016,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2062,7 +2062,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2106,7 +2106,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2152,7 +2152,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.4,
@@ -2198,7 +2198,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.2,
@@ -2244,7 +2244,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -2290,7 +2290,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2334,7 +2334,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2378,7 +2378,7 @@
    "opp": "CLE",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2424,7 +2424,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.2,
@@ -2470,7 +2470,7 @@
    "opp": "CHI",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.2,
@@ -2516,7 +2516,7 @@
    "opp": "NOP",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2562,7 +2562,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.5,
    "bonus": 0.1,
    "pct": 1.0,
@@ -2609,7 +2609,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.9,
@@ -2656,7 +2656,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2703,7 +2703,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -2749,7 +2749,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.8,
@@ -2796,7 +2796,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2844,7 +2844,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2891,7 +2891,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.8,
@@ -2938,7 +2938,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.3,
@@ -2985,7 +2985,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -3031,7 +3031,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3077,7 +3077,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -3124,7 +3124,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.9,
@@ -3171,7 +3171,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3218,7 +3218,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.15,
    "pct": 0.5,
@@ -3264,7 +3264,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -3311,7 +3311,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.2,
@@ -3358,7 +3358,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 0.5,
@@ -3405,7 +3405,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -3452,7 +3452,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3499,7 +3499,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3546,7 +3546,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -3593,7 +3593,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3640,7 +3640,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3687,7 +3687,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.3,
@@ -3733,7 +3733,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.75,
@@ -3779,7 +3779,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.7,
@@ -3826,7 +3826,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3872,7 +3872,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3919,7 +3919,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3965,7 +3965,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4012,7 +4012,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 0.5,
@@ -4059,7 +4059,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.3,
@@ -4105,7 +4105,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -4151,7 +4151,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.6,
@@ -4198,7 +4198,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.4,
@@ -4245,7 +4245,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.25,
@@ -4291,7 +4291,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -4338,7 +4338,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -4384,7 +4384,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.8,
@@ -4431,7 +4431,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4478,7 +4478,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -4524,7 +4524,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -4570,7 +4570,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.7,
@@ -4617,7 +4617,7 @@
    "opp": "DAL",
    "game": "DAL@CLE:2026-11-14",
    "tip": "2026-11-15T00:30Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.7,
@@ -4664,7 +4664,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -4710,7 +4710,7 @@
    "opp": "DET",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -4756,7 +4756,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4802,7 +4802,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -4848,7 +4848,7 @@
    "opp": "DEN",
    "game": "DEN@NOP:2026-11-14",
    "tip": "2026-11-15T00:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 0.75,
@@ -4895,7 +4895,7 @@
    "opp": "MIN",
    "game": "CHI@MIN:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -4941,7 +4941,7 @@
    "opp": "BKN",
    "game": "BKN@MEM:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -4988,7 +4988,7 @@
    "opp": "MIA",
    "game": "DET@MIA:2026-11-14",
    "tip": "2026-11-15T01:00Z",
-   "recorded": "2026-11-14T21:34Z",
+   "recorded": "2026-11-14T21:41Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.7,
@@ -5030,35 +5030,8 @@
   }
  },
  "teams": {
-  "recorded": "2026-11-14T21:34Z",
+  "recorded": "2026-11-14T21:41Z",
   "list": [
-   {
-    "slugs": [
-     "ivica-zubac-19970318",
-     "isaiah-hartenstein-19980505",
-     "darryn-peterson-20070117",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Isaiah Hartenstein",
-     "Darryn Peterson",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 210.3,
-    "p": {
-     "150": 0.9714,
-     "180": 0.8066,
-     "210": 0.4765,
-     "240": 0.1889,
-     "270": 0.0549,
-     "290": 0.0204
-    }
-   },
    {
     "slugs": [
      "ivica-zubac-19970318",
@@ -5076,14 +5049,14 @@
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 210.5,
+    "mu": 207.4,
     "p": {
-     "150": 0.9733,
-     "180": 0.8092,
-     "210": 0.4763,
-     "240": 0.1854,
-     "270": 0.0528,
-     "290": 0.0185
+     "150": 0.966,
+     "180": 0.7855,
+     "210": 0.4453,
+     "240": 0.1681,
+     "270": 0.0476,
+     "290": 0.0167
     }
    },
    {
@@ -5103,95 +5076,203 @@
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:00Z",
-    "mu": 209.4,
+    "mu": 206.3,
     "p": {
-     "150": 0.9725,
-     "180": 0.7969,
-     "210": 0.4545,
-     "240": 0.1791,
-     "270": 0.0501,
-     "290": 0.0193
+     "150": 0.966,
+     "180": 0.7735,
+     "210": 0.4243,
+     "240": 0.1656,
+     "270": 0.0458,
+     "290": 0.0174
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "cam-spencer-20000406",
-     "darryn-peterson-20070117",
-     "anthony-davis-19930311",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Cam Spencer",
-     "Darryn Peterson",
-     "Anthony Davis",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 209.2,
-    "p": {
-     "150": 0.9698,
-     "180": 0.7971,
-     "210": 0.4547,
-     "240": 0.1743,
-     "270": 0.0519,
-     "290": 0.0183
-    }
-   },
-   {
-    "slugs": [
-     "ivica-zubac-19970318",
-     "alex-sarr-20050426",
+     "isaiah-hartenstein-19980505",
      "darryn-peterson-20070117",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
-     "Alex Sarr",
+     "Isaiah Hartenstein",
      "Darryn Peterson",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 207.6,
+    "mu": 207.3,
     "p": {
-     "150": 0.9668,
-     "180": 0.7809,
-     "210": 0.4486,
-     "240": 0.1727,
-     "270": 0.0491,
-     "290": 0.0179
+     "150": 0.9645,
+     "180": 0.7783,
+     "210": 0.4368,
+     "240": 0.1625,
+     "270": 0.0455,
+     "290": 0.016
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "matas-buzelis-20041013",
-     "darryn-peterson-20070117",
-     "anthony-davis-19930311",
+     "josh-giddey-20021010",
+     "nickeil-alexander-walker-19980902",
+     "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
-     "Matas Buzelis",
-     "Darryn Peterson",
-     "Anthony Davis",
+     "Josh Giddey",
+     "Nickeil Alexander-Walker",
+     "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 206.7,
+    "mu": 205.9,
     "p": {
-     "150": 0.9558,
-     "180": 0.7676,
-     "210": 0.438,
-     "240": 0.1707,
-     "270": 0.0476,
-     "290": 0.0177
+     "150": 0.9626,
+     "180": 0.7737,
+     "210": 0.428,
+     "240": 0.1584,
+     "270": 0.0425,
+     "290": 0.0157
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "isaiah-hartenstein-19980505",
+     "nickeil-alexander-walker-19980902",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Isaiah Hartenstein",
+     "Nickeil Alexander-Walker",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 205.8,
+    "p": {
+     "150": 0.9608,
+     "180": 0.7592,
+     "210": 0.4169,
+     "240": 0.1581,
+     "270": 0.0423,
+     "290": 0.0153
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "josh-giddey-20021010",
+     "kevin-durant-19880929",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Josh Giddey",
+     "Kevin Durant",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 206.8,
+    "p": {
+     "150": 0.9698,
+     "180": 0.7795,
+     "210": 0.4287,
+     "240": 0.1559,
+     "270": 0.0422,
+     "290": 0.0175
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "saddiq-bey-19990409",
+     "kevin-durant-19880929",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Saddiq Bey",
+     "Kevin Durant",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T00:00Z",
+    "mu": 205.7,
+    "p": {
+     "150": 0.9729,
+     "180": 0.7747,
+     "210": 0.4184,
+     "240": 0.1557,
+     "270": 0.042,
+     "290": 0.0151
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "saddiq-bey-19990409",
+     "nickeil-alexander-walker-19980902",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Saddiq Bey",
+     "Nickeil Alexander-Walker",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T00:00Z",
+    "mu": 204.8,
+    "p": {
+     "150": 0.962,
+     "180": 0.7527,
+     "210": 0.4063,
+     "240": 0.1546,
+     "270": 0.0417,
+     "290": 0.0139
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "isaiah-hartenstein-19980505",
+     "kevin-durant-19880929",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Isaiah Hartenstein",
+     "Kevin Durant",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 206.8,
+    "p": {
+     "150": 0.9727,
+     "180": 0.7898,
+     "210": 0.4247,
+     "240": 0.1533,
+     "270": 0.0401,
+     "290": 0.0129
     }
    },
    {
@@ -5211,41 +5292,230 @@
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 208.7,
+    "mu": 204.8,
     "p": {
-     "150": 0.972,
-     "180": 0.8015,
-     "210": 0.4504,
-     "240": 0.1698,
-     "270": 0.0475,
-     "290": 0.0169
+     "150": 0.9612,
+     "180": 0.7565,
+     "210": 0.4026,
+     "240": 0.1495,
+     "270": 0.0401,
+     "290": 0.0145
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "ivica-zubac-19970318",
+     "darryn-peterson-20070117",
+     "anthony-davis-19930311",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Ivica Zubac",
+     "Darryn Peterson",
+     "Anthony Davis",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 204.0,
+    "p": {
+     "150": 0.9569,
+     "180": 0.7547,
+     "210": 0.4076,
+     "240": 0.1481,
+     "270": 0.0384,
+     "290": 0.0135
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "cam-spencer-20000406",
-     "darryn-peterson-20070117",
+     "josh-giddey-20021010",
+     "isaiah-hartenstein-19980505",
+     "anthony-davis-19930311",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Josh Giddey",
+     "Isaiah Hartenstein",
+     "Anthony Davis",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 203.0,
+    "p": {
+     "150": 0.9477,
+     "180": 0.7354,
+     "210": 0.3982,
+     "240": 0.1477,
+     "270": 0.037,
+     "290": 0.0125
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "isaiah-hartenstein-19980505",
+     "saddiq-bey-19990409",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
+     "Isaiah Hartenstein",
+     "Saddiq Bey",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-15T00:00Z",
+    "mu": 202.4,
+    "p": {
+     "150": 0.9489,
+     "180": 0.7322,
+     "210": 0.3865,
+     "240": 0.1477,
+     "270": 0.042,
+     "290": 0.0147
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "ivica-zubac-19970318",
+     "darryn-peterson-20070117",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
      "Cam Spencer",
+     "Ivica Zubac",
      "Darryn Peterson",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 15.5,
     "lock": "2026-11-15T01:00Z",
-    "mu": 207.6,
+    "mu": 204.5,
     "p": {
-     "150": 0.9715,
-     "180": 0.7953,
-     "210": 0.4459,
-     "240": 0.1669,
-     "270": 0.0453,
-     "290": 0.0159
+     "150": 0.9644,
+     "180": 0.7617,
+     "210": 0.4021,
+     "240": 0.1474,
+     "270": 0.0386,
+     "290": 0.0138
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "ivica-zubac-19970318",
+     "josh-giddey-20021010",
+     "cooper-flagg-20061221",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Ivica Zubac",
+     "Josh Giddey",
+     "Cooper Flagg",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T00:30Z",
+    "mu": 202.1,
+    "p": {
+     "150": 0.9393,
+     "180": 0.7187,
+     "210": 0.3874,
+     "240": 0.1462,
+     "270": 0.0402,
+     "290": 0.0153
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "josh-giddey-20021010",
+     "darryn-peterson-20070117",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Josh Giddey",
+     "Darryn Peterson",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 207.8,
+    "p": {
+     "150": 0.9819,
+     "180": 0.8298,
+     "210": 0.4533,
+     "240": 0.1449,
+     "270": 0.0291,
+     "290": 0.0084
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "ivica-zubac-19970318",
+     "isaiah-hartenstein-19980505",
+     "cooper-flagg-20061221",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Ivica Zubac",
+     "Isaiah Hartenstein",
+     "Cooper Flagg",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T00:30Z",
+    "mu": 202.1,
+    "p": {
+     "150": 0.9379,
+     "180": 0.7145,
+     "210": 0.3834,
+     "240": 0.1449,
+     "270": 0.0414,
+     "290": 0.0149
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "isaiah-hartenstein-19980505",
+     "keyonte-george-20031108",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Isaiah Hartenstein",
+     "Keyonte George",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 203.1,
+    "p": {
+     "150": 0.9509,
+     "180": 0.7316,
+     "210": 0.3908,
+     "240": 0.1446,
+     "270": 0.0363,
+     "290": 0.0125
     }
    },
    {
@@ -5265,14 +5535,95 @@
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 205.9,
+    "mu": 203.1,
     "p": {
-     "150": 0.9615,
-     "180": 0.7685,
-     "210": 0.425,
-     "240": 0.1639,
-     "270": 0.0453,
-     "290": 0.0161
+     "150": 0.9555,
+     "180": 0.742,
+     "210": 0.4015,
+     "240": 0.1443,
+     "270": 0.0412,
+     "290": 0.0123
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "isaiah-hartenstein-19980505",
+     "darryn-peterson-20070117",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Isaiah Hartenstein",
+     "Darryn Peterson",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 207.8,
+    "p": {
+     "150": 0.9815,
+     "180": 0.8237,
+     "210": 0.4463,
+     "240": 0.1441,
+     "270": 0.0284,
+     "290": 0.0068
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "josh-giddey-20021010",
+     "saddiq-bey-19990409",
+     "anthony-davis-19930311",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Josh Giddey",
+     "Saddiq Bey",
+     "Anthony Davis",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-15T00:00Z",
+    "mu": 202.0,
+    "p": {
+     "150": 0.9418,
+     "180": 0.7176,
+     "210": 0.3811,
+     "240": 0.1441,
+     "270": 0.0394,
+     "290": 0.0151
+    }
+   },
+   {
+    "slugs": [
+     "ivica-zubac-19970318",
+     "josh-giddey-20021010",
+     "isaiah-hartenstein-19980505",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Ivica Zubac",
+     "Josh Giddey",
+     "Isaiah Hartenstein",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 203.5,
+    "p": {
+     "150": 0.9523,
+     "180": 0.7425,
+     "210": 0.3967,
+     "240": 0.1438,
+     "270": 0.0376,
+     "290": 0.0143
     }
    },
    {
@@ -5292,499 +5643,310 @@
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 206.2,
+    "mu": 203.1,
     "p": {
-     "150": 0.9576,
-     "180": 0.7717,
-     "210": 0.4347,
-     "240": 0.1619,
-     "270": 0.0431,
-     "290": 0.0157
+     "150": 0.947,
+     "180": 0.7403,
+     "210": 0.3984,
+     "240": 0.1438,
+     "270": 0.0386,
+     "290": 0.0131
     }
    },
    {
     "slugs": [
+     "cam-spencer-20000406",
      "ivica-zubac-19970318",
-     "bones-hyland-20000914",
-     "darryn-peterson-20070117",
-     "anthony-davis-19930311",
+     "saddiq-bey-19990409",
+     "cooper-flagg-20061221",
      "victor-wembanyama-20040104"
     ],
     "names": [
+     "Cam Spencer",
      "Ivica Zubac",
-     "Bones Hyland",
-     "Darryn Peterson",
-     "Anthony Davis",
+     "Saddiq Bey",
+     "Cooper Flagg",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 204.3,
+    "lock": "2026-11-15T00:00Z",
+    "mu": 201.0,
     "p": {
-     "150": 0.9412,
-     "180": 0.7315,
-     "210": 0.4063,
-     "240": 0.1591,
-     "270": 0.0436,
-     "290": 0.0162
+     "150": 0.9308,
+     "180": 0.7015,
+     "210": 0.3749,
+     "240": 0.1427,
+     "270": 0.0407,
+     "290": 0.0163
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
      "isaiah-hartenstein-19980505",
-     "kevin-durant-19880929",
+     "immanuel-quickley-19990617",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
      "Isaiah Hartenstein",
-     "Kevin Durant",
+     "Immanuel Quickley",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 206.3,
+    "mu": 203.5,
     "p": {
-     "150": 0.9715,
-     "180": 0.7866,
-     "210": 0.4257,
-     "240": 0.1583,
-     "270": 0.0429,
-     "290": 0.0152
+     "150": 0.9571,
+     "180": 0.7486,
+     "210": 0.3967,
+     "240": 0.1427,
+     "270": 0.0372,
+     "290": 0.0124
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
      "josh-giddey-20021010",
-     "isaiah-hartenstein-19980505",
-     "anthony-davis-19930311",
+     "saddiq-bey-19990409",
+     "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
      "Josh Giddey",
-     "Isaiah Hartenstein",
+     "Saddiq Bey",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-15T00:00Z",
+    "mu": 202.5,
+    "p": {
+     "150": 0.9507,
+     "180": 0.7302,
+     "210": 0.3831,
+     "240": 0.1426,
+     "270": 0.0372,
+     "290": 0.0132
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "ivica-zubac-19970318",
+     "nickeil-alexander-walker-19980902",
+     "anthony-davis-19930311",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Ivica Zubac",
+     "Nickeil Alexander-Walker",
      "Anthony Davis",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 204.7,
+    "mu": 202.5,
     "p": {
-     "150": 0.9496,
-     "180": 0.7505,
-     "210": 0.4119,
-     "240": 0.1583,
-     "270": 0.0447,
-     "290": 0.0165
-    }
-   },
-   {
-    "slugs": [
-     "ivica-zubac-19970318",
-     "josh-giddey-20021010",
-     "kevin-durant-19880929",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Josh Giddey",
-     "Kevin Durant",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 206.6,
-    "p": {
-     "150": 0.973,
-     "180": 0.7911,
-     "210": 0.4264,
-     "240": 0.1577,
-     "270": 0.0437,
-     "290": 0.0147
+     "150": 0.9564,
+     "180": 0.7417,
+     "210": 0.3854,
+     "240": 0.1413,
+     "270": 0.0359,
+     "290": 0.0135
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
      "matas-buzelis-20041013",
-     "darryn-peterson-20070117",
-     "bam-adebayo-19970718",
+     "isaiah-hartenstein-19980505",
+     "cooper-flagg-20061221",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
      "Matas Buzelis",
-     "Darryn Peterson",
-     "Bam Adebayo",
+     "Isaiah Hartenstein",
+     "Cooper Flagg",
      "Victor Wembanyama"
     ],
-    "stars": 15.5,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 205.2,
+    "stars": 16.0,
+    "lock": "2026-11-15T00:30Z",
+    "mu": 199.7,
     "p": {
-     "150": 0.9595,
-     "180": 0.7633,
-     "210": 0.4183,
-     "240": 0.1567,
-     "270": 0.0398,
-     "290": 0.0119
+     "150": 0.9195,
+     "180": 0.6823,
+     "210": 0.3657,
+     "240": 0.1411,
+     "270": 0.0391,
+     "290": 0.0133
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
      "isaiah-hartenstein-19980505",
-     "keyonte-george-20031108",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Isaiah Hartenstein",
-     "Keyonte George",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 205.7,
-    "p": {
-     "150": 0.9643,
-     "180": 0.7699,
-     "210": 0.4291,
-     "240": 0.1563,
-     "270": 0.0429,
-     "290": 0.0157
-    }
-   },
-   {
-    "slugs": [
-     "cam-spencer-20000406",
-     "isaiah-hartenstein-19980505",
-     "darryn-peterson-20070117",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Cam Spencer",
-     "Isaiah Hartenstein",
-     "Darryn Peterson",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 209.7,
-    "p": {
-     "150": 0.9841,
-     "180": 0.8401,
-     "210": 0.4723,
-     "240": 0.1561,
-     "270": 0.033,
-     "290": 0.0095
-    }
-   },
-   {
-    "slugs": [
-     "ivica-zubac-19970318",
      "saddiq-bey-19990409",
-     "keyonte-george-20031108",
-     "bam-adebayo-19970718",
+     "anthony-davis-19930311",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
+     "Isaiah Hartenstein",
      "Saddiq Bey",
-     "Keyonte George",
-     "Bam Adebayo",
+     "Anthony Davis",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:00Z",
-    "mu": 204.8,
+    "mu": 201.9,
     "p": {
-     "150": 0.9601,
-     "180": 0.7573,
-     "210": 0.4107,
-     "240": 0.156,
-     "270": 0.0451,
-     "290": 0.0157
+     "150": 0.9415,
+     "180": 0.7122,
+     "210": 0.376,
+     "240": 0.1407,
+     "270": 0.0388,
+     "290": 0.0132
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "cam-spencer-20000406",
-     "keyonte-george-20031108",
-     "anthony-davis-19930311",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Cam Spencer",
-     "Keyonte George",
-     "Anthony Davis",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 204.5,
-    "p": {
-     "150": 0.9567,
-     "180": 0.7525,
-     "210": 0.4125,
-     "240": 0.1557,
-     "270": 0.0443,
-     "290": 0.0163
-    }
-   },
-   {
-    "slugs": [
-     "cam-spencer-20000406",
-     "josh-giddey-20021010",
-     "darryn-peterson-20070117",
+     "isaiah-hartenstein-19980505",
+     "vj-edgecombe-20050730",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
-     "Cam Spencer",
-     "Josh Giddey",
-     "Darryn Peterson",
+     "Ivica Zubac",
+     "Isaiah Hartenstein",
+     "VJ Edgecombe",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 210.0,
+    "mu": 202.9,
     "p": {
-     "150": 0.9866,
-     "180": 0.8516,
-     "210": 0.4832,
-     "240": 0.1536,
-     "270": 0.0299,
-     "290": 0.0076
+     "150": 0.9529,
+     "180": 0.7349,
+     "210": 0.3877,
+     "240": 0.1401,
+     "270": 0.0377,
+     "290": 0.014
     }
    },
    {
     "slugs": [
-     "ivica-zubac-19970318",
-     "aaron-gordon-19950916",
-     "darryn-peterson-20070117",
-     "anthony-davis-19930311",
+     "josh-giddey-20021010",
+     "isaiah-hartenstein-19980505",
+     "saddiq-bey-19990409",
+     "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
-     "Ivica Zubac",
-     "Aaron Gordon",
-     "Darryn Peterson",
-     "Anthony Davis",
+     "Josh Giddey",
+     "Isaiah Hartenstein",
+     "Saddiq Bey",
+     "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:00Z",
-    "mu": 204.5,
+    "mu": 205.8,
     "p": {
-     "150": 0.9514,
-     "180": 0.7465,
-     "210": 0.4089,
-     "240": 0.153,
-     "270": 0.0447,
-     "290": 0.0147
+     "150": 0.9709,
+     "180": 0.7889,
+     "210": 0.4203,
+     "240": 0.1393,
+     "270": 0.0321,
+     "290": 0.0087
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "cam-spencer-20000406",
+     "matas-buzelis-20041013",
      "josh-giddey-20021010",
      "cooper-flagg-20061221",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
-     "Cam Spencer",
+     "Matas Buzelis",
      "Josh Giddey",
      "Cooper Flagg",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:30Z",
-    "mu": 202.0,
+    "mu": 199.7,
     "p": {
-     "150": 0.9398,
-     "180": 0.7143,
-     "210": 0.3876,
-     "240": 0.152,
-     "270": 0.0437,
-     "290": 0.0155
+     "150": 0.9203,
+     "180": 0.6925,
+     "210": 0.3707,
+     "240": 0.139,
+     "270": 0.0381,
+     "290": 0.0145
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "josh-giddey-20021010",
-     "nickeil-alexander-walker-19980902",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Josh Giddey",
-     "Nickeil Alexander-Walker",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 204.8,
-    "p": {
-     "150": 0.9602,
-     "180": 0.7625,
-     "210": 0.4063,
-     "240": 0.1511,
-     "270": 0.0397,
-     "290": 0.0125
-    }
-   },
-   {
-    "slugs": [
-     "matas-buzelis-20041013",
-     "josh-giddey-20021010",
-     "darryn-peterson-20070117",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Matas Buzelis",
-     "Josh Giddey",
-     "Darryn Peterson",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 207.5,
-    "p": {
-     "150": 0.9726,
-     "180": 0.8102,
-     "210": 0.4491,
-     "240": 0.1499,
-     "270": 0.0325,
-     "290": 0.0083
-    }
-   },
-   {
-    "slugs": [
-     "ivica-zubac-19970318",
-     "jared-mccain-20040220",
-     "darryn-peterson-20070117",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Jared McCain",
-     "Darryn Peterson",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 203.0,
-    "p": {
-     "150": 0.9471,
-     "180": 0.7337,
-     "210": 0.3896,
-     "240": 0.149,
-     "270": 0.0409,
-     "290": 0.0136
-    }
-   },
-   {
-    "slugs": [
-     "cam-spencer-20000406",
      "saddiq-bey-19990409",
-     "darryn-peterson-20070117",
+     "vj-edgecombe-20050730",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
-     "Cam Spencer",
+     "Ivica Zubac",
      "Saddiq Bey",
-     "Darryn Peterson",
+     "VJ Edgecombe",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:00Z",
-    "mu": 208.9,
+    "mu": 201.8,
     "p": {
-     "150": 0.9863,
-     "180": 0.8315,
-     "210": 0.4567,
-     "240": 0.1483,
-     "270": 0.0329,
-     "290": 0.0096
+     "150": 0.9495,
+     "180": 0.7252,
+     "210": 0.3725,
+     "240": 0.1381,
+     "270": 0.0365,
+     "290": 0.0131
     }
    },
    {
     "slugs": [
+     "cam-spencer-20000406",
      "ivica-zubac-19970318",
-     "isaiah-hartenstein-19980505",
-     "nickeil-alexander-walker-19980902",
-     "bam-adebayo-19970718",
+     "kevin-durant-19880929",
+     "anthony-davis-19930311",
      "victor-wembanyama-20040104"
     ],
     "names": [
+     "Cam Spencer",
      "Ivica Zubac",
-     "Isaiah Hartenstein",
-     "Nickeil Alexander-Walker",
-     "Bam Adebayo",
+     "Kevin Durant",
+     "Anthony Davis",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 204.6,
+    "mu": 203.4,
     "p": {
-     "150": 0.9595,
-     "180": 0.7549,
-     "210": 0.4104,
-     "240": 0.1481,
-     "270": 0.0394,
-     "290": 0.0127
-    }
-   },
-   {
-    "slugs": [
-     "ivica-zubac-19970318",
-     "bones-hyland-20000914",
-     "darryn-peterson-20070117",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Ivica Zubac",
-     "Bones Hyland",
-     "Darryn Peterson",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-15T01:00Z",
-    "mu": 202.7,
-    "p": {
-     "150": 0.9457,
-     "180": 0.7255,
-     "210": 0.3893,
-     "240": 0.1477,
-     "270": 0.0389,
+     "150": 0.9627,
+     "180": 0.7516,
+     "210": 0.3857,
+     "240": 0.1367,
+     "270": 0.0349,
      "290": 0.0121
     }
    },
@@ -5792,108 +5954,135 @@
     "slugs": [
      "ivica-zubac-19970318",
      "saddiq-bey-19990409",
-     "kevin-durant-19880929",
+     "immanuel-quickley-19990617",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
      "Saddiq Bey",
-     "Kevin Durant",
+     "Immanuel Quickley",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:00Z",
-    "mu": 205.5,
+    "mu": 202.4,
     "p": {
-     "150": 0.9721,
-     "180": 0.7685,
-     "210": 0.4092,
-     "240": 0.1476,
-     "270": 0.0386,
-     "290": 0.0143
+     "150": 0.9593,
+     "180": 0.7358,
+     "210": 0.3781,
+     "240": 0.1366,
+     "270": 0.0369,
+     "290": 0.0125
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "josh-giddey-20021010",
-     "alex-sarr-20050426",
-     "anthony-davis-19930311",
+     "matas-buzelis-20041013",
+     "darryn-peterson-20070117",
+     "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
-     "Josh Giddey",
-     "Alex Sarr",
-     "Anthony Davis",
+     "Matas Buzelis",
+     "Darryn Peterson",
+     "Bam Adebayo",
      "Victor Wembanyama"
     ],
-    "stars": 16.0,
+    "stars": 15.5,
     "lock": "2026-11-15T01:00Z",
     "mu": 202.0,
     "p": {
-     "150": 0.9367,
-     "180": 0.7146,
-     "210": 0.3849,
-     "240": 0.1473,
-     "270": 0.0395,
-     "290": 0.0138
+     "150": 0.9507,
+     "180": 0.7337,
+     "210": 0.3801,
+     "240": 0.1365,
+     "270": 0.0375,
+     "290": 0.0125
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "isaiah-hartenstein-19980505",
      "saddiq-bey-19990409",
-     "anthony-davis-19930311",
+     "keyonte-george-20031108",
+     "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
-     "Isaiah Hartenstein",
      "Saddiq Bey",
-     "Anthony Davis",
+     "Keyonte George",
+     "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T00:00Z",
-    "mu": 203.6,
+    "mu": 202.0,
     "p": {
-     "150": 0.9487,
-     "180": 0.7335,
-     "210": 0.3981,
-     "240": 0.147,
-     "270": 0.0431,
-     "290": 0.0159
+     "150": 0.9536,
+     "180": 0.7285,
+     "210": 0.3807,
+     "240": 0.1364,
+     "270": 0.0353,
+     "290": 0.0129
     }
    },
    {
     "slugs": [
      "ivica-zubac-19970318",
-     "josh-giddey-20021010",
-     "darryn-peterson-20070117",
-     "miles-bridges-19980321",
+     "darius-garland-20000126",
+     "kevin-durant-19880929",
+     "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Ivica Zubac",
-     "Josh Giddey",
-     "Darryn Peterson",
-     "Miles Bridges",
+     "Darius Garland",
+     "Kevin Durant",
+     "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 16.0,
     "lock": "2026-11-15T01:00Z",
-    "mu": 201.7,
+    "mu": 204.3,
     "p": {
-     "150": 0.9373,
-     "180": 0.7169,
-     "210": 0.3866,
-     "240": 0.1469,
-     "270": 0.0401,
-     "290": 0.0155
+     "150": 0.9686,
+     "180": 0.7611,
+     "210": 0.3971,
+     "240": 0.1361,
+     "270": 0.0378,
+     "290": 0.0123
+    }
+   },
+   {
+    "slugs": [
+     "cam-spencer-20000406",
+     "ivica-zubac-19970318",
+     "kevin-durant-19880929",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Cam Spencer",
+     "Ivica Zubac",
+     "Kevin Durant",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-15T01:00Z",
+    "mu": 203.9,
+    "p": {
+     "150": 0.971,
+     "180": 0.7594,
+     "210": 0.3918,
+     "240": 0.1361,
+     "270": 0.0335,
+     "290": 0.0113
     }
    }
   ]
