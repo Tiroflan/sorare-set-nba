@@ -15,7 +15,9 @@ import json
 import math
 import re
 import statistics as st
+import time
 import urllib.request
+from pathlib import Path
 from statistics import NormalDist
 
 from model import norm
@@ -190,15 +192,42 @@ def expected_stats(prop) -> dict:
     return out
 
 
+PROPS_CACHE = Path(__file__).resolve().parent.parent / "data" / "props_cache.json"
+PROPS_MAX_AGE_H = 4
+
+
 def fetch_all():
-    """Lignes de match fusionnées (Pinnacle prioritaire) et props Bovada."""
+    """Lignes de match fusionnées (Pinnacle prioritaire) et props Bovada.
+
+    Bovada renvoie parfois les matchs sans aucun marché joueur : on réessaie,
+    puis on reprend les dernières props reçues (moins de 4 h) plutôt que de
+    retomber sans prévenir sur l'historique pour tout le monde.
+    """
     lines, props = {}, {}
-    try:
-        events = bovada_events()
-        lines.update(bovada_lines(events))
-        props = bovada_props(events)
-    except Exception as e:
-        print(f"  Bovada indisponible ({e})")
+    for attempt in range(3):
+        try:
+            events = bovada_events()
+            lines.update(bovada_lines(events))
+            props = bovada_props(events)
+        except Exception as e:
+            print(f"  Bovada indisponible ({e})")
+        if props:
+            break
+        time.sleep(20)
+    if props:
+        PROPS_CACHE.parent.mkdir(exist_ok=True)
+        PROPS_CACHE.write_text(json.dumps({"at": time.time(), "props": props}, ensure_ascii=False), encoding="utf-8")
+        print(f"  props Bovada : {len(props)} joueurs")
+    elif PROPS_CACHE.exists():
+        c = json.loads(PROPS_CACHE.read_text(encoding="utf-8"))
+        age = (time.time() - c["at"]) / 3600
+        if age < PROPS_MAX_AGE_H:
+            props = {k: dict(v, lines={s: [tuple(x) for x in l] for s, l in v["lines"].items()}) for k, v in c["props"].items()}
+            print(f"  props Bovada vides : reprise des props d'il y a {age:.1f} h ({len(props)} joueurs)")
+        else:
+            print("  props Bovada vides, cache trop vieux : historique pour tout le monde")
+    else:
+        print("  props Bovada vides : historique pour tout le monde")
     try:
         lines.update(pinnacle_lines())
     except Exception as e:
