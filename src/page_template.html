@@ -58,7 +58,7 @@ button.act { border: 1px solid var(--line); background: var(--card); color: var(
 button.act.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 button.icon { border: 0; background: var(--chip); color: var(--ink); width: 32px; height: 32px; border-radius: 50%;
   font-size: 18px; line-height: 1; flex: 0 0 auto; }
-input[type=search] { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
+input[type=search], input[type=password] { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
   background: var(--card); color: var(--ink); font: inherit; }
 .filters { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
 .filters button { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
@@ -93,9 +93,11 @@ nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 8px; flex: 1 0
 </style>
 </head>
 <body>
-<header>
-  <h1>Set NBA Planner</h1>
-  <div class="sub" id="meta"></div>
+<header class="row">
+  <div class="grow"><h1>Set NBA Planner</h1>
+    <div class="sub" id="meta"></div>
+    <div class="sub" id="upd-status"></div></div>
+  <button class="act" id="upd">Mettre à jour</button>
 </header>
 <div class="paliers" id="paliers"></div>
 <nav id="tabs">
@@ -213,6 +215,8 @@ function renderMeta() {
   const nights = [...new Set(D.games.map(g => g.night))].length;
   document.getElementById("meta").textContent =
     `Mis à jour le ${D.generated} · ${nights} soir${nights > 1 ? "s" : ""} · ${D.games.length} matchs`;
+  if (!document.getElementById("upd-status").innerHTML && ghToken())
+    document.getElementById("upd-status").innerHTML = `<a href="#" id="upd-set" class="src">réglage du bouton</a>`;
   document.getElementById("paliers").innerHTML = D.targets.map(t =>
     `<button data-t="${t}" class="${t === target ? "on" : ""}">Palier ${palierOf(t)} · ${t}</button>`).join("");
   const on = document.querySelector("#paliers button.on");
@@ -602,7 +606,82 @@ document.getElementById("paliers").onclick = e => {
   target = +e.target.dataset.t; store.set("target", target); renderMeta();
   const cur = document.querySelector("#tabs button.on").dataset.tab; show(cur);
 };
+
+// ---- Bouton « Mettre à jour » : lance le calcul sur GitHub, puis recharge la page ----
+// Le jeton reste dans ce navigateur (localStorage) ; il n'est jamais dans le dépôt ni dans la page publiée.
+const GH_REPO = "Tiroflan/sorare-set-nba", GH_WF = "update.yml";
+const GH_ACTIONS = `https://github.com/${GH_REPO}/actions/workflows/${GH_WF}`;
+const ghToken = () => store.get("ghToken", "");
+const setUpd = t => { document.getElementById("upd-status").innerHTML = t; };
+async function gh(path, opts = {}) {
+  const r = await fetch(`https://api.github.com/repos/${GH_REPO}${path}`, { ...opts, headers: {
+    Accept: "application/vnd.github+json", Authorization: `Bearer ${ghToken()}`, ...(opts.headers || {}) } });
+  if (!r.ok && r.status !== 204) throw new Error(r.status === 401 || r.status === 403
+    ? "jeton refusé ou expiré" : `GitHub a répondu ${r.status}`);
+  return r.status === 204 ? null : r.json();
+}
+async function launchUpdate() {
+  const btn = document.getElementById("upd");
+  btn.disabled = true;
+  try {
+    const since = Date.now() - 5000;
+    await gh(`/actions/workflows/${GH_WF}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
+    setUpd("Calcul lancé sur GitHub… (3 à 5 min, tu peux laisser la page ouverte)");
+    const t0 = Date.now();
+    const poll = async () => {
+      const runs = (await gh(`/actions/workflows/${GH_WF}/runs?per_page=5`)).workflow_runs || [];
+      const run = runs.find(r => Date.parse(r.created_at) >= since);
+      const min = Math.round((Date.now() - t0) / 60000);
+      if (run && run.status === "completed") {
+        if (run.conclusion !== "success") { setUpd(`Le calcul a échoué (${run.conclusion}). <a href="${run.html_url}">Voir sur GitHub</a>`); btn.disabled = false; return; }
+        setUpd("Calcul fini, publication de la page…");
+        setTimeout(() => { location.href = location.pathname + "?t=" + Date.now(); }, 45000);
+        return;
+      }
+      setUpd(`Calcul en cours sur GitHub… ${min} min`);
+      setTimeout(poll, 15000);
+    };
+    setTimeout(poll, 10000);
+  } catch (e) {
+    setUpd(`Échec : ${esc(e.message)}. <a href="${GH_ACTIONS}">Lancer depuis GitHub</a>`);
+    btn.disabled = false;
+  }
+}
+function tokenSetup() {
+  document.getElementById("sheetbody").innerHTML = `
+    <div class="row"><div class="grow"><h2>Mettre à jour la page</h2></div>
+      <button class="icon" id="close" aria-label="Fermer">×</button></div>
+    <div class="card small">
+      <b>Sans réglage</b> : <a href="${GH_ACTIONS}">ouvre GitHub</a>, puis « Run workflow ». La page se met à jour en 3 à 5 min.
+    </div>
+    <div class="card small"><b>En un bouton</b> (à faire une fois sur ce téléphone) :
+      <ol style="padding-left:18px;margin:6px 0">
+        <li><a href="https://github.com/settings/personal-access-tokens/new">Crée un jeton GitHub « fine-grained »</a>.</li>
+        <li>Repository access : <b>Only select repositories</b>, puis <b>sorare-set-nba</b>.</li>
+        <li>Permissions : <b>Actions</b>, en <b>Read and write</b>. Rien d'autre.</li>
+        <li>Durée : 90 jours par exemple. Génère, copie, colle ci-dessous.</li>
+      </ol>
+      <input type="password" id="tok" placeholder="github_pat_…" autocomplete="off">
+      <div class="src" style="margin:6px 0">Le jeton reste dans ce navigateur, nulle part ailleurs. Il ne peut que lancer
+        ou lire les calculs de ce dépôt. Pour l'effacer : « Oublier le jeton » ci-dessous.</div>
+      <div class="row"><button class="act primary" id="tok-save">Enregistrer et lancer</button>
+        ${ghToken() ? `<button class="act" id="tok-del">Oublier le jeton</button>` : ""}</div>
+    </div>`;
+  document.getElementById("sheet").classList.add("open");
+  document.getElementById("close").onclick = closeDetail;
+  document.getElementById("tok-save").onclick = () => {
+    const v = document.getElementById("tok").value.trim();
+    if (!v) return;
+    store.set("ghToken", v); closeDetail(); launchUpdate();
+  };
+  const del = document.getElementById("tok-del");
+  if (del) del.onclick = () => { store.set("ghToken", ""); closeDetail(); setUpd("Jeton oublié."); };
+}
+document.getElementById("upd").onclick = () => ghToken() ? launchUpdate() : tokenSetup();
+document.getElementById("upd").oncontextmenu = e => { e.preventDefault(); tokenSetup(); };
+
 renderMeta(); show("teams");
+document.addEventListener("click", e => { if (e.target.id === "upd-set") { e.preventDefault(); tokenSetup(); } });
 </script>
 </body>
 </html>
