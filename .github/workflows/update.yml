@@ -2,9 +2,10 @@ name: Mise à jour de la page
 
 on:
   schedule:
-    # Heures UTC. Paris = UTC+1 en hiver : 10h, 16h, 20h, 22h, 23h, 23h30, 00h, 00h30.
-    - cron: "0 9,15,19,21 * * *"
-    - cron: "0,30 22,23 * * *"
+    # Heures UTC. Paris = UTC+1 en hiver : 10h, 16h, 20h, 22h, 23h, 23h30, 00h, 00h30 (+17 min).
+    # Minutes décalées de l'heure pile : GitHub y retarde ou saute moins les passages.
+    - cron: "17 9,15,19,21 * * *"
+    - cron: "17,47 22,23 * * *"
   workflow_dispatch: {}
 
 permissions:

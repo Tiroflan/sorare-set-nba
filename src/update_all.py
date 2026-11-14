@@ -11,6 +11,7 @@ import argparse
 import subprocess
 import sys
 import time
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,16 +38,20 @@ def main():
     if age_h(DATA / "calibration.json") > 24 * 7:
         run("src/history.py")
         run("src/calibrate.py")
-    # Bilan du soir qui vient de finir, une fois (passage du matin).
+    # Bilans des soirs finis qui n'en ont pas encore. Heure de Paris, de 7h à 20h :
+    # tous les matchs de la nuit US sont terminés. Rattrape jusqu'à 3 soirs manqués.
     sys.path.insert(0, str(ROOT / "src"))
-    import espn
-    night = espn.us_tonight()
-    if time.localtime().tm_hour < 12 and (ROOT / "journal" / f"{night}.json").exists() \
-            and not (ROOT / "journal" / f"bilan-{night}.json").exists():
-        try:
-            run("src/bilan.py", night)
-        except subprocess.CalledProcessError as e:
-            print(f"Bilan non fait : {e}")
+    from espn import PARIS
+    now = datetime.now(PARIS)
+    if 7 <= now.hour < 20:
+        for k in (3, 2, 1):
+            night = (now - timedelta(days=k)).date().isoformat()
+            j = ROOT / "journal"
+            if (j / f"{night}.json").exists() and not (j / f"bilan-{night}.json").exists():
+                try:
+                    run("src/bilan.py", night)
+                except Exception as e:  # le bilan ne doit jamais empêcher la page de sortir
+                    print(f"Bilan {night} non fait : {e}")
     run("src/build_page.py", "--nuits", a.nuits)
 
 

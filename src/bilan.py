@@ -56,6 +56,9 @@ def run(night):
             row["actual"] = round(sorare_score(g) * (1 + p["bonus"]), 2)
             row["stats"] = {k: g[v] or 0 for k, v in STATS.items()}
         rows.append(row)
+    if pending:  # on réessaiera au passage suivant
+        print(f"Bilan {night} pas écrit : {len(pending)} matchs pas finis ({', '.join(pending[:5])})")
+        sys.exit(2)
     pl = [r for r in rows if r["played"]]
 
     out = {"night": night, "n": len(rows), "pending": pending}

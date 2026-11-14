@@ -8,7 +8,13 @@
 import json
 import re
 import urllib.request
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
+
+try:
+    PARIS = ZoneInfo("Europe/Paris")
+except Exception:  # pas de base de fuseaux sur la machine : heure d'hiver
+    PARIS = timezone(timedelta(hours=1))
 
 BASE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
@@ -73,7 +79,7 @@ def injuries() -> dict[str, dict]:
 
 def us_tonight() -> date:
     """Date du soir NBA en cours : avant midi heure de Paris, c'est encore la veille aux États-Unis."""
-    now = datetime.now()
+    now = datetime.now(PARIS)
     return (now - timedelta(hours=12)).date() if now.hour < 12 else now.date()
 
 
