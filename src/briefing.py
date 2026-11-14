@@ -107,9 +107,9 @@ def main():
     for n, gs in nights.items():
         print(f"**{night_label(n)}** : {len(gs)} matchs, " + ", ".join(
             f"{g['away']}@{g['home']} {g['when'].split(' · ')[-1]}" for g in gs))
-        no = [f"{g['away']}@{g['home']}" for g in gs if not g.get("book")]
+        no = [f"{g['away']}@{g['home']}" for g in gs if not g.get("book") or g["book"].startswith("estimation")]
         if no:
-            print(f"  sans cotes pour l'instant : {', '.join(no)}")
+            print(f"  sans cotes pour l'instant (estimés d'après les matchs joués) : {', '.join(no)}")
     for t in (240, 270, 290):
         teams = sorted(D["teams"], key=lambda x: -x["p"][str(t)])[:3]
         print(f"\n**Meilleures équipes pour {t} pts**")

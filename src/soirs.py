@@ -19,13 +19,14 @@ import itertools
 import json
 import math
 import random
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import espn
 import history
 import odds
 import rotowire
+import team_ratings
 from model import (breakdown, build_player, context_factors, expected_score, game_context, norm,
                    simulate_team)
 from phase0_faisabilite import edition_bonus, p_normal
@@ -86,6 +87,19 @@ def load_pool(nights: int):
                 s["spread_home"] = float(line) if fav == s["home"] else -float(line)
                 s["total"] = s["total"] or g["total"]
                 s["book"] = "RotoWire"
+    # Pas encore de cotes nulle part (souvent le lendemain) : estimation d'après les matchs joués.
+    todo = [s for s in sched if s["spread_home"] is None]
+    if todo:
+        try:
+            r = team_ratings.ratings(team_ratings.results(min(date.fromisoformat(s["night"]) for s in sched)))
+            for s in todo:
+                pr = team_ratings.predict(r, s["home"], s["away"])
+                if pr:
+                    s["spread_home"], s["total"] = pr
+                    s["book"] = "estimation (matchs joués)"
+            print(f"  {sum(1 for s in todo if s.get('book'))} matchs sans cotes estimés d'après {r['n']} matchs joués")
+        except Exception as e:
+            print(f"  estimation des matchs sans cotes impossible ({e})")
     print("Blessures ESPN...")
     inj = espn.injuries()
 

@@ -96,7 +96,9 @@ def main():
                 "chance de jouer = part de ses 10 derniers matchs où il est entré en jeu "
                 "(vérifié le 12/11 : 56 % prévu, 55 % ont joué)"),
             "Remplaçant promu": f"titulaire ce soir et moins de {model.PROMO_MAX_USUAL_MIN} min d'habitude",
-            "Match sans cotes": "joué serré, total = 2 x moyenne de la ligue",
+            "Match sans cotes": ("points de chaque équipe estimés d'après ses matchs joués (attaque x défense adverse, "
+                                 "avantage du terrain mesuré) ; sur la saison, écart final estimé à 12,2 pts près "
+                                 "contre 13,7 en supposant un match nul, total à peine mieux que la moyenne ligue"),
             "Double-double et triple-double": "bonus ignorés dans l'estimation (1 point chacun au plus)",
         },
     }
