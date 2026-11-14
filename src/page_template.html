@@ -142,6 +142,7 @@ if (!D.targets.includes(target)) target = D.defaultTarget;
 let mine = store.get("mine", []).filter(id => byId[id]);
 let nightFilter = "all", query = "";
 let playerSort = store.get("psort", "star");
+let starFilter = "all";
 
 const fmtP = x => x >= 0.995 ? "99 %" : x < 0.005 ? "<1 %" : Math.round(x * 100) + " %";
 const pClass = x => x >= 0.25 ? "pct-good" : x >= 0.1 ? "pct-mid" : "pct-low";
@@ -342,13 +343,17 @@ function renderPlayers() {
     return `nuit du ${+n.slice(8, 10)} au ${d.getUTCDate()}`; };
   const byScore = playerSort === "score";
   const q = query.trim().toLowerCase();
+  const starLevels = [...new Set(P.filter(p => p.pct > 0).map(p => p.stars))].sort((a, b) => a - b);
   const list = P.filter(p => p.pct > 0 && (nightFilter === "all" || p.night === nightFilter)
+      && (starFilter === "all" || p.stars === +starFilter)
       && (!q || p.name.toLowerCase().includes(q) || p.team.toLowerCase() === q))
     .sort((a, b) => byScore ? b.exp - a.exp : b.exp / b.stars - a.exp / a.stars).slice(0, 80);
   const full = mine.length >= 5;
   el.innerHTML = `<input type="search" id="q" placeholder="Rechercher un joueur ou une équipe (ex. SAS)" value="${esc(query)}">
     <div class="filters">${["all", ...nights].map(n =>
       `<button data-n="${n}" class="${n === nightFilter ? "on" : ""}">${n === "all" ? "Tous les soirs" : chip(n)}</button>`).join("")}</div>
+    <div class="filters">${["all", ...starLevels].map(v =>
+      `<button data-st="${v}" class="${String(v) === String(starFilter) ? "on" : ""}">${v === "all" ? "Toutes ★" : stars(v)}</button>`).join("")}</div>
     <div class="filters">${[["star", "Tri : points par étoile"], ["score", "Tri : score estimé"]].map(([k, l]) =>
       `<button data-sort="${k}" class="${k === playerSort ? "on" : ""}">${l}</button>`).join("")}</div>
     <p class="small muted">Le chiffre en gras est le score estimé s'il joue, bonus de carte compris ; dessous, les points par étoile et la source.</p>
@@ -358,6 +363,7 @@ function renderPlayers() {
   const qi = document.getElementById("q");
   qi.oninput = () => { query = qi.value; renderPlayers(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
   el.querySelectorAll("[data-n]").forEach(b => b.onclick = () => { nightFilter = b.dataset.n; renderPlayers(); });
+  el.querySelectorAll("[data-st]").forEach(b => b.onclick = () => { starFilter = b.dataset.st; renderPlayers(); });
   el.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => { playerSort = b.dataset.sort; store.set("psort", playerSort); renderPlayers(); });
   el.querySelectorAll("[data-add]").forEach(b => b.onclick = () => {
     if (mine.length < 5) { mine.push(+b.dataset.add); store.set("mine", mine); renderPlayers(); }
