@@ -85,6 +85,13 @@ table.t td { padding: 5px 4px 5px 0; border-top: 1px solid var(--line); vertical
 table.t td.r, table.t th.r { text-align: right; }
 .formula { font-size: 13px; color: var(--muted); margin-top: 4px; }
 .src { font-size: 11.5px; color: var(--muted); }
+#upd { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; }
+#upd.busy { opacity: .85; }
+#upd.busy::before { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 2px solid currentColor;
+  border-right-color: transparent; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.updbar { margin-top: 6px; font-size: 13px; padding: 6px 10px; border-radius: 10px; background: var(--chip); }
+.updbar.busy { color: var(--accent); } .updbar.ok { color: var(--good); } .updbar.err { color: var(--bad); }
 .srcpill { display: inline-block; font-size: 10.5px; font-weight: 600; border-radius: 999px; padding: 0 6px; margin-top: 2px; }
 .srcpill.books { background: var(--accent); color: var(--accent-ink); }
 .srcpill.hist { background: var(--chip); color: var(--muted); }
@@ -612,7 +619,7 @@ document.getElementById("paliers").onclick = e => {
 const GH_REPO = "Tiroflan/sorare-set-nba", GH_WF = "update.yml";
 const GH_ACTIONS = `https://github.com/${GH_REPO}/actions/workflows/${GH_WF}`;
 const ghToken = () => store.get("ghToken", "");
-const setUpd = t => { document.getElementById("upd-status").innerHTML = t; };
+const setUpd = t => { const el = document.getElementById("upd-status"); el.className = "updbar ok"; el.innerHTML = t; };
 async function gh(path, opts = {}) {
   const r = await fetch(`https://api.github.com/repos/${GH_REPO}${path}`, { ...opts, headers: {
     Accept: "application/vnd.github+json", Authorization: `Bearer ${ghToken()}`, ...(opts.headers || {}) } });
@@ -620,33 +627,86 @@ async function gh(path, opts = {}) {
     ? "jeton refusé ou expiré" : `GitHub a répondu ${r.status}`);
   return r.status === 204 ? null : r.json();
 }
+// Retour visuel : texte du bouton + bandeau sous le titre.
+const updBtn = () => document.getElementById("upd");
+function updState(label, msg, kind = "busy") {
+  const b = updBtn();
+  b.textContent = label;
+  b.classList.toggle("busy", kind === "busy");
+  b.disabled = kind === "busy";
+  const el = document.getElementById("upd-status");
+  el.className = msg ? `updbar ${kind}` : "sub";
+  el.innerHTML = msg || "";
+}
+const updIdle = () => updState("Mettre à jour", "", "idle");
+let polling = false;
+
+// Suit le calcul GitHub le plus récent lancé après `since`, jusqu'à la publication.
+async function follow(since) {
+  if (polling) return;
+  polling = true;
+  const t0 = since;
+  const tick = async () => {
+    try {
+      const runs = (await gh(`/actions/workflows/${GH_WF}/runs?per_page=5`)).workflow_runs || [];
+      const run = runs.find(r => Date.parse(r.created_at) >= since - 60000);
+      const min = Math.max(0, Math.floor((Date.now() - t0) / 60000));
+      if (!run || run.status !== "completed") {
+        const step = !run || run.status === "queued" ? "en file d'attente chez GitHub" : "calcul en cours";
+        updState(`En cours · ${min} min`, `⏳ ${step}, ${min} min écoulée${min > 1 ? "s" : ""} sur 3 à 5. Tu peux fermer la page, le calcul continue.`);
+        return setTimeout(tick, 10000);
+      }
+      if (run.conclusion === "cancelled") {  // remplacé par un lancement plus récent : on suit celui-là
+        const newer = runs.find(r => Date.parse(r.created_at) > Date.parse(run.created_at));
+        if (newer) { since = Date.parse(newer.created_at); return setTimeout(tick, 5000); }
+      }
+      if (run.conclusion !== "success") {
+        polling = false;
+        updState("Réessayer", `✕ Le calcul a échoué (${esc(run.conclusion)}). <a href="${run.html_url}">Voir sur GitHub</a>`, "err");
+        return;
+      }
+      let left = 45;
+      const count = () => {
+        updState(`Publication · ${left} s`, `✓ Calcul fini. Publication de la page, rechargement dans ${left} s…`);
+        if (left-- <= 0) { store.set("updDone", Date.now()); location.href = location.pathname + "?t=" + Date.now(); }
+        else setTimeout(count, 1000);
+      };
+      count();
+    } catch (e) {
+      polling = false;
+      updState("Réessayer", `✕ ${esc(e.message)}. <a href="${GH_ACTIONS}">Voir sur GitHub</a>`, "err");
+    }
+  };
+  tick();
+}
+
 async function launchUpdate() {
-  const btn = document.getElementById("upd");
-  btn.disabled = true;
+  updState("Lancement…", "⏳ Envoi de la demande à GitHub…");
   try {
     const since = Date.now() - 5000;
     await gh(`/actions/workflows/${GH_WF}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
-    setUpd("Calcul lancé sur GitHub… (3 à 5 min, tu peux laisser la page ouverte)");
-    const t0 = Date.now();
-    const poll = async () => {
-      const runs = (await gh(`/actions/workflows/${GH_WF}/runs?per_page=5`)).workflow_runs || [];
-      const run = runs.find(r => Date.parse(r.created_at) >= since);
-      const min = Math.round((Date.now() - t0) / 60000);
-      if (run && run.status === "completed") {
-        if (run.conclusion !== "success") { setUpd(`Le calcul a échoué (${run.conclusion}). <a href="${run.html_url}">Voir sur GitHub</a>`); btn.disabled = false; return; }
-        setUpd("Calcul fini, publication de la page…");
-        setTimeout(() => { location.href = location.pathname + "?t=" + Date.now(); }, 45000);
-        return;
-      }
-      setUpd(`Calcul en cours sur GitHub… ${min} min`);
-      setTimeout(poll, 15000);
-    };
-    setTimeout(poll, 10000);
+    updState("En cours · 0 min", "✓ Demande reçue par GitHub. Le calcul démarre (3 à 5 min).");
+    setTimeout(() => follow(since), 4000);
   } catch (e) {
-    setUpd(`Échec : ${esc(e.message)}. <a href="${GH_ACTIONS}">Lancer depuis GitHub</a>`);
-    btn.disabled = false;
+    updState("Réessayer", `✕ Échec : ${esc(e.message)}. <a href="${GH_ACTIONS}">Lancer depuis GitHub</a>`, "err");
   }
 }
+
+// À l'ouverture : un calcul est-il déjà en cours (lancé ici, sur l'autre appareil ou par l'horaire) ?
+async function resumeIfRunning() {
+  const done = store.get("updDone", 0);
+  if (done && Date.now() - done < 120000) {
+    store.set("updDone", 0);
+    updState("Mettre à jour", `✓ Page à jour : ${esc(D.generated)}.`, "ok");
+    setTimeout(updIdle, 8000);
+  }
+  if (!ghToken()) return;
+  try {
+    const runs = (await gh(`/actions/workflows/${GH_WF}/runs?per_page=1`)).workflow_runs || [];
+    if (runs[0] && runs[0].status !== "completed") follow(Date.parse(runs[0].created_at));
+  } catch (e) { /* silencieux à l'ouverture */ }
+}
+
 function tokenSetup() {
   document.getElementById("sheetbody").innerHTML = `
     <div class="row"><div class="grow"><h2>Mettre à jour la page</h2></div>
@@ -678,6 +738,7 @@ function tokenSetup() {
   if (del) del.onclick = () => { store.set("ghToken", ""); closeDetail(); setUpd("Jeton oublié."); };
 }
 document.getElementById("upd").onclick = () => ghToken() ? launchUpdate() : tokenSetup();
+resumeIfRunning();
 document.getElementById("upd").oncontextmenu = e => { e.preventDefault(); tokenSetup(); };
 
 renderMeta(); show("teams");
