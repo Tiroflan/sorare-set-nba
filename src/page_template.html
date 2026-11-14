@@ -85,6 +85,9 @@ table.t td { padding: 5px 4px 5px 0; border-top: 1px solid var(--line); vertical
 table.t td.r, table.t th.r { text-align: right; }
 .formula { font-size: 13px; color: var(--muted); margin-top: 4px; }
 .src { font-size: 11.5px; color: var(--muted); }
+.srcpill { display: inline-block; font-size: 10.5px; font-weight: 600; border-radius: 999px; padding: 0 6px; margin-top: 2px; }
+.srcpill.books { background: var(--accent); color: var(--accent-ink); }
+.srcpill.hist { background: var(--chip); color: var(--muted); }
 nav { overflow-x: auto; scrollbar-width: none; }
 nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 8px; flex: 1 0 auto; }
 </style>
@@ -129,6 +132,7 @@ let target = store.get("target", D.defaultTarget);
 if (!D.targets.includes(target)) target = D.defaultTarget;
 let mine = store.get("mine", []).filter(id => byId[id]);
 let nightFilter = "all", query = "";
+let playerSort = store.get("psort", "star");
 
 const fmtP = x => x >= 0.995 ? "99 %" : x < 0.005 ? "<1 %" : Math.round(x * 100) + " %";
 const pClass = x => x >= 0.25 ? "pct-good" : x >= 0.1 ? "pct-mid" : "pct-low";
@@ -139,21 +143,21 @@ const palierOf = t => D.targets.indexOf(t) + 1;
 // Ce que veut dire chaque tag (infobulle, fiche joueur, glossaire).
 const TAGS = [
   ["props", "props +12 % vs historique",
-   "Bovada publie des cotes sur ses stats ce soir : l'estimation vient de ces cotes. Le % compare à ce que donnerait son historique seul (vert : les cotes voient plus haut, rouge : plus bas)."],
-  ["2e soir", "2e soir",
-   "Son équipe a joué la veille (back-to-back). Risque de minutes réduites ou de repos ; déjà dans les cotes quand il y a des props."],
+   "Deux estimations du même joueur : l'une tirée des cotes Bovada de ce soir (retenue), l'autre de son historique (production par minute sur ses 10 derniers matchs, ajustée au match). +12 % = les cotes attendent 12 % de points Sorare en plus que l'historique. Les cotes voient ce que l'historique ignore : coéquipier absent, adversaire faible, changement de rôle. Au-delà de ±25 %, c'est un vrai signal : sur nos 2 premières nuits, les écarts forts allaient dans le bon sens. Le détail stat par stat est dans sa fiche."],
+  ["back-to-back", "back-to-back",
+   "Son équipe a joué la veille. Risque de minutes réduites ou de repos ; déjà dans les cotes quand il y a des props."],
   ["PROMU", "PROMU titulaire",
    "Titulaire probable ce soir selon RotoWire alors qu'il joue d'habitude moins de 24 min : ses minutes sont estimées sur ses 3 matchs les plus longs. Souvent une bonne affaire en étoiles."],
   ["banc", "banc, joue 40 % des matchs",
    "Fin de banc : pas titulaire et moins de 20 min d'habitude. Il n'entre pas à tous les matchs ; sa chance de jouer = part de ses 10 derniers matchs où il est entré."],
   ["ESPN Day-To-Day", "ESPN Day-To-Day",
-   "Blessure légère signalée par ESPN, décision le jour du match. Compté 60 % de chances de jouer tant que RotoWire n'en dit pas plus (hypothèse)."],
+   "Blessure légère signalée par ESPN, décision le jour du match. ESPN ne donne pas de %, et RotoWire ne publie les compos que le soir même : on compte 60 % de chances de jouer. Ce 60 % est une hypothèse, pas encore mesurée (aucun cas dans les bilans pour l'instant). Le soir du match, le % de RotoWire le remplace dès qu'il paraît."],
   ["ESPN Out", "ESPN Out", "Annoncé absent par ESPN : compté 0 %."],
   ["Sorare OUT", "Sorare OUT", "Blessure OUT dans les données Sorare : compté 0 %."],
   ["RotoWire", "RotoWire Ques",
    "Dans la liste des incertains de RotoWire pour ce soir. On prend le % affiché par RotoWire ; sans %, Prob (probable) = 85 %, Ques (incertain) = 50 %, Doubt (douteux) = 20 %, Out ou OFS (absent) = 0 %."],
   ["joue", "joue 60 %",
-   "Probabilité qu'il joue ce soir. La simulation le compte absent (0 point) dans le reste des cas. Le détail de la source est dans sa fiche."],
+   "Probabilité qu'il joue. On prend la première source disponible : 1. le % de RotoWire le soir même (titulaires et incertains) ; 2. le statut RotoWire sans % (Prob 85 %, Ques 50 %, Doubt 20 %, Out 0 %) ; 3. ESPN : Out 0 %, Day-To-Day 60 % ; 4. Sorare : OUT 0 % ; 5. fin de banc : part de ses 10 derniers matchs où il est entré ; 6. sinon 100 %. Dans le reste des simulations, il marque 0 point. Sa fiche dit quelle source a servi."],
   ["carte", "carte +10 %",
    "Bonus de ta carte (Shiny +5 %, Holo +10 %, variante +15 %), déjà appliqué au score affiché. Ne pas surpondérer : 40 pts à 0 % valent mieux que 30 pts à +15 %."],
 ];
@@ -222,7 +226,8 @@ function playerLine(p, action) {
       <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}</div>
       ${badges(p)}
     </div>
-    <div class="num"><b>${p.exp.toFixed(0)}</b><div class="small muted">${(p.exp / p.stars).toFixed(1)}/★</div></div>
+    <div class="num"><b>${p.exp.toFixed(0)}</b><div class="small muted">${(p.exp / p.stars).toFixed(1)}/★</div>
+      <span class="srcpill ${p.usesProps ? "books" : "hist"}" title="${p.usesProps ? "Projection tirée des cotes Bovada" : "Pas de cotes : projection sur l'historique"}">${p.usesProps ? "cotes" : "historique"}</span></div>
     ${action || ""}
   </div>`;
 }
@@ -231,7 +236,7 @@ function renderTeams() {
   const next = D.targets[D.targets.indexOf(target) + 1];
   const list = [...D.teams].sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
   document.getElementById("teams").innerHTML =
-    `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Touche un joueur pour son détail et l'explication de ses tags ; glossaire complet dans Méthode.</p>` +
+    `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
       const lock = lockOf(ps);
@@ -242,7 +247,7 @@ function renderTeams() {
             <span class="muted small"> pour ${target}${next ? ` · ${fmtP(t.p[next])} pour ${next}` : ""}</span></div>
           <button class="act" data-load="${i}">Charger</button>
         </div>
-        <div class="small muted">Moyenne ${t.mu.toFixed(0)} pts · ${stars(st)} · figée ${lock.when}</div>
+        <div class="small muted">Moyenne ${t.mu.toFixed(0)} pts · ${stars(st)} · figée ${lock.when} · ${ps.filter(p => p.usesProps).length}/5 aux cotes</div>
         <div class="plist">${ps.map(p => playerLine(p)).join("")}</div>
       </div>`;
     }).join("");
@@ -321,22 +326,28 @@ function findSwaps(team, base) {
 function renderPlayers() {
   const el = document.getElementById("players");
   const nights = [...new Set(P.map(p => p.night))].sort();
-  const nightLabel = n => { const p = P.find(x => x.night === n); return p ? p.when.split(" · ")[0] : n; };
+  // Soir US = nuit à Paris : « nuit du 14 au 15 » (deux soirs peuvent commencer le même jour à Paris).
+  const chip = n => { const d = new Date(n + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + 1);
+    return `nuit du ${+n.slice(8, 10)} au ${d.getUTCDate()}`; };
+  const byScore = playerSort === "score";
   const q = query.trim().toLowerCase();
   const list = P.filter(p => p.pct > 0 && (nightFilter === "all" || p.night === nightFilter)
       && (!q || p.name.toLowerCase().includes(q) || p.team.toLowerCase() === q))
-    .sort((a, b) => b.exp / b.stars - a.exp / a.stars).slice(0, 80);
+    .sort((a, b) => byScore ? b.exp - a.exp : b.exp / b.stars - a.exp / a.stars).slice(0, 80);
   const full = mine.length >= 5;
   el.innerHTML = `<input type="search" id="q" placeholder="Rechercher un joueur ou une équipe (ex. SAS)" value="${esc(query)}">
     <div class="filters">${["all", ...nights].map(n =>
-      `<button data-n="${n}" class="${n === nightFilter ? "on" : ""}">${n === "all" ? "Tous les soirs" : nightLabel(n)}</button>`).join("")}</div>
-    <p class="small muted">Classés par points estimés par étoile. Le chiffre en gras est le score estimé, bonus de carte compris.</p>
+      `<button data-n="${n}" class="${n === nightFilter ? "on" : ""}">${n === "all" ? "Tous les soirs" : chip(n)}</button>`).join("")}</div>
+    <div class="filters">${[["star", "Tri : points par étoile"], ["score", "Tri : score estimé"]].map(([k, l]) =>
+      `<button data-sort="${k}" class="${k === playerSort ? "on" : ""}">${l}</button>`).join("")}</div>
+    <p class="small muted">Le chiffre en gras est le score estimé s'il joue, bonus de carte compris ; dessous, les points par étoile et la source.</p>
     <div class="card plist">${list.map(p => playerLine(p, mine.includes(p.id)
       ? `<button class="icon" disabled aria-label="Déjà pris">✓</button>`
       : `<button class="icon" data-add="${p.id}" ${full ? "disabled" : ""} aria-label="Ajouter">+</button>`)).join("")}</div>`;
   const qi = document.getElementById("q");
   qi.oninput = () => { query = qi.value; renderPlayers(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
   el.querySelectorAll("[data-n]").forEach(b => b.onclick = () => { nightFilter = b.dataset.n; renderPlayers(); });
+  el.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => { playerSort = b.dataset.sort; store.set("psort", playerSort); renderPlayers(); });
   el.querySelectorAll("[data-add]").forEach(b => b.onclick = () => {
     if (mine.length < 5) { mine.push(+b.dataset.add); store.set("mine", mine); renderPlayers(); }
   });
@@ -374,17 +385,21 @@ function openDetail(id) {
     <div class="card"><div><span class="big">${p.exp.toFixed(0)}</span>
       <span class="muted small"> pts estimés · ${(p.exp / p.stars).toFixed(1)} par étoile</span></div>
       <div class="formula">${formula}</div>
-      <div class="formula">Historique seul : ${n1(p.hist)} pts${p.usesProps ? " (la projection retenue vient des cotes)" : ""}</div></div>
+      <div class="formula">Historique seul : ${n1(p.hist)} pts${p.usesProps
+        ? ` · les cotes attendent ${p.exp >= p.hist ? "+" : "−"}${Math.abs(Math.round((p.exp / p.hist - 1) * 100))} % (projection retenue : les cotes)` : ""}</div></div>
     ${(() => { const tags = [...p.reasons, ...(p.pct < 1 ? [`joue ${Math.round(p.pct * 100)} %`] : []),
         ...(p.bonus > 0 ? [`carte +${Math.round(p.bonus * 100)} %`] : [])];
       return tags.length ? `<h3>Ses tags</h3><div class="plist">${tags.map(r =>
         `<div class="pl"><span class="badge">${esc(r)}</span><div class="small" style="margin-top:3px">${esc(tagInfo(r))}</div></div>`).join("")}</div>` : ""; })()}
 
     <h3>Composantes du score Sorare</h3>
-    <table class="t"><tr><th>Stat</th><th class="r">Estimé</th><th class="r">Barème</th><th class="r">Pts</th></tr>
+    ${p.usesProps ? `<div class="src">Colonne « Hist. » : ce que donnerait son historique seul pour la même stat, contexte du match inclus.
+      L'écart entre les deux colonnes explique le tag props.</div>` : ""}
+    <table class="t"><tr><th>Stat</th><th class="r">Estimé</th>${p.usesProps ? `<th class="r">Hist.</th>` : ""}<th class="r">Barème</th><th class="r">Pts</th></tr>
       ${p.comps.map(c => `<tr><td>${c.label}<div class="src">${esc(c.src)}</div></td><td class="r">${n2(c.val)}</td>
+        ${p.usesProps ? `<td class="r muted">${p.histVals && p.histVals[c.k] !== undefined ? n2(p.histVals[c.k]) : "-"}</td>` : ""}
         <td class="r">${c.w > 0 ? "+" : ""}${n1(c.w)}</td><td class="r">${n1(c.pts)}</td></tr>`).join("")}
-      <tr><td><b>Total brut</b></td><td></td><td></td><td class="r"><b>${n1(raw)}</b></td></tr></table>
+      <tr><td><b>Total brut</b></td><td></td>${p.usesProps ? "<td></td>" : ""}<td></td><td class="r"><b>${n1(raw)}</b></td></tr></table>
     <div class="src" style="margin-top:4px">Bonus double-double non compté (1 point au plus).</div>
 
     ${lines ? `<h3>Cotes Bovada utilisées</h3>

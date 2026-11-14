@@ -116,9 +116,9 @@ def load_pool(nights: int):
         if not pl:
             continue
         prev = (datetime.fromisoformat(g["night"]) - timedelta(days=1)).date().isoformat()
-        if (team, prev) in played_night_before and "2e soir" not in pl["reasons"]:
+        if (team, prev) in played_night_before and "back-to-back" not in pl["reasons"]:
             pl["b2b"] = True
-            pl["reasons"].append("2e soir")
+            pl["reasons"].append("back-to-back")
         ctx = contexts.setdefault(pl["game_key"], game_context(g, calib))
         e_sim = expected_score(pl, ctx, calib)  # centre "naturel" de la simulation
         sd_rate = (sum((r - pl["rate"]) ** 2 for r in pl["rates"]) / len(pl["rates"])) ** 0.5
@@ -128,13 +128,16 @@ def load_pool(nights: int):
         # Estimation historique, stat par stat, ajustée au contexte du match.
         hist_comps = breakdown(pl, {}, {})
         pl["hist_exp"] = sum(c["pts"] for c in hist_comps) * pace * blow * (1 + pl["bonus"])
+        pl["hist_vals"] = {c["k"]: c["val"] * pace * blow for c in hist_comps}  # comparables aux props
         pl["comps"], pl["uses_props"] = hist_comps, False
         pl["exp"] = pl["hist_exp"]
         prop = props.get(norm(p["displayName"]))
         if prop and espn.code(prop["team"]) == team:
             comps = breakdown(pl, odds.expected_stats(prop), prop["lines"])
             raw = sum(c["pts"] for c in comps)
-            if raw > 0:
+            # Au moins une stat vraiment tirée des cotes : sinon (marché publié mais
+            # inexploitable) on garde l'historique ajusté au match.
+            if raw > 0 and any(c["src"] == "Bovada" for c in comps):
                 # Les cotes intègrent déjà rythme et blowout : pas de facteur de contexte.
                 pl["comps"], pl["uses_props"] = comps, True
                 pl["exp"] = raw * (1 + pl["bonus"])

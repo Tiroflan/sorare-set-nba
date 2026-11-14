@@ -64,6 +64,7 @@ def main():
             "comps": p["comps"], "usesProps": p["uses_props"], "pace": round(p["pace"], 3),
             "blow": round(p["blow"], 3), "pctSrc": p["pct_src"], "minRule": p["min_rule"],
             "usualMin": p["usual_min"], "last": p["last"],
+            "histVals": {k: round(v, 2) for k, v in p["hist_vals"].items()},
         })
     games = []
     for g in sorted(sched, key=lambda g: g["tip_utc"]):

@@ -114,7 +114,7 @@ def build_player(p, games_hist, bonus, edition, game, lineup, inj_espn, now_utc)
     prev_tip = last if last < tip else None
     b2b = prev_tip is not None and (tip - prev_tip) < timedelta(hours=30)
     if b2b:
-        reasons.append("2e soir")
+        reasons.append("back-to-back")
 
     # Production par minute de chaque composante, pour compléter les props.
     tot_min = sum(g["minsPlayed"] for g in played[:10])
