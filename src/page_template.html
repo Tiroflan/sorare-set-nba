@@ -136,6 +136,29 @@ const stars = s => s.toFixed(1).replace(".0", "") + "★";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const palierOf = t => D.targets.indexOf(t) + 1;
 
+// Ce que veut dire chaque tag (infobulle, fiche joueur, glossaire).
+const TAGS = [
+  ["props", "props +12 % vs historique",
+   "Bovada publie des cotes sur ses stats ce soir : l'estimation vient de ces cotes. Le % compare à ce que donnerait son historique seul (vert : les cotes voient plus haut, rouge : plus bas)."],
+  ["2e soir", "2e soir",
+   "Son équipe a joué la veille (back-to-back). Risque de minutes réduites ou de repos ; déjà dans les cotes quand il y a des props."],
+  ["PROMU", "PROMU titulaire",
+   "Titulaire probable ce soir selon RotoWire alors qu'il joue d'habitude moins de 24 min : ses minutes sont estimées sur ses 3 matchs les plus longs. Souvent une bonne affaire en étoiles."],
+  ["banc", "banc, joue 40 % des matchs",
+   "Fin de banc : pas titulaire et moins de 20 min d'habitude. Il n'entre pas à tous les matchs ; sa chance de jouer = part de ses 10 derniers matchs où il est entré."],
+  ["ESPN Day-To-Day", "ESPN Day-To-Day",
+   "Blessure légère signalée par ESPN, décision le jour du match. Compté 60 % de chances de jouer tant que RotoWire n'en dit pas plus (hypothèse)."],
+  ["ESPN Out", "ESPN Out", "Annoncé absent par ESPN : compté 0 %."],
+  ["Sorare OUT", "Sorare OUT", "Blessure OUT dans les données Sorare : compté 0 %."],
+  ["RotoWire", "RotoWire Ques",
+   "Dans la liste des incertains de RotoWire pour ce soir. On prend le % affiché par RotoWire ; sans %, Prob (probable) = 85 %, Ques (incertain) = 50 %, Doubt (douteux) = 20 %, Out ou OFS (absent) = 0 %."],
+  ["joue", "joue 60 %",
+   "Probabilité qu'il joue ce soir. La simulation le compte absent (0 point) dans le reste des cas. Le détail de la source est dans sa fiche."],
+  ["carte", "carte +10 %",
+   "Bonus de ta carte (Shiny +5 %, Holo +10 %, variante +15 %), déjà appliqué au score affiché. Ne pas surpondérer : 40 pts à 0 % valent mieux que 30 pts à +15 %."],
+];
+const tagInfo = r => (TAGS.find(([k]) => r.startsWith(k)) || [0, 0, ""])[2];
+
 function badges(p) {
   const out = [];
   for (const r of p.reasons) {
@@ -143,10 +166,10 @@ function badges(p) {
     if (r.startsWith("PROMU")) cls = "hot";
     else if (r.startsWith("props")) cls = r.includes("+") ? "up" : "down";
     else if (r.includes("Out") || r.includes("Day") || r.includes("RotoWire")) cls = "down";
-    out.push(`<span class="badge ${cls}">${esc(r)}</span>`);
+    out.push(`<span class="badge ${cls}" title="${esc(tagInfo(r))}">${esc(r)}</span>`);
   }
-  if (p.pct < 1) out.push(`<span class="badge down">joue ${Math.round(p.pct * 100)} %</span>`);
-  if (p.bonus > 0) out.push(`<span class="badge">carte +${Math.round(p.bonus * 100)} %</span>`);
+  if (p.pct < 1) out.push(`<span class="badge down" title="${esc(tagInfo("joue"))}">joue ${Math.round(p.pct * 100)} %</span>`);
+  if (p.bonus > 0) out.push(`<span class="badge" title="${esc(tagInfo("carte"))}">carte +${Math.round(p.bonus * 100)} %</span>`);
   return out.length ? `<div class="badges">${out.join("")}</div>` : "";
 }
 
@@ -208,7 +231,7 @@ function renderTeams() {
   const next = D.targets[D.targets.indexOf(target) + 1];
   const list = [...D.teams].sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
   document.getElementById("teams").innerHTML =
-    `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points.</p>` +
+    `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Touche un joueur pour son détail et l'explication de ses tags ; glossaire complet dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
       const lock = lockOf(ps);
@@ -352,6 +375,10 @@ function openDetail(id) {
       <span class="muted small"> pts estimés · ${(p.exp / p.stars).toFixed(1)} par étoile</span></div>
       <div class="formula">${formula}</div>
       <div class="formula">Historique seul : ${n1(p.hist)} pts${p.usesProps ? " (la projection retenue vient des cotes)" : ""}</div></div>
+    ${(() => { const tags = [...p.reasons, ...(p.pct < 1 ? [`joue ${Math.round(p.pct * 100)} %`] : []),
+        ...(p.bonus > 0 ? [`carte +${Math.round(p.bonus * 100)} %`] : [])];
+      return tags.length ? `<h3>Ses tags</h3><div class="plist">${tags.map(r =>
+        `<div class="pl"><span class="badge">${esc(r)}</span><div class="small" style="margin-top:3px">${esc(tagInfo(r))}</div></div>`).join("")}</div>` : ""; })()}
 
     <h3>Composantes du score Sorare</h3>
     <table class="t"><tr><th>Stat</th><th class="r">Estimé</th><th class="r">Barème</th><th class="r">Pts</th></tr>
@@ -496,6 +523,25 @@ function renderMethod() {
   const c = D.calib;
   const labels = c.buckets.map(([lo, hi]) => hi >= 99 ? `${lo}+` : `${lo}-${hi - 1}`);
   document.getElementById("method").innerHTML = `
+    <div class="card"><b>Glossaire : les tags des joueurs</b>
+      <div class="plist">${TAGS.map(([k, ex, txt]) => `<div class="pl"><span class="badge">${esc(ex)}</span>
+        <div class="small" style="margin-top:3px">${esc(txt)}</div></div>`).join("")}</div></div>
+    <div class="card"><b>Glossaire : les mots de la page</b>
+      <table class="t">
+        <tr><td style="width:34%"><b>XX %</b></td><td class="small">Chance que l'équipe atteigne le palier choisi, sur 20 000 soirées simulées.</td></tr>
+        <tr><td style="width:34%"><b>Moyenne</b></td><td class="small">Score moyen de l'équipe sur ces simulations. Une équipe peut avoir une meilleure moyenne mais moins de chances de passer un palier élevé, si elle est moins explosive.</td></tr>
+        <tr><td style="width:34%"><b>pts (à droite d'un joueur)</b></td><td class="small">Score Sorare estimé s'il joue, bonus de carte compris.</td></tr>
+        <tr><td style="width:34%"><b>x/★</b></td><td class="small">Points estimés par étoile dépensée : le rapport qualité-prix du joueur.</td></tr>
+        <tr><td style="width:34%"><b>figée</b></td><td class="small">Heure où l'équipe se verrouille : le premier coup d'envoi parmi ses 5 joueurs, heure de Paris.</td></tr>
+        <tr><td style="width:34%"><b>Palier</b></td><td class="small">Seuil de points du Set (240, 270, 290…). Le sélecteur en haut change le classement des équipes.</td></tr>
+        <tr><td style="width:34%"><b>props</b></td><td class="small">Cotes des bookmakers sur les stats d'un joueur (plus ou moins de X points, rebonds, passes, 3 pts). Source : Bovada.</td></tr>
+        <tr><td style="width:34%"><b>historique</b></td><td class="small">Production du joueur par minute sur ses 10 derniers matchs, multipliée par ses minutes estimées.</td></tr>
+        <tr><td style="width:34%"><b>spread</b></td><td class="small">Écart de points attendu par les bookmakers entre les deux équipes. Gros spread = risque de match plié, donc de titulaires sortis tôt (blowout).</td></tr>
+        <tr><td style="width:34%"><b>total</b></td><td class="small">Total de points attendu dans le match. Haut = rythme rapide, plus de stats pour tout le monde.</td></tr>
+        <tr><td style="width:34%"><b>blowout</b></td><td class="small">Match à sens unique : les titulaires jouent moins. Mesuré sur les vrais matchs de tes joueurs (tableau plus bas).</td></tr>
+        <tr><td style="width:34%"><b>écart-type</b></td><td class="small">Dispersion autour de l'estimation : environ 2 fois sur 3, le score réel tombe à moins d'un écart-type de l'estimation.</td></tr>
+        <tr><td style="width:34%"><b>biais (Bilan)</b></td><td class="small">Réel moins prévu, en moyenne. Positif : le modèle est trop prudent ; négatif : trop optimiste.</td></tr>
+      </table></div>
     <div class="card"><b>Barème Sorare NBA</b>
       <div class="small">Point +1 · panier à 3 pts +1 · rebond +1,2 · passe +1,5 · interception +3 · contre +3 ·
         balle perdue −2 · double-double +1 · triple-double +1.</div></div>
