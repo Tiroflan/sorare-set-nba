@@ -28,7 +28,7 @@ def _load(night: str) -> dict:
     return {"night": night, "players": {}, "teams": None}
 
 
-def record(pool, results, targets, now=None):
+def record(pool, results, targets, now=None, sched=None):
     """pool : fiches de soirs.load_pool ; results : sortie de best_teams."""
     now = now or datetime.now(timezone.utc)
     stamp = now.strftime("%Y-%m-%dT%H:%MZ")
@@ -59,6 +59,15 @@ def record(pool, results, targets, now=None):
             "stars": sum(p["stars"] for p in combo), "lock": lock["tip_utc"], "mu": round(mu, 1),
             "p": {str(t): round(r[t], 4) for t in targets},
         })
+    # Matchs : notre dernière estimation tant qu'il n'y avait pas de cotes, puis les
+    # dernières vraies cotes avant le coup d'envoi. Le bilan compare les deux.
+    for g in sched or []:
+        if _tip(g["tip_utc"]) <= now or g.get("spread_home") is None:
+            continue
+        j = files.setdefault(g["night"], _load(g["night"]))
+        e = j.setdefault("games", {}).setdefault(f"{g['away']}@{g['home']}", {"tip": g["tip_utc"]})
+        line = {"spread_home": g["spread_home"], "total": g["total"], "book": g.get("book"), "recorded": stamp}
+        e["est" if str(g.get("book") or "").startswith("estimation") else "odds"] = line
     for night, teams in teams_by_night.items():
         j = files.setdefault(night, _load(night))
         j["teams"] = {"recorded": stamp, "list": teams}

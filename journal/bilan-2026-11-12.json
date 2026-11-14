@@ -89,6 +89,19 @@
    "joue": 64
   }
  },
+ "matchs": null,
+ "rythme": {
+  "rythme moyen": {
+   "n": 17,
+   "prevu": 168.71999999999997,
+   "reel": 165.7
+  },
+  "match lent (< 0,97)": {
+   "n": 3,
+   "prevu": 26.36,
+   "reel": 16.8
+  }
+ },
  "joueurs": [
   {
    "slug": "ausar-thompson-20030130",

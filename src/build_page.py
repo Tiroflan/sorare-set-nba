@@ -47,7 +47,7 @@ def main():
     results = best_teams(live, contexts, calib, TARGETS, random.Random(5), top_k=300)
     results.sort(key=lambda t: -t[0][DEFAULT_TARGET])
     try:  # le journal ne doit jamais empêcher la page de sortir
-        journal.record(pool, results[:40], TARGETS)
+        journal.record(pool, results[:40], TARGETS, sched=sched)
     except Exception as e:
         print(f"Journal non écrit : {e!r}")
 
@@ -120,7 +120,8 @@ def bilans():
                          "pct": r["pct"], "src": r["pctSrc"], "e": r["exp"], "sd": r["sd"], "h": r["hist"],
                          "pr": r["usesProps"], "em": r["estMin"], "m": r.get("min"), "a": r["actual"],
                          "c": r["comps"], "st": r.get("stats"), "pl": r["played"]})
-        out.append({"night": b["night"], "rows": rows, "pending": b.get("pending", [])})
+        out.append({"night": b["night"], "rows": rows, "pending": b.get("pending", []),
+                    "games": (b.get("matchs") or {}).get("lignes", []), "pace": b.get("rythme") or {}})
     done = {b["night"] for b in out}
     for b in out:
         j = jdir / f"{b['night']}.json"

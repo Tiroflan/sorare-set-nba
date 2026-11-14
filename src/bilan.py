@@ -39,6 +39,36 @@ def stats(errs):
             "rmse": math.sqrt(sum(e * e for e in errs) / n)}
 
 
+def games_check(night, games):
+    """Nos estimations de la veille contre les cotes finales et le résultat réel."""
+    if not games:
+        return None
+    from datetime import date as _d, timedelta as _td
+    import team_ratings
+    res = {f"{g['away']}@{g['home']}": g for g in team_ratings.results(_d.fromisoformat(night) + _td(days=1))
+           if g["night"] == night}
+    rows = []
+    for key, g in games.items():
+        r = res.get(key)
+        if not r:
+            continue
+        rows.append({"match": key, "est": g.get("est"), "odds": g.get("odds"),
+                     "real_spread": r["away_pts"] - r["home_pts"], "real_total": r["home_pts"] + r["away_pts"]})
+    mae = lambda xs: round(sum(map(abs, xs)) / len(xs), 1) if xs else None
+    both = [x for x in rows if x["est"] and x["odds"]]
+    odds = [x for x in rows if x["odds"]]
+    return {
+        "lignes": rows,
+        "n_estimes": len(both),
+        "est_vs_cotes": {"ecart": mae([x["est"]["spread_home"] - x["odds"]["spread_home"] for x in both]),
+                         "total": mae([x["est"]["total"] - x["odds"]["total"] for x in both])},
+        "est_vs_reel": {"ecart": mae([x["est"]["spread_home"] - x["real_spread"] for x in both]),
+                        "total": mae([x["est"]["total"] - x["real_total"] for x in both])},
+        "cotes_vs_reel": {"ecart": mae([x["odds"]["spread_home"] - x["real_spread"] for x in odds]),
+                          "total": mae([x["odds"]["total"] - x["real_total"] for x in odds]), "n": len(odds)},
+    }
+
+
 def run(night):
     j = json.loads((DIR / f"{night}.json").read_text(encoding="utf-8"))
     players = j["players"]
@@ -78,6 +108,19 @@ def run(night):
         e["prevu"] += r["pct"]
         e["joue"] += r["played"]
     out["presence"] = buckets
+    out["matchs"] = games_check(night, j.get("games") or {})
+    # Rythme : chez les joueurs projetés sur l'historique (rythme appliqué), le réel/prévu
+    # doit rester stable d'un groupe à l'autre si l'ajustement est bien dosé.
+    rp = {}
+    for r in pl:
+        if r["usesProps"]:
+            continue
+        b = "match lent (< 0,97)" if r["pace"] < 0.97 else "match rapide (> 1,03)" if r["pace"] > 1.03 else "rythme moyen"
+        e = rp.setdefault(b, {"n": 0, "prevu": 0.0, "reel": 0.0})
+        e["n"] += 1
+        e["prevu"] += r["exp"]
+        e["reel"] += r["actual"]
+    out["rythme"] = rp
     out["joueurs"] = sorted(
         ({k: r.get(k) for k in ("slug", "tip", "name", "team", "opp", "stars", "bonus", "pct", "pctSrc", "exp", "sd", "hist",
                                 "usesProps", "estMin", "min", "actual", "comps", "stats", "reasons", "played")}
@@ -101,6 +144,13 @@ def show(o):
     print("Stats, réel - projeté :")
     for k, s in o["composantes"].items():
         print(f"  {LABELS[k]:15s}", f(s))
+    m = o.get("matchs")
+    if m and m["n_estimes"]:
+        print(f"Matchs estimés la veille ({m['n_estimes']}) : à {m['est_vs_cotes']['ecart']} pts des cotes sur l'écart, "
+              f"{m['est_vs_cotes']['total']} sur le total ; erreur réelle écart {m['est_vs_reel']['ecart']} "
+              f"(cotes : {m['cotes_vs_reel']['ecart']}), total {m['est_vs_reel']['total']} (cotes : {m['cotes_vs_reel']['total']})")
+    for b, e in (o.get("rythme") or {}).items():
+        print(f"  {b:22s} {e['n']:3d} joueurs à l'historique, réel/prévu {e['reel'] / e['prevu']:.2f}")
     print("Présence :")
     for b, e in o["presence"].items():
         print(f"  {b:20s} {e['n']:3d} joueurs, prévu {e['prevu'] / e['n']:.0%}, ont joué {e['joue'] / e['n']:.0%}")

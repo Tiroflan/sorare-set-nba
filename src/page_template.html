@@ -526,6 +526,27 @@ function renderBilan() {
       <div class="small muted">Les 8 meilleures pour ${target} pts (palier ${palierOf(target)}), avec leur score réel.
         ${fin.length ? `${fin.filter(t => t.score >= target).length} sur ${fin.length} finies ont passé, ${n1(fin.reduce((s, t) => s + t.p[target], 0))} attendues d'après les probas.` : ""}</div>
       <div class="plist">${teamHtml || `<div class="muted small">Pas d'équipe enregistrée.</div>`}</div></div>
+    ${(() => {
+      const gl = sel.flatMap(b => b.games || []), est = gl.filter(x => x.est && x.odds), od = gl.filter(x => x.odds);
+      const mae = xs => xs.length ? n1(mean(xs.map(Math.abs))) : "-";
+      if (!est.length) return "";
+      return `<div class="card"><b>Matchs sans cotes la veille</b>
+        <div class="small muted">Notre estimation (d'après les matchs joués) comparée aux vraies cotes publiées ensuite, et au résultat.</div>
+        <table class="t"><tr><th></th><th class="r">Écart final</th><th class="r">Total</th></tr>
+          <tr><td>Distance aux vraies cotes</td><td class="r">${mae(est.map(x => x.est.spread_home - x.odds.spread_home))}</td><td class="r">${mae(est.map(x => x.est.total - x.odds.total))}</td></tr>
+          <tr><td>Erreur réelle de notre estimation</td><td class="r">${mae(est.map(x => x.est.spread_home - x.real_spread))}</td><td class="r">${mae(est.map(x => x.est.total - x.real_total))}</td></tr>
+          <tr><td>Erreur réelle des bookmakers</td><td class="r">${mae(od.map(x => x.odds.spread_home - x.real_spread))}</td><td class="r">${mae(od.map(x => x.odds.total - x.real_total))}</td></tr></table>
+        <div class="src" style="margin-top:6px">${est.length} matchs estimés, ${od.length} avec cotes. Erreurs moyennes en points.</div></div>`; })()}
+    ${(() => {
+      const acc = {};
+      for (const b of sel) for (const [k, e] of Object.entries(b.pace || {})) {
+        const a = acc[k] || (acc[k] = { n: 0, prevu: 0, reel: 0 }); a.n += e.n; a.prevu += e.prevu; a.reel += e.reel; }
+      const ks = Object.keys(acc);
+      if (!ks.length) return "";
+      return `<div class="card"><b>Le rythme est-il bien dosé ?</b>
+        <div class="small muted">Joueurs projetés sur l'historique, groupés par l'effet rythme appliqué. Si le dosage est bon, le rapport réel / prévu est le même dans chaque groupe.</div>
+        <table class="t"><tr><th>Groupe</th><th class="r">Joueurs</th><th class="r">Réel / prévu</th></tr>
+          ${ks.map(k => `<tr><td>${esc(k)}</td><td class="r">${acc[k].n}</td><td class="r">${n2(acc[k].reel / acc[k].prevu)}</td></tr>`).join("")}</table></div>`; })()}
     <div class="card"><b>Qui a joué</b>
       <table class="t"><tr><th>Annoncé</th><th class="r">Joueurs</th><th class="r">Prévu</th><th class="r">Ont joué</th></tr>${presence}</table></div>
     <div class="card"><b>Props ou historique ?</b>

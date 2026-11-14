@@ -94,6 +94,24 @@
    "joue": 25
   }
  },
+ "matchs": null,
+ "rythme": {
+  "match lent (< 0,97)": {
+   "n": 19,
+   "prevu": 258.87,
+   "reel": 285.7
+  },
+  "rythme moyen": {
+   "n": 22,
+   "prevu": 245.20000000000005,
+   "reel": 256.99
+  },
+  "match rapide (> 1,03)": {
+   "n": 13,
+   "prevu": 162.43999999999997,
+   "reel": 222.26
+  }
+ },
  "joueurs": [
   {
    "slug": "franz-wagner-20010827",

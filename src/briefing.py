@@ -83,6 +83,12 @@ def main():
         print("\n".join(bilan_block(last["rows"], night_label(last["night"]))))
         if len(B) > 1:
             print("\n".join(bilan_block([r for b in B for r in b["rows"]], f"Cumul sur {len(B)} nuits")))
+        gl = [x for b in B for x in b.get("games", [])]
+        est = [x for x in gl if x.get("est") and x.get("odds")]
+        if est:
+            m = lambda f: sum(abs(f(x)) for x in est) / len(est)
+            print(f"- matchs estimés la veille ({len(est)}, cumul) : à {m(lambda x: x['est']['spread_home'] - x['odds']['spread_home']):.1f} pts "
+                  f"des vraies cotes sur l'écart, {m(lambda x: x['est']['total'] - x['odds']['total']):.1f} sur le total")
         top = sorted(last["rows"], key=lambda r: -abs(r["a"] - r["e"]) if r["pl"] else 0)[:5]
         print("- plus gros écarts : " + " ; ".join(
             f"{r['n']} {r['a']:.0f} pour {r['e']:.0f} prévus ({r['em']:.0f} → {r['m']} min)" for r in top if r["pl"]))
