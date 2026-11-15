@@ -138,7 +138,7 @@ def bilans():
                 else:
                     ok = False
                     pts.append(None)
-            b["teams"].append({"names": t["names"], "p": t["p"], "lock": t["lock"], "pts": pts,
+            b["teams"].append({"names": t["names"], "p": t["p"], "lock": t["lock"], "pts": pts, "mu": t.get("mu"),
                                "score": round(sum(pts), 1) if ok else None})
     return sorted(out, key=lambda b: b["night"], reverse=True)
 

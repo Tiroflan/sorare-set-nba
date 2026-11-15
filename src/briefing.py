@@ -69,6 +69,33 @@ def bilan_block(rows, title):
     return out
 
 
+def teams_block(B):
+    """Les équipes proposées font-elles ce qu'on leur prédit ? En choisissant les plus hautes
+    projections, l'outil attrape aussi les joueurs surestimés par hasard : on le surveille."""
+    out, nights, sel, oth = [], [], [], []
+    for b in sorted(B, key=lambda b: b["night"]):
+        done = [t for t in b["teams"] if t["score"] is not None and t.get("mu")]
+        if not done:
+            continue
+        mu, sc = mean([t["mu"] for t in done]), mean([t["score"] for t in done])
+        hit, exp = sum(t["score"] >= 240 for t in done), sum(t["p"]["240"] for t in done)
+        nights.append((mu, sc, hit, exp))
+        out.append(f"- {night_label(b['night'])} : projetées {mu:.0f} pts en moyenne, réel {sc:.0f} ({sc - mu:+.0f}) ; "
+                   f"{hit} sur {len(done)} au-dessus de 240 pour {exp:.1f} attendues")
+        names = {n for t in b["teams"] for n in t["names"]}
+        for r in b["rows"]:
+            if r["pl"]:
+                (sel if r["n"] in names else oth).append(r["a"] - r["e"])
+    if not nights:
+        return []
+    head = [f"\n**Équipes proposées, projeté contre réel** ({len(nights)} nuits)"]
+    tail = [f"- cumul : {mean([n[1] - n[0] for n in nights]):+.0f} pts par équipe et par nuit ; "
+            f"{sum(n[2] for n in nights)} au-dessus de 240 pour {sum(n[3] for n in nights):.1f} attendues",
+            f"- joueurs retenus dans les équipes : {mean(sel):+.1f} pts contre leur projection ({len(sel)} joueurs), "
+            f"les autres {mean(oth):+.1f} ({len(oth)}). Un écart qui se creuse = les équipes sont trop optimistes"]
+    return head + out + tail
+
+
 def main():
     D = load("--local" in sys.argv)
     P = {p["id"]: p for p in D["players"]}
@@ -104,6 +131,7 @@ def main():
             hit = sum(t["score"] >= 240 for t in done)
             print(f"- {hit} sur {len(done)} ont passé 240, {sum(t['p']['240'] for t in done):.1f} attendues "
                   "(équipes très liées entre elles : à lire comme un seul tirage)")
+        print("\n".join(teams_block(B)))
         print()
 
     print("## Les 2 prochains soirs\n")
