@@ -33,8 +33,9 @@ def main():
     ap.add_argument("--nuits", default="2")
     a = ap.parse_args()
     DATA.mkdir(exist_ok=True)
-    if age_h(DATA / "players.json") > 20:
-        run("src/fetch_gallery.py", a.slug)
+    # Galerie relue à chaque passage : les cartes des packs ouverts dans la journée
+    # comptent dès la mise à jour suivante.
+    run("src/fetch_gallery.py", a.slug)
     if age_h(DATA / "calibration.json") > 24 * 7:
         run("src/history.py")
         run("src/calibrate.py")
