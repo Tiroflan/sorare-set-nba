@@ -28,6 +28,11 @@ DEFAULT_TARGET = 240
 # Rejoué le 16/11 sur 274 joueurs projetés à 15 pts ou plus : les 32 « explosifs » ont fait +12 pts
 # ou plus dans 25 % des cas, les autres dans 14 %.
 BOOM_CUT = 0.28
+# Seuil pour jouer un soir, par palier (chance de la meilleure équipe, telle qu'affichée).
+# Calculé le 16/11 en simulant les ~50 soirs restants jusqu'au 6 janvier, avec 4 tentatives par palier
+# et retour au palier 1 après 4 échecs : en dessous, mieux vaut attendre un meilleur soir.
+# Paliers 1 à 3 : toujours jouer.
+PLAY_MIN = {240: 0.15, 270: 0.09, 290: 0.06}
 BOOM_MIN_EXP = 15
 JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 
@@ -98,7 +103,7 @@ def main():
         "generated": datetime.now(PARIS).strftime("%d/%m à %Hh%M"),
         "nights": args.nuits, "targets": TARGETS, "defaultTarget": DEFAULT_TARGET,
         "starCap": STAR_CAP, "sigmaMargin": SIGMA_MARGIN,
-        "disp": {"props": model.DISP_PROPS, "hist": model.DISP_HIST}, "boomCut": BOOM_CUT, "boomMinExp": BOOM_MIN_EXP,
+        "disp": {"props": model.DISP_PROPS, "hist": model.DISP_HIST}, "playMin": {str(k): v for k, v in PLAY_MIN.items()}, "boomCut": BOOM_CUT, "boomMinExp": BOOM_MIN_EXP,
         "calib": calib, "games": games, "players": players, "teams": teams,
         "hypotheses": {
             "Écart final autour du spread (écart-type)": f"{model.SIGMA_MARGIN:g} points",

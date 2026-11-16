@@ -158,10 +158,10 @@ def main():
         for x in D["teams"]:
             n = min((P[i] for i in x["ids"]), key=lambda p: p["tip"])["night"]
             best[n] = max(best.get(n, 0), x["p"][str(t)])
-        if len(best) > 1:
-            top = max(best, key=best.get)
-            print(f"- quel soir jouer : " + " ; ".join(f"{night_label(n)} {pct(v)}" for n, v in sorted(best.items()))
-                  + f" → le meilleur : {night_label(top)}")
+        mn = (D.get("playMin") or {}).get(str(t), 0)
+        if best:
+            print(f"- jouer ? (seuil {pct(mn) if mn else 'aucun'}) : " + " ; ".join(
+                f"{night_label(n)} {pct(v)} {'à jouer' if v >= mn else 'soir creux'}" for n, v in sorted(best.items())))
 
 
 if __name__ == "__main__":

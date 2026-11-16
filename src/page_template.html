@@ -263,12 +263,13 @@ function renderTeams() {
     const lk = lockOf(t.ids.map(id => byId[id]));
     if (!best[lk.night] || t.p[target] > best[lk.night].p) best[lk.night] = { p: t.p[target], when: lk.when };
   }
-  const nights = Object.keys(best).sort(), top = Math.max(...nights.map(n => best[n].p));
-  const whenCard = nights.length > 1 ? `<div class="card"><b>Quel soir jouer ?</b>
-    <div class="small muted">Une tentative ratée coûte une vie : garde-la pour le soir où la meilleure équipe a le plus de chances.</div>
+  const nights = Object.keys(best).sort(), min = (D.playMin || {})[target] || 0;
+  const whenCard = nights.length ? `<div class="card"><b>Faut-il jouer ce soir ?</b>
+    <div class="small muted">${min ? `Pour ${target}, joue dès que la meilleure équipe atteint <b>${fmtP(min)}</b>. En dessous, c'est un soir creux : attends le suivant.`
+      : `Pour ${target}, joue tous les soirs : la chance est assez haute pour ne pas attendre.`}</div>
     ${nights.map(n => `<div class="row small"><div class="grow">${nightLabel(n)}</div>
-      <div><b class="${pClass(best[n].p)}">${fmtP(best[n].p)}</b>${best[n].p === top ? " · le meilleur" : ""}</div></div>`).join("")}
-    <div class="src">Au-delà de ces ${nights.length} soirs, pas encore de projection. Les soirs sans cotes reposent sur notre estimation des matchs.</div></div>` : "";
+      <div><b class="${pClass(best[n].p)}">${fmtP(best[n].p)}</b> · ${best[n].p >= min ? "à jouer" : "soir creux"}</div></div>`).join("")}
+    <div class="src">4 tentatives par palier, et 4 échecs renvoient au palier 1. Mais on remonte à 240 en 4 à 5 soirs, et il en reste une cinquantaine jusqu'au 6 janvier : mieux vaut jouer chaque bon soir que garder une vie. Seuils calculés le 16/11 en simulant toute la fin du set.</div></div>` : "";
   document.getElementById("teams").innerHTML = whenCard +
     `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
