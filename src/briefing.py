@@ -154,6 +154,14 @@ def main():
             print(f"- {pct(x['p'][str(t)])} : " + ", ".join(f"{p['name']} {p['stars']:g}★" for p in ps)
                   + f" · {sum(p['stars'] for p in ps):g}★ · figée {when(lock['tip'])}"
                   + (f" · attention : {', '.join(flags)}" if flags else ""))
+        best = {}
+        for x in D["teams"]:
+            n = min((P[i] for i in x["ids"]), key=lambda p: p["tip"])["night"]
+            best[n] = max(best.get(n, 0), x["p"][str(t)])
+        if len(best) > 1:
+            top = max(best, key=best.get)
+            print(f"- quel soir jouer : " + " ; ".join(f"{night_label(n)} {pct(v)}" for n, v in sorted(best.items()))
+                  + f" → le meilleur : {night_label(top)}")
 
 
 if __name__ == "__main__":

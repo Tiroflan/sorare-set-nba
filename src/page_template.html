@@ -170,8 +170,11 @@ const TAGS = [
    "Probabilité qu'il joue. On prend la première source disponible : 1. le % de RotoWire le soir même (titulaires et incertains) ; 2. le statut RotoWire sans % (Prob 85 %, Ques 50 %, Doubt 20 %, Out 0 %) ; 3. ESPN : Out 0 %, Day-To-Day 60 % ; 4. Sorare : OUT 0 % ; 5. fin de banc : part de ses 10 derniers matchs où il est entré ; 6. sinon 100 %. Dans le reste des simulations, il marque 0 point. Sa fiche dit quelle source a servi."],
   ["carte", "carte +10 %",
    "Bonus de ta carte (Shiny +5 %, Holo +10 %, variante +15 %), déjà appliqué au score affiché. Ne pas surpondérer : 40 pts à 0 % valent mieux que 30 pts à +15 %."],
+  ["explosif", "explosif",
+   "Joueur capable de grosses soirées : projeté à 15 pts ou plus, avec au moins 28 % de chances de faire 1,4 fois sa projection (irrégularité de ses minutes et de sa production sur ses derniers matchs). Vérifié sur les 4 premières nuits : les joueurs ainsi repérés ont fait +12 pts ou plus au-dessus de leur projection dans 25 % des cas, les autres dans 14 % (32 joueurs seulement, à confirmer). Utile pour viser un palier haut, risqué pour un palier facile. La simulation en tient déjà compte : le tag sert à comprendre ses choix."],
 ];
 const tagInfo = r => (TAGS.find(([k]) => r.startsWith(k)) || [0, 0, ""])[2];
+const isBoom = p => p.upside !== undefined && D.boomCut && p.upside >= D.boomCut && p.exp >= (D.boomMinExp || 0);
 
 function badges(p) {
   const out = [];
@@ -182,6 +185,7 @@ function badges(p) {
     else if (r.includes("Out") || r.includes("Day") || r.includes("RotoWire")) cls = "down";
     out.push(`<span class="badge ${cls}" title="${esc(tagInfo(r))}">${esc(r)}</span>`);
   }
+  if (isBoom(p)) out.push(`<span class="badge hot" title="${esc(tagInfo("explosif"))}">explosif</span>`);
   if (p.pct < 1) out.push(`<span class="badge down" title="${esc(tagInfo("joue"))}">joue ${Math.round(p.pct * 100)} %</span>`);
   if (p.bonus > 0) out.push(`<span class="badge" title="${esc(tagInfo("carte"))}">carte +${Math.round(p.bonus * 100)} %</span>`);
   return out.length ? `<div class="badges">${out.join("")}</div>` : "";
@@ -191,6 +195,12 @@ function badges(p) {
 function gauss() { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random();
   return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
 function bucket(m) { const b = D.calib.buckets; for (let i = 0; i < b.length; i++) if (m >= b[i][0] && m < b[i][1]) return i; return b.length - 1; }
+// Élargissement mesuré sur le journal : les explosions sont plus fréquentes que ne le dit l'historique.
+function widen(x, p) {
+  if (!D.disp || p.exp <= 0) return x;
+  const [up, dn] = p.usesProps ? D.disp.props : D.disp.hist, d = x / p.exp - 1;
+  return p.exp * (1 + (d > 0 ? up : dn) * d);
+}
 function simulate(team, n) {
   const hits = Object.fromEntries(D.targets.map(t => [t, 0]));
   const keys = [...new Set(team.map(p => p.game))];
@@ -207,7 +217,7 @@ function simulate(team, n) {
       const pace = 1 + slope * (tp / league - 1);
       const ratio = D.calib.minutes[p.role][bucket(margin[p.game])];
       const m = Math.min(48, Math.max(0, p.estMin * ratio + gauss() * p.sdMin));
-      total += p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale;
+      total += widen(p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale, p);
     }
     sum += total;
     for (const t of D.targets) if (total >= t) hits[t]++;
@@ -247,7 +257,19 @@ function playerLine(p, action) {
 function renderTeams() {
   const next = D.targets[D.targets.indexOf(target) + 1];
   const list = [...D.teams].sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
-  document.getElementById("teams").innerHTML =
+  // Quel soir jouer : la meilleure équipe de chaque soir de verrouillage.
+  const best = {};
+  for (const t of D.teams) {
+    const lk = lockOf(t.ids.map(id => byId[id]));
+    if (!best[lk.night] || t.p[target] > best[lk.night].p) best[lk.night] = { p: t.p[target], when: lk.when };
+  }
+  const nights = Object.keys(best).sort(), top = Math.max(...nights.map(n => best[n].p));
+  const whenCard = nights.length > 1 ? `<div class="card"><b>Quel soir jouer ?</b>
+    <div class="small muted">Une tentative ratée coûte une vie : garde-la pour le soir où la meilleure équipe a le plus de chances.</div>
+    ${nights.map(n => `<div class="row small"><div class="grow">${nightLabel(n)}</div>
+      <div><b class="${pClass(best[n].p)}">${fmtP(best[n].p)}</b>${best[n].p === top ? " · le meilleur" : ""}</div></div>`).join("")}
+    <div class="src">Au-delà de ces ${nights.length} soirs, pas encore de projection. Les soirs sans cotes reposent sur notre estimation des matchs.</div></div>` : "";
+  document.getElementById("teams").innerHTML = whenCard +
     `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
@@ -403,8 +425,9 @@ function openDetail(id) {
       <span class="muted small"> pts estimés · ${(p.exp / p.stars).toFixed(1)} par étoile</span></div>
       <div class="formula">${formula}</div>
       <div class="formula">Historique seul : ${n1(p.hist)} pts${p.usesProps
-        ? ` · les cotes attendent ${p.exp >= p.hist ? "+" : "−"}${Math.abs(Math.round((p.exp / p.hist - 1) * 100))} % (projection retenue : les cotes)` : ""}</div></div>
-    ${(() => { const tags = [...p.reasons, ...(p.pct < 1 ? [`joue ${Math.round(p.pct * 100)} %`] : []),
+        ? ` · les cotes attendent ${p.exp >= p.hist ? "+" : "−"}${Math.abs(Math.round((p.exp / p.hist - 1) * 100))} % (projection retenue : les cotes)` : ""}</div>
+      ${p.upside !== undefined ? `<div class="formula">Grosse soirée : ${Math.round(p.upside * 100)} % de chances de faire ${Math.round(1.4 * p.exp)} pts ou plus (1,4 fois la projection), s'il joue</div>` : ""}</div>
+    ${(() => { const tags = [...p.reasons, ...(isBoom(p) ? ["explosif"] : []), ...(p.pct < 1 ? [`joue ${Math.round(p.pct * 100)} %`] : []),
         ...(p.bonus > 0 ? [`carte +${Math.round(p.bonus * 100)} %`] : [])];
       return tags.length ? `<h3>Ses tags</h3><div class="plist">${tags.map(r =>
         `<div class="pl"><span class="badge">${esc(r)}</span><div class="small" style="margin-top:3px">${esc(tagInfo(r))}</div></div>`).join("")}</div>` : ""; })()}

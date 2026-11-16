@@ -19,6 +19,17 @@ PROMO_MAX_USUAL_MIN = 24  # titulaire ce soir mais moins de 24 min d'habitude = 
 MIN_SD_FLOOR = 3.0        # incertitude minimale sur les minutes
 # --- Mesuré avec le journal des soirs ---
 BENCH_MAX_USUAL_MIN = 20  # sous 20 min d'habitude et pas titulaire : chance de jouer = taux d'apparition récent
+# Élargissement de la simulation (haut, bas), réglé le 16/11 sur 379 joueurs rejoués
+# (src/calib_check.py) : sans lui, 17,7 % des joueurs passaient au-dessus du 90e centile
+# simulé et 12,1 % sous le 10e ; avec, 11,3 % et 8,7 %. Les explosions sont plus
+# fréquentes que ne le dit l'historique, surtout pour les joueurs sans props.
+DISP_PROPS = (1.15, 1.0)
+DISP_HIST = (1.6, 1.2)
+# Même chose pour l'écart-type affiché (±) : 68 % des joueurs dans ±1 écart-type.
+SD_WIDEN_PROPS = 1.1
+SD_WIDEN_HIST = 1.4
+# Testé et écarté le 16/11 : un aléa commun aux joueurs d'un même match.
+# Corrélation des surprises entre coéquipiers -0,03 (1 193 paires), entre adversaires -0,03.
 # -------------------------------------------------------------------------
 
 
@@ -202,6 +213,30 @@ def _bucket(margin, calib):
     return len(calib["buckets"]) - 1
 
 
+def widen(x, pl):
+    """Écarte le tirage x de la projection : plus vers le haut que vers le bas."""
+    c = pl["exp"]
+    if c <= 0:
+        return x
+    up, dn = DISP_PROPS if pl.get("uses_props") else DISP_HIST
+    d = x / c - 1
+    return c * (1 + (up if d > 0 else dn) * d)
+
+
+def upside(pl, n=2000, seed=11):
+    """Chance de faire 1,4 fois sa projection ou plus, d'après la simulation élargie
+    (minutes et production tirées au sort, sans l'effet blowout)."""
+    rng = random.Random(seed)
+    if pl["exp"] <= 0:
+        return 0.0
+    hits = 0
+    for _ in range(n):
+        m = min(48.0, max(0.0, rng.gauss(pl["est_min"], pl["sd_min"])))
+        x = rng.choice(pl["rates"]) / pl["rate"] * m / pl["est_min"] * pl["exp"] if pl["est_min"] > 0 else 0.0
+        hits += widen(x, pl) >= 1.4 * pl["exp"]
+    return hits / n
+
+
 def simulate_team(team, contexts, calib, targets, n_sim, rng):
     """Probabilité d'atteindre chaque cible. Un tirage d'écart final par match,
     partagé par les joueurs du même match (d'où la corrélation)."""
@@ -219,7 +254,8 @@ def simulate_team(team, contexts, calib, targets, n_sim, rng):
             pace = 1 + calib["pace_slope"] * (team_pts / league - 1)
             ratio = calib["minutes"][pl["role"]][_bucket(margin[pl["game_key"]], calib)]
             m = min(48.0, max(0.0, rng.gauss(pl["est_min"] * ratio, pl["sd_min"])))
-            total += rng.choice(pl["rates"]) * pace * m * (1 + pl["bonus"]) * pl.get("scale", 1.0)
+            x = rng.choice(pl["rates"]) * pace * m * (1 + pl["bonus"]) * pl.get("scale", 1.0)
+            total += widen(x, pl)
         for t in targets:
             hits[t] += total >= t
     return {t: hits[t] / n_sim for t in targets}

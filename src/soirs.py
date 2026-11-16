@@ -27,7 +27,7 @@ import history
 import odds
 import rotowire
 import team_ratings
-from model import (breakdown, build_player, context_factors, expected_score, game_context, norm,
+from model import (SD_WIDEN_HIST, SD_WIDEN_PROPS, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
                    simulate_team)
 from phase0_faisabilite import edition_bonus, p_normal
 
@@ -158,7 +158,8 @@ def load_pool(nights: int):
                 pl["reasons"].append(f"props {pl['exp'] / pl['hist_exp'] - 1:+.0%} vs historique")
         # La simulation garde la forme de l'historique, recentrée sur l'estimation retenue.
         pl["scale"] = pl["exp"] / e_sim if e_sim > 0 else 1.0
-        pl["sd"] *= pl["scale"]
+        pl["sd"] *= pl["scale"] * (SD_WIDEN_PROPS if pl["uses_props"] else SD_WIDEN_HIST)
+        pl["upside"] = upside(pl)
         pool.append(pl)
     return pool, contexts, calib, sched
 

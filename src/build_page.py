@@ -24,6 +24,11 @@ OUT = ROOT / "site" / "index.html"
 # Sorare Tools (chapitre 1 de Divination), à confirmer sur le plateau.
 TARGETS = (150, 180, 210, 240, 270, 290)
 DEFAULT_TARGET = 240
+# Tag « explosif » : projeté à 15 pts ou plus et au moins 28 % de chances de faire 1,4 fois sa projection.
+# Rejoué le 16/11 sur 274 joueurs projetés à 15 pts ou plus : les 32 « explosifs » ont fait +12 pts
+# ou plus dans 25 % des cas, les autres dans 14 %.
+BOOM_CUT = 0.28
+BOOM_MIN_EXP = 15
 JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 
 
@@ -45,6 +50,12 @@ def main():
     live = [p for p in pool if p["pct"] > 0]
     print("Recherche des meilleures équipes...")
     results = best_teams(live, contexts, calib, TARGETS, random.Random(5), top_k=300)
+    # Les soirs suivants, à part : sinon les 300 meilleures se figent toutes le premier soir,
+    # et on ne peut pas comparer les soirs (une vie perdue par tentative ratée).
+    for night in sorted({p["night"] for p in live})[1:]:
+        sub = [p for p in live if p["night"] == night]
+        if len(sub) >= 5:
+            results += best_teams(sub, contexts, calib, TARGETS, random.Random(5), top_k=40)
     results.sort(key=lambda t: -t[0][DEFAULT_TARGET])
     try:  # le journal ne doit jamais empêcher la page de sortir
         journal.record(pool, results[:40], TARGETS, sched=sched)
@@ -65,6 +76,7 @@ def main():
             "blow": round(p["blow"], 3), "pctSrc": p["pct_src"], "minRule": p["min_rule"],
             "usualMin": p["usual_min"], "last": p["last"],
             "histVals": {k: round(v, 2) for k, v in p["hist_vals"].items()},
+            "upside": round(p["upside"], 3),
         })
     games = []
     for g in sorted(sched, key=lambda g: g["tip_utc"]):
@@ -86,6 +98,7 @@ def main():
         "generated": datetime.now(PARIS).strftime("%d/%m à %Hh%M"),
         "nights": args.nuits, "targets": TARGETS, "defaultTarget": DEFAULT_TARGET,
         "starCap": STAR_CAP, "sigmaMargin": SIGMA_MARGIN,
+        "disp": {"props": model.DISP_PROPS, "hist": model.DISP_HIST}, "boomCut": BOOM_CUT, "boomMinExp": BOOM_MIN_EXP,
         "calib": calib, "games": games, "players": players, "teams": teams,
         "hypotheses": {
             "Écart final autour du spread (écart-type)": f"{model.SIGMA_MARGIN:g} points",
@@ -100,6 +113,11 @@ def main():
                                  "avantage du terrain mesuré) ; sur la saison, écart final estimé à 12,2 pts près "
                                  "contre 13,7 en supposant un match nul, total à peine mieux que la moyenne ligue"),
             "Double-double et triple-double": "bonus ignorés dans l'estimation (1 point chacun au plus)",
+            "Élargissement de la simulation": (
+                f"écarts vers le haut x{model.DISP_PROPS[0]:g} (avec props) et x{model.DISP_HIST[0]:g} (historique), "
+                f"vers le bas x{model.DISP_PROPS[1]:g} et x{model.DISP_HIST[1]:g} ; réglé le 16/11 sur 379 joueurs rejoués : "
+                "11 % au-dessus du 90e centile simulé et 9 % sous le 10e, au lieu de 18 % et 12 %"),
+            "Aléa commun à un match": "testé et écarté : les surprises de coéquipiers ne vont pas ensemble (corrélation -0,03 sur 1 193 paires)",
         },
     }
     cache.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
