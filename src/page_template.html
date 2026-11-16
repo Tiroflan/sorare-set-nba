@@ -310,12 +310,13 @@ function renderMine() {
       ${st > D.starCap ? `<div class="warn">Plafond dépassé de ${stars(st - D.starCap)}</div>` : ""}
       <div class="plist">${slots.join("")}</div>
     </div>
-    <div class="card" id="result">${team.length === 5 ? "Calcul…" : `<span class="muted">Choisis 5 joueurs pour voir tes chances.</span>`}</div>
+    <div class="card" id="result">${team.length === 5 ? "Calcul…" : fillPrompt(team, st)}</div>
     <div id="swaps"></div>`;
   el.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => {
     mine = mine.filter(id => id !== +b.dataset.rm); store.set("mine", mine); renderMine();
   });
   const c = document.getElementById("clear"); if (c) c.onclick = () => { mine = []; store.set("mine", mine); renderMine(); };
+  const fb = document.getElementById("fillbtn"); if (fb) fb.onclick = () => findFill(team);
   if (team.length !== 5) return;
   const token = ++simToken;
   setTimeout(() => {
@@ -328,6 +329,76 @@ function renderMine() {
         <td class="num ${pClass(r[t])}">${fmtP(r[t])}</td></tr>`).join("")}</table>
       <div style="margin-top:10px"><button class="act primary" id="swapbtn">Chercher un meilleur remplaçant</button></div>`;
     document.getElementById("swapbtn").onclick = () => findSwaps(team, r);
+  }, 30);
+}
+
+// ---- Compléter l'équipe : meilleures façons de remplir les places libres ----
+function fillPrompt(team, st) {
+  const k = 5 - team.length, budget = D.starCap - st;
+  if (!team.length) return `<span class="muted">Choisis 5 joueurs pour voir tes chances, ou charge une équipe depuis l'onglet Équipes.</span>`;
+  if (budget < k) return `<span class="muted">Plus assez d'étoiles : il reste ${stars(Math.max(0, budget))} pour ${k} joueur${k > 1 ? "s" : ""}.</span>`;
+  return `<div class="small muted">Il reste ${stars(budget)} pour ${k} joueur${k > 1 ? "s" : ""}.</div>
+    <div style="margin-top:8px"><button class="act primary" id="fillbtn">Compléter l'équipe</button></div>`;
+}
+const phi = z => 0.5 * (1 + Math.tanh(0.7978845608 * (z + 0.044715 * z * z * z)));
+// Écart-type approché d'un joueur (chance de jouer comprise), pour trier vite avant de simuler.
+function approxSd(p) {
+  const m = mean(p.rates), cv = Math.sqrt(mean(p.rates.map(r => (r - m) ** 2))) / m;
+  const s = p.exp * Math.hypot(cv, p.sdMin / Math.max(1, p.estMin)) * (p.usesProps ? 1.1 : 1.4);
+  return Math.sqrt(p.pct * s * s + p.pct * (1 - p.pct) * p.exp * p.exp);
+}
+function findFill(team) {
+  const box = document.getElementById("swaps");
+  box.innerHTML = `<div class="card muted">Recherche…</div>`;
+  setTimeout(() => {
+    const k = 5 - team.length, budget = D.starCap - team.reduce((a, p) => a + p.stars, 0);
+    const keep = [0, 15, 8, 5, 4, 3][k];
+    const byLevel = {};
+    for (const p of P) if (p.pct > 0 && !team.includes(p) && p.stars <= budget) (byLevel[p.stars] = byLevel[p.stars] || []).push(p);
+    const short = new Set();
+    for (const ps of Object.values(byLevel)) {
+      ps.sort((a, b) => b.exp * b.pct - a.exp * a.pct).slice(0, keep).forEach(p => short.add(p));
+      ps.sort((a, b) => (b.exp * b.pct + approxSd(b)) - (a.exp * a.pct + approxSd(a))).slice(0, keep).forEach(p => short.add(p));
+    }
+    const cand = [...short], baseMu = team.reduce((a, p) => a + p.exp * p.pct, 0);
+    const baseVar = team.reduce((a, p) => a + approxSd(p) ** 2, 0);
+    const combos = [];
+    (function pick(start, chosen, used) {
+      if (chosen.length === k) {
+        const mu = baseMu + chosen.reduce((a, p) => a + p.exp * p.pct, 0);
+        const sd = Math.sqrt(baseVar + chosen.reduce((a, p) => a + approxSd(p) ** 2, 0));
+        combos.push({ add: chosen.slice(), score: 1 - phi((target - mu) / sd) });
+        return;
+      }
+      for (let i = start; i < cand.length; i++)
+        if (used + cand[i].stars <= budget) { chosen.push(cand[i]); pick(i + 1, chosen, used + cand[i].stars); chosen.pop(); }
+    })(0, [], 0);
+    combos.sort((a, b) => b.score - a.score);
+    // Les meilleures au total, plus la meilleure de chaque répartition d'étoiles.
+    const split = c => c.add.map(p => p.stars).sort((a, b) => b - a).map(x => stars(x)).join(" + ");
+    const seen = new Set(), pool = [];
+    for (const c of combos) {
+      const key = split(c);
+      if (pool.length < 25 || !seen.has(key)) { pool.push(c); seen.add(key); }
+      if (pool.length >= 60) break;
+    }
+    for (const c of pool) c.r = simulate([...team, ...c.add], 4000);
+    pool.sort((a, b) => b.r[target] - a.r[target]);
+    const bySplit = [], done = new Set();
+    for (const c of pool) { const key = split(c); if (!done.has(key)) { done.add(key); bySplit.push(c); } }
+    const shown = bySplit.slice(0, 8);
+    box.innerHTML = `<div class="card"><b>Compléter l'équipe</b>
+      <div class="small muted">Meilleure option pour chaque répartition des ${stars(budget)} restantes, classées par chance d'atteindre ${target}. Calcul rapide (4 000 tirages) : 1 ou 2 points d'écart, c'est une égalité. L'équipe complète est recalculée plus finement une fois prise.</div>
+      ${shown.length ? shown.map((c, i) => `<div class="pl" style="border-top:1px solid var(--line);padding:8px 0">
+        <div class="row"><div class="grow small"><b>${split(c)}</b> <span class="muted">· ${stars(c.add.reduce((a, p) => a + p.stars, 0))} utilisées</span></div>
+          <div class="num ${pClass(c.r[target])}"><b>${fmtP(c.r[target])}</b></div>
+          <button class="act" data-fill="${i}">Prendre</button></div>
+        ${c.add.map(p => `<div class="small"><span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)} <span class="muted">· ${p.exp.toFixed(0)} pts · ${p.when}${p.pct < 1 ? ` · joue ${Math.round(p.pct * 100)} %` : ""}</span>${isBoom(p) ? ` <span class="badge hot">explosif</span>` : ""}</div>`).join("")}
+      </div>`).join("") : `<div class="small muted" style="margin-top:6px">Aucune combinaison possible avec ces étoiles.</div>`}</div>`;
+    box.querySelectorAll("[data-fill]").forEach(b => b.onclick = () => {
+      mine = [...team, ...shown[+b.dataset.fill].add].map(p => p.id); store.set("mine", mine); renderMine();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }, 30);
 }
 
