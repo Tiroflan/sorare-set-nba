@@ -19,6 +19,11 @@ PROMO_MAX_USUAL_MIN = 24  # titulaire ce soir mais moins de 24 min d'habitude = 
 MIN_SD_FLOOR = 3.0        # incertitude minimale sur les minutes
 # --- Mesuré avec le journal des soirs ---
 BENCH_MAX_USUAL_MIN = 20  # sous 20 min d'habitude et pas titulaire : chance de jouer = taux d'apparition récent
+# Chance de jouer d'une fin de banc = BENCH_PCT_A + BENCH_PCT_B x taux d'apparition récent.
+# Recalé le 17/11 sur 211 cas (5 nuits) : le taux brut prévoyait 54 %, 63 % ont joué ; 21 % prévus -> 41 % joués
+# chez les moins présents (matchs manqués sur blessure comptés comme non joués).
+BENCH_PCT_A = 0.26
+BENCH_PCT_B = 0.72
 # Élargissement de la simulation (haut, bas), réglé le 16/11 sur 379 joueurs rejoués
 # (src/calib_check.py) : sans lui, 17,7 % des joueurs passaient au-dessus du 90e centile
 # simulé et 12,1 % sous le 10e ; avec, 11,3 % et 8,7 %. Les explosions sont plus
@@ -106,8 +111,9 @@ def build_player(p, games_hist, bonus, edition, game, lineup, inj_espn, now_utc)
         if not starter and usual < BENCH_MAX_USUAL_MIN and recent_games:
             seen = sum((g.get("minsPlayed") or 0) > 0 for g in recent_games)
             if seen < len(recent_games):
-                pct = seen / len(recent_games)
-                pct_src += f". Fin de banc : entré en jeu {seen} fois sur ses {len(recent_games)} derniers matchs, compté {pct:.0%}"
+                pct = BENCH_PCT_A + BENCH_PCT_B * seen / len(recent_games)
+                pct_src += (f". Fin de banc : entré en jeu {seen} fois sur ses {len(recent_games)} derniers matchs, "
+                            f"compté {pct:.0%} (recalé sur nos bilans)")
                 reasons.append(f"banc, joue {pct:.0%} des matchs")
 
     promoted = bool(starter) and usual < PROMO_MAX_USUAL_MIN

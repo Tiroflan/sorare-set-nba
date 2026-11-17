@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 J = ROOT / "journal"
 SOLID, TREND = 2.5, 1.5
 RECAL_DATE = "2026-11-16"  # premier soir projeté avec la simulation élargie
+BENCH_RECAL = "2026-11-17"  # premier soir avec la chance de jouer des fins de banc recalée
 
 
 def _load():
@@ -150,8 +151,11 @@ def compute():
             "rabaisser ces projections (souvent des remplaçants promus estimés sur leurs meilleurs matchs)"))
 
     # 6. Chance de jouer des incertains (moins de 70 %).
-    unc = [r for _, r, _ in [(n, r, p) for b, j in nights for n, r, p in [(b["night"], r, j["players"].get(r["slug"], {})) for r in b["joueurs"]]]
-           if 0 < r["pct"] < 0.7]
+    unc = [r for b, _ in nights if b["night"] >= BENCH_RECAL for r in b["joueurs"] if 0 < r["pct"] < 0.7]
+    if not unc:
+        out.append(_item("presence", "La chance de jouer des incertains est-elle juste ?",
+                         "règle des fins de banc recalée le 17/11 : pas encore de soir joué avec la nouvelle règle", None, 0, 1,
+                         "réajuster BENCH_PCT_A et BENCH_PCT_B"))
     if unc:
         exp_ = sum(r["pct"] for r in unc)
         obs = sum(bool(r["played"]) for r in unc)
@@ -159,7 +163,7 @@ def compute():
         out.append(_item(
             "presence", "La chance de jouer des incertains est-elle juste ?",
             f"{exp_ / len(unc):.0%} prévu, {obs / len(unc):.0%} ont joué ({len(unc)} joueurs)", z, len(unc),
-            len(unc) / n_nights, "remonter la chance de jouer des fins de banc (règle du taux d'apparition récent)"))
+            len(unc) / n_nights, "réajuster BENCH_PCT_A et BENCH_PCT_B (recalage des fins de banc du 17/11)"))
 
     # 7. Rythme : les joueurs à l'historique des matchs rapides et lents sont-ils bien dosés ?
     fast, slow = [], []

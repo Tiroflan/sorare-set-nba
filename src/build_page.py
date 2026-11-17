@@ -111,8 +111,8 @@ def main():
             "Statuts RotoWire Prob / Ques / Doubt sans pourcentage": ", ".join(
                 f"{k} {v:.0%}" for k, v in model.P_PLAY_ROTOWIRE.items()),
             "Fin de banc (pas titulaire, moins de 20 min d'habitude)": (
-                "chance de jouer = part de ses 10 derniers matchs où il est entré en jeu "
-                "(vérifié le 12/11 : 56 % prévu, 55 % ont joué)"),
+                f"chance de jouer = {model.BENCH_PCT_A:.0%} + {model.BENCH_PCT_B:g} x part de ses 10 derniers matchs "
+                "où il est entré en jeu (recalé le 17/11 sur 211 cas : la part brute prévoyait 54 %, 63 % ont joué)"),
             "Remplaçant promu": f"titulaire ce soir et moins de {model.PROMO_MAX_USUAL_MIN} min d'habitude",
             "Match sans cotes": ("points de chaque équipe estimés d'après ses matchs joués (attaque x défense adverse, "
                                  "avantage du terrain mesuré) ; sur la saison, écart final estimé à 12,2 pts près "
