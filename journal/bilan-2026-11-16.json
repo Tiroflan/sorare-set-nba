@@ -1,0 +1,6726 @@
+{
+ "night": "2026-11-16",
+ "n": 169,
+ "pending": [],
+ "score": {
+  "n": 129,
+  "biais": -0.2995348837209304,
+  "mae": 7.4184496124031005,
+  "rmse": 9.501471611845066
+ },
+ "score_props": {
+  "n": 70,
+  "biais": 1.0385714285714285,
+  "mae": 8.801142857142858,
+  "rmse": 10.875936084507195
+ },
+ "score_hist_meme_joueurs": {
+  "n": 70,
+  "biais": 0.8211428571428571,
+  "mae": 9.17942857142857,
+  "rmse": 11.62999287556593
+ },
+ "score_sans_props": {
+  "n": 59,
+  "biais": -1.8871186440677967,
+  "mae": 5.777966101694915,
+  "rmse": 7.553019600447609
+ },
+ "minutes": {
+  "n": 129,
+  "biais": -0.724031007751938,
+  "mae": 4.469767441860466,
+  "rmse": 6.015419463165428
+ },
+ "dans_1_ecart_type": 0.751937984496124,
+ "composantes": {
+  "pts": {
+   "n": 129,
+   "biais": -0.14015503875968996,
+   "mae": 4.112403100775194,
+   "rmse": 5.314928806395647
+  },
+  "reb": {
+   "n": 129,
+   "biais": -0.15682170542635657,
+   "mae": 1.9374418604651162,
+   "rmse": 2.591251381269334
+  },
+  "ast": {
+   "n": 129,
+   "biais": -0.03573643410852713,
+   "mae": 1.1811627906976745,
+   "rmse": 1.5525610250273927
+  },
+  "tpm": {
+   "n": 129,
+   "biais": -0.08426356589147287,
+   "mae": 0.6782170542635658,
+   "rmse": 0.9681377472624537
+  },
+  "stl": {
+   "n": 129,
+   "biais": 0.05550387596899225,
+   "mae": 0.6649612403100775,
+   "rmse": 0.9057413769175311
+  },
+  "blk": {
+   "n": 129,
+   "biais": -0.025503875968992243,
+   "mae": 0.4289147286821705,
+   "rmse": 0.6313422394041238
+  },
+  "tov": {
+   "n": 129,
+   "biais": -0.10155038759689922,
+   "mae": 0.7750387596899225,
+   "rmse": 0.9986005711870957
+  }
+ },
+ "presence": {
+  "sûr (100 %)": {
+   "n": 84,
+   "prevu": 84.0,
+   "joue": 83
+  },
+  "probable (70-99 %)": {
+   "n": 21,
+   "prevu": 16.5,
+   "joue": 19
+  },
+  "incertain (< 70 %)": {
+   "n": 64,
+   "prevu": 14.499999999999996,
+   "joue": 27
+  }
+ },
+ "matchs": {
+  "lignes": [
+   {
+    "match": "ORL@BOS",
+    "est": {
+     "spread_home": -11.9,
+     "total": 216.8,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-15T23:23Z"
+    },
+    "odds": {
+     "spread_home": -8.5,
+     "total": 213.5,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": 10,
+    "real_total": 220
+   },
+   {
+    "match": "CHI@CLE",
+    "est": {
+     "spread_home": -11.3,
+     "total": 240.7,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-16T02:22Z"
+    },
+    "odds": {
+     "spread_home": -8.5,
+     "total": 241.5,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": -11,
+    "real_total": 241
+   },
+   {
+    "match": "MEM@WAS",
+    "est": {
+     "spread_home": 7.5,
+     "total": 229.4,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-16T02:22Z"
+    },
+    "odds": {
+     "spread_home": 3.5,
+     "total": 233.0,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": 16,
+    "real_total": 256
+   },
+   {
+    "match": "PHI@BKN",
+    "est": {
+     "spread_home": 2.9,
+     "total": 223.2,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-16T02:22Z"
+    },
+    "odds": {
+     "spread_home": 4.5,
+     "total": 226.5,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": 12,
+    "real_total": 258
+   },
+   {
+    "match": "HOU@MIA",
+    "est": {
+     "spread_home": 6.3,
+     "total": 231.4,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-16T02:22Z"
+    },
+    "odds": {
+     "spread_home": 2.0,
+     "total": 232.0,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": -18,
+    "real_total": 238
+   },
+   {
+    "match": "POR@MIN",
+    "est": {
+     "spread_home": -5.6,
+     "total": 228.6,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-15T23:23Z"
+    },
+    "odds": {
+     "spread_home": -2.0,
+     "total": 227.5,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": -8,
+    "real_total": 204
+   },
+   {
+    "match": "GSW@NOP",
+    "est": {
+     "spread_home": 7.7,
+     "total": 238.9,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-15T23:23Z"
+    },
+    "odds": {
+     "spread_home": 3.5,
+     "total": 224.0,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": -21,
+    "real_total": 209
+   },
+   {
+    "match": "PHX@DEN",
+    "est": {
+     "spread_home": -5.7,
+     "total": 229.5,
+     "book": "estimation (matchs joués)",
+     "recorded": "2026-11-16T02:22Z"
+    },
+    "odds": {
+     "spread_home": -9.5,
+     "total": 230.0,
+     "book": "Pinnacle",
+     "recorded": "2026-11-16T23:14Z"
+    },
+    "real_spread": 12,
+    "real_total": 222
+   }
+  ],
+  "n_estimes": 8,
+  "est_vs_cotes": {
+   "ecart": 3.5,
+   "total": 3.5
+  },
+  "est_vs_reel": {
+   "ecart": 14.1,
+   "total": 16.7
+  },
+  "cotes_vs_reel": {
+   "ecart": 14.1,
+   "total": 14.2,
+   "n": 8
+  }
+ },
+ "rythme": {
+  "rythme moyen": {
+   "n": 50,
+   "prevu": 547.35,
+   "reel": 458.7899999999999
+  },
+  "match rapide (> 1,03)": {
+   "n": 6,
+   "prevu": 87.61,
+   "reel": 67.3
+  },
+  "match lent (< 0,97)": {
+   "n": 3,
+   "prevu": 38.07,
+   "reel": 35.6
+  }
+ },
+ "joueurs": [
+  {
+   "slug": "jalen-smith-20000316",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jalen Smith",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 3.0,
+   "bonus": 0.15,
+   "pct": 0.5,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 50%",
+   "exp": 35.19,
+   "sd": 14.42,
+   "hist": 34.32,
+   "usesProps": true,
+   "estMin": 26,
+   "min": 28,
+   "actual": 56.0,
+   "comps": {
+    "pts": 13.29,
+    "tpm": 1.95,
+    "reb": 8.15,
+    "ast": 1.8,
+    "stl": 0.6,
+    "blk": 1.0,
+    "tov": 1.0
+   },
+   "stats": {
+    "pts": 17,
+    "reb": 11,
+    "ast": 3,
+    "tpm": 3,
+    "stl": 2,
+    "blk": 2,
+    "tov": 1
+   },
+   "reasons": [
+    "props +3% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "donovan-mitchell-19960907",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Donovan Mitchell",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 3.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 41.6,
+   "sd": 8.8,
+   "hist": 39.07,
+   "usesProps": true,
+   "estMin": 32.8,
+   "min": 36,
+   "actual": 54.8,
+   "comps": {
+    "pts": 26.34,
+    "tpm": 2.95,
+    "reb": 4.6,
+    "ast": 5.55,
+    "stl": 1.11,
+    "blk": 0.3,
+    "tov": 2.82
+   },
+   "stats": {
+    "pts": 39,
+    "reb": 4,
+    "ast": 4,
+    "tpm": 2,
+    "stl": 3,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "props +6% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "julius-randle-19941129",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Julius Randle",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 32.2,
+   "sd": 9.81,
+   "hist": 28.32,
+   "usesProps": true,
+   "estMin": 31.8,
+   "min": 34,
+   "actual": 50.7,
+   "comps": {
+    "pts": 19.41,
+    "tpm": 1.35,
+    "reb": 6.6,
+    "ast": 4.95,
+    "stl": 1.07,
+    "blk": 0.1,
+    "tov": 3.68
+   },
+   "stats": {
+    "pts": 33,
+    "reb": 6,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 2,
+    "blk": 1,
+    "tov": 1
+   },
+   "reasons": [
+    "props +14% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "joel-embiid-19940316",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Joel Embiid",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 0.5,
+   "pctSrc": "RotoWire : titulaire probable (Ques), probabilité affichée 50%",
+   "exp": 36.5,
+   "sd": 12.17,
+   "hist": 29.66,
+   "usesProps": true,
+   "estMin": 29.8,
+   "min": 33,
+   "actual": 49.5,
+   "comps": {
+    "pts": 22.22,
+    "tpm": 0.9,
+    "reb": 7.95,
+    "ast": 4.0,
+    "stl": 0.56,
+    "blk": 0.47,
+    "tov": 2.62
+   },
+   "stats": {
+    "pts": 37,
+    "reb": 5,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 2,
+    "tov": 3
+   },
+   "reasons": [
+    "props +23% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "saddiq-bey-19990409",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Saddiq Bey",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 32.2,
+   "sd": 13.86,
+   "hist": 29.88,
+   "usesProps": true,
+   "estMin": 31.2,
+   "min": 33,
+   "actual": 45.7,
+   "comps": {
+    "pts": 17.77,
+    "tpm": 2.3,
+    "reb": 5.5,
+    "ast": 2.6,
+    "stl": 0.82,
+    "blk": 0.2,
+    "tov": 0.71
+   },
+   "stats": {
+    "pts": 23,
+    "reb": 6,
+    "ast": 3,
+    "tpm": 5,
+    "stl": 1,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "props +8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "rudy-gobert-19920626",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Rudy Gobert",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.3,
+   "sd": 9.28,
+   "hist": 25.34,
+   "usesProps": true,
+   "estMin": 28,
+   "min": 33,
+   "actual": 45.0,
+   "comps": {
+    "pts": 9.0,
+    "tpm": 0.0,
+    "reb": 10.35,
+    "ast": 1.64,
+    "stl": 0.48,
+    "blk": 1.15,
+    "tov": 0.77
+   },
+   "stats": {
+    "pts": 18,
+    "reb": 15,
+    "ast": 4,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 2,
+    "tov": 2
+   },
+   "reasons": [
+    "props +8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "donovan-clingan-20040223",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Donovan Clingan",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 3.0,
+   "bonus": 0.1,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 37.18,
+   "sd": 12.73,
+   "hist": 36.85,
+   "usesProps": true,
+   "estMin": 26.8,
+   "min": 23,
+   "actual": 44.55,
+   "comps": {
+    "pts": 10.91,
+    "tpm": 0.9,
+    "reb": 11.1,
+    "ast": 2.0,
+    "stl": 0.6,
+    "blk": 2.3,
+    "tov": 1.5
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 10,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 5,
+    "tov": 1
+   },
+   "reasons": [
+    "props +1% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "anthony-black-20040120",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Anthony Black",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 3.0,
+   "bonus": 0.1,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 32.45,
+   "sd": 16.44,
+   "hist": 38.38,
+   "usesProps": true,
+   "estMin": 35.8,
+   "min": 33,
+   "actual": 43.89,
+   "comps": {
+    "pts": 13.89,
+    "tpm": 1.8,
+    "reb": 4.6,
+    "ast": 4.45,
+    "stl": 1.96,
+    "blk": 0.86,
+    "tov": 3.43
+   },
+   "stats": {
+    "pts": 20,
+    "reb": 2,
+    "ast": 7,
+    "tpm": 3,
+    "stl": 3,
+    "blk": 1,
+    "tov": 4
+   },
+   "reasons": [
+    "props -15% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "cedric-coward-20030911",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Cedric Coward",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 35.7,
+   "sd": 12.43,
+   "hist": 35.02,
+   "usesProps": true,
+   "estMin": 28.4,
+   "min": 27,
+   "actual": 40.6,
+   "comps": {
+    "pts": 15.94,
+    "tpm": 1.95,
+    "reb": 7.8,
+    "ast": 3.6,
+    "stl": 1.67,
+    "blk": 0.29,
+    "tov": 1.47
+   },
+   "stats": {
+    "pts": 18,
+    "reb": 8,
+    "ast": 6,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "props +2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "miles-bridges-19980321",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Miles Bridges",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 3.5,
+   "bonus": 0.15,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 35.65,
+   "sd": 15.68,
+   "hist": 32.9,
+   "usesProps": true,
+   "estMin": 25.2,
+   "min": 29,
+   "actual": 39.79,
+   "comps": {
+    "pts": 14.45,
+    "tpm": 1.55,
+    "reb": 5.95,
+    "ast": 2.9,
+    "stl": 0.95,
+    "blk": 0.6,
+    "tov": 0.52
+   },
+   "stats": {
+    "pts": 16,
+    "reb": 8,
+    "ast": 2,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 1,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back",
+    "props +8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "aj-dybantsa-20070129",
+   "tip": "2026-11-17T00:00Z",
+   "name": "AJ Dybantsa",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.3,
+   "sd": 8.25,
+   "hist": 27.89,
+   "usesProps": true,
+   "estMin": 36,
+   "min": 33,
+   "actual": 39.5,
+   "comps": {
+    "pts": 16.43,
+    "tpm": 1.25,
+    "reb": 5.45,
+    "ast": 2.3,
+    "stl": 1.16,
+    "blk": 0.42,
+    "tov": 2.54
+   },
+   "stats": {
+    "pts": 21,
+    "reb": 5,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 3,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back",
+    "props -2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "tre-jones-20000108",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Tre Jones",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 21.84,
+   "sd": 9.27,
+   "hist": 20.98,
+   "usesProps": true,
+   "estMin": 20.6,
+   "min": 23,
+   "actual": 39.27,
+   "comps": {
+    "pts": 10.91,
+    "tpm": 0.53,
+    "reb": 2.7,
+    "ast": 3.6,
+    "stl": 0.95,
+    "blk": 0.42,
+    "tov": 1.69
+   },
+   "stats": {
+    "pts": 16,
+    "reb": 2,
+    "ast": 6,
+    "tpm": 0,
+    "stl": 4,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "franz-wagner-20010827",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Franz Wagner",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 4.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 36.4,
+   "sd": 13.13,
+   "hist": 40.73,
+   "usesProps": true,
+   "estMin": 38.6,
+   "min": 38,
+   "actual": 39.1,
+   "comps": {
+    "pts": 21.01,
+    "tpm": 1.6,
+    "reb": 6.4,
+    "ast": 6.7,
+    "stl": 1.41,
+    "blk": 0.1,
+    "tov": 4.22
+   },
+   "stats": {
+    "pts": 21,
+    "reb": 8,
+    "ast": 9,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 1,
+    "tov": 4
+   },
+   "reasons": [
+    "props -11% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "payton-pritchard-19980128",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Payton Pritchard",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 25.2,
+   "sd": 15.39,
+   "hist": 23.25,
+   "usesProps": true,
+   "estMin": 27,
+   "min": 32,
+   "actual": 37.3,
+   "comps": {
+    "pts": 13.58,
+    "tpm": 2.05,
+    "reb": 3.15,
+    "ast": 3.8,
+    "stl": 0.79,
+    "blk": 0.2,
+    "tov": 1.49
+   },
+   "stats": {
+    "pts": 21,
+    "reb": 4,
+    "ast": 5,
+    "tpm": 4,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back",
+    "props +8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "derik-queen-20041227",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Derik Queen",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 21.8,
+   "sd": 9.88,
+   "hist": 21.58,
+   "usesProps": true,
+   "estMin": 21,
+   "min": 21,
+   "actual": 37.0,
+   "comps": {
+    "pts": 10.43,
+    "tpm": 0.49,
+    "reb": 6.1,
+    "ast": 2.5,
+    "stl": 0.98,
+    "blk": 0.78,
+    "tov": 2.64
+   },
+   "stats": {
+    "pts": 17,
+    "reb": 10,
+    "ast": 0,
+    "tpm": 4,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "props +1% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "anthony-davis-19930311",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Anthony Davis",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 4.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 46.2,
+   "sd": 13.29,
+   "hist": 47.21,
+   "usesProps": true,
+   "estMin": 34.8,
+   "min": 35,
+   "actual": 36.54,
+   "comps": {
+    "pts": 23.76,
+    "tpm": 0.81,
+    "reb": 10.45,
+    "ast": 2.45,
+    "stl": 1.21,
+    "blk": 1.01,
+    "tov": 1.72
+   },
+   "stats": {
+    "pts": 23,
+    "reb": 4,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 2,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back",
+    "props -2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "zach-edey-20020314",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Zach Edey",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 20.7,
+   "sd": 7.77,
+   "hist": 22.9,
+   "usesProps": true,
+   "estMin": 23.7,
+   "min": 21,
+   "actual": 36.5,
+   "comps": {
+    "pts": 8.85,
+    "tpm": 0.11,
+    "reb": 7.25,
+    "ast": 1.0,
+    "stl": 0.11,
+    "blk": 1.45,
+    "tov": 1.56
+   },
+   "stats": {
+    "pts": 23,
+    "reb": 10,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -10% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "nolan-traore-20060528",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Nolan Traore",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 26.71,
+   "sd": 17.25,
+   "hist": 26.71,
+   "usesProps": false,
+   "estMin": 23.6,
+   "min": 30,
+   "actual": 35.91,
+   "comps": {
+    "pts": 14.06,
+    "tpm": 1.85,
+    "reb": 1.95,
+    "ast": 2.87,
+    "stl": 1.44,
+    "blk": 0.62,
+    "tov": 1.54
+   },
+   "stats": {
+    "pts": 23,
+    "reb": 1,
+    "ast": 4,
+    "tpm": 2,
+    "stl": 2,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "jarrett-allen-19980421",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jarrett Allen",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 3.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 34.55,
+   "sd": 16.61,
+   "hist": 29.68,
+   "usesProps": true,
+   "estMin": 24.4,
+   "min": 31,
+   "actual": 34.96,
+   "comps": {
+    "pts": 15.26,
+    "tpm": 0.28,
+    "reb": 9.3,
+    "ast": 1.39,
+    "stl": 0.65,
+    "blk": 1.2,
+    "tov": 0.74
+   },
+   "stats": {
+    "pts": 13,
+    "reb": 14,
+    "ast": 3,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 1,
+    "tov": 4
+   },
+   "reasons": [
+    "props +16% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "tristan-da-silva-20010522",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Tristan da Silva",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 22.57,
+   "sd": 11.33,
+   "hist": 25.6,
+   "usesProps": true,
+   "estMin": 34.2,
+   "min": 32,
+   "actual": 34.34,
+   "comps": {
+    "pts": 12.07,
+    "tpm": 2.6,
+    "reb": 4.4,
+    "ast": 1.75,
+    "stl": 0.33,
+    "blk": 0.33,
+    "tov": 1.53
+   },
+   "stats": {
+    "pts": 13,
+    "reb": 6,
+    "ast": 3,
+    "tpm": 3,
+    "stl": 3,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "props -12% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "yves-missi-20040514",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Yves Missi",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 25.93,
+   "sd": 11.94,
+   "hist": 30.69,
+   "usesProps": true,
+   "estMin": 24,
+   "min": 23,
+   "actual": 33.91,
+   "comps": {
+    "pts": 6.6,
+    "tpm": 0.0,
+    "reb": 6.9,
+    "ast": 1.45,
+    "stl": 0.59,
+    "blk": 2.34,
+    "tov": 0.59
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 14,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 3,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -16% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "kevin-durant-19880929",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Kevin Durant",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 3.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 36.86,
+   "sd": 9.56,
+   "hist": 35.63,
+   "usesProps": true,
+   "estMin": 34.6,
+   "min": 29,
+   "actual": 33.49,
+   "comps": {
+    "pts": 22.17,
+    "tpm": 1.8,
+    "reb": 5.45,
+    "ast": 4.0,
+    "stl": 0.62,
+    "blk": 0.92,
+    "tov": 2.98
+   },
+   "stats": {
+    "pts": 22,
+    "reb": 2,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 1,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back",
+    "props +3% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "matas-buzelis-20041013",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Matas Buzelis",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.41,
+   "sd": 11.59,
+   "hist": 24.88,
+   "usesProps": true,
+   "estMin": 29.6,
+   "min": 32,
+   "actual": 33.18,
+   "comps": {
+    "pts": 15.61,
+    "tpm": 2.3,
+    "reb": 5.85,
+    "ast": 2.2,
+    "stl": 0.52,
+    "blk": 0.63,
+    "tov": 2.82
+   },
+   "stats": {
+    "pts": 23,
+    "reb": 3,
+    "ast": 0,
+    "tpm": 3,
+    "stl": 1,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "props +10% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jalen-green-20020209",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Jalen Green",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 20.48,
+   "sd": 9.49,
+   "hist": 19.06,
+   "usesProps": true,
+   "estMin": 24.6,
+   "min": 27,
+   "actual": 33.08,
+   "comps": {
+    "pts": 11.57,
+    "tpm": 1.45,
+    "reb": 3.15,
+    "ast": 2.35,
+    "stl": 0.72,
+    "blk": 0.45,
+    "tov": 2.26
+   },
+   "stats": {
+    "pts": 16,
+    "reb": 5,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 3,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "back-to-back",
+    "props +7% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "javon-small-20021219",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Javon Small",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 24.24,
+   "sd": 14.45,
+   "hist": 24.24,
+   "usesProps": false,
+   "estMin": 21.6,
+   "min": 29,
+   "actual": 33.0,
+   "comps": {
+    "pts": 10.94,
+    "tpm": 1.73,
+    "reb": 2.59,
+    "ast": 4.32,
+    "stl": 0.72,
+    "blk": 0.14,
+    "tov": 1.01
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 5,
+    "ast": 12,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "banc, joue 60% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jalen-suggs-20010603",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jalen Suggs",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 2.5,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 21.0,
+   "sd": 13.66,
+   "hist": 22.88,
+   "usesProps": true,
+   "estMin": 28.8,
+   "min": 25,
+   "actual": 32.76,
+   "comps": {
+    "pts": 8.29,
+    "tpm": 1.5,
+    "reb": 3.1,
+    "ast": 3.7,
+    "stl": 1.47,
+    "blk": 0.18,
+    "tov": 2.02
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 6,
+    "ast": 4,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 2,
+    "tov": 1
+   },
+   "reasons": [
+    "props -8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "dean-wade-19961120",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Dean Wade",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 20.1,
+   "sd": 11.0,
+   "hist": 23.65,
+   "usesProps": true,
+   "estMin": 36,
+   "min": 33,
+   "actual": 32.7,
+   "comps": {
+    "pts": 5.69,
+    "tpm": 1.4,
+    "reb": 4.9,
+    "ast": 1.95,
+    "stl": 1.14,
+    "blk": 0.57,
+    "tov": 0.43
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 11,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 2,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -15% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "vj-edgecombe-20050730",
+   "tip": "2026-11-17T00:30Z",
+   "name": "VJ Edgecombe",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 32.7,
+   "sd": 13.52,
+   "hist": 30.26,
+   "usesProps": true,
+   "estMin": 33.8,
+   "min": 34,
+   "actual": 31.8,
+   "comps": {
+    "pts": 14.07,
+    "tpm": 1.7,
+    "reb": 6.25,
+    "ast": 3.8,
+    "stl": 1.58,
+    "blk": 0.4,
+    "tov": 1.09
+   },
+   "stats": {
+    "pts": 14,
+    "reb": 9,
+    "ast": 4,
+    "tpm": 1,
+    "stl": 2,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "props +8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "cam-spencer-20000406",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Cam Spencer",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 31.0,
+   "sd": 10.24,
+   "hist": 32.47,
+   "usesProps": true,
+   "estMin": 28,
+   "min": 32,
+   "actual": 31.7,
+   "comps": {
+    "pts": 13.43,
+    "tpm": 2.05,
+    "reb": 3.3,
+    "ast": 7.8,
+    "stl": 1.11,
+    "blk": 0.12,
+    "tov": 1.96
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 6,
+    "ast": 9,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -5% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "bobby-portis-19950210",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Bobby Portis Jr.",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 18.9,
+   "sd": 9.23,
+   "hist": 17.32,
+   "usesProps": true,
+   "estMin": 17.4,
+   "min": 24,
+   "actual": 30.66,
+   "comps": {
+    "pts": 7.07,
+    "tpm": 1.2,
+    "reb": 4.55,
+    "ast": 1.82,
+    "stl": 0.46,
+    "blk": 0.46,
+    "tov": 0.64
+   },
+   "stats": {
+    "pts": 16,
+    "reb": 6,
+    "ast": 0,
+    "tpm": 2,
+    "stl": 2,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +9% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "fred-vanvleet-19940225",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Fred VanVleet",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 3.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 31.19,
+   "sd": 10.47,
+   "hist": 32.04,
+   "usesProps": true,
+   "estMin": 31.2,
+   "min": 26,
+   "actual": 30.45,
+   "comps": {
+    "pts": 13.58,
+    "tpm": 2.85,
+    "reb": 3.2,
+    "ast": 5.55,
+    "stl": 1.02,
+    "blk": 0.2,
+    "tov": 1.22
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 5,
+    "ast": 6,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 1,
+    "tov": 1
+   },
+   "reasons": [
+    "props -3% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "dayron-sharpe-20011106",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Day'Ron Sharpe",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.7,
+   "sd": 11.91,
+   "hist": 34.22,
+   "usesProps": true,
+   "estMin": 30.3,
+   "min": 26,
+   "actual": 30.3,
+   "comps": {
+    "pts": 9.0,
+    "tpm": 0.4,
+    "reb": 8.35,
+    "ast": 3.8,
+    "stl": 0.9,
+    "blk": 1.66,
+    "tov": 2.56
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 9,
+    "ast": 5,
+    "tpm": 0,
+    "stl": 2,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -19% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "james-harden-19890826",
+   "tip": "2026-11-17T00:00Z",
+   "name": "James Harden",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 36.4,
+   "sd": 12.25,
+   "hist": 33.67,
+   "usesProps": true,
+   "estMin": 31.8,
+   "min": 35,
+   "actual": 29.8,
+   "comps": {
+    "pts": 17.98,
+    "tpm": 2.8,
+    "reb": 4.6,
+    "ast": 6.95,
+    "stl": 0.98,
+    "blk": 0.49,
+    "tov": 2.35
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 4,
+    "ast": 10,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "props +8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jerami-grant-19940312",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jerami Grant",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 22.6,
+   "sd": 8.27,
+   "hist": 20.61,
+   "usesProps": true,
+   "estMin": 23.6,
+   "min": 24,
+   "actual": 29.2,
+   "comps": {
+    "pts": 13.58,
+    "tpm": 1.95,
+    "reb": 2.8,
+    "ast": 1.76,
+    "stl": 0.29,
+    "blk": 0.69,
+    "tov": 0.98
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 1,
+    "ast": 2,
+    "tpm": 2,
+    "stl": 3,
+    "blk": 2,
+    "tov": 0
+   },
+   "reasons": [
+    "props +10% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "kyshawn-george-20031212",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Kyshawn George",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 30.9,
+   "sd": 11.55,
+   "hist": 31.66,
+   "usesProps": true,
+   "estMin": 32.4,
+   "min": 39,
+   "actual": 28.7,
+   "comps": {
+    "pts": 16.09,
+    "tpm": 2.3,
+    "reb": 4.45,
+    "ast": 4.35,
+    "stl": 0.56,
+    "blk": 1.03,
+    "tov": 2.06
+   },
+   "stats": {
+    "pts": 18,
+    "reb": 6,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 1,
+    "tov": 3
+   },
+   "reasons": [
+    "back-to-back",
+    "props -2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "meleek-thomas-20060806",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Meleek Thomas",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 25.09,
+   "sd": 9.47,
+   "hist": 27.5,
+   "usesProps": true,
+   "estMin": 25.4,
+   "min": 31,
+   "actual": 28.04,
+   "comps": {
+    "pts": 13.75,
+    "tpm": 2.3,
+    "reb": 2.81,
+    "ast": 1.67,
+    "stl": 1.15,
+    "blk": 0.31,
+    "tov": 1.15
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 6,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 2,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props -9% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "oso-ighodaro-20020714",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Oso Ighodaro",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 15.1,
+   "sd": 8.76,
+   "hist": 19.44,
+   "usesProps": true,
+   "estMin": 27.3,
+   "min": 34,
+   "actual": 27.7,
+   "comps": {
+    "pts": 5.69,
+    "tpm": 0.0,
+    "reb": 5.1,
+    "ast": 2.9,
+    "stl": 0.12,
+    "blk": 0.98,
+    "tov": 2.22
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 11,
+    "ast": 3,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "back-to-back",
+    "props -22% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "isaiah-crawford-20011101",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Isaiah Crawford",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 4.96,
+   "sd": 5.7,
+   "hist": 4.96,
+   "usesProps": false,
+   "estMin": 7,
+   "min": 22,
+   "actual": 27.5,
+   "comps": {
+    "pts": 2.97,
+    "tpm": 0.71,
+    "reb": 0.36,
+    "ast": 0.0,
+    "stl": 0.12,
+    "blk": 0.12,
+    "tov": 0.12
+   },
+   "stats": {
+    "pts": 11,
+    "reb": 10,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 60% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "klay-thompson-19900208",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Klay Thompson",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 24.1,
+   "sd": 13.39,
+   "hist": 31.49,
+   "usesProps": true,
+   "estMin": 28.8,
+   "min": 23,
+   "actual": 26.0,
+   "comps": {
+    "pts": 13.43,
+    "tpm": 3.4,
+    "reb": 1.67,
+    "ast": 2.56,
+    "stl": 0.22,
+    "blk": 1.0,
+    "tov": 1.11
+   },
+   "stats": {
+    "pts": 17,
+    "reb": 0,
+    "ast": 2,
+    "tpm": 5,
+    "stl": 0,
+    "blk": 1,
+    "tov": 1
+   },
+   "reasons": [
+    "props -23% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "herbert-jones-19981006",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Herbert Jones",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 17.6,
+   "sd": 8.83,
+   "hist": 14.81,
+   "usesProps": true,
+   "estMin": 26,
+   "min": 24,
+   "actual": 25.9,
+   "comps": {
+    "pts": 8.07,
+    "tpm": 1.35,
+    "reb": 3.3,
+    "ast": 2.0,
+    "stl": 0.78,
+    "blk": 0.49,
+    "tov": 1.36
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 2,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 3,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "props +19% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "christian-braun-20010417",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Christian Braun",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.6,
+   "sd": 11.93,
+   "hist": 27.08,
+   "usesProps": true,
+   "estMin": 31.4,
+   "min": 34,
+   "actual": 25.1,
+   "comps": {
+    "pts": 11.92,
+    "tpm": 1.4,
+    "reb": 4.5,
+    "ast": 2.4,
+    "stl": 2.1,
+    "blk": 0.27,
+    "tov": 0.91
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 3,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 2,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "props +2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "damian-lillard-19900715",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Damian Lillard",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 3.0,
+   "bonus": 0.1,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 35.2,
+   "sd": 13.68,
+   "hist": 32.2,
+   "usesProps": true,
+   "estMin": 29.4,
+   "min": 24,
+   "actual": 24.64,
+   "comps": {
+    "pts": 21.18,
+    "tpm": 3.05,
+    "reb": 3.3,
+    "ast": 4.3,
+    "stl": 0.59,
+    "blk": 0.1,
+    "tov": 2.34
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 2,
+    "ast": 4,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "props +9% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jonathan-kuminga-20021006",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Jonathan Kuminga",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 26.6,
+   "sd": 13.27,
+   "hist": 25.74,
+   "usesProps": true,
+   "estMin": 30.8,
+   "min": 30,
+   "actual": 24.3,
+   "comps": {
+    "pts": 12.9,
+    "tpm": 1.35,
+    "reb": 5.5,
+    "ast": 2.7,
+    "stl": 0.77,
+    "blk": 0.77,
+    "tov": 1.45
+   },
+   "stats": {
+    "pts": 13,
+    "reb": 9,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +3% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "collin-gillespie-19990625",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Collin Gillespie",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 26.25,
+   "sd": 13.31,
+   "hist": 23.73,
+   "usesProps": true,
+   "estMin": 24.4,
+   "min": 27,
+   "actual": 24.26,
+   "comps": {
+    "pts": 10.32,
+    "tpm": 2.5,
+    "reb": 3.0,
+    "ast": 4.0,
+    "stl": 1.55,
+    "blk": 0.1,
+    "tov": 1.16
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 3,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back",
+    "props +11% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "thomas-bryant-19970731",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Thomas Bryant",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 23.36,
+   "sd": 13.3,
+   "hist": 23.36,
+   "usesProps": false,
+   "estMin": 18.6,
+   "min": 18,
+   "actual": 24.0,
+   "comps": {
+    "pts": 12.4,
+    "tpm": 1.55,
+    "reb": 4.09,
+    "ast": 0.85,
+    "stl": 0.28,
+    "blk": 0.28,
+    "tov": 0.28
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 5,
+    "ast": 4,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "ryan-conwell-20040615",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Ryan Conwell",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 20.99,
+   "sd": 14.83,
+   "hist": 20.99,
+   "usesProps": false,
+   "estMin": 26,
+   "min": 31,
+   "actual": 23.9,
+   "comps": {
+    "pts": 10.13,
+    "tpm": 2.27,
+    "reb": 3.02,
+    "ast": 1.81,
+    "stl": 1.06,
+    "blk": 0.0,
+    "tov": 0.91
+   },
+   "stats": {
+    "pts": 14,
+    "reb": 2,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 1,
+    "blk": 1,
+    "tov": 2
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jabari-walker-20020730",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Jabari Walker",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 18.11,
+   "sd": 11.76,
+   "hist": 18.11,
+   "usesProps": false,
+   "estMin": 18.6,
+   "min": 17,
+   "actual": 23.5,
+   "comps": {
+    "pts": 8.01,
+    "tpm": 0.81,
+    "reb": 6.11,
+    "ast": 0.81,
+    "stl": 0.27,
+    "blk": 0.0,
+    "tov": 0.41
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 5,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jordan-goodwin-19981023",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Jordan Goodwin",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 24.89,
+   "sd": 13.51,
+   "hist": 25.55,
+   "usesProps": true,
+   "estMin": 21.2,
+   "min": 20,
+   "actual": 23.31,
+   "comps": {
+    "pts": 9.16,
+    "tpm": 2.0,
+    "reb": 4.4,
+    "ast": 2.81,
+    "stl": 1.41,
+    "blk": 0.11,
+    "tov": 0.76
+   },
+   "stats": {
+    "pts": 11,
+    "reb": 6,
+    "ast": 2,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 60% des matchs",
+    "back-to-back",
+    "props -3% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jordan-poole-19990619",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Jordan Poole",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 22.2,
+   "sd": 11.47,
+   "hist": 19.89,
+   "usesProps": true,
+   "estMin": 22,
+   "min": 31,
+   "actual": 22.9,
+   "comps": {
+    "pts": 11.13,
+    "tpm": 1.65,
+    "reb": 1.88,
+    "ast": 3.35,
+    "stl": 0.71,
+    "blk": 0.71,
+    "tov": 1.06
+   },
+   "stats": {
+    "pts": 11,
+    "reb": 2,
+    "ast": 5,
+    "tpm": 1,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +12% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "dillon-brooks-19960122",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Dillon Brooks",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 24.6,
+   "sd": 16.85,
+   "hist": 21.27,
+   "usesProps": true,
+   "estMin": 28.2,
+   "min": 28,
+   "actual": 22.8,
+   "comps": {
+    "pts": 15.08,
+    "tpm": 1.9,
+    "reb": 3.5,
+    "ast": 2.1,
+    "stl": 0.86,
+    "blk": 0.19,
+    "tov": 1.52
+   },
+   "stats": {
+    "pts": 15,
+    "reb": 4,
+    "ast": 4,
+    "tpm": 3,
+    "stl": 0,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "back-to-back",
+    "props +16% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "gui-santos-20020622",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Gui Santos",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.5,
+   "pctSrc": "RotoWire : incertain (Ques), probabilité affichée 50%",
+   "exp": 13.2,
+   "sd": 8.86,
+   "hist": 10.96,
+   "usesProps": true,
+   "estMin": 15.4,
+   "min": 19,
+   "actual": 22.4,
+   "comps": {
+    "pts": 6.82,
+    "tpm": 0.4,
+    "reb": 3.25,
+    "ast": 1.13,
+    "stl": 0.32,
+    "blk": 0.4,
+    "tov": 0.89
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 7,
+    "ast": 2,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +20% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "will-richard-20021224",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Will Richard",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 13.7,
+   "sd": 6.89,
+   "hist": 17.05,
+   "usesProps": true,
+   "estMin": 30.3,
+   "min": 24,
+   "actual": 22.1,
+   "comps": {
+    "pts": 6.82,
+    "tpm": 1.1,
+    "reb": 2.8,
+    "ast": 1.49,
+    "stl": 0.45,
+    "blk": 0.45,
+    "tov": 1.2
+   },
+   "stats": {
+    "pts": 11,
+    "reb": 3,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 2,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -20% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "noah-clowney-20040714",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Noah Clowney",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 14.7,
+   "sd": 9.21,
+   "hist": 15.36,
+   "usesProps": true,
+   "estMin": 20.4,
+   "min": 25,
+   "actual": 21.1,
+   "comps": {
+    "pts": 6.6,
+    "tpm": 0.86,
+    "reb": 3.9,
+    "ast": 0.86,
+    "stl": 0.38,
+    "blk": 0.67,
+    "tov": 0.95
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 3,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "props -4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "myron-gardner-20010521",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Myron Gardner",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 16.5,
+   "sd": 11.4,
+   "hist": 16.5,
+   "usesProps": false,
+   "estMin": 23.7,
+   "min": 25,
+   "actual": 20.9,
+   "comps": {
+    "pts": 4.6,
+    "tpm": 0.46,
+    "reb": 5.51,
+    "ast": 2.3,
+    "stl": 0.46,
+    "blk": 0.69,
+    "tov": 1.38
+   },
+   "stats": {
+    "pts": 14,
+    "reb": 2,
+    "ast": 3,
+    "tpm": 4,
+    "stl": 0,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "PROMU titulaire"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jaylen-wells-20030826",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jaylen Wells",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 20.1,
+   "sd": 9.43,
+   "hist": 17.8,
+   "usesProps": true,
+   "estMin": 27,
+   "min": 27,
+   "actual": 20.3,
+   "comps": {
+    "pts": 12.07,
+    "tpm": 2.05,
+    "reb": 3.0,
+    "ast": 1.1,
+    "stl": 0.6,
+    "blk": 0.1,
+    "tov": 0.7
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 4,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +13% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jrue-holiday-19900612",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Jrue Holiday",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 2.5,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 24.99,
+   "sd": 10.43,
+   "hist": 25.17,
+   "usesProps": true,
+   "estMin": 27,
+   "min": 26,
+   "actual": 20.27,
+   "comps": {
+    "pts": 12.74,
+    "tpm": 2.15,
+    "reb": 3.5,
+    "ast": 4.1,
+    "stl": 0.89,
+    "blk": 0.1,
+    "tov": 2.18
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 4,
+    "ast": 3,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props -1% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "sam-hauser-19971208",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Sam Hauser",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 15.6,
+   "sd": 8.3,
+   "hist": 16.2,
+   "usesProps": true,
+   "estMin": 19.2,
+   "min": 25,
+   "actual": 20.2,
+   "comps": {
+    "pts": 6.7,
+    "tpm": 1.95,
+    "reb": 3.3,
+    "ast": 0.84,
+    "stl": 0.56,
+    "blk": 0.09,
+    "tov": 0.19
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 1,
+    "ast": 2,
+    "tpm": 4,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back",
+    "props -4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "goga-bitadze-19990720",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Goga Bitadze",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 13.37,
+   "sd": 8.48,
+   "hist": 13.37,
+   "usesProps": false,
+   "estMin": 14.4,
+   "min": 20,
+   "actual": 19.7,
+   "comps": {
+    "pts": 5.19,
+    "tpm": 0.0,
+    "reb": 4.37,
+    "ast": 0.71,
+    "stl": 0.35,
+    "blk": 0.71,
+    "tov": 0.47
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 6,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "keon-ellis-20000108",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Keon Ellis",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 13.27,
+   "sd": 9.01,
+   "hist": 13.27,
+   "usesProps": false,
+   "estMin": 19,
+   "min": 21,
+   "actual": 19.4,
+   "comps": {
+    "pts": 3.89,
+    "tpm": 0.81,
+    "reb": 1.54,
+    "ast": 1.63,
+    "stl": 1.09,
+    "blk": 0.72,
+    "tov": 0.54
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 2,
+    "ast": 0,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 2,
+    "tov": 1
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "peyton-watson-20020911",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Peyton Watson",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 28.1,
+   "sd": 11.25,
+   "hist": 26.5,
+   "usesProps": true,
+   "estMin": 28.4,
+   "min": 22,
+   "actual": 17.8,
+   "comps": {
+    "pts": 13.43,
+    "tpm": 1.5,
+    "reb": 4.8,
+    "ast": 2.3,
+    "stl": 0.6,
+    "blk": 1.59,
+    "tov": 1.29
+   },
+   "stats": {
+    "pts": 14,
+    "reb": 4,
+    "ast": 0,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 1,
+    "tov": 3
+   },
+   "reasons": [
+    "props +6% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "ayo-dosunmu-20000117",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Ayo Dosunmu",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 3.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 31.4,
+   "sd": 13.51,
+   "hist": 34.08,
+   "usesProps": true,
+   "estMin": 33.2,
+   "min": 30,
+   "actual": 17.0,
+   "comps": {
+    "pts": 17.98,
+    "tpm": 1.45,
+    "reb": 4.05,
+    "ast": 3.2,
+    "stl": 1.71,
+    "blk": 0.5,
+    "tov": 2.21
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 5,
+    "ast": 2,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props -8% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "robert-williams-iii-19971017",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Robert Williams III",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 19.3,
+   "sd": 9.26,
+   "hist": 20.1,
+   "usesProps": true,
+   "estMin": 16.6,
+   "min": 16,
+   "actual": 17.0,
+   "comps": {
+    "pts": 6.7,
+    "tpm": 0.0,
+    "reb": 6.3,
+    "ast": 0.88,
+    "stl": 0.78,
+    "blk": 1.07,
+    "tov": 0.88
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 5,
+    "ast": 2,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 80% des matchs",
+    "props -4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "tari-eason-20010510",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Tari Eason",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 26.6,
+   "sd": 9.86,
+   "hist": 25.95,
+   "usesProps": true,
+   "estMin": 26,
+   "min": 28,
+   "actual": 16.9,
+   "comps": {
+    "pts": 12.07,
+    "tpm": 1.5,
+    "reb": 6.65,
+    "ast": 1.61,
+    "stl": 0.8,
+    "blk": 1.0,
+    "tov": 1.41
+   },
+   "stats": {
+    "pts": 7,
+    "reb": 7,
+    "ast": 3,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "back-to-back",
+    "props +2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "mario-hezonja-19950225",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Mario Hezonja",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 19.72,
+   "sd": 13.55,
+   "hist": 19.72,
+   "usesProps": false,
+   "estMin": 18,
+   "min": 15,
+   "actual": 16.8,
+   "comps": {
+    "pts": 8.17,
+    "tpm": 1.05,
+    "reb": 5.44,
+    "ast": 1.4,
+    "stl": 0.44,
+    "blk": 0.18,
+    "tov": 0.88
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 4,
+    "ast": 2,
+    "tpm": 1,
+    "stl": 1,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "luka-garza-19981227",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Luka Garza",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 1.5,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 15.3,
+   "sd": 11.9,
+   "hist": 15.3,
+   "usesProps": false,
+   "estMin": 12.8,
+   "min": 18,
+   "actual": 16.8,
+   "comps": {
+    "pts": 5.68,
+    "tpm": 1.08,
+    "reb": 3.25,
+    "ast": 1.62,
+    "stl": 0.18,
+    "blk": 0.45,
+    "tov": 0.36
+   },
+   "stats": {
+    "pts": 3,
+    "reb": 0,
+    "ast": 4,
+    "tpm": 1,
+    "stl": 1,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "bilal-coulibaly-20040726",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Bilal Coulibaly",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 17.9,
+   "sd": 8.33,
+   "hist": 16.94,
+   "usesProps": true,
+   "estMin": 24.4,
+   "min": 16,
+   "actual": 16.0,
+   "comps": {
+    "pts": 7.07,
+    "tpm": 0.28,
+    "reb": 3.7,
+    "ast": 0.75,
+    "stl": 0.85,
+    "blk": 1.13,
+    "tov": 0.47
+   },
+   "stats": {
+    "pts": 11,
+    "reb": 5,
+    "ast": 0,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back",
+    "props +6% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "buddy-hield-19921217",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Buddy Hield",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 16.4,
+   "sd": 11.68,
+   "hist": 16.4,
+   "usesProps": false,
+   "estMin": 17.4,
+   "min": 20,
+   "actual": 15.8,
+   "comps": {
+    "pts": 8.14,
+    "tpm": 1.56,
+    "reb": 2.34,
+    "ast": 2.01,
+    "stl": 0.78,
+    "blk": 0.22,
+    "tov": 1.45
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 4,
+    "ast": 2,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "alex-sarr-20050426",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Alex Sarr",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.9,
+   "sd": 13.02,
+   "hist": 33.06,
+   "usesProps": true,
+   "estMin": 30.6,
+   "min": 31,
+   "actual": 15.3,
+   "comps": {
+    "pts": 11.57,
+    "tpm": 1.0,
+    "reb": 7.0,
+    "ast": 1.95,
+    "stl": 1.17,
+    "blk": 1.17,
+    "tov": 1.49
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 4,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 2,
+    "tov": 2
+   },
+   "reasons": [
+    "back-to-back",
+    "props -16% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "anfernee-simons-19990608",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Anfernee Simons",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 16.9,
+   "sd": 11.64,
+   "hist": 17.61,
+   "usesProps": true,
+   "estMin": 18.8,
+   "min": 26,
+   "actual": 15.2,
+   "comps": {
+    "pts": 10.74,
+    "tpm": 2.25,
+    "reb": 1.77,
+    "ast": 0.97,
+    "stl": 0.35,
+    "blk": 0.0,
+    "tov": 0.35
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 1,
+    "ast": 2,
+    "tpm": 1,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props -4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "al-horford-19860603",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Al Horford",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.9,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "exp": 14.51,
+   "sd": 11.62,
+   "hist": 14.51,
+   "usesProps": false,
+   "estMin": 15.6,
+   "min": 15,
+   "actual": 15.0,
+   "comps": {
+    "pts": 4.17,
+    "tpm": 0.97,
+    "reb": 3.19,
+    "ast": 1.77,
+    "stl": 0.27,
+    "blk": 0.8,
+    "tov": 0.44
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 5,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 3,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 90% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "trevon-brazile-20030107",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Trevon Brazile",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 12.7,
+   "sd": 7.08,
+   "hist": 14.45,
+   "usesProps": true,
+   "estMin": 16.4,
+   "min": 24,
+   "actual": 14.8,
+   "comps": {
+    "pts": 4.66,
+    "tpm": 0.66,
+    "reb": 4.3,
+    "ast": 0.41,
+    "stl": 0.5,
+    "blk": 0.41,
+    "tov": 0.58
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 4,
+    "ast": 0,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "props -12% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "bones-hyland-20000914",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Bones Hyland",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 25.24,
+   "sd": 18.69,
+   "hist": 25.24,
+   "usesProps": false,
+   "estMin": 17,
+   "min": 13,
+   "actual": 14.7,
+   "comps": {
+    "pts": 13.1,
+    "tpm": 2.38,
+    "reb": 1.41,
+    "ast": 3.79,
+    "stl": 0.87,
+    "blk": 0.22,
+    "tov": 0.97
+   },
+   "stats": {
+    "pts": 5,
+    "reb": 1,
+    "ast": 5,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "jaron-pierre-20020712",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Jaron Pierre Jr.",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 9.24,
+   "sd": 10.1,
+   "hist": 9.24,
+   "usesProps": false,
+   "estMin": 11.2,
+   "min": 20,
+   "actual": 14.6,
+   "comps": {
+    "pts": 4.75,
+    "tpm": 0.75,
+    "reb": 1.5,
+    "ast": 0.25,
+    "stl": 1.0,
+    "blk": 0.25,
+    "tov": 1.25
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 3,
+    "ast": 0,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "olivier-maxence-prosper-20020703",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Olivier-Maxence Prosper",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 6.27,
+   "sd": 8.61,
+   "hist": 6.27,
+   "usesProps": false,
+   "estMin": 8.8,
+   "min": 16,
+   "actual": 14.5,
+   "comps": {
+    "pts": 3.62,
+    "tpm": 0.31,
+    "reb": 1.45,
+    "ast": 0.41,
+    "stl": 0.21,
+    "blk": 0.1,
+    "tov": 0.62
+   },
+   "stats": {
+    "pts": 12,
+    "reb": 0,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "nic-claxton-19990417",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Nic Claxton",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 22.41,
+   "sd": 13.69,
+   "hist": 22.41,
+   "usesProps": false,
+   "estMin": 18.7,
+   "min": 17,
+   "actual": 13.55,
+   "comps": {
+    "pts": 7.67,
+    "tpm": 0.0,
+    "reb": 5.33,
+    "ast": 2.33,
+    "stl": 0.0,
+    "blk": 1.33,
+    "tov": 0.67
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 2,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "bam-adebayo-19970718",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Bam Adebayo",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 3.5,
+   "bonus": 0.1,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 45.76,
+   "sd": 9.44,
+   "hist": 50.05,
+   "usesProps": true,
+   "estMin": 36.4,
+   "min": 16,
+   "actual": 13.42,
+   "comps": {
+    "pts": 18.76,
+    "tpm": 0.62,
+    "reb": 8.7,
+    "ast": 3.35,
+    "stl": 2.17,
+    "blk": 0.93,
+    "tov": 1.24
+   },
+   "stats": {
+    "pts": 4,
+    "reb": 1,
+    "ast": 2,
+    "tpm": 0,
+    "stl": 2,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props -9% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jordan-walsh-20040303",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jordan Walsh",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 10.9,
+   "sd": 6.32,
+   "hist": 13.14,
+   "usesProps": true,
+   "estMin": 19,
+   "min": 17,
+   "actual": 13.4,
+   "comps": {
+    "pts": 4.58,
+    "tpm": 0.7,
+    "reb": 3.35,
+    "ast": 0.56,
+    "stl": 0.56,
+    "blk": 0.0,
+    "tov": 0.45
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 2,
+    "ast": 0,
+    "tpm": 2,
+    "stl": 1,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back",
+    "props -17% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "josh-giddey-20021010",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Josh Giddey",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 32.1,
+   "sd": 12.84,
+   "hist": 30.94,
+   "usesProps": true,
+   "estMin": 30.8,
+   "min": 24,
+   "actual": 12.8,
+   "comps": {
+    "pts": 12.42,
+    "tpm": 1.4,
+    "reb": 6.75,
+    "ast": 8.55,
+    "stl": 0.52,
+    "blk": 0.72,
+    "tov": 3.2
+   },
+   "stats": {
+    "pts": 4,
+    "reb": 4,
+    "ast": 8,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 1,
+    "tov": 6
+   },
+   "reasons": [
+    "props +4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "branden-carlson-19990614",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Branden Carlson",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 6.19,
+   "sd": 6.83,
+   "hist": 6.19,
+   "usesProps": false,
+   "estMin": 8.4,
+   "min": 15,
+   "actual": 12.7,
+   "comps": {
+    "pts": 2.15,
+    "tpm": 0.1,
+    "reb": 2.25,
+    "ast": 0.2,
+    "stl": 0.0,
+    "blk": 0.51,
+    "tov": 0.41
+   },
+   "stats": {
+    "pts": 5,
+    "reb": 6,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "sidy-cissoko-20040402",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Sidy Cissoko",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.5,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 17.01,
+   "sd": 9.04,
+   "hist": 21.93,
+   "usesProps": true,
+   "estMin": 30,
+   "min": 28,
+   "actual": 11.87,
+   "comps": {
+    "pts": 7.32,
+    "tpm": 1.35,
+    "reb": 3.2,
+    "ast": 1.9,
+    "stl": 0.51,
+    "blk": 0.38,
+    "tov": 0.89
+   },
+   "stats": {
+    "pts": 5,
+    "reb": 4,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -22% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "oscar-tshiebwe-19991127",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Oscar Tshiebwe",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.5,
+   "bonus": 0.05,
+   "pct": 0.9,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "exp": 6.32,
+   "sd": 7.37,
+   "hist": 6.32,
+   "usesProps": false,
+   "estMin": 5.4,
+   "min": 7,
+   "actual": 11.76,
+   "comps": {
+    "pts": 1.63,
+    "tpm": 0.0,
+    "reb": 2.06,
+    "ast": 0.57,
+    "stl": 0.14,
+    "blk": 0.28,
+    "tov": 0.28
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 6,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 90% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "aaron-gordon-19950916",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Aaron Gordon",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 27.2,
+   "sd": 12.46,
+   "hist": 21.44,
+   "usesProps": true,
+   "estMin": 29,
+   "min": 25,
+   "actual": 11.7,
+   "comps": {
+    "pts": 13.75,
+    "tpm": 1.55,
+    "reb": 5.3,
+    "ast": 2.45,
+    "stl": 0.87,
+    "blk": 0.48,
+    "tov": 1.16
+   },
+   "stats": {
+    "pts": 11,
+    "reb": 1,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "props +27% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "craig-porter-jr-20000226",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Craig Porter Jr.",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.9,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "exp": 11.24,
+   "sd": 8.98,
+   "hist": 11.24,
+   "usesProps": false,
+   "estMin": 15.4,
+   "min": 14,
+   "actual": 11.7,
+   "comps": {
+    "pts": 2.81,
+    "tpm": 0.12,
+    "reb": 2.81,
+    "ast": 2.44,
+    "stl": 0.37,
+    "blk": 0.49,
+    "tov": 1.22
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 1,
+    "ast": 3,
+    "tpm": 0,
+    "stl": 2,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 90% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "l-j-cryer-20011009",
+   "tip": "2026-11-17T01:00Z",
+   "name": "LJ Cryer",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 15.34,
+   "sd": 17.34,
+   "hist": 15.34,
+   "usesProps": false,
+   "estMin": 13.2,
+   "min": 25,
+   "actual": 11.7,
+   "comps": {
+    "pts": 8.39,
+    "tpm": 2.2,
+    "reb": 0.69,
+    "ast": 2.34,
+    "stl": 0.14,
+    "blk": 0.0,
+    "tov": 0.27
+   },
+   "stats": {
+    "pts": 7,
+    "reb": 1,
+    "ast": 3,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "baylor-scheierman-20000926",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Baylor Scheierman",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 23.92,
+   "sd": 16.09,
+   "hist": 23.92,
+   "usesProps": false,
+   "estMin": 28.3,
+   "min": 12,
+   "actual": 11.7,
+   "comps": {
+    "pts": 9.28,
+    "tpm": 2.16,
+    "reb": 5.59,
+    "ast": 2.29,
+    "stl": 1.14,
+    "blk": 0.13,
+    "tov": 0.64
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 3,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "mikel-brown-20060403",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Mikel Brown Jr.",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 20.2,
+   "sd": 7.65,
+   "hist": 22.15,
+   "usesProps": true,
+   "estMin": 23.2,
+   "min": 19,
+   "actual": 10.7,
+   "comps": {
+    "pts": 11.02,
+    "tpm": 1.7,
+    "reb": 2.4,
+    "ast": 3.4,
+    "stl": 1.02,
+    "blk": 0.11,
+    "tov": 1.93
+   },
+   "stats": {
+    "pts": 3,
+    "reb": 1,
+    "ast": 5,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props -9% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jaesean-tate-19951028",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Jae'Sean Tate",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.5,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "exp": 3.38,
+   "sd": 3.56,
+   "hist": 3.38,
+   "usesProps": false,
+   "estMin": 4.8,
+   "min": 12,
+   "actual": 10.6,
+   "comps": {
+    "pts": 1.04,
+    "tpm": 0.0,
+    "reb": 0.91,
+    "ast": 0.52,
+    "stl": 0.26,
+    "blk": 0.0,
+    "tov": 0.26
+   },
+   "stats": {
+    "pts": 3,
+    "reb": 3,
+    "ast": 2,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 50% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jayson-kent-20020203",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Jayson Kent",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.2,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "exp": 6.91,
+   "sd": 6.21,
+   "hist": 6.91,
+   "usesProps": false,
+   "estMin": 10.8,
+   "min": 11,
+   "actual": 10.0,
+   "comps": {
+    "pts": 2.79,
+    "tpm": 0.56,
+    "reb": 1.49,
+    "ast": 0.56,
+    "stl": 0.74,
+    "blk": 0.0,
+    "tov": 0.74
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 20% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "cameron-johnson-19960303",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Cameron Johnson",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 2.5,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 24.57,
+   "sd": 10.53,
+   "hist": 25.05,
+   "usesProps": true,
+   "estMin": 30.2,
+   "min": 28,
+   "actual": 9.97,
+   "comps": {
+    "pts": 12.74,
+    "tpm": 2.15,
+    "reb": 3.9,
+    "ast": 2.05,
+    "stl": 1.13,
+    "blk": 0.0,
+    "tov": 1.35
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 0,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [
+    "props -2% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "marvin-bagley-iii-19990314",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Marvin Bagley III",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 14.02,
+   "sd": 6.58,
+   "hist": 14.02,
+   "usesProps": false,
+   "estMin": 13.4,
+   "min": 10,
+   "actual": 9.4,
+   "comps": {
+    "pts": 6.44,
+    "tpm": 0.0,
+    "reb": 3.78,
+    "ast": 0.41,
+    "stl": 0.2,
+    "blk": 0.61,
+    "tov": 0.41
+   },
+   "stats": {
+    "pts": 4,
+    "reb": 2,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "reed-sheppard-20040624",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Reed Sheppard",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 21.9,
+   "sd": 9.87,
+   "hist": 19.54,
+   "usesProps": true,
+   "estMin": 19.6,
+   "min": 19,
+   "actual": 9.4,
+   "comps": {
+    "pts": 10.74,
+    "tpm": 2.3,
+    "reb": 2.2,
+    "ast": 2.55,
+    "stl": 1.18,
+    "blk": 0.18,
+    "tov": 0.73
+   },
+   "stats": {
+    "pts": 5,
+    "reb": 2,
+    "ast": 2,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back",
+    "props +12% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "scoot-henderson-20040203",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Scoot Henderson",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 11.6,
+   "sd": 10.05,
+   "hist": 11.6,
+   "usesProps": false,
+   "estMin": 22.6,
+   "min": 23,
+   "actual": 9.2,
+   "comps": {
+    "pts": 8.29,
+    "tpm": 1.09,
+    "reb": 1.97,
+    "ast": 1.48,
+    "stl": 0.49,
+    "blk": 0.1,
+    "tov": 2.17
+   },
+   "stats": {
+    "pts": 10,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "quinten-post-20000321",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Quinten Post",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.0,
+   "pctSrc": "ESPN : Out. Post (concussion) is questionable for Monday's game against the Wizards.",
+   "exp": 8.04,
+   "sd": 9.68,
+   "hist": 8.04,
+   "usesProps": false,
+   "estMin": 10,
+   "min": 9,
+   "actual": 9.03,
+   "comps": {
+    "pts": 3.77,
+    "tpm": 0.41,
+    "reb": 1.64,
+    "ast": 0.41,
+    "stl": 0.27,
+    "blk": 0.14,
+    "tov": 0.41
+   },
+   "stats": {
+    "pts": 5,
+    "reb": 3,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "ESPN Out"
+   ],
+   "played": true
+  },
+  {
+   "slug": "toumani-camara-20000508",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Toumani Camara",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 22.8,
+   "sd": 9.9,
+   "hist": 22.6,
+   "usesProps": true,
+   "estMin": 31.4,
+   "min": 26,
+   "actual": 9.0,
+   "comps": {
+    "pts": 11.73,
+    "tpm": 2.3,
+    "reb": 4.15,
+    "ast": 1.6,
+    "stl": 0.83,
+    "blk": 0.52,
+    "tov": 1.35
+   },
+   "stats": {
+    "pts": 3,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [
+    "props +1% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "deandre-ayton-19980723",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Deandre Ayton",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 7.92,
+   "sd": 8.37,
+   "hist": 7.92,
+   "usesProps": false,
+   "estMin": 10,
+   "min": 9,
+   "actual": 8.5,
+   "comps": {
+    "pts": 2.86,
+    "tpm": 0.0,
+    "reb": 3.14,
+    "ast": 0.5,
+    "stl": 0.07,
+    "blk": 0.21,
+    "tov": 0.36
+   },
+   "stats": {
+    "pts": 4,
+    "reb": 0,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "micah-potter-19980406",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Micah Potter",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.5,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "exp": 6.29,
+   "sd": 9.37,
+   "hist": 6.29,
+   "usesProps": false,
+   "estMin": 7,
+   "min": 8,
+   "actual": 8.3,
+   "comps": {
+    "pts": 3.3,
+    "tpm": 0.4,
+    "reb": 2.2,
+    "ast": 0.3,
+    "stl": 0.1,
+    "blk": 0.1,
+    "tov": 0.6
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 4,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 50% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "danny-wolf-20040505",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Danny Wolf",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 2.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 20.68,
+   "sd": 12.09,
+   "hist": 30.42,
+   "usesProps": true,
+   "estMin": 33,
+   "min": 12,
+   "actual": 8.29,
+   "comps": {
+    "pts": 9.14,
+    "tpm": 1.45,
+    "reb": 5.95,
+    "ast": 2.35,
+    "stl": 0.31,
+    "blk": 0.47,
+    "tov": 1.88
+   },
+   "stats": {
+    "pts": 3,
+    "reb": 2,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -32% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jamal-cain-19990320",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jamal Cain",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.9,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "exp": 14.24,
+   "sd": 15.71,
+   "hist": 14.24,
+   "usesProps": false,
+   "estMin": 22.6,
+   "min": 15,
+   "actual": 8.0,
+   "comps": {
+    "pts": 8.28,
+    "tpm": 1.3,
+    "reb": 4.14,
+    "ast": 0.59,
+    "stl": 0.47,
+    "blk": 0.12,
+    "tov": 1.3
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 5,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 90% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "deanthony-melton-19980528",
+   "tip": "2026-11-17T01:00Z",
+   "name": "De'Anthony Melton",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
+   "exp": 28.6,
+   "sd": 12.85,
+   "hist": 29.93,
+   "usesProps": true,
+   "estMin": 27.7,
+   "min": 21,
+   "actual": 7.9,
+   "comps": {
+    "pts": 13.29,
+    "tpm": 2.1,
+    "reb": 4.1,
+    "ast": 3.3,
+    "stl": 1.49,
+    "blk": 0.62,
+    "tov": 1.49
+   },
+   "stats": {
+    "pts": 8,
+    "reb": 2,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "PROMU titulaire",
+    "props -4% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "jevon-carter-19950914",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jevon Carter",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 10.46,
+   "sd": 9.08,
+   "hist": 10.46,
+   "usesProps": false,
+   "estMin": 13.8,
+   "min": 12,
+   "actual": 7.9,
+   "comps": {
+    "pts": 3.76,
+    "tpm": 1.06,
+    "reb": 0.97,
+    "ast": 1.83,
+    "stl": 0.58,
+    "blk": 0.19,
+    "tov": 0.19
+   },
+   "stats": {
+    "pts": 3,
+    "reb": 2,
+    "ast": 1,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "joan-beringer-20061111",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Joan Beringer",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 15.23,
+   "sd": 11.88,
+   "hist": 15.23,
+   "usesProps": false,
+   "estMin": 14.6,
+   "min": 16,
+   "actual": 7.8,
+   "comps": {
+    "pts": 5.06,
+    "tpm": 0.0,
+    "reb": 4.98,
+    "ast": 0.49,
+    "stl": 0.24,
+    "blk": 0.98,
+    "tov": 0.41
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 4,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "taylor-hendricks-20031122",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Taylor Hendricks",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 18.71,
+   "sd": 13.84,
+   "hist": 18.71,
+   "usesProps": false,
+   "estMin": 16,
+   "min": 19,
+   "actual": 7.6,
+   "comps": {
+    "pts": 9.54,
+    "tpm": 1.12,
+    "reb": 4.63,
+    "ast": 1.26,
+    "stl": 0.28,
+    "blk": 0.14,
+    "tov": 0.84
+   },
+   "stats": {
+    "pts": 9,
+    "reb": 3,
+    "ast": 0,
+    "tpm": 1,
+    "stl": 0,
+    "blk": 0,
+    "tov": 3
+   },
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "bogdan-bogdanovic-19920818",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Bogdan Bogdanović",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 10.98,
+   "sd": 12.2,
+   "hist": 10.98,
+   "usesProps": false,
+   "estMin": 12.2,
+   "min": 26,
+   "actual": 7.5,
+   "comps": {
+    "pts": 5.84,
+    "tpm": 1.13,
+    "reb": 1.33,
+    "ast": 1.44,
+    "stl": 0.21,
+    "blk": 0.1,
+    "tov": 0.62
+   },
+   "stats": {
+    "pts": 6,
+    "reb": 0,
+    "ast": 1,
+    "tpm": 2,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "charles-bassey-20001028",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Charles Bassey",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 19.69,
+   "sd": 12.85,
+   "hist": 19.69,
+   "usesProps": false,
+   "estMin": 16.2,
+   "min": 16,
+   "actual": 7.0,
+   "comps": {
+    "pts": 9.04,
+    "tpm": 0.0,
+    "reb": 6.46,
+    "ast": 0.82,
+    "stl": 0.12,
+    "blk": 0.94,
+    "tov": 1.06
+   },
+   "stats": {
+    "pts": 4,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 1,
+    "tov": 0
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "bruce-thornton-20030914",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Bruce Thornton",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 2.64,
+   "sd": 2.92,
+   "hist": 2.64,
+   "usesProps": false,
+   "estMin": 3.6,
+   "min": 12,
+   "actual": 7.0,
+   "comps": {
+    "pts": 1.63,
+    "tpm": 0.26,
+    "reb": 0.09,
+    "ast": 0.0,
+    "stl": 0.26,
+    "blk": 0.0,
+    "tov": 0.17
+   },
+   "stats": {
+    "pts": 7,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 60% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "yang-hansen-20050626",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Yang Hansen",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 9.28,
+   "sd": 10.02,
+   "hist": 9.28,
+   "usesProps": false,
+   "estMin": 10.2,
+   "min": 8,
+   "actual": 6.7,
+   "comps": {
+    "pts": 3.97,
+    "tpm": 0.45,
+    "reb": 3.25,
+    "ast": 0.9,
+    "stl": 0.36,
+    "blk": 0.09,
+    "tov": 1.08
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 3,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 60% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "tre-mann-20010203",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Tre Mann",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.5,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "exp": 4.9,
+   "sd": 6.68,
+   "hist": 4.9,
+   "usesProps": false,
+   "estMin": 7.2,
+   "min": 3,
+   "actual": 6.5,
+   "comps": {
+    "pts": 1.56,
+    "tpm": 0.19,
+    "reb": 0.19,
+    "ast": 0.58,
+    "stl": 0.58,
+    "blk": 0.39,
+    "tov": 0.58
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 0,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 50% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "kris-murray-20000819",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Kris Murray",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 7.12,
+   "sd": 7.75,
+   "hist": 7.12,
+   "usesProps": false,
+   "estMin": 10.2,
+   "min": 7,
+   "actual": 4.2,
+   "comps": {
+    "pts": 0.96,
+    "tpm": 0.16,
+    "reb": 1.37,
+    "ast": 0.64,
+    "stl": 0.56,
+    "blk": 0.48,
+    "tov": 0.08
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "tyus-jones-19960510",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Tyus Jones",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 9.42,
+   "sd": 6.76,
+   "hist": 9.42,
+   "usesProps": false,
+   "estMin": 11.8,
+   "min": 11,
+   "actual": 4.2,
+   "comps": {
+    "pts": 2.71,
+    "tpm": 0.32,
+    "reb": 0.65,
+    "ast": 2.49,
+    "stl": 0.54,
+    "blk": 0.22,
+    "tov": 0.43
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 2,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "malevy-leons-19990923",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Malevy Leons",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 4.66,
+   "sd": 3.99,
+   "hist": 4.66,
+   "usesProps": false,
+   "estMin": 6.6,
+   "min": 6,
+   "actual": 3.2,
+   "comps": {
+    "pts": 0.97,
+    "tpm": 0.11,
+    "reb": 1.08,
+    "ast": 0.22,
+    "stl": 0.32,
+    "blk": 0.32,
+    "tov": 0.11
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 60% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "will-riley-20060210",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Will Riley",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 6.77,
+   "sd": 7.04,
+   "hist": 6.77,
+   "usesProps": false,
+   "estMin": 11,
+   "min": 3,
+   "actual": 3.2,
+   "comps": {
+    "pts": 4.32,
+    "tpm": 0.52,
+    "reb": 0.65,
+    "ast": 0.39,
+    "stl": 0.13,
+    "blk": 0.13,
+    "tov": 0.26
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 80% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "demar-derozan-19890807",
+   "tip": "2026-11-17T02:00Z",
+   "name": "DeMar DeRozan",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 16.8,
+   "sd": 6.8,
+   "hist": 16.04,
+   "usesProps": true,
+   "estMin": 21.6,
+   "min": 15,
+   "actual": 2.7,
+   "comps": {
+    "pts": 10.01,
+    "tpm": 0.18,
+    "reb": 1.88,
+    "ast": 2.8,
+    "stl": 0.54,
+    "blk": 0.18,
+    "tov": 0.99
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 1,
+    "ast": 1,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "props +5% vs historique"
+   ],
+   "played": true
+  },
+  {
+   "slug": "keshad-johnson-20010623",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Keshad Johnson",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.1,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 10%",
+   "exp": 10.52,
+   "sd": 10.88,
+   "hist": 10.52,
+   "usesProps": false,
+   "estMin": 10,
+   "min": 3,
+   "actual": 2.52,
+   "comps": {
+    "pts": 5.33,
+    "tpm": 0.67,
+    "reb": 3.0,
+    "ast": 0.67,
+    "stl": 0.33,
+    "blk": 0.0,
+    "tov": 1.0
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 2,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 10% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "cody-williams-20041120",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Cody Williams",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.4,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "exp": 1.56,
+   "sd": 3.96,
+   "hist": 1.56,
+   "usesProps": false,
+   "estMin": 4.8,
+   "min": 4,
+   "actual": 2.2,
+   "comps": {
+    "pts": 1.25,
+    "tpm": 0.07,
+    "reb": 0.35,
+    "ast": 0.0,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 0.14
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 1,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 40% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "gary-payton-ii-19921201",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Gary Payton II",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 9.33,
+   "sd": 7.89,
+   "hist": 9.33,
+   "usesProps": false,
+   "estMin": 14.6,
+   "min": 8,
+   "actual": 2.0,
+   "comps": {
+    "pts": 4.61,
+    "tpm": 0.44,
+    "reb": 1.87,
+    "ast": 0.44,
+    "stl": 0.88,
+    "blk": 0.0,
+    "tov": 0.77
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "bryce-hopkins-20020907",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Bryce Hopkins",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 9.85,
+   "sd": 13.02,
+   "hist": 9.85,
+   "usesProps": false,
+   "estMin": 16.2,
+   "min": 4,
+   "actual": 1.2,
+   "comps": {
+    "pts": 6.3,
+    "tpm": 0.22,
+    "reb": 2.14,
+    "ast": 0.79,
+    "stl": 0.22,
+    "blk": 0.0,
+    "tov": 0.9
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 60% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "zyon-pullin-20010303",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Zyon Pullin",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.1,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 10%",
+   "exp": 11.78,
+   "sd": 17.7,
+   "hist": 11.78,
+   "usesProps": false,
+   "estMin": 13,
+   "min": 4,
+   "actual": 1.2,
+   "comps": {
+    "pts": 5.5,
+    "tpm": 0.25,
+    "reb": 1.25,
+    "ast": 2.75,
+    "stl": 0.5,
+    "blk": 0.0,
+    "tov": 0.75
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 10% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "koa-peat-20070120",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Koa Peat",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 4.26,
+   "sd": 4.86,
+   "hist": 4.26,
+   "usesProps": false,
+   "estMin": 5.2,
+   "min": 2,
+   "actual": 1.2,
+   "comps": {
+    "pts": 2.9,
+    "tpm": 0.0,
+    "reb": 0.82,
+    "ast": 0.15,
+    "stl": 0.15,
+    "blk": 0.15,
+    "tov": 0.37
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 1,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 60% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "hugo-gonzalez-20060205",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Hugo González",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 10.38,
+   "sd": 10.18,
+   "hist": 10.38,
+   "usesProps": false,
+   "estMin": 14.8,
+   "min": 5,
+   "actual": 0.42,
+   "comps": {
+    "pts": 4.59,
+    "tpm": 0.63,
+    "reb": 2.19,
+    "ast": 0.63,
+    "stl": 0.83,
+    "blk": 0.21,
+    "tov": 1.04
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 2,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "anthony-edwards-20010805",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Anthony Edwards",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 44.42,
+   "sd": 26.13,
+   "hist": 44.42,
+   "usesProps": false,
+   "estMin": 33,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 30.6,
+    "tpm": 3.8,
+    "reb": 3.8,
+    "ast": 3.4,
+    "stl": 2.0,
+    "blk": 0.6,
+    "tov": 3.6
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "bennedict-mathurin-20020619",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Bennedict Mathurin",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 7.52,
+   "sd": 8.19,
+   "hist": 7.52,
+   "usesProps": false,
+   "estMin": 13.8,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 4.48,
+    "tpm": 0.44,
+    "reb": 1.41,
+    "ast": 1.05,
+    "stl": 0.26,
+    "blk": 0.0,
+    "tov": 0.79
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "ben-saraf-20060414",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Ben Saraf",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 0.1,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 10%",
+   "exp": 6.02,
+   "sd": 4.28,
+   "hist": 6.02,
+   "usesProps": false,
+   "estMin": 8.3,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.33,
+    "tpm": 0.33,
+    "reb": 0.67,
+    "ast": 2.33,
+    "stl": 0.33,
+    "blk": 0.0,
+    "tov": 1.0
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 10% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "brandon-williams-19991122",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Brandon Williams",
+   "team": "GSW",
+   "opp": "NOP",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 18.76,
+   "sd": 12.59,
+   "hist": 18.76,
+   "usesProps": false,
+   "estMin": 16.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 10.46,
+    "tpm": 0.7,
+    "reb": 2.11,
+    "ast": 2.31,
+    "stl": 0.91,
+    "blk": 0.4,
+    "tov": 1.51
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "bryce-mcgowens-20021108",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Bryce McGowens",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 12.9,
+   "sd": 12.84,
+   "hist": 12.9,
+   "usesProps": false,
+   "estMin": 13.4,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 4.83,
+    "tpm": 0.31,
+    "reb": 1.09,
+    "ast": 0.78,
+    "stl": 1.71,
+    "blk": 0.31,
+    "tov": 0.47
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "chaney-johnson-20020620",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Chaney Johnson",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 6.94,
+   "sd": 7.72,
+   "hist": 6.94,
+   "usesProps": false,
+   "estMin": 12.6,
+   "min": 1,
+   "actual": 0.0,
+   "comps": {
+    "pts": 2.78,
+    "tpm": 0.32,
+    "reb": 1.74,
+    "ast": 0.58,
+    "stl": 0.32,
+    "blk": 0.32,
+    "tov": 0.65
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [],
+   "played": true
+  },
+  {
+   "slug": "chris-youngblood-20020209",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Chris Youngblood",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 12.89,
+   "sd": 9.18,
+   "hist": 12.89,
+   "usesProps": false,
+   "estMin": 15.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 7.04,
+    "tpm": 1.6,
+    "reb": 1.6,
+    "ast": 1.44,
+    "stl": 0.64,
+    "blk": 0.16,
+    "tov": 1.28
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "colin-castleton-20000525",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Colin Castleton",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 4.16,
+   "sd": 4.54,
+   "hist": 4.16,
+   "usesProps": false,
+   "estMin": 4.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.04,
+    "tpm": 0.12,
+    "reb": 1.44,
+    "ast": 0.24,
+    "stl": 0.12,
+    "blk": 0.12,
+    "tov": 0.36
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "deandre-jordan-19880721",
+   "tip": "2026-11-17T01:00Z",
+   "name": "DeAndre Jordan",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.2,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "exp": 12.59,
+   "sd": 8.47,
+   "hist": 12.59,
+   "usesProps": false,
+   "estMin": 13.8,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 3.6,
+    "tpm": 0.0,
+    "reb": 4.8,
+    "ast": 0.8,
+    "stl": 0.4,
+    "blk": 0.6,
+    "tov": 0.6
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 20% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "dejounte-murray-19960919",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Dejounte Murray",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 26.5,
+   "sd": 16.36,
+   "hist": 26.5,
+   "usesProps": false,
+   "estMin": 31,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 13.07,
+    "tpm": 0.86,
+    "reb": 4.43,
+    "ast": 4.32,
+    "stl": 1.51,
+    "blk": 0.54,
+    "tov": 2.27
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "drake-powell-20050908",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Drake Powell",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.5,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "exp": 4.18,
+   "sd": 3.58,
+   "hist": 4.18,
+   "usesProps": false,
+   "estMin": 7.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 1.85,
+    "tpm": 0.22,
+    "reb": 0.65,
+    "ast": 0.76,
+    "stl": 0.22,
+    "blk": 0.0,
+    "tov": 0.33
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 50% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "dru-smith-19971230",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Dru Smith",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.6,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "exp": 5.01,
+   "sd": 5.19,
+   "hist": 5.01,
+   "usesProps": false,
+   "estMin": 7.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 1.93,
+    "tpm": 0.39,
+    "reb": 0.77,
+    "ast": 1.16,
+    "stl": 0.39,
+    "blk": 0.0,
+    "tov": 0.64
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 60% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "grant-nelson-20020318",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Grant Nelson",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 0 fois sur ses 10 derniers matchs, compté 0%",
+   "exp": 8.26,
+   "sd": 4.86,
+   "hist": 8.26,
+   "usesProps": false,
+   "estMin": 9,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 7.33,
+    "tpm": 0.33,
+    "reb": 2.33,
+    "ast": 0.67,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 1.67
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 0% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "gregory-jackson-ii-20041217",
+   "tip": "2026-11-17T00:00Z",
+   "name": "GG Jackson",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 12.17,
+   "sd": 13.3,
+   "hist": 12.17,
+   "usesProps": false,
+   "estMin": 13,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 5.68,
+    "tpm": 0.95,
+    "reb": 2.07,
+    "ast": 0.95,
+    "stl": 0.34,
+    "blk": 0.26,
+    "tov": 0.69
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "isaiah-evans-20051206",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Isaiah Evans",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 2.5,
+   "sd": 9.28,
+   "hist": 2.5,
+   "usesProps": false,
+   "estMin": 3.6,
+   "min": 4,
+   "actual": 0.0,
+   "comps": {
+    "pts": 1.59,
+    "tpm": 0.35,
+    "reb": 0.28,
+    "ast": 0.35,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 0.14
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "ja-morant-19990810",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Ja Morant",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 3.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 28.15,
+   "sd": 12.72,
+   "hist": 28.15,
+   "usesProps": false,
+   "estMin": 26.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 15.63,
+    "tpm": 1.35,
+    "reb": 2.55,
+    "ast": 5.41,
+    "stl": 1.2,
+    "blk": 0.0,
+    "tov": 1.95
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "jaylen-clark-20011013",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Jaylen Clark",
+   "team": "MIN",
+   "opp": "POR",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 14.5,
+   "sd": 9.88,
+   "hist": 14.5,
+   "usesProps": false,
+   "estMin": 17.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 5.83,
+    "tpm": 0.99,
+    "reb": 2.42,
+    "ast": 0.77,
+    "stl": 1.21,
+    "blk": 0.22,
+    "tov": 0.66
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "jaylon-tyson-20021202",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Jaylon Tyson",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 26.1,
+   "sd": 9.75,
+   "hist": 21.04,
+   "usesProps": true,
+   "estMin": 25.4,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 13.76,
+    "tpm": 2.15,
+    "reb": 4.75,
+    "ast": 2.9,
+    "stl": 0.47,
+    "blk": 0.35,
+    "tov": 1.17
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out",
+    "props +24% vs historique"
+   ],
+   "played": false
+  },
+  {
+   "slug": "josh-minott-20021125",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Josh Minott",
+   "team": "BKN",
+   "opp": "PHI",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.8,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "exp": 5.71,
+   "sd": 9.61,
+   "hist": 5.71,
+   "usesProps": false,
+   "estMin": 5.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.68,
+    "tpm": 0.47,
+    "reb": 1.26,
+    "ast": 0.24,
+    "stl": 0.32,
+    "blk": 0.08,
+    "tov": 0.32
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 80% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "julian-strawther-20020418",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Julian Strawther",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 20.01,
+   "sd": 8.78,
+   "hist": 20.01,
+   "usesProps": false,
+   "estMin": 18.3,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 13.0,
+    "tpm": 3.0,
+    "reb": 2.67,
+    "ast": 1.0,
+    "stl": 0.67,
+    "blk": 0.0,
+    "tov": 2.0
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "karim-lopez-20070412",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Karim Lopez",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.4,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "exp": 2.55,
+   "sd": 3.46,
+   "hist": 2.55,
+   "usesProps": false,
+   "estMin": 4.2,
+   "min": 2,
+   "actual": 0.0,
+   "comps": {
+    "pts": 1.17,
+    "tpm": 0.0,
+    "reb": 1.17,
+    "ast": 0.0,
+    "stl": 0.0,
+    "blk": 0.12,
+    "tov": 0.23
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 40% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "nick-richards-19971129",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Nick Richards",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 2.85,
+   "sd": 10.32,
+   "hist": 2.85,
+   "usesProps": false,
+   "estMin": 2.6,
+   "min": 3,
+   "actual": 0.0,
+   "comps": {
+    "pts": 1.43,
+    "tpm": 0.11,
+    "reb": 0.96,
+    "ast": 0.21,
+    "stl": 0.0,
+    "blk": 0.05,
+    "tov": 0.27
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "nikola-jovic-20030609",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Nikola Jović",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 9.61,
+   "sd": 8.7,
+   "hist": 9.61,
+   "usesProps": false,
+   "estMin": 11.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.84,
+    "tpm": 0.32,
+    "reb": 2.37,
+    "ast": 1.26,
+    "stl": 0.24,
+    "blk": 0.39,
+    "tov": 0.24
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "nikola-vucevic-19901024",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Nikola Vučević",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.15,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 10.25,
+   "sd": 7.94,
+   "hist": 10.25,
+   "usesProps": false,
+   "estMin": 11,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 3.03,
+    "tpm": 0.38,
+    "reb": 2.94,
+    "ast": 1.14,
+    "stl": 0.0,
+    "blk": 0.47,
+    "tov": 0.38
+   },
+   "stats": null,
+   "reasons": [],
+   "played": false
+  },
+  {
+   "slug": "noah-penda-20050107",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Noah Penda",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 14.24,
+   "sd": 12.88,
+   "hist": 14.24,
+   "usesProps": false,
+   "estMin": 15,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 4.33,
+    "tpm": 1.0,
+    "reb": 3.0,
+    "ast": 2.33,
+    "stl": 1.0,
+    "blk": 0.67,
+    "tov": 1.33
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "paolo-banchero-20021112",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Paolo Banchero",
+   "team": "ORL",
+   "opp": "BOS",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 33.4,
+   "sd": 15.09,
+   "hist": 33.4,
+   "usesProps": false,
+   "estMin": 28.4,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 21.4,
+    "tpm": 1.4,
+    "reb": 7.0,
+    "ast": 4.8,
+    "stl": 0.6,
+    "blk": 0.4,
+    "tov": 3.0
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "pelle-larsson-20010223",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Pelle Larsson",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 20.6,
+   "sd": 8.07,
+   "hist": 22.5,
+   "usesProps": true,
+   "estMin": 30.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 10.76,
+    "tpm": 1.48,
+    "reb": 3.2,
+    "ast": 3.2,
+    "stl": 1.28,
+    "blk": 0.0,
+    "tov": 2.07
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out",
+    "props -8% vs historique"
+   ],
+   "played": false
+  },
+  {
+   "slug": "sam-merrill-19960515",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Sam Merrill",
+   "team": "CLE",
+   "opp": "CHI",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 19.53,
+   "sd": 7.32,
+   "hist": 19.53,
+   "usesProps": false,
+   "estMin": 23,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 7.42,
+    "tpm": 1.5,
+    "reb": 3.33,
+    "ast": 1.83,
+    "stl": 0.97,
+    "blk": 0.11,
+    "tov": 0.32
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "scotty-pippen-jr-20001110",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Scotty Pippen Jr.",
+   "team": "MEM",
+   "opp": "WAS",
+   "stars": 1.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 14.24,
+   "sd": 9.13,
+   "hist": 14.24,
+   "usesProps": false,
+   "estMin": 16.4,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 6.06,
+    "tpm": 0.44,
+    "reb": 2.07,
+    "ast": 1.92,
+    "stl": 1.63,
+    "blk": 0.15,
+    "tov": 1.92
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "tobe-awaka-20040130",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Tobe Awaka",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 12.59,
+   "sd": 7.55,
+   "hist": 12.59,
+   "usesProps": false,
+   "estMin": 10.8,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.0,
+    "tpm": 0.0,
+    "reb": 5.25,
+    "ast": 0.75,
+    "stl": 0.25,
+    "blk": 0.75,
+    "tov": 0.5
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "tre-donaldson-20031211",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Tre Donaldson",
+   "team": "MIA",
+   "opp": "HOU",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.1,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 10%",
+   "exp": 6.36,
+   "sd": 6.49,
+   "hist": 6.36,
+   "usesProps": false,
+   "estMin": 8.3,
+   "min": 3,
+   "actual": 0.0,
+   "comps": {
+    "pts": 3.0,
+    "tpm": 0.33,
+    "reb": 1.0,
+    "ast": 1.33,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 0.33
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 10% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "trendon-watford-20001109",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Trendon Watford",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 14.73,
+   "sd": 8.47,
+   "hist": 14.73,
+   "usesProps": false,
+   "estMin": 18.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 7.25,
+    "tpm": 0.31,
+    "reb": 3.39,
+    "ast": 0.93,
+    "stl": 0.77,
+    "blk": 0.46,
+    "tov": 1.08
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "vit-krejci-20000619",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Vít Krejčí",
+   "team": "POR",
+   "opp": "MIN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 7.94,
+   "sd": 7.14,
+   "hist": 7.94,
+   "usesProps": false,
+   "estMin": 11,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.68,
+    "tpm": 0.46,
+    "reb": 1.94,
+    "ast": 1.11,
+    "stl": 0.37,
+    "blk": 0.09,
+    "tov": 0.46
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "zach-collins-19971119",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Zach Collins",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 8.1,
+   "sd": 7.24,
+   "hist": 8.1,
+   "usesProps": false,
+   "estMin": 12,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.59,
+    "tpm": 0.0,
+    "reb": 3.0,
+    "ast": 1.23,
+    "stl": 0.27,
+    "blk": 0.0,
+    "tov": 0.55
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "zeke-nnaji-20010109",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Zeke Nnaji",
+   "team": "DEN",
+   "opp": "PHX",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.2,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "exp": 6.21,
+   "sd": 3.76,
+   "hist": 6.21,
+   "usesProps": false,
+   "estMin": 6.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 4.4,
+    "tpm": 0.2,
+    "reb": 1.8,
+    "ast": 0.0,
+    "stl": 0.0,
+    "blk": 0.2,
+    "tov": 0.8
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 20% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "adem-bona-20030328",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Adem Bona",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 11.43,
+   "sd": 9.38,
+   "hist": 11.43,
+   "usesProps": false,
+   "estMin": 14.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.09,
+    "tpm": 0.0,
+    "reb": 3.84,
+    "ast": 0.77,
+    "stl": 0.44,
+    "blk": 0.99,
+    "tov": 0.88
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "dillon-mitchell-20031003",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Dillon Mitchell",
+   "team": "BOS",
+   "opp": "ORL",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.1,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 10%",
+   "exp": 8.05,
+   "sd": 9.68,
+   "hist": 8.05,
+   "usesProps": false,
+   "estMin": 11.7,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 3.67,
+    "tpm": 0.33,
+    "reb": 3.0,
+    "ast": 1.33,
+    "stl": 0.33,
+    "blk": 0.0,
+    "tov": 1.33
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 10% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "duop-reath-19960626",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Duop Reath",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.4,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "exp": 4.46,
+   "sd": 6.63,
+   "hist": 4.46,
+   "usesProps": false,
+   "estMin": 5.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.74,
+    "tpm": 0.49,
+    "reb": 0.77,
+    "ast": 0.07,
+    "stl": 0.0,
+    "blk": 0.21,
+    "tov": 0.21
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 40% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "jamaree-bouyea-19990627",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Jamaree Bouyea",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.5,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "exp": 5.75,
+   "sd": 11.85,
+   "hist": 5.75,
+   "usesProps": false,
+   "estMin": 5.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.95,
+    "tpm": 0.12,
+    "reb": 0.53,
+    "ast": 1.24,
+    "stl": 0.12,
+    "blk": 0.0,
+    "tov": 0.3
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 50% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "labaron-philon-jr-20051124",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Labaron Philon Jr.",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.7,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "exp": 2.93,
+   "sd": 6.0,
+   "hist": 2.93,
+   "usesProps": false,
+   "estMin": 4.6,
+   "min": 1,
+   "actual": 0.0,
+   "comps": {
+    "pts": 1.7,
+    "tpm": 0.22,
+    "reb": 0.49,
+    "ast": 0.55,
+    "stl": 0.05,
+    "blk": 0.0,
+    "tov": 0.33
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 70% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "pat-spencer-19960704",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Pat Spencer",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 6.19,
+   "sd": 9.97,
+   "hist": 6.19,
+   "usesProps": false,
+   "estMin": 5.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 2.51,
+    "tpm": 0.46,
+    "reb": 0.8,
+    "ast": 0.91,
+    "stl": 0.46,
+    "blk": 0.23,
+    "tov": 0.69
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "rasheer-fleming-20040710",
+   "tip": "2026-11-17T02:00Z",
+   "name": "Rasheer Fleming",
+   "team": "PHX",
+   "opp": "DEN",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 5.07,
+   "sd": 4.81,
+   "hist": 5.07,
+   "usesProps": false,
+   "estMin": 9.6,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 1.69,
+    "tpm": 0.11,
+    "reb": 2.03,
+    "ast": 0.0,
+    "stl": 0.56,
+    "blk": 0.23,
+    "tov": 0.79
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 30% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "rayan-rupert-20040531",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Rayan Rupert",
+   "team": "PHI",
+   "opp": "BKN",
+   "stars": 2.5,
+   "bonus": 0.1,
+   "pct": 0.2,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "exp": 7.25,
+   "sd": 7.44,
+   "hist": 7.25,
+   "usesProps": false,
+   "estMin": 9.7,
+   "min": 1,
+   "actual": 0.0,
+   "comps": {
+    "pts": 0.67,
+    "tpm": 0.0,
+    "reb": 2.33,
+    "ast": 0.33,
+    "stl": 0.33,
+    "blk": 0.67,
+    "tov": 0.33
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "banc, joue 20% des matchs"
+   ],
+   "played": true
+  },
+  {
+   "slug": "anthony-gill-19921017",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Anthony Gill",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.5,
+   "bonus": 0.05,
+   "pct": 0.3,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "exp": 2.95,
+   "sd": 2.98,
+   "hist": 2.95,
+   "usesProps": false,
+   "estMin": 4.8,
+   "min": 3,
+   "actual": 0.0,
+   "comps": {
+    "pts": 1.5,
+    "tpm": 0.0,
+    "reb": 1.0,
+    "ast": 0.0,
+    "stl": 0.0,
+    "blk": 0.0,
+    "tov": 0.0
+   },
+   "stats": {
+    "pts": 2,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 1
+   },
+   "reasons": [
+    "banc, joue 30% des matchs",
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "carlton-carrington-20050721",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Bub Carrington",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 12.51,
+   "sd": 10.14,
+   "hist": 12.51,
+   "usesProps": false,
+   "estMin": 18.4,
+   "min": 3,
+   "actual": 0.0,
+   "comps": {
+    "pts": 4.53,
+    "tpm": 1.18,
+    "reb": 1.67,
+    "ast": 2.16,
+    "stl": 0.49,
+    "blk": 0.2,
+    "tov": 0.49
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 0
+   },
+   "reasons": [
+    "back-to-back"
+   ],
+   "played": true
+  },
+  {
+   "slug": "clint-capela-19940518",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Clint Capela",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.0,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 16.79,
+   "sd": 17.27,
+   "hist": 16.79,
+   "usesProps": false,
+   "estMin": 16.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 3.4,
+    "tpm": 0.0,
+    "reb": 5.51,
+    "ast": 1.78,
+    "stl": 0.81,
+    "blk": 0.81,
+    "tov": 0.81
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "felix-okpara-20040420",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Felix Okpara",
+   "team": "WAS",
+   "opp": "MEM",
+   "stars": 1.0,
+   "bonus": 0.05,
+   "pct": 0.2,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "exp": 3.83,
+   "sd": 4.27,
+   "hist": 3.83,
+   "usesProps": false,
+   "estMin": 3.8,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 1.25,
+    "tpm": 0.0,
+    "reb": 0.75,
+    "ast": 0.25,
+    "stl": 0.0,
+    "blk": 0.5,
+    "tov": 0.25
+   },
+   "stats": null,
+   "reasons": [
+    "banc, joue 20% des matchs"
+   ],
+   "played": false
+  },
+  {
+   "slug": "marcus-smart-19940306",
+   "tip": "2026-11-17T00:30Z",
+   "name": "Marcus Smart",
+   "team": "HOU",
+   "opp": "MIA",
+   "stars": 1.5,
+   "bonus": 0.15,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 16.52,
+   "sd": 12.91,
+   "hist": 16.52,
+   "usesProps": false,
+   "estMin": 18.8,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 6.71,
+    "tpm": 1.43,
+    "reb": 2.24,
+    "ast": 1.79,
+    "stl": 0.9,
+    "blk": 0.09,
+    "tov": 1.43
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "trey-murphy-iii-20000618",
+   "tip": "2026-11-17T01:00Z",
+   "name": "Trey Murphy III",
+   "team": "NOP",
+   "opp": "GSW",
+   "stars": 2.5,
+   "bonus": 0.0,
+   "pct": 0.0,
+   "pctSrc": "RotoWire : Out ce soir",
+   "exp": 29.3,
+   "sd": 13.87,
+   "hist": 29.3,
+   "usesProps": false,
+   "estMin": 33.2,
+   "min": null,
+   "actual": null,
+   "comps": {
+    "pts": 15.72,
+    "tpm": 2.19,
+    "reb": 5.0,
+    "ast": 3.64,
+    "stl": 1.14,
+    "blk": 0.21,
+    "tov": 1.56
+   },
+   "stats": null,
+   "reasons": [
+    "RotoWire Out"
+   ],
+   "played": false
+  },
+  {
+   "slug": "patrick-williams-20010826",
+   "tip": "2026-11-17T00:00Z",
+   "name": "Patrick Williams",
+   "team": "CHI",
+   "opp": "CLE",
+   "stars": 2.0,
+   "bonus": 0.0,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 22.64,
+   "sd": 10.82,
+   "hist": 22.64,
+   "usesProps": false,
+   "estMin": 25,
+   "min": 13,
+   "actual": -4.0,
+   "comps": {
+    "pts": 10.0,
+    "tpm": 1.21,
+    "reb": 4.39,
+    "ast": 2.42,
+    "stl": 0.91,
+    "blk": 0.45,
+    "tov": 1.06
+   },
+   "stats": {
+    "pts": 0,
+    "reb": 0,
+    "ast": 0,
+    "tpm": 0,
+    "stl": 0,
+    "blk": 0,
+    "tov": 2
+   },
+   "reasons": [],
+   "played": true
+  }
+ ]
+}
