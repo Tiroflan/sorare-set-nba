@@ -604,7 +604,17 @@ function renderBilan() {
       <div class="num"><b>${n1(r.a)}</b><div class="small muted">prévu ${n1(r.e)}</div>
       <div class="small ${r.a >= r.e ? "pct-good" : "pct-low"}">${sgn(r.a - r.e)}</div></div></div>`;
 
-  el.innerHTML = `
+  const V = D.verdicts || [], vCls = v => v === "on peut conclure" ? "pct-good" : v === "tendance" ? "pct-mid" : "muted";
+  const verdictCard = V.length ? `<div class="card"><b>Ce qu'on peut conclure</b>
+    <div class="small muted">Tous les soirs joués comptent. « Tendance » : à surveiller, pas prouvé. « On peut conclure » : moins d'une chance sur 80 que ce soit le hasard (score z de 2,5 ou plus). Le seuil est plus exigeant que d'habitude parce qu'on teste une dizaine de questions à la fois.</div>
+    ${V.map(v => `<div class="pl" style="border-top:1px solid var(--line);padding:8px 0">
+      <div class="row"><div class="grow small"><b>${esc(v.question)}</b></div><div class="small ${vCls(v.verdict)}"><b>${esc(v.verdict)}</b></div></div>
+      <div class="small">${esc(v.chiffre)}${v.z !== null ? ` <span class="muted">(z = ${v.z})</span>` : ""}</div>
+      ${v.reste ? `<div class="src">Reste : ${esc(v.reste)}</div>` : ""}
+      ${v.verdict !== "trop tôt" ? `<div class="src">Si ça se confirme : ${esc(v.action)}</div>` : ""}</div>`).join("")}
+    ${(D.aFaire || []).length ? `<div class="small" style="margin-top:6px"><b>Chantiers en attente</b></div>${D.aFaire.map(a => `<div class="src">${esc(a)}</div>`).join("")}` : ""}
+  </div>` : "";
+  el.innerHTML = verdictCard + `
     <div class="paliers">${chips.map(([k, l]) => `<button data-bn="${k}" class="${k === bilanNight ? "on" : ""}">${l}</button>`).join("")}</div>
     <div class="card"><b>Projection contre score réel</b>
       <div class="small muted">Dernière projection faite avant chaque match (bonus de carte compris), comparée au score marqué.</div>

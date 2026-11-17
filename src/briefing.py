@@ -134,6 +134,13 @@ def main():
         print("\n".join(teams_block(B)))
         print()
 
+    try:  # verdicts lus dans le journal local (git pull avant)
+        import verdicts
+        verdicts.show(verdicts.compute())
+        print()
+    except Exception as e:
+        print(f"(verdicts non calculés : {e!r})\n")
+
     print("## Les 2 prochains soirs\n")
     nights = {}
     for g in D["games"]:

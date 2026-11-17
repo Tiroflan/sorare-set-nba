@@ -172,6 +172,13 @@ def render(data):
     except Exception as e:  # le bilan ne doit jamais empêcher la page de sortir
         print(f"Bilans non chargés : {e!r}")
         data["bilans"] = []
+    try:
+        import verdicts
+        data["verdicts"] = verdicts.compute()
+        data["aFaire"] = verdicts.A_FAIRE
+    except Exception as e:
+        print(f"Verdicts non calculés : {e!r}")
+        data["verdicts"] = []
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False))
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(html, encoding="utf-8")
