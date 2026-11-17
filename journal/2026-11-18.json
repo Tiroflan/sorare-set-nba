@@ -7,7 +7,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -52,7 +52,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -97,7 +97,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -142,7 +142,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -187,7 +187,7 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -234,7 +234,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -279,7 +279,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -324,11 +324,11 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 7.34,
    "sd": 12.01,
    "raw": 7.34,
@@ -343,7 +343,7 @@
    "pace": 0.998,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.257,
    "comps": {
@@ -371,11 +371,11 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 14.2,
    "sd": 10.99,
    "raw": 14.2,
@@ -390,7 +390,7 @@
    "pace": 1.001,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.235,
    "comps": {
@@ -418,7 +418,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -463,7 +463,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.1,
    "pct": 0.6,
@@ -510,7 +510,7 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -555,7 +555,7 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.1,
    "pct": 1.0,
@@ -600,7 +600,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 4.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -645,11 +645,11 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.4,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "pct": 0.548,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
    "exp": 2.34,
    "sd": 2.4,
    "raw": 2.23,
@@ -664,7 +664,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 40% des matchs"
+    "banc, joue 55% des matchs"
    ],
    "upside": 0.363,
    "comps": {
@@ -692,7 +692,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -739,7 +739,7 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 4.5,
    "bonus": 0.1,
    "pct": 0.6,
@@ -786,7 +786,7 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -831,7 +831,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -878,7 +878,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -923,7 +923,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -968,7 +968,7 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1013,7 +1013,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1058,11 +1058,11 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.3,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "pct": 0.47600000000000003,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 48% (recalé sur nos bilans)",
    "exp": 5.71,
    "sd": 4.59,
    "raw": 5.71,
@@ -1077,7 +1077,7 @@
    "pace": 0.987,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 30% des matchs"
+    "banc, joue 48% des matchs"
    ],
    "upside": 0.329,
    "comps": {
@@ -1105,11 +1105,11 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 12.99,
    "sd": 15.14,
    "raw": 12.99,
@@ -1124,7 +1124,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.296,
    "comps": {
@@ -1152,7 +1152,7 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1199,7 +1199,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1244,11 +1244,11 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 4.8,
    "sd": 5.87,
    "raw": 4.8,
@@ -1263,7 +1263,7 @@
    "pace": 1.008,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.308,
    "comps": {
@@ -1291,11 +1291,11 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 2.61,
    "sd": 2.19,
    "raw": 2.61,
@@ -1310,7 +1310,7 @@
    "pace": 1.007,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.339,
    "comps": {
@@ -1338,11 +1338,11 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 5.8,
    "sd": 9.87,
    "raw": 5.8,
@@ -1357,7 +1357,7 @@
    "pace": 0.967,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.388,
    "comps": {
@@ -1385,7 +1385,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1432,11 +1432,11 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 17.89,
    "sd": 12.68,
    "raw": 17.89,
@@ -1451,7 +1451,7 @@
    "pace": 1.011,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.284,
    "comps": {
@@ -1479,7 +1479,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1524,7 +1524,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1569,7 +1569,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1614,7 +1614,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1659,7 +1659,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1706,7 +1706,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1751,7 +1751,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1796,7 +1796,7 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1841,7 +1841,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1888,7 +1888,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1933,7 +1933,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1978,7 +1978,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -2025,11 +2025,11 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.3,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "pct": 0.47600000000000003,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 48% (recalé sur nos bilans)",
    "exp": 4.35,
    "sd": 4.54,
    "raw": 4.35,
@@ -2044,7 +2044,7 @@
    "pace": 0.977,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 30% des matchs"
+    "banc, joue 48% des matchs"
    ],
    "upside": 0.326,
    "comps": {
@@ -2072,7 +2072,7 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2117,7 +2117,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 4.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2162,11 +2162,11 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 14.42,
    "sd": 11.46,
    "raw": 14.42,
@@ -2181,7 +2181,7 @@
    "pace": 0.987,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.318,
    "comps": {
@@ -2209,11 +2209,11 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 12.2,
    "sd": 9.37,
    "raw": 12.2,
@@ -2228,7 +2228,7 @@
    "pace": 1.016,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.335,
    "comps": {
@@ -2256,11 +2256,11 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 4.76,
    "sd": 6.12,
    "raw": 4.76,
@@ -2275,7 +2275,7 @@
    "pace": 0.998,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.366,
    "comps": {
@@ -2303,7 +2303,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2348,11 +2348,11 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 26.22,
    "sd": 20.1,
    "raw": 24.97,
@@ -2367,7 +2367,7 @@
    "pace": 1.049,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.28,
    "comps": {
@@ -2395,7 +2395,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2440,7 +2440,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2485,7 +2485,7 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -2532,11 +2532,11 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
-   "pct": 0.2,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "pct": 0.404,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
    "exp": 15.42,
    "sd": 6.86,
    "raw": 15.42,
@@ -2551,7 +2551,7 @@
    "pace": 0.994,
    "blow": 1.034,
    "reasons": [
-    "banc, joue 20% des matchs"
+    "banc, joue 40% des matchs"
    ],
    "upside": 0.2,
    "comps": {
@@ -2579,7 +2579,7 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2624,7 +2624,7 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2669,7 +2669,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -2716,7 +2716,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2761,7 +2761,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2806,7 +2806,7 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2851,7 +2851,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2896,11 +2896,11 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.1,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 10%",
+   "pct": 0.332,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 1 fois sur ses 10 derniers matchs, compté 33% (recalé sur nos bilans)",
    "exp": 1.94,
    "sd": 1.6,
    "raw": 1.94,
@@ -2915,7 +2915,7 @@
    "pace": 0.987,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 10% des matchs"
+    "banc, joue 33% des matchs"
    ],
    "upside": 0.331,
    "comps": {
@@ -2943,11 +2943,11 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.4,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "pct": 0.548,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
    "exp": 4.45,
    "sd": 3.37,
    "raw": 4.23,
@@ -2962,7 +2962,7 @@
    "pace": 1.049,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 40% des matchs"
+    "banc, joue 55% des matchs"
    ],
    "upside": 0.333,
    "comps": {
@@ -2990,11 +2990,11 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 5.2,
    "sd": 5.19,
    "raw": 5.2,
@@ -3009,7 +3009,7 @@
    "pace": 1.049,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.348,
    "comps": {
@@ -3037,11 +3037,11 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.3,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "pct": 0.47600000000000003,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 48% (recalé sur nos bilans)",
    "exp": 4.43,
    "sd": 6.45,
    "raw": 4.43,
@@ -3056,7 +3056,7 @@
    "pace": 1.019,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 30% des matchs"
+    "banc, joue 48% des matchs"
    ],
    "upside": 0.389,
    "comps": {
@@ -3084,11 +3084,11 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 21.17,
    "sd": 10.57,
    "raw": 20.16,
@@ -3103,7 +3103,7 @@
    "pace": 0.998,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.244,
    "comps": {
@@ -3131,7 +3131,7 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3176,7 +3176,7 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 4.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3221,7 +3221,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3266,11 +3266,11 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 7.98,
    "sd": 7.51,
    "raw": 7.98,
@@ -3285,7 +3285,7 @@
    "pace": 1.001,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.293,
    "comps": {
@@ -3313,11 +3313,11 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 15.9,
    "sd": 9.31,
    "raw": 15.9,
@@ -3332,7 +3332,7 @@
    "pace": 0.977,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.246,
    "comps": {
@@ -3360,7 +3360,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -3407,11 +3407,11 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 13.06,
    "sd": 10.53,
    "raw": 13.06,
@@ -3426,7 +3426,7 @@
    "pace": 1.001,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.349,
    "comps": {
@@ -3454,7 +3454,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3499,7 +3499,7 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3544,11 +3544,11 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 6.67,
    "sd": 9.01,
    "raw": 6.67,
@@ -3563,7 +3563,7 @@
    "pace": 1.007,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.372,
    "comps": {
@@ -3591,7 +3591,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3636,7 +3636,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.1,
    "pct": 1.0,
@@ -3681,11 +3681,11 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 18.98,
    "sd": 11.86,
    "raw": 18.98,
@@ -3700,7 +3700,7 @@
    "pace": 0.99,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.303,
    "comps": {
@@ -3728,11 +3728,11 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 3.75,
    "sd": 3.26,
    "raw": 3.75,
@@ -3747,7 +3747,7 @@
    "pace": 1.007,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.308,
    "comps": {
@@ -3775,7 +3775,7 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3820,7 +3820,7 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.15,
    "pct": 0.6,
@@ -3867,7 +3867,7 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3912,11 +3912,11 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 13.87,
    "sd": 15.05,
    "raw": 13.87,
@@ -3931,7 +3931,7 @@
    "pace": 0.977,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.33,
    "comps": {
@@ -3959,11 +3959,11 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.4,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "pct": 0.548,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
    "exp": 6.43,
    "sd": 13.19,
    "raw": 6.12,
@@ -3978,7 +3978,7 @@
    "pace": 1.019,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 40% des matchs"
+    "banc, joue 55% des matchs"
    ],
    "upside": 0.42,
    "comps": {
@@ -4006,7 +4006,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4051,7 +4051,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -4096,7 +4096,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4141,11 +4141,11 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.4,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "pct": 0.548,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
    "exp": 12.03,
    "sd": 9.83,
    "raw": 12.03,
@@ -4160,7 +4160,7 @@
    "pace": 0.994,
    "blow": 1.034,
    "reasons": [
-    "banc, joue 40% des matchs"
+    "banc, joue 55% des matchs"
    ],
    "upside": 0.317,
    "comps": {
@@ -4188,7 +4188,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -4233,7 +4233,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4278,11 +4278,11 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 10.56,
    "sd": 11.56,
    "raw": 10.56,
@@ -4297,7 +4297,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.346,
    "comps": {
@@ -4325,7 +4325,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4370,7 +4370,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -4417,7 +4417,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.6,
@@ -4464,7 +4464,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4509,11 +4509,11 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 2.75,
    "sd": 2.14,
    "raw": 2.75,
@@ -4528,7 +4528,7 @@
    "pace": 0.987,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.26,
    "comps": {
@@ -4556,11 +4556,11 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 11.75,
    "sd": 8.56,
    "raw": 11.75,
@@ -4575,7 +4575,7 @@
    "pace": 0.977,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.281,
    "comps": {
@@ -4603,7 +4603,7 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4648,11 +4648,11 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.3,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "pct": 0.47600000000000003,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 48% (recalé sur nos bilans)",
    "exp": 12.82,
    "sd": 15.24,
    "raw": 12.82,
@@ -4667,7 +4667,7 @@
    "pace": 0.998,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 30% des matchs"
+    "banc, joue 48% des matchs"
    ],
    "upside": 0.408,
    "comps": {
@@ -4695,7 +4695,7 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -4740,7 +4740,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4785,7 +4785,7 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4830,7 +4830,7 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4875,11 +4875,11 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 6.08,
    "sd": 9.12,
    "raw": 6.08,
@@ -4894,7 +4894,7 @@
    "pace": 1.049,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.374,
    "comps": {
@@ -4922,7 +4922,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -4967,7 +4967,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5012,7 +5012,7 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -5057,7 +5057,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5102,7 +5102,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.1,
    "pct": 1.0,
@@ -5147,7 +5147,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5192,7 +5192,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5237,11 +5237,11 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.2,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "pct": 0.404,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
    "exp": 7.85,
    "sd": 10.05,
    "raw": 7.48,
@@ -5256,7 +5256,7 @@
    "pace": 1.049,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 20% des matchs"
+    "banc, joue 40% des matchs"
    ],
    "upside": 0.395,
    "comps": {
@@ -5284,7 +5284,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -5329,7 +5329,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.6,
@@ -5376,7 +5376,7 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5421,11 +5421,11 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 4.54,
    "sd": 5.47,
    "raw": 4.54,
@@ -5440,7 +5440,7 @@
    "pace": 1.019,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.372,
    "comps": {
@@ -5468,11 +5468,11 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 6.2,
    "sd": 7.96,
    "raw": 6.2,
@@ -5487,7 +5487,7 @@
    "pace": 1.033,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.357,
    "comps": {
@@ -5515,7 +5515,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5560,7 +5560,7 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5605,11 +5605,11 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 2.46,
    "sd": 2.95,
    "raw": 2.46,
@@ -5624,7 +5624,7 @@
    "pace": 0.99,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.38,
    "comps": {
@@ -5652,11 +5652,11 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 9.7,
    "sd": 9.67,
    "raw": 9.24,
@@ -5671,7 +5671,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.262,
    "comps": {
@@ -5699,11 +5699,11 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 17.1,
    "sd": 18.35,
    "raw": 17.1,
@@ -5718,7 +5718,7 @@
    "pace": 1.001,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.305,
    "comps": {
@@ -5746,7 +5746,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5791,7 +5791,7 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -5836,11 +5836,11 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 4.98,
    "sd": 3.71,
    "raw": 4.98,
@@ -5855,7 +5855,7 @@
    "pace": 1.001,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.312,
    "comps": {
@@ -5883,7 +5883,7 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5928,11 +5928,11 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 6.69,
    "sd": 7.68,
    "raw": 6.69,
@@ -5947,7 +5947,7 @@
    "pace": 0.994,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.303,
    "comps": {
@@ -5975,7 +5975,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.15,
    "pct": 0.6,
@@ -6022,7 +6022,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6067,7 +6067,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6112,7 +6112,7 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -6157,7 +6157,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -6204,7 +6204,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -6249,7 +6249,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6294,7 +6294,7 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.5,
    "bonus": 0.15,
    "pct": 1.0,
@@ -6339,11 +6339,11 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 16.57,
    "sd": 12.47,
    "raw": 16.57,
@@ -6358,7 +6358,7 @@
    "pace": 0.994,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.29,
    "comps": {
@@ -6386,11 +6386,11 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 3.13,
    "sd": 3.7,
    "raw": 2.99,
@@ -6405,7 +6405,7 @@
    "pace": 0.994,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.288,
    "comps": {
@@ -6433,7 +6433,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6478,11 +6478,11 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.7,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 70%",
+   "pct": 0.764,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
    "exp": 13.23,
    "sd": 11.08,
    "raw": 13.23,
@@ -6497,7 +6497,7 @@
    "pace": 1.049,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 70% des matchs"
+    "banc, joue 76% des matchs"
    ],
    "upside": 0.34,
    "comps": {
@@ -6525,7 +6525,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -6570,11 +6570,11 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
-   "pct": 0.4,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "pct": 0.548,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
    "exp": 20.32,
    "sd": 12.69,
    "raw": 19.35,
@@ -6589,7 +6589,7 @@
    "pace": 1.011,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 40% des matchs"
+    "banc, joue 55% des matchs"
    ],
    "upside": 0.253,
    "comps": {
@@ -6617,7 +6617,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6662,11 +6662,11 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.4,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 40%",
+   "pct": 0.548,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
    "exp": 2.62,
    "sd": 8.11,
    "raw": 2.49,
@@ -6681,7 +6681,7 @@
    "pace": 1.049,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 40% des matchs"
+    "banc, joue 55% des matchs"
    ],
    "upside": 0.457,
    "comps": {
@@ -6709,11 +6709,11 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 9.86,
    "sd": 8.18,
    "raw": 9.86,
@@ -6728,7 +6728,7 @@
    "pace": 1.049,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.318,
    "comps": {
@@ -6756,11 +6756,11 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.15,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 10.71,
    "sd": 8.14,
    "raw": 9.32,
@@ -6775,7 +6775,7 @@
    "pace": 0.977,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.281,
    "comps": {
@@ -6803,11 +6803,11 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 8.66,
    "sd": 7.44,
    "raw": 8.66,
@@ -6822,7 +6822,7 @@
    "pace": 1.008,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.368,
    "comps": {
@@ -6850,7 +6850,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6895,7 +6895,7 @@
    "opp": "CHI",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -6940,7 +6940,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6985,11 +6985,11 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 9.84,
    "sd": 9.06,
    "raw": 9.84,
@@ -7004,7 +7004,7 @@
    "pace": 1.033,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.328,
    "comps": {
@@ -7032,7 +7032,7 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7077,11 +7077,11 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 7.55,
    "sd": 8.4,
    "raw": 7.19,
@@ -7096,7 +7096,7 @@
    "pace": 1.007,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.321,
    "comps": {
@@ -7124,7 +7124,7 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7169,7 +7169,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -7216,7 +7216,7 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -7263,7 +7263,7 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.6,
@@ -7310,11 +7310,11 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.3,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 30%",
+   "pct": 0.47600000000000003,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 48% (recalé sur nos bilans)",
    "exp": 6.44,
    "sd": 9.97,
    "raw": 6.44,
@@ -7329,7 +7329,7 @@
    "pace": 1.019,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 30% des matchs"
+    "banc, joue 48% des matchs"
    ],
    "upside": 0.379,
    "comps": {
@@ -7357,7 +7357,7 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7402,7 +7402,7 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -7449,7 +7449,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.6,
@@ -7496,7 +7496,7 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -7543,7 +7543,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7588,11 +7588,11 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 7.98,
    "sd": 9.48,
    "raw": 7.6,
@@ -7607,7 +7607,7 @@
    "pace": 1.033,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.295,
    "comps": {
@@ -7635,11 +7635,11 @@
    "opp": "SAC",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.2,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "pct": 0.404,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
    "exp": 6.12,
    "sd": 4.65,
    "raw": 6.12,
@@ -7654,7 +7654,7 @@
    "pace": 1.019,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 20% des matchs"
+    "banc, joue 40% des matchs"
    ],
    "upside": 0.323,
    "comps": {
@@ -7682,11 +7682,11 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.2,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "pct": 0.404,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
    "exp": 9.82,
    "sd": 5.02,
    "raw": 9.82,
@@ -7701,7 +7701,7 @@
    "pace": 0.987,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 20% des matchs"
+    "banc, joue 40% des matchs"
    ],
    "upside": 0.231,
    "comps": {
@@ -7729,7 +7729,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7774,7 +7774,7 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7819,7 +7819,7 @@
    "opp": "MIA",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -7866,7 +7866,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7911,7 +7911,7 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -7956,7 +7956,7 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -8003,7 +8003,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -8050,7 +8050,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -8097,7 +8097,7 @@
    "opp": "ATL",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 4.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -8142,11 +8142,11 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 50%",
+   "pct": 0.62,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
    "exp": 16.85,
    "sd": 12.95,
    "raw": 16.85,
@@ -8161,7 +8161,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 50% des matchs"
+    "banc, joue 62% des matchs"
    ],
    "upside": 0.33,
    "comps": {
@@ -8189,7 +8189,7 @@
    "opp": "IND",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -8234,11 +8234,11 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
-   "pct": 0.8,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 80%",
+   "pct": 0.836,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
    "exp": 20.97,
    "sd": 15.43,
    "raw": 20.97,
@@ -8253,7 +8253,7 @@
    "pace": 1.033,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 80% des matchs"
+    "banc, joue 84% des matchs"
    ],
    "upside": 0.308,
    "comps": {
@@ -8281,11 +8281,11 @@
    "opp": "MEM",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 22.83,
    "sd": 13.09,
    "raw": 22.83,
@@ -8300,7 +8300,7 @@
    "pace": 1.016,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.272,
    "comps": {
@@ -8328,7 +8328,7 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -8375,11 +8375,11 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 4.01,
    "sd": 4.33,
    "raw": 4.01,
@@ -8394,7 +8394,7 @@
    "pace": 0.994,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.325,
    "comps": {
@@ -8422,11 +8422,11 @@
    "opp": "MIL",
    "game": "MIL@MIA:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.05,
-   "pct": 0.2,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "pct": 0.404,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
    "exp": 3.87,
    "sd": 4.67,
    "raw": 3.69,
@@ -8441,7 +8441,7 @@
    "pace": 1.049,
    "blow": 1.033,
    "reasons": [
-    "banc, joue 20% des matchs"
+    "banc, joue 40% des matchs"
    ],
    "upside": 0.39,
    "comps": {
@@ -8469,7 +8469,7 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -8514,11 +8514,11 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 5.78,
    "sd": 7.41,
    "raw": 5.78,
@@ -8533,7 +8533,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.297,
    "comps": {
@@ -8561,7 +8561,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -8608,7 +8608,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -8653,7 +8653,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -8700,7 +8700,7 @@
    "opp": "PHI",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -8745,7 +8745,7 @@
    "opp": "HOU",
    "game": "HOU@IND:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -8792,7 +8792,7 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -8837,7 +8837,7 @@
    "opp": "ORL",
    "game": "PHI@ORL:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -8882,7 +8882,7 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -8927,11 +8927,11 @@
    "opp": "TOR",
    "game": "WAS@TOR:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.9,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90%",
+   "pct": 0.9079999999999999,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 91% (recalé sur nos bilans)",
    "exp": 6.18,
    "sd": 7.51,
    "raw": 6.18,
@@ -8946,7 +8946,7 @@
    "pace": 0.98,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 90% des matchs"
+    "banc, joue 91% des matchs"
    ],
    "upside": 0.324,
    "comps": {
@@ -8974,7 +8974,7 @@
    "opp": "DET",
    "game": "DET@NOP:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -9019,7 +9019,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -9064,11 +9064,11 @@
    "opp": "BKN",
    "game": "CHI@BKN:2026-11-18",
    "tip": "2026-11-19T00:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 8.05,
    "sd": 7.24,
    "raw": 8.05,
@@ -9083,7 +9083,7 @@
    "pace": 1.011,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.343,
    "comps": {
@@ -9111,7 +9111,7 @@
    "opp": "CLE",
    "game": "MEM@CLE:2026-11-18",
    "tip": "2026-11-19T00:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -9156,7 +9156,7 @@
    "opp": "PHX",
    "game": "PHX@SAC:2026-11-18",
    "tip": "2026-11-19T03:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 0.6,
@@ -9203,11 +9203,11 @@
    "opp": "BOS",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.2,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 20%",
+   "pct": 0.404,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
    "exp": 4.7,
    "sd": 3.43,
    "raw": 4.7,
@@ -9222,7 +9222,7 @@
    "pace": 0.967,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 20% des matchs"
+    "banc, joue 40% des matchs"
    ],
    "upside": 0.312,
    "comps": {
@@ -9250,11 +9250,11 @@
    "opp": "OKC",
    "game": "ATL@OKC:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 14.32,
    "sd": 11.07,
    "raw": 14.32,
@@ -9269,7 +9269,7 @@
    "pace": 0.987,
    "blow": 1.036,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.272,
    "comps": {
@@ -9297,7 +9297,7 @@
    "opp": "DAL",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -9342,7 +9342,7 @@
    "opp": "GSW",
    "game": "GSW@DAL:2026-11-18",
    "tip": "2026-11-19T01:00Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -9387,11 +9387,11 @@
    "opp": "DEN",
    "game": "BOS@DEN:2026-11-18",
    "tip": "2026-11-19T02:30Z",
-   "recorded": "2026-11-17T11:01Z",
+   "recorded": "2026-11-17T11:21Z",
    "stars": 1.0,
    "bonus": 0.0,
-   "pct": 0.6,
-   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 60%",
+   "pct": 0.6920000000000001,
+   "pctSrc": "Aucune blessure signalée (RotoWire, ESPN, Sorare). Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 69% (recalé sur nos bilans)",
    "exp": 4.34,
    "sd": 7.51,
    "raw": 4.34,
@@ -9406,7 +9406,7 @@
    "pace": 0.998,
    "blow": 1.035,
    "reasons": [
-    "banc, joue 60% des matchs"
+    "banc, joue 69% des matchs"
    ],
    "upside": 0.363,
    "comps": {
@@ -9437,7 +9437,7 @@
     "spread_home": 3.0,
     "total": 235.8,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "HOU@IND": {
@@ -9446,7 +9446,7 @@
     "spread_home": 4.6,
     "total": 224.9,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "MIL@MIA": {
@@ -9455,7 +9455,7 @@
     "spread_home": -10.9,
     "total": 233.5,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "PHI@ORL": {
@@ -9464,7 +9464,7 @@
     "spread_home": 2.3,
     "total": 221.6,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "CHI@BKN": {
@@ -9473,7 +9473,7 @@
     "spread_home": -6.7,
     "total": 237.6,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "WAS@TOR": {
@@ -9482,7 +9482,7 @@
     "spread_home": -7.1,
     "total": 227.2,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "DET@NOP": {
@@ -9491,7 +9491,7 @@
     "spread_home": 8.2,
     "total": 233.5,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "ATL@OKC": {
@@ -9500,7 +9500,7 @@
     "spread_home": -3.6,
     "total": 226.4,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "GSW@DAL": {
@@ -9509,7 +9509,7 @@
     "spread_home": 1.2,
     "total": 226.2,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "BOS@DEN": {
@@ -9518,7 +9518,7 @@
     "spread_home": 5.5,
     "total": 221.1,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "UTA@LAL": {
@@ -9527,7 +9527,7 @@
     "spread_home": -15.3,
     "total": 233.1,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   },
   "PHX@SAC": {
@@ -9536,7 +9536,7 @@
     "spread_home": 3.6,
     "total": 230.2,
     "book": "estimation (matchs joués)",
-    "recorded": "2026-11-17T11:01Z"
+    "recorded": "2026-11-17T11:21Z"
    }
   }
  }
