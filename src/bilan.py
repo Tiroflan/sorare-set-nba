@@ -97,6 +97,14 @@ def run(night):
     out["score_hist_meme_joueurs"] = stats([r["actual"] - r["hist"] for r in pl if r["usesProps"]])
     out["score_sans_props"] = stats([r["actual"] - r["exp"] for r in pl if not r["usesProps"]])
     out["minutes"] = stats([r["min"] - r["estMin"] for r in pl])
+    # Nous contre la projection officielle Sorare, sans bonus de carte (Sorare ne le compte pas).
+    vs = [r for r in pl if r.get("sorare") is not None]
+    out["vs_sorare"] = {
+        "n": len(vs),
+        "nous": stats([r["actual"] / (1 + r["bonus"]) - r["exp"] / (1 + r["bonus"]) for r in vs]),
+        "sorare": stats([r["actual"] / (1 + r["bonus"]) - r["sorare"] for r in vs]),
+        "nous_plus_proches": sum(abs(r["actual"] - r["exp"]) / (1 + r["bonus"]) < abs(r["actual"] / (1 + r["bonus"]) - r["sorare"]) for r in vs),
+    }
     z = [(r["actual"] - r["exp"]) / r["sd"] for r in pl if r["sd"] > 0]
     out["dans_1_ecart_type"] = sum(abs(x) <= 1 for x in z) / len(z) if z else None
     out["composantes"] = {k: stats([r["stats"][k] - r["comps"].get(k, 0) for r in pl]) for k in STATS}
@@ -123,7 +131,7 @@ def run(night):
     out["rythme"] = rp
     out["joueurs"] = sorted(
         ({k: r.get(k) for k in ("slug", "tip", "name", "team", "opp", "stars", "bonus", "pct", "pctSrc", "exp", "sd", "hist",
-                                "usesProps", "estMin", "min", "actual", "comps", "stats", "reasons", "played")}
+                                "usesProps", "estMin", "min", "actual", "comps", "stats", "reasons", "played", "sorare")}
          for r in rows), key=lambda r: -(r["actual"] or 0))
     (DIR / f"bilan-{night}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     show(out)

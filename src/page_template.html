@@ -172,6 +172,8 @@ const TAGS = [
    "Probabilité qu'il joue. On prend la première source disponible : 1. le % de RotoWire le soir même (titulaires et incertains) ; 2. le statut RotoWire sans % (Prob 85 %, Ques 50 %, Doubt 20 %, Out 0 %) ; 3. ESPN : Out 0 %, Day-To-Day 60 % ; 4. Sorare : OUT 0 % ; 5. fin de banc : part de ses 10 derniers matchs où il est entré ; 6. sinon 100 %. Dans le reste des simulations, il marque 0 point. Sa fiche dit quelle source a servi."],
   ["carte", "carte +10 %",
    "Bonus de ta carte (Shiny +5 %, Holo +10 %, variante +15 %), déjà appliqué au score affiché. Ne pas surpondérer : 40 pts à 0 % valent mieux que 30 pts à +15 %."],
+  ["plafond", "plafond",
+   "Score que l'équipe dépasse une fois sur 10 dans la simulation (90e centile). Utile pour viser un palier haut : à chance égale, préfère l'équipe au plafond le plus haut. Le tri « plafond » de l'onglet Équipes les classe ainsi."],
   ["explosif", "explosif",
    "Joueur capable de grosses soirées : projeté à 15 pts ou plus, avec au moins 28 % de chances de faire 1,4 fois sa projection (irrégularité de ses minutes et de sa production sur ses derniers matchs). Vérifié sur les 4 premières nuits : les joueurs ainsi repérés ont fait +12 pts ou plus au-dessus de leur projection dans 25 % des cas, les autres dans 14 % (32 joueurs seulement, à confirmer). Utile pour viser un palier haut, risqué pour un palier facile. La simulation en tient déjà compte : le tag sert à comprendre ses choix."],
 ];
@@ -208,6 +210,7 @@ function simulate(team, n) {
   const keys = [...new Set(team.map(p => p.game))];
   const league = D.calib.league_team_pts, slope = D.calib.pace_slope;
   let sum = 0;
+  const totals = [];
   for (let s = 0; s < n; s++) {
     const margin = {};
     for (const k of keys) margin[k] = Math.abs(gauss() * D.sigmaMargin - G[k].spreadUsed);
@@ -222,11 +225,14 @@ function simulate(team, n) {
       total += widen(p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale, p) * (p.teamK || 1);
     }
     total += D.calib.team_offset || 0;
+    totals.push(total);
     sum += total;
     for (const t of D.targets) if (total >= t) hits[t]++;
   }
   const out = Object.fromEntries(D.targets.map(t => [t, hits[t] / n]));
   out.mean = sum / n;
+  totals.sort((a, b) => a - b);
+  out.p90 = totals[Math.floor(0.9 * (totals.length - 1))];
   return out;
 }
 const lockOf = team => team.reduce((a, p) => (!a || p.tip < a.tip) ? p : a, null);
@@ -258,13 +264,33 @@ function playerLine(p, action) {
 }
 
 let teamNight = store.get("tnight", "all");
+let teamSort = store.get("tsort", "p");
 function renderTeams() {
   const next = D.targets[D.targets.indexOf(target) + 1];
   const nightsAll = [...new Set(P.map(p => p.night))].sort();
   if (teamNight !== "all" && !nightsAll.includes(teamNight)) teamNight = "all";
   const oneNight = t => t.ids.every(id => byId[id].night === teamNight);
-  const list = [...D.teams].filter(t => teamNight === "all" || oneNight(t))
-    .sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
+  const bySort = teamSort === "p90" ? (a, b) => (b.p90 || 0) - (a.p90 || 0) || b.p[target] - a.p[target]
+    : (a, b) => b.p[target] - a.p[target];
+  const list = [...D.teams].filter(t => teamNight === "all" || oneNight(t)).sort(bySort).slice(0, 8);
+  const sortChips = `<div class="paliers">${[["p", `Trier : chance pour ${target}`], ["p90", "Trier : plafond"]]
+    .map(([k, l]) => `<button data-ts="${k}" class="${k === teamSort ? "on" : ""}">${l}</button>`).join("")}</div>`;
+  // Équipes sans joueur commun à jouer en parallèle (une nuit choisie).
+  const sets = teamNight !== "all" && D.parallel && D.parallel[teamNight] ? D.parallel[teamNight][String(target)] || [] : [];
+  const rec = teamNight !== "all" && D.reco && D.reco[teamNight] ? D.reco[teamNight][String(target)] : null;
+  const parCard = teamNight === "all"
+    ? `<div class="card small muted">Pour jouer plusieurs équipes en parallèle (sans joueur commun), choisis une nuit ci-dessus.</div>`
+    : sets.length ? `<div class="card"><b>Plusieurs équipes en parallèle</b>
+      <div class="small muted">Chaque équipe ratée coûte une vie, mais il suffit qu'une passe pour monter d'un palier avec 4 vies neuves. Combien en jouer pour ${target}, selon tes vies :</div>
+      ${rec ? [4, 3, 2, 1].map(l => { const r = rec[String(l)]; return `<div class="row small"><div class="grow">${l} vie${l > 1 ? "s" : ""}</div><div>${r.m
+        ? `<b>${r.m} équipe${r.m > 1 ? "s" : ""}</b> · <span class="${pClass(r.p)}">${fmtP(r.p)}</span> de passer ce soir` : "attends un meilleur soir"}</div></div>`; }).join("") : ""}
+      ${sets.map((s, k) => { const ps = s.ids.map(id => byId[id]); return `<div class="pl" style="border-top:1px solid var(--line);padding:8px 0">
+        <div class="row"><div class="grow small"><b>Équipe ${k + 1}</b> · <span class="${pClass(s.p[target])}"><b>${fmtP(s.p[target])}</b></span>
+          <span class="muted">· plafond ${s.p90} pts · ${stars(ps.reduce((a, p) => a + p.stars, 0))}</span></div>
+          <button class="act" data-pload="${k}">Charger</button></div>
+        <div class="small">${ps.map(p => `<span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)}`).join(" · ")}</div></div>`; }).join("")}
+      <div class="src">Équipes choisies l'une après l'autre parmi les joueurs restants ; chances supposées indépendantes (aucun joueur commun). Nombre d'équipes calculé en simulant toute la fin du set (gain espéré : 100 € à 270, 1000 € à 290), avec 4 tentatives par palier et retour au palier 1 après 4 échecs.</div></div>`
+    : "";
   const nightChips = `<div class="paliers">${[["all", "Sur les 2 nuits"], ...nightsAll.map(n => [n, `Seulement la ${nightLabel(n)}`])]
     .map(([k, l]) => `<button data-tn="${k}" class="${k === teamNight ? "on" : ""}">${l}</button>`).join("")}</div>`;
   // Quel soir jouer : la meilleure équipe de chaque soir de verrouillage.
@@ -281,7 +307,7 @@ function renderTeams() {
       <div><b class="${pClass(best[n].p)}">${fmtP(best[n].p)}</b> · ${best[n].p >= min ? "à jouer" : "soir creux"}</div></div>`).join("")}
     <div class="src">4 tentatives par palier, et 4 échecs renvoient au palier 1. Mais on remonte à 240 en 4 à 5 soirs, et il en reste une cinquantaine jusqu'au 6 janvier : mieux vaut jouer chaque bon soir que garder une vie. Seuils calculés le 16/11 en simulant toute la fin du set.</div></div>` : "";
   const empty = list.length ? "" : `<div class="card muted small">Pas encore d'équipe calculée avec seulement des joueurs de cette nuit : elles apparaissent à la prochaine mise à jour.</div>`;
-  document.getElementById("teams").innerHTML = whenCard + nightChips + empty +
+  document.getElementById("teams").innerHTML = whenCard + nightChips + parCard + sortChips + empty +
     `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
@@ -293,10 +319,16 @@ function renderTeams() {
             <span class="muted small"> pour ${target}${next ? ` · ${fmtP(t.p[next])} pour ${next}` : ""}</span></div>
           <button class="act" data-load="${i}">Charger</button>
         </div>
-        <div class="small muted">Moyenne ${t.mu.toFixed(0)} pts · ${stars(st)} · figée ${lock.when} · ${ps.filter(p => p.usesProps).length}/5 aux cotes</div>
+        <div class="small muted">Moyenne ${t.mu.toFixed(0)} pts${t.p90 ? ` · plafond ${t.p90} pts` : ""} · ${stars(st)} · figée ${lock.when} · ${ps.filter(p => p.usesProps).length}/5 aux cotes</div>
         <div class="plist">${ps.map(p => playerLine(p)).join("")}</div>
       </div>`;
     }).join("");
+  document.querySelectorAll("[data-ts]").forEach(b => b.onclick = () => {
+    teamSort = b.dataset.ts; store.set("tsort", teamSort); renderTeams();
+  });
+  document.querySelectorAll("[data-pload]").forEach(b => b.onclick = () => {
+    mine = sets[+b.dataset.pload].ids.slice(); store.set("mine", mine); show("mine");
+  });
   document.querySelectorAll("[data-tn]").forEach(b => b.onclick = () => {
     teamNight = b.dataset.tn; store.set("tnight", teamNight); renderTeams();
   });
@@ -338,7 +370,7 @@ function renderMine() {
     const r = simulate(team, 20000);
     document.getElementById("result").innerHTML = `
       <div><span class="big ${pClass(r[target])}">${fmtP(r[target])}</span>
-        <span class="muted small"> de chances d'atteindre ${target} · moyenne ${r.mean.toFixed(0)} pts</span></div>
+        <span class="muted small"> de chances d'atteindre ${target} · moyenne ${r.mean.toFixed(0)} pts · plafond ${r.p90.toFixed(0)} pts</span></div>
       <table class="pal">${D.targets.map(t => `<tr><td>Palier ${palierOf(t)} · ${t} pts</td>
         <td class="num ${pClass(r[t])}">${fmtP(r[t])}</td></tr>`).join("")}</table>
       <div style="margin-top:10px"><button class="act primary" id="swapbtn">Chercher un meilleur remplaçant</button></div>`;

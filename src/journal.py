@@ -28,7 +28,7 @@ def _load(night: str) -> dict:
     return {"night": night, "players": {}, "teams": None}
 
 
-def record(pool, results, targets, now=None, sched=None):
+def record(pool, results, targets, now=None, sched=None, absences=None):
     """pool : fiches de soirs.load_pool ; results : sortie de best_teams."""
     now = now or datetime.now(timezone.utc)
     stamp = now.strftime("%Y-%m-%dT%H:%MZ")
@@ -45,7 +45,7 @@ def record(pool, results, targets, now=None, sched=None):
             "raw": round(p["exp"] / (1 + p["bonus"]), 2), "hist": round(p["hist_exp"], 2),
             "usesProps": p["uses_props"], "estMin": round(p["est_min"], 1), "sdMin": round(p["sd_min"], 1),
             "role": p["role"], "starter": p.get("starter"), "promoted": p.get("promoted"), "b2b": p.get("b2b"),
-            "pace": round(p["pace"], 3), "blow": round(p["blow"], 3), "reasons": p["reasons"], "upside": round(p.get("upside", 0), 3),
+            "pace": round(p["pace"], 3), "blow": round(p["blow"], 3), "reasons": p["reasons"], "upside": round(p.get("upside", 0), 3), "sorare": p.get("sorare_proj"),
             "comps": {c["k"]: round(c["val"], 2) for c in p["comps"]},
             "histComps": {k: round(v, 2) for k, v in p.get("hist_vals", {}).items()},
         }
@@ -68,6 +68,11 @@ def record(pool, results, targets, now=None, sched=None):
         e = j.setdefault("games", {}).setdefault(f"{g['away']}@{g['home']}", {"tip": g["tip_utc"]})
         line = {"spread_home": g["spread_home"], "total": g["total"], "book": g.get("book"), "recorded": stamp}
         e["est" if str(g.get("book") or "").startswith("estimation") else "odds"] = line
+        # Absences annoncées par ESPN avant le match, par équipe : pour mesurer plus tard si les
+        # coéquipiers d'un absent font mieux que leur projection sur l'historique (report de minutes).
+        for team in (g["away"], g["home"]):
+            if team in (absences or {}):
+                j.setdefault("absences", {})[team] = absences[team]
     for night, teams in teams_by_night.items():
         j = files.setdefault(night, _load(night))
         j["teams"] = {"recorded": stamp, "list": teams}

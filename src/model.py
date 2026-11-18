@@ -149,6 +149,7 @@ def build_player(p, games_hist, bonus, edition, game, lineup, inj_espn, now_utc)
     return {
         "comp_rates": comp,
         "slug": p["slug"], "name": p["displayName"], "team": team,
+        "sorare_proj": p.get("nextClassicFixtureProjectedScore"),  # projection officielle Sorare, pour comparer
         "opp": game["away"] if home else game["home"], "home": home,
         "night": game["night"], "tip_utc": game["tip_utc"], "game_key": f"{game['away']}@{game['home']}:{game['night']}",
         "stars": float(p["setStars"]), "bonus": bonus, "edition": edition,
@@ -253,6 +254,7 @@ def simulate_team(team, contexts, calib, targets, n_sim, rng):
     """Probabilité d'atteindre chaque cible. Un tirage d'écart final par match,
     partagé par les joueurs du même match (d'où la corrélation)."""
     hits = {t: 0 for t in targets}
+    totals = []
     games = {pl["game_key"] for pl in team}
     league = calib["league_team_pts"]
     for _ in range(n_sim):
@@ -269,9 +271,13 @@ def simulate_team(team, contexts, calib, targets, n_sim, rng):
             x = rng.choice(pl["rates"]) * pace * m * (1 + pl["bonus"]) * pl.get("scale", 1.0)
             total += widen(x, pl) * pl.get("team_k", 1.0)
         total += calib.get("team_offset", 0.0)
+        totals.append(total)
         for t in targets:
             hits[t] += total >= t
-    return {t: hits[t] / n_sim for t in targets}
+    out = {t: hits[t] / n_sim for t in targets}
+    totals.sort()
+    out["p90"] = totals[int(0.9 * (len(totals) - 1))]  # plafond : 1 chance sur 10 de faire mieux
+    return out
 
 
 def now_utc():

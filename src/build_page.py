@@ -15,7 +15,8 @@ from pathlib import Path
 import journal
 import model
 from model import SIGMA_MARGIN
-from soirs import PARIS, STAR_CAP, best_teams, load_pool
+import strategie
+from soirs import PARIS, STAR_CAP, best_teams, disjoint_sets, load_pool
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = Path(__file__).resolve().parent / "page_template.html"
@@ -69,8 +70,18 @@ def main():
                     seen.add(k)
                     results.append(r)
     results.sort(key=lambda t: -t[0][DEFAULT_TARGET])
+    # Équipes sans joueur commun, à jouer en parallèle une même nuit, et combien en jouer.
+    parallel, reco = {}, {}
+    for night in sorted({p["night"] for p in live}):
+        sub = [p for p in live if p["night"] == night]
+        if len(sub) < 5:
+            continue
+        print(f"Équipes en parallèle, nuit {night}...")
+        sets = disjoint_sets(sub, contexts, calib, TARGETS, random.Random(7))
+        parallel[night] = sets
+        reco[night] = strategie.recommend({t: [x[0][t] for x in sets[t]] for t in TARGETS}, night)
     try:  # le journal ne doit jamais empêcher la page de sortir
-        journal.record(pool, results[:40], TARGETS, sched=sched)
+        journal.record(pool, results[:40], TARGETS, sched=sched, absences=calib.get("espn_out"))
     except Exception as e:
         print(f"Journal non écrit : {e!r}")
 
@@ -106,6 +117,7 @@ def main():
         teams.append({
             "ids": [ids[p["slug"]] for p in combo], "mu": round(mu + calib.get("team_offset", 0.0), 1),
             "p": {str(t): round(r[t], 4) for t in TARGETS},
+            "p90": round(r.get("p90", 0)),
         })
     data = {
         "generated": datetime.now(PARIS).strftime("%d/%m à %Hh%M"),
@@ -113,6 +125,10 @@ def main():
         "starCap": STAR_CAP, "sigmaMargin": SIGMA_MARGIN,
         "disp": {"props": model.DISP_PROPS, "hist": model.DISP_HIST}, "playMin": {str(k): v for k, v in PLAY_MIN.items()}, "boomCut": BOOM_CUT, "boomMinExp": BOOM_MIN_EXP,
         "calib": calib, "games": games, "players": players, "teams": teams,
+        "parallel": {n: {str(t): [{"ids": [ids[p["slug"]] for p in c], "p": {str(x): round(r[x], 4) for x in TARGETS},
+                                    "p90": round(r.get("p90", 0)), "mu": round(mu + calib.get("team_offset", 0.0), 1)}
+                                   for r, mu, c in sets[t]] for t in TARGETS} for n, sets in parallel.items()},
+        "reco": reco,
         "hypotheses": {
             "Écart final autour du spread (écart-type)": f"{model.SIGMA_MARGIN:g} points",
             "Joueur Day-To-Day chez ESPN, sans autre info": f"{model.P_PLAY_DAY_TO_DAY:.0%} de chances de jouer",

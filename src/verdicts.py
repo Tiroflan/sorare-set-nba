@@ -223,6 +223,20 @@ def compute():
             z, len(tag), len(tag) / max(1, len({n for n, _, p in played if 'upside' in p})),
             "garder le tag" if z > 0 else "retirer le tag, qui repère l'inverse de ce qu'il promet (la simulation, elle, est réglée à part)"))
 
+    # 10. Nous contre la projection officielle Sorare (enregistrée depuis le 18/11).
+    vs = [(r, p) for _, r, p in played if p.get("sorare") is not None]
+    if len(vs) > 2:
+        dd = [abs(r["actual"] - p["sorare"] * (1 + p["bonus"])) - abs(r["actual"] - p["exp"]) for r, p in vs]
+        z = st.mean(dd) / (st.stdev(dd) / math.sqrt(len(dd))) if st.stdev(dd) > 0 else None
+        out.append(_item(
+            "sorare", "Faisons-nous mieux que la projection officielle de Sorare ?",
+            f"nous plus proches du réel de {st.mean(dd):+.2f} pt en moyenne ({sum(d > 0 for d in dd)} joueurs sur {len(dd)})",
+            z, len(dd), len(dd) / max(1, len({n for n, _, p in played if p.get('sorare') is not None})),
+            "on fait mieux : rien à changer" if (z or 0) > 0 else "Sorare fait mieux : chercher pourquoi et s'en servir comme repère"))
+    else:
+        out.append(_item("sorare", "Faisons-nous mieux que la projection officielle de Sorare ?",
+                         "projection Sorare enregistrée depuis le 18/11 : premier bilan demain", None, 0, 1, ""))
+
     # 9. Nos estimations de match (sans cotes) contre les vraies cotes, sur l'écart final.
     gl = [x for b, _ in nights for x in (b.get("matchs") or {}).get("lignes", [])
           if x.get("est") and x.get("odds") and x.get("real_spread") is not None]
@@ -242,6 +256,9 @@ A_FAIRE = [
     "Titulaire qui revient le soir même : rabaisser les minutes du remplaçant qui a joué gros pendant son absence "
     "(proposé le 16/11, à faire)",
     "Recaler les projections sur l'historique (réel = 4,3 + 0,83 x prévu au 16/11) : reporté par Romain le 16/11",
+    "Report de minutes après une blessure (idée reprise de Sowin le 18/11) : les absences ESPN sont enregistrées par "
+    "équipe dans le journal depuis le 18/11 ; vers le 25/11, mesurer si les joueurs sans props d'une équipe privée "
+    "d'un titulaire font mieux que leur projection, avant de coder un report",
     "Équipes surestimées (établi le 18/11) : le diagnostic donne 2,5 pts sur 23 dus à la sélection (pente 0,87 dans un "
     "niveau d'étoiles), le reste aux mêmes stars présentes partout (Wembanyama -8 pts par équipe à lui seul). "
     "Correction appliquée le 18/11 (TEAM_SHRINK et team_offset) : à réévaluer quand le verdict « équipes » "

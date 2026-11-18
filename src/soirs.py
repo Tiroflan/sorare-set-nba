@@ -15,6 +15,7 @@ Usage :
 """
 
 import argparse
+import heapq
 import itertools
 import json
 import math
@@ -102,6 +103,10 @@ def load_pool(nights: int):
             print(f"  estimation des matchs sans cotes impossible ({e})")
     print("Blessures ESPN...")
     inj = espn.injuries()
+    calib["espn_out"] = {}
+    for name, i in inj.items():
+        if i.get("status") == "Out" and i.get("team"):
+            calib["espn_out"].setdefault(i["team"], []).append(name)
 
     first_game = {}
     for g in sorted(sched, key=lambda g: g["tip_utc"]):
@@ -188,6 +193,48 @@ def describe(team):
 
 def evaluate(team, contexts, calib, targets, rng):
     return simulate_team(team, contexts, calib, targets, N_SIM, rng)
+
+
+def disjoint_sets(live, contexts, calib, targets, rng, n_sets=4, n_cand=12, n_sim=5000):
+    """Pour chaque cible : jusqu'à n_sets équipes sans joueur commun (une carte ne joue que dans
+    une équipe), choisies l'une après l'autre. Chaque étape énumère les combinaisons des joueurs
+    encore libres, garde les n_cand meilleures selon l'approximation normale, les simule et prend
+    la meilleure. Renvoie {cible: [(probas, moyenne, joueurs), ...]}."""
+    off = calib.get("team_offset", 0.0)
+    out = {}
+    for t in targets:
+        used, sets = set(), []
+        for _ in range(n_sets):
+            avail = [p for p in live if p["slug"] not in used]
+            by_level = {}
+            for p in avail:
+                by_level.setdefault(p["stars"], []).append(p)
+            short = {}
+            for ps in by_level.values():
+                for key in (lambda p: -p["exp"], lambda p: -(p["exp"] + p["sd"])):
+                    for p in sorted(ps, key=key)[:KEEP_PER_STAR_LEVEL]:
+                        short[p["slug"]] = p
+            short = list(short.values())
+            mus = [p["exp"] * p["pct"] * p.get("team_k", 1.0) for p in short]
+            vs = [p["sd"] ** 2 for p in short]
+            st_ = [p["stars"] for p in short]
+
+            def scored():
+                for idx in itertools.combinations(range(len(short)), 5):
+                    if sum(st_[i] for i in idx) > STAR_CAP:
+                        continue
+                    mu = sum(mus[i] for i in idx)
+                    yield (mu + off - t) / math.sqrt(sum(vs[i] for i in idx) or 1), mu, idx
+            cands = heapq.nlargest(n_cand, scored(), key=lambda x: x[0])
+            if not cands:
+                break
+            sims = [(simulate_team([short[i] for i in idx], contexts, calib, targets, n_sim, rng), mu,
+                     [short[i] for i in idx]) for _, mu, idx in cands]
+            best = max(sims, key=lambda s: s[0][t])
+            sets.append(best)
+            used |= {p["slug"] for p in best[2]}
+        out[t] = sets
+    return out
 
 
 def best_teams(live, contexts, calib, targets, rng, top_k=TOP_K):
