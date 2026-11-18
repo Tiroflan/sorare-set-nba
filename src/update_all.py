@@ -24,7 +24,9 @@ def age_h(path: Path) -> float:
 
 def run(*args):
     print(f"\n$ python {' '.join(args)}", flush=True)
-    subprocess.run([sys.executable, *args], cwd=ROOT, check=True)
+    t0 = time.time()
+    subprocess.run([sys.executable, "-u", *args], cwd=ROOT, check=True)  # -u : journaux horodatés au fil de l'eau
+    print(f"  ({time.time() - t0:.0f} s)", flush=True)
 
 
 def main():

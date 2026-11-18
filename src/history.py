@@ -15,6 +15,7 @@ from sorare_api import ComplexityError, gql
 DATA = Path(__file__).resolve().parent.parent / "data"
 CACHE = DATA / "history.json"
 MAX_AGE_H = 6
+MAX_KEEP_H = 48
 
 Q = """
 query Hist($slugs: [String!]!) {
@@ -44,11 +45,22 @@ def _load() -> dict:
     return {}
 
 
-def get(slugs: list[str], force: bool = False) -> dict[str, list[dict]]:
-    """Renvoie {slug: [matchs du plus récent au plus ancien]}."""
+def get(slugs: list[str], force: bool = False, still_fresh=None) -> dict[str, list[dict]]:
+    """Renvoie {slug: [matchs du plus récent au plus ancien]}.
+    still_fresh(slug, at) : si fourni, une entrée de plus de MAX_AGE_H heures est gardée quand
+    il dit qu'aucun match du joueur n'a pu se terminer depuis (au plus MAX_KEEP_H heures)."""
     cache = _load()
     now = time.time()
-    todo = [s for s in slugs if force or s not in cache or now - cache[s]["at"] > MAX_AGE_H * 3600]
+
+    def stale(s):
+        if force or s not in cache:
+            return True
+        age = now - cache[s]["at"]
+        if age <= MAX_AGE_H * 3600:
+            return False
+        return not (still_fresh and age <= MAX_KEEP_H * 3600 and still_fresh(s, cache[s]["at"]))
+    todo = [s for s in slugs if stale(s)]
+    print(f"  {len(todo)} historiques à relire ({len(slugs) - len(todo)} déjà à jour)")
     i, size = 0, 3
     while i < len(todo):
         batch = todo[i : i + size]

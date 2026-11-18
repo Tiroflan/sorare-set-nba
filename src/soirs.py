@@ -34,7 +34,7 @@ from phase0_faisabilite import edition_bonus, p_normal
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 STAR_CAP = 16.0
-N_SIM = 15000
+N_SIM = 6000   # erreur de tirage d'environ ±0,5 point sur une chance de 20 %
 TOP_K = 250
 KEEP_PER_STAR_LEVEL = 6
 
@@ -58,7 +58,8 @@ def load_pool(nights: int):
     print("Calendrier ESPN...")
     # Le matin, la nuit US d'hier est finie : on prend un jour de plus et on garde
     # les `nights` premiers soirs qui ont encore des matchs à venir.
-    sched = [g for g in espn.schedule(espn.us_tonight(), nights + 1) if g["status"] == "STATUS_SCHEDULED"]
+    raw_sched = espn.schedule(espn.us_tonight(), nights + 1)
+    sched = [g for g in raw_sched if g["status"] == "STATUS_SCHEDULED"]
     keep = sorted({g["night"] for g in sched})[:nights]
     sched = [g for g in sched if g["night"] in keep]
     print("Compos RotoWire du soir...")
@@ -117,7 +118,31 @@ def load_pool(nights: int):
 
     in_window = [p for p in players if (p.get("activeClub") or {}).get("code") in first_game]
     print(f"{len(in_window)} joueurs de ta galerie jouent dans la fenêtre, historique...")
-    hist = history.get([p["slug"] for p in in_window])
+    # Un historique reste valable tant que l'équipe du joueur n'a pas fini de match depuis sa lecture
+    # (scores ESPN par soir, data/espn_scores.json ; un soir se termine au plus tard à 9 h UTC le lendemain).
+    still_fresh = None
+    try:
+        scores = json.loads((DATA / "espn_scores.json").read_text(encoding="utf-8"))
+        yesterday = (espn.us_tonight() - timedelta(days=1)).isoformat()
+        if yesterday in scores:  # sinon on ne sait pas qui a joué hier : règle des 6 h seule
+            last_end = {}
+            for night, games in scores.items():
+                end = (datetime.fromisoformat(night) + timedelta(days=1, hours=9)).replace(tzinfo=timezone.utc).timestamp()
+                for g in games:
+                    for t in (g["home"], g["away"]):
+                        last_end[t] = max(last_end.get(t, 0), end)
+            # Matchs de ce soir déjà commencés ou finis (matinées du week-end, ou passage pendant les matchs).
+            now_ts = datetime.now(timezone.utc).timestamp()
+            for g in raw_sched:
+                tip = datetime.fromisoformat(g["tip_utc"].replace("Z", "+00:00")).timestamp()
+                if tip < now_ts:
+                    for t in (g["home"], g["away"]):
+                        last_end[t] = max(last_end.get(t, 0), tip)
+            team_of = {p["slug"]: p["activeClub"]["code"] for p in in_window}
+            still_fresh = lambda s, at: team_of.get(s) in last_end and at >= last_end[team_of[s]]
+    except Exception as e:
+        print(f"  règle de fraîcheur des historiques indisponible ({e!r})")
+    hist = history.get([p["slug"] for p in in_window], still_fresh=still_fresh)
 
     best_bonus = {}
     for c in gallery:
@@ -195,7 +220,7 @@ def evaluate(team, contexts, calib, targets, rng):
     return simulate_team(team, contexts, calib, targets, N_SIM, rng)
 
 
-def disjoint_sets(live, contexts, calib, targets, rng, n_sets=4, n_cand=12, n_sim=5000):
+def disjoint_sets(live, contexts, calib, targets, rng, n_sets=4, n_cand=8, n_sim=3000):
     """Pour chaque cible : jusqu'à n_sets équipes sans joueur commun (une carte ne joue que dans
     une équipe), choisies l'une après l'autre. Chaque étape énumère les combinaisons des joueurs
     encore libres, garde les n_cand meilleures selon l'approximation normale, les simule et prend

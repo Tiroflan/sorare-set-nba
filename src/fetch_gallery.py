@@ -6,11 +6,13 @@ Sortie : data/gallery.json, data/players.json
 
 import json
 import sys
+import time
 from pathlib import Path
 
 from sorare_api import ComplexityError, gql
 
 DATA = Path(__file__).resolve().parent.parent / "data"
+PLAYERS_MAX_AGE_H = 6
 
 CARDS_Q = """
 query Gallery($slug: String!, $first: Int!, $after: String) {
@@ -92,7 +94,16 @@ def main() -> None:
     (DATA / "gallery.json").write_text(json.dumps(cards, indent=1, ensure_ascii=False), encoding="utf-8")
     slugs = sorted({c["anyPlayer"]["slug"] for c in cards if c.get("anyPlayer")})
     print(f"{len(cards)} cartes, {len(slugs)} joueurs distincts")
-    players = fetch_players(slugs)
+    # Fiches joueurs (étoiles, blessures Sorare, projection Sorare) : relues en entier toutes les
+    # 6 h ; entre-temps, seuls les nouveaux joueurs (packs ouverts) sont lus. Gagne ~3 min par passage.
+    pf = DATA / "players.json"
+    known = {}
+    if pf.exists() and time.time() - pf.stat().st_mtime < PLAYERS_MAX_AGE_H * 3600:
+        known = {p["slug"]: p for p in json.loads(pf.read_text(encoding="utf-8"))}
+    todo = [s_ for s_ in slugs if s_ not in known]
+    print(f"{len(todo)} fiches joueurs à lire ({len(slugs) - len(todo)} déjà à jour)")
+    fresh = {p["slug"]: p for p in fetch_players(todo)} if todo else {}
+    players = [known.get(s_) or fresh[s_] for s_ in slugs if s_ in known or s_ in fresh]
     (DATA / "players.json").write_text(json.dumps(players, indent=1, ensure_ascii=False), encoding="utf-8")
     print("OK : data/gallery.json et data/players.json")
 
