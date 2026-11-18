@@ -216,6 +216,10 @@ A_FAIRE = [
     "Titulaire qui revient le soir même : rabaisser les minutes du remplaçant qui a joué gros pendant son absence "
     "(proposé le 16/11, à faire)",
     "Recaler les projections sur l'historique (réel = 4,3 + 0,83 x prévu au 16/11) : reporté par Romain le 16/11",
+    "Équipes surestimées (établi le 18/11) : le diagnostic donne 2,5 pts sur 23 dus à la sélection (pente 0,87 dans un "
+    "niveau d'étoiles), le reste aux mêmes stars présentes partout (Wembanyama -8 pts par équipe à lui seul). "
+    "Correction proposée le 18/11 : rétrécir les projections (0,87) et retirer des équipes le trou mesuré, réduit "
+    "de moitié tant qu'il y a peu de soirs ; en attente de la décision de Romain",
 ]
 
 
