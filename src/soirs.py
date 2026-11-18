@@ -27,7 +27,7 @@ import history
 import odds
 import rotowire
 import team_ratings
-from model import (SD_WIDEN_HIST, SD_WIDEN_PROPS, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
+from model import (SD_WIDEN_HIST, SD_WIDEN_PROPS, TEAM_SHRINK, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
                    simulate_team)
 from phase0_faisabilite import edition_bonus, p_normal
 
@@ -161,6 +161,22 @@ def load_pool(nights: int):
         pl["sd"] *= pl["scale"] * (SD_WIDEN_PROPS if pl["uses_props"] else SD_WIDEN_HIST)
         pl["upside"] = upside(pl)
         pool.append(pl)
+    # Correction des équipes (voir TEAM_SHRINK dans model.py).
+    levels = {}
+    for pl in pool:
+        if pl["pct"] > 0:
+            levels.setdefault((pl["night"], pl["stars"]), []).append(pl["exp"])
+    for pl in pool:
+        g = levels.get((pl["night"], pl["stars"]), [])
+        m = sum(g) / len(g) if len(g) >= 3 else pl["exp"]
+        pl["team_k"] = (m + TEAM_SHRINK * (pl["exp"] - m)) / pl["exp"] if pl["exp"] > 0 else 1.0
+    try:
+        import verdicts
+        calib["team_offset"], n_off, gap = verdicts.team_offset()
+        print(f"Correction des équipes : {calib['team_offset']:+.1f} pts (trou de {gap:+.1f} sur {n_off} soirs)")
+    except Exception as e:
+        calib["team_offset"] = 0.0
+        print(f"Correction des équipes non calculée : {e!r}")
     return pool, contexts, calib, sched
 
 
@@ -189,9 +205,10 @@ def best_teams(live, contexts, calib, targets, rng, top_k=TOP_K):
     for combo in itertools.combinations(list(short.values()), 5):
         if sum(p["stars"] for p in combo) > STAR_CAP:
             continue
-        mu = sum(p["exp"] * p["pct"] for p in combo)
+        mu = sum(p["exp"] * p["pct"] * p.get("team_k", 1.0) for p in combo)
         sd = math.sqrt(sum(p["sd"] ** 2 for p in combo))
-        teams.append((sum(p_normal(mu, sd, t) for t in targets), mu, combo))
+        off = calib.get("team_offset", 0.0)
+        teams.append((sum(p_normal(mu + off, sd, t) for t in targets), mu, combo))
     teams.sort(key=lambda t: -t[0])
     return [(evaluate(list(c), contexts, calib, targets, rng), mu, list(c)) for _, mu, c in teams[:top_k]]
 

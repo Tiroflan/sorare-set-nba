@@ -33,6 +33,12 @@ DISP_HIST = (1.6, 1.2)
 # Même chose pour l'écart-type affiché (±) : 68 % des joueurs dans ±1 écart-type.
 SD_WIDEN_PROPS = 1.1
 SD_WIDEN_HIST = 1.4
+# Équipes surestimées (établi le 18/11, 5 soirs sur 5 sous la projection) :
+# 1. avant de choisir et simuler les équipes, chaque projection est rapprochée de la moyenne de son niveau
+#    d'étoiles ce soir-là (pente mesurée 0,87 sur 585 joueurs : les plus hautes projections d'un niveau
+#    sont un peu gonflées par hasard, et l'optimiseur les attrape) ;
+# 2. le trou restant mesuré sur les équipes proposées est retiré du score simulé (verdicts.team_offset).
+TEAM_SHRINK = 0.87
 # Testé et écarté le 16/11 : un aléa commun aux joueurs d'un même match.
 # Corrélation des surprises entre coéquipiers -0,03 (1 193 paires), entre adversaires -0,03.
 # -------------------------------------------------------------------------
@@ -261,7 +267,8 @@ def simulate_team(team, contexts, calib, targets, n_sim, rng):
             ratio = calib["minutes"][pl["role"]][_bucket(margin[pl["game_key"]], calib)]
             m = min(48.0, max(0.0, rng.gauss(pl["est_min"] * ratio, pl["sd_min"])))
             x = rng.choice(pl["rates"]) * pace * m * (1 + pl["bonus"]) * pl.get("scale", 1.0)
-            total += widen(x, pl)
+            total += widen(x, pl) * pl.get("team_k", 1.0)
+        total += calib.get("team_offset", 0.0)
         for t in targets:
             hits[t] += total >= t
     return {t: hits[t] / n_sim for t in targets}

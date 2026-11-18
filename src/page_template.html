@@ -217,8 +217,9 @@ function simulate(team, n) {
       const pace = 1 + slope * (tp / league - 1);
       const ratio = D.calib.minutes[p.role][bucket(margin[p.game])];
       const m = Math.min(48, Math.max(0, p.estMin * ratio + gauss() * p.sdMin));
-      total += widen(p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale, p);
+      total += widen(p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale, p) * (p.teamK || 1);
     }
+    total += D.calib.team_offset || 0;
     sum += total;
     for (const t of D.targets) if (total >= t) hits[t]++;
   }
@@ -370,12 +371,12 @@ function findFill(team) {
       ps.sort((a, b) => b.exp * b.pct - a.exp * a.pct).slice(0, keep).forEach(p => short.add(p));
       ps.sort((a, b) => (b.exp * b.pct + approxSd(b)) - (a.exp * a.pct + approxSd(a))).slice(0, keep).forEach(p => short.add(p));
     }
-    const cand = [...short], baseMu = team.reduce((a, p) => a + p.exp * p.pct, 0);
+    const cand = [...short], baseMu = team.reduce((a, p) => a + p.exp * p.pct * (p.teamK || 1), 0) + (D.calib.team_offset || 0);
     const baseVar = team.reduce((a, p) => a + approxSd(p) ** 2, 0);
     const combos = [];
     (function pick(start, chosen, used) {
       if (chosen.length === k) {
-        const mu = baseMu + chosen.reduce((a, p) => a + p.exp * p.pct, 0);
+        const mu = baseMu + chosen.reduce((a, p) => a + p.exp * p.pct * (p.teamK || 1), 0);
         const sd = Math.sqrt(baseVar + chosen.reduce((a, p) => a + approxSd(p) ** 2, 0));
         combos.push({ add: chosen.slice(), score: 1 - phi((target - mu) / sd) });
         return;

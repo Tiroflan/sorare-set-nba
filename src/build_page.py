@@ -89,6 +89,7 @@ def main():
             "usualMin": p["usual_min"], "last": p["last"],
             "histVals": {k: round(v, 2) for k, v in p["hist_vals"].items()},
             "upside": round(p["upside"], 3),
+            "teamK": round(p.get("team_k", 1.0), 3),
         })
     games = []
     for g in sorted(sched, key=lambda g: g["tip_utc"]):
@@ -103,7 +104,7 @@ def main():
     teams = []
     for r, mu, combo in results:
         teams.append({
-            "ids": [ids[p["slug"]] for p in combo], "mu": round(mu, 1),
+            "ids": [ids[p["slug"]] for p in combo], "mu": round(mu + calib.get("team_offset", 0.0), 1),
             "p": {str(t): round(r[t], 4) for t in TARGETS},
         })
     data = {
@@ -129,6 +130,11 @@ def main():
                 f"écarts vers le haut x{model.DISP_PROPS[0]:g} (avec props) et x{model.DISP_HIST[0]:g} (historique), "
                 f"vers le bas x{model.DISP_PROPS[1]:g} et x{model.DISP_HIST[1]:g} ; réglé le 16/11 sur 379 joueurs rejoués : "
                 "11 % au-dessus du 90e centile simulé et 9 % sous le 10e, au lieu de 18 % et 12 %"),
+            "Correction des équipes": (
+                f"projections rapprochées de la moyenne de leur niveau d'étoiles (x{model.TEAM_SHRINK:g}), puis "
+                f"{calib.get('team_offset', 0.0):+.0f} pts retirés au score simulé des équipes : trou mesuré sur les "
+                "équipes proposées, compté pour moitié avec 5 soirs, de plus en plus avec les soirs suivants, "
+                "recalculé chaque nuit (établi le 18/11 : 5 soirs sur 5 sous la projection)"),
             "Aléa commun à un match": "testé et écarté : les surprises de coéquipiers ne vont pas ensemble (corrélation -0,03 sur 1 193 paires)",
         },
     }

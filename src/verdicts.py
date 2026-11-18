@@ -70,6 +70,32 @@ def _var(p):
     return pct * sd * sd + pct * (1 - pct) * e * e
 
 
+TEAM_PRIOR_NIGHTS = 5  # le trou mesuré compte pour n / (n + 5) : moitié avec 5 soirs, 80 % avec 20
+
+
+def team_offset():
+    """Correction ajoutée au score des équipes dans la simulation : trou moyen des équipes
+    proposées (réel - projeté, toutes les équipes complètes d'un soir, moyenné par soir),
+    réduit tant qu'il y a peu de soirs. Se recalcule chaque nuit : si le trou n'était que
+    de la malchance, la correction s'efface d'elle-même. Renvoie (correction, soirs, trou)."""
+    nights = _load()
+    actual = {(b["night"], r["slug"]): (r["actual"] or 0.0) for b, _ in nights for r in b["joueurs"]}
+    per_night = []
+    for b, j in nights:
+        nxt = (date.fromisoformat(b["night"]) + timedelta(days=1)).isoformat()
+        gaps = []
+        for t in (j.get("teams") or {}).get("list") or []:
+            pts = [actual.get((b["night"], s), actual.get((nxt, s))) for s in t["slugs"]]
+            if None not in pts:
+                gaps.append(sum(pts) - t["mu"])
+        if gaps:
+            per_night.append(st.mean(gaps))
+    if not per_night:
+        return 0.0, 0, 0.0
+    n, gap = len(per_night), st.mean(per_night)
+    return gap * n / (n + TEAM_PRIOR_NIGHTS), n, gap
+
+
 def compute():
     nights = _load()
     out = []
@@ -218,8 +244,8 @@ A_FAIRE = [
     "Recaler les projections sur l'historique (réel = 4,3 + 0,83 x prévu au 16/11) : reporté par Romain le 16/11",
     "Équipes surestimées (établi le 18/11) : le diagnostic donne 2,5 pts sur 23 dus à la sélection (pente 0,87 dans un "
     "niveau d'étoiles), le reste aux mêmes stars présentes partout (Wembanyama -8 pts par équipe à lui seul). "
-    "Correction proposée le 18/11 : rétrécir les projections (0,87) et retirer des équipes le trou mesuré, réduit "
-    "de moitié tant qu'il y a peu de soirs ; en attente de la décision de Romain",
+    "Correction appliquée le 18/11 (TEAM_SHRINK et team_offset) : à réévaluer quand le verdict « équipes » "
+    "aura 10 soirs depuis le 18/11 ; si le trou disparaît, la correction s'efface d'elle-même",
 ]
 
 
