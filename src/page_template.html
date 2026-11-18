@@ -254,9 +254,16 @@ function playerLine(p, action) {
   </div>`;
 }
 
+let teamNight = store.get("tnight", "all");
 function renderTeams() {
   const next = D.targets[D.targets.indexOf(target) + 1];
-  const list = [...D.teams].sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
+  const nightsAll = [...new Set(P.map(p => p.night))].sort();
+  if (teamNight !== "all" && !nightsAll.includes(teamNight)) teamNight = "all";
+  const oneNight = t => t.ids.every(id => byId[id].night === teamNight);
+  const list = [...D.teams].filter(t => teamNight === "all" || oneNight(t))
+    .sort((a, b) => b.p[target] - a.p[target]).slice(0, 8);
+  const nightChips = `<div class="paliers">${[["all", "Sur les 2 nuits"], ...nightsAll.map(n => [n, `Seulement la ${nightLabel(n)}`])]
+    .map(([k, l]) => `<button data-tn="${k}" class="${k === teamNight ? "on" : ""}">${l}</button>`).join("")}</div>`;
   // Quel soir jouer : la meilleure équipe de chaque soir de verrouillage.
   const best = {};
   for (const t of D.teams) {
@@ -270,7 +277,7 @@ function renderTeams() {
     ${nights.map(n => `<div class="row small"><div class="grow">${nightLabel(n)}</div>
       <div><b class="${pClass(best[n].p)}">${fmtP(best[n].p)}</b> · ${best[n].p >= min ? "à jouer" : "soir creux"}</div></div>`).join("")}
     <div class="src">4 tentatives par palier, et 4 échecs renvoient au palier 1. Mais on remonte à 240 en 4 à 5 soirs, et il en reste une cinquantaine jusqu'au 6 janvier : mieux vaut jouer chaque bon soir que garder une vie. Seuils calculés le 16/11 en simulant toute la fin du set.</div></div>` : "";
-  document.getElementById("teams").innerHTML = whenCard +
+  document.getElementById("teams").innerHTML = whenCard + nightChips +
     `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
@@ -286,6 +293,9 @@ function renderTeams() {
         <div class="plist">${ps.map(p => playerLine(p)).join("")}</div>
       </div>`;
     }).join("");
+  document.querySelectorAll("[data-tn]").forEach(b => b.onclick = () => {
+    teamNight = b.dataset.tn; store.set("tnight", teamNight); renderTeams();
+  });
   document.querySelectorAll("[data-load]").forEach(b => b.onclick = () => {
     mine = list[+b.dataset.load].ids.slice(); store.set("mine", mine); show("mine");
   });

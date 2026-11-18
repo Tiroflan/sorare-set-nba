@@ -57,10 +57,17 @@ def main():
     results = best_teams(live, contexts, calib, TARGETS, random.Random(5), top_k=300)
     # Les soirs suivants, à part : sinon les 300 meilleures se figent toutes le premier soir,
     # et on ne peut pas comparer les soirs (une vie perdue par tentative ratée).
-    for night in sorted({p["night"] for p in live})[1:]:
+    # Aussi les meilleures équipes d'une seule nuit (filtre de l'onglet Équipes : gagner un palier
+    # en une nuit pour jouer le suivant le lendemain), sans doublon avec celles déjà trouvées.
+    seen = {frozenset(p["slug"] for p in c) for _, _, c in results}
+    for night in sorted({p["night"] for p in live}):
         sub = [p for p in live if p["night"] == night]
         if len(sub) >= 5:
-            results += best_teams(sub, contexts, calib, TARGETS, random.Random(5), top_k=40)
+            for r in best_teams(sub, contexts, calib, TARGETS, random.Random(5), top_k=40):
+                k = frozenset(p["slug"] for p in r[2])
+                if k not in seen:
+                    seen.add(k)
+                    results.append(r)
     results.sort(key=lambda t: -t[0][DEFAULT_TARGET])
     try:  # le journal ne doit jamais empêcher la page de sortir
         journal.record(pool, results[:40], TARGETS, sched=sched)
