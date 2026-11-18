@@ -97,6 +97,8 @@ table.t td.r, table.t th.r { text-align: right; }
 .srcpill.hist { background: var(--chip); color: var(--muted); }
 nav { overflow-x: auto; scrollbar-width: none; }
 nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 8px; flex: 1 0 auto; }
+details.card summary { cursor: pointer; list-style-position: inside; }
+details.card[open] summary { margin-bottom: 6px; }
 </style>
 </head>
 <body>
@@ -278,7 +280,8 @@ function renderTeams() {
     ${nights.map(n => `<div class="row small"><div class="grow">${nightLabel(n)}</div>
       <div><b class="${pClass(best[n].p)}">${fmtP(best[n].p)}</b> · ${best[n].p >= min ? "à jouer" : "soir creux"}</div></div>`).join("")}
     <div class="src">4 tentatives par palier, et 4 échecs renvoient au palier 1. Mais on remonte à 240 en 4 à 5 soirs, et il en reste une cinquantaine jusqu'au 6 janvier : mieux vaut jouer chaque bon soir que garder une vie. Seuils calculés le 16/11 en simulant toute la fin du set.</div></div>` : "";
-  document.getElementById("teams").innerHTML = whenCard + nightChips +
+  const empty = list.length ? "" : `<div class="card muted small">Pas encore d'équipe calculée avec seulement des joueurs de cette nuit : elles apparaissent à la prochaine mise à jour.</div>`;
+  document.getElementById("teams").innerHTML = whenCard + nightChips + empty +
     `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
@@ -677,13 +680,31 @@ function renderBilan() {
       <table class="t"><tr><th>Stat</th><th class="r">Prévu</th><th class="r">Réel</th><th class="r">Écart</th><th class="r">En pts</th></tr>${stats}
         <tr><td>Minutes</td><td class="r">${n1(mean(pl.map(r => r.em)))}</td><td class="r">${n1(mean(pl.map(r => r.m)))}</td>
         <td class="r">${n1(mean(pl.map(r => Math.abs(r.m - r.em))))}</td><td></td></tr></table></div>
-    <div class="card"><b>Joueur par joueur</b> <span class="small muted">plus gros écarts en premier</span>
-      <div class="plist">${sorted.map(line).join("")}</div></div>
-    ${dnp.length ? `<div class="card"><b>N'ont pas joué</b> <span class="small muted">alors qu'on leur donnait une chance</span>
-      <div class="plist">${dnp.map(r => `<div class="pl"><div class="name">${esc(r.n)} <span class="stars">${stars(r.s)}</span></div>
-        <div class="small muted">prévu ${n1(r.e)} pts s'il jouait, ${fmtP(r.pct)} de chances</div>
-        <div class="src">${esc(r.src)}</div></div>`).join("")}</div></div>` : ""}`;
+    <details class="card" id="bl-play"><summary><b>Joueur par joueur</b> <span class="small muted">${sorted.length} joueurs, plus gros écarts en premier</span></summary>
+      <div class="plist" id="bl-play-list"></div><div id="bl-play-more"></div></details>
+    ${dnp.length ? `<details class="card" id="bl-dnp"><summary><b>N'ont pas joué</b> <span class="small muted">${dnp.length} joueurs à qui on donnait une chance</span></summary>
+      <div class="plist" id="bl-dnp-list"></div><div id="bl-dnp-more"></div></details>` : ""}`;
   el.querySelector(".paliers").onclick = e => { if (e.target.dataset.bn) { bilanNight = e.target.dataset.bn; renderBilan(); } };
+  const dnpLine = r => `<div class="pl"><div class="name">${esc(r.n)} <span class="stars">${stars(r.s)}</span></div>
+    <div class="small muted">prévu ${n1(r.e)} pts s'il jouait, ${fmtP(r.pct)} de chances</div>
+    <div class="src">${esc(r.src)}</div></div>`;
+  pageList("bl-play", sorted, line);
+  if (dnp.length) pageList("bl-dnp", dnp, dnpLine);
+}
+// Liste repliée, affichée par pages de 20 : la page Bilan grossit chaque nuit.
+function pageList(id, items, fmt, step = 20) {
+  let shown = 0;
+  const list = document.getElementById(id + "-list"), more = document.getElementById(id + "-more");
+  const add = () => {
+    list.insertAdjacentHTML("beforeend", items.slice(shown, shown + step).map(fmt).join(""));
+    shown = Math.min(items.length, shown + step);
+    more.innerHTML = shown < items.length
+      ? `<button class="act" style="margin-top:8px">Voir ${Math.min(step, items.length - shown)} de plus (${items.length - shown} restants)</button>` : "";
+    const b = more.querySelector("button"); if (b) b.onclick = add;
+  };
+  document.getElementById(id).addEventListener("toggle", function once(e) {
+    if (e.target.open && !shown) add();
+  });
 }
 const fr_lock = iso => { const d = new Date(iso.replace("Z", ":00Z"));
   return d.toLocaleString("fr-FR", { weekday: "short", day: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }); };
