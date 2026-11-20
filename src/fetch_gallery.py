@@ -103,7 +103,7 @@ def main() -> None:
     todo = [s_ for s_ in slugs if s_ not in known or "l10" not in known[s_]]  # l10 ajouté le 20/11
     print(f"{len(todo)} fiches joueurs à lire ({len(slugs) - len(todo)} déjà à jour)")
     fresh = {p["slug"]: p for p in fetch_players(todo)} if todo else {}
-    players = [known.get(s_) or fresh[s_] for s_ in slugs if s_ in known or s_ in fresh]
+    players = [fresh.get(s_) or known[s_] for s_ in slugs if s_ in fresh or s_ in known]  # les fiches neuves d'abord
     (DATA / "players.json").write_text(json.dumps(players, indent=1, ensure_ascii=False), encoding="utf-8")
     print("OK : data/gallery.json et data/players.json")
 
