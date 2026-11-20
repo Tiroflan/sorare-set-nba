@@ -475,6 +475,49 @@ function findSwaps(team, base) {
   }, 30);
 }
 
+// ---- Mission du jour : dépasser son L10 de X points et marquer au moins Y points ----
+let mission = store.get("mission", { d: 7, min: 20, open: false });
+const l10 = p => mean(p.last.slice(0, 10).map(g => g.s));
+function simRaw(p, n) {  // scores bruts simulés (sans bonus de carte ni correction d'équipe), s'il joue
+  const g = G[p.game], league = D.calib.league_team_pts, slope = D.calib.pace_slope, out = [];
+  const tp = p.home ? g.homePts : g.awayPts, pace = 1 + slope * (tp / league - 1);
+  for (let s = 0; s < n; s++) {
+    const margin = Math.abs(gauss() * D.sigmaMargin - g.spreadUsed);
+    const ratio = D.calib.minutes[p.role][bucket(margin)];
+    const m = Math.min(48, Math.max(0, p.estMin * ratio + gauss() * p.sdMin));
+    const x = p.rates[Math.floor(Math.random() * p.rates.length)] * pace * m * (1 + p.bonus) * p.scale;
+    out.push(widen(x, p) / (1 + p.bonus));
+  }
+  return out;
+}
+function missionCard() {
+  return `<details class="card" id="mission"${mission.open ? " open" : ""}><summary><b>Mission du jour</b>
+    <span class="small muted">qui a le plus de chances de la remplir</span></summary>
+    <div class="small" style="margin:6px 0">Dépasser son L10 de <input id="m-d" type="number" step="1" value="${mission.d}" style="width:4em">
+      pts et marquer au moins <input id="m-min" type="number" step="1" value="${mission.min}" style="width:4em"> pts fantasy, sur les matchs de la prochaine nuit.</div>
+    <div class="plist" id="m-list"></div>
+    <div class="src">L10 = moyenne de ses 10 derniers matchs joués (score Sorare recalculé, sans bonus de carte). Chance = chance de jouer × chance de dépasser le seuil le plus haut des deux, d'après la même simulation que les équipes (sans la correction d'équipe). Seuls tes joueurs sont listés.</div></details>`;
+}
+function renderMission() {
+  const box = document.getElementById("m-list"); if (!box) return;
+  const night = [...new Set(P.map(p => p.night))].sort()[0];
+  const rows = P.filter(p => p.night === night && p.pct > 0 && p.last && p.last.length >= 3).map(p => {
+    const base = l10(p), thr = Math.max(base + mission.d, mission.min), sims = simRaw(p, 2000);
+    return { p, base, thr, prob: p.pct * sims.filter(x => x >= thr).length / sims.length, raw: p.exp / (1 + p.bonus) };
+  }).sort((a, b) => b.prob - a.prob).slice(0, 12);
+  box.innerHTML = rows.map(r => `<div class="pl row"><div class="grow tap" data-detail="${r.p.id}">
+      <div class="name">${esc(r.p.name)} <span class="stars">${stars(r.p.stars)}</span></div>
+      <div class="small muted">${r.p.team} ${r.p.home ? "vs" : "@"} ${r.p.opp} · ${r.p.when} · L10 ${n1(r.base)} → il faut ${n1(r.thr)} · projeté ${n1(r.raw)}${r.p.pct < 1 ? ` · joue ${Math.round(r.p.pct * 100)} %` : ""}</div></div>
+    <div class="num"><b class="${pClass(r.prob)}">${fmtP(r.prob)}</b></div></div>`).join("") || `<div class="small muted">Pas de match à venir.</div>`;
+}
+function bindMission() {
+  const d = document.getElementById("mission"); if (!d) return;
+  d.addEventListener("toggle", () => { mission.open = d.open; store.set("mission", mission); if (d.open) renderMission(); });
+  for (const [id, k] of [["m-d", "d"], ["m-min", "min"]])
+    document.getElementById(id).onchange = e => { mission[k] = +e.target.value || 0; store.set("mission", mission); renderMission(); };
+  if (d.open) renderMission();
+}
+
 function renderPlayers() {
   const el = document.getElementById("players");
   const nights = [...new Set(P.map(p => p.night))].sort();
@@ -489,7 +532,7 @@ function renderPlayers() {
       && (!q || p.name.toLowerCase().includes(q) || p.team.toLowerCase() === q))
     .sort((a, b) => byScore ? b.exp - a.exp : b.exp / b.stars - a.exp / a.stars).slice(0, 80);
   const full = mine.length >= 5;
-  el.innerHTML = `<input type="search" id="q" placeholder="Rechercher un joueur ou une équipe (ex. SAS)" value="${esc(query)}">
+  el.innerHTML = missionCard() + `<input type="search" id="q" placeholder="Rechercher un joueur ou une équipe (ex. SAS)" value="${esc(query)}">
     <div class="filters">${["all", ...nights].map(n =>
       `<button data-n="${n}" class="${n === nightFilter ? "on" : ""}">${n === "all" ? "Tous les soirs" : chip(n)}</button>`).join("")}</div>
     <div class="filters">${["all", ...starLevels].map(v =>
@@ -502,6 +545,7 @@ function renderPlayers() {
       : `<button class="icon" data-add="${p.id}" ${full ? "disabled" : ""} aria-label="Ajouter">+</button>`)).join("")}</div>`;
   const qi = document.getElementById("q");
   qi.oninput = () => { query = qi.value; renderPlayers(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
+  bindMission();
   el.querySelectorAll("[data-n]").forEach(b => b.onclick = () => { nightFilter = b.dataset.n; renderPlayers(); });
   el.querySelectorAll("[data-st]").forEach(b => b.onclick = () => { starFilter = b.dataset.st; renderPlayers(); });
   el.querySelectorAll("[data-sort]").forEach(b => b.onclick = () => { playerSort = b.dataset.sort; store.set("psort", playerSort); renderPlayers(); });
