@@ -167,6 +167,19 @@ def compute():
             f"props plus proches du réel de {st.mean(pr):.2f} pt en moyenne sur {len(pr)} joueurs",
             z, len(pr), len(pr) / n_nights, "rien à changer si oui (on les utilise déjà) ; si non, revoir leur conversion"))
 
+    # 4 bis. Quand les props dépassent nettement l'historique (+20 % ou plus), les bookmakers
+    # voient-ils encore trop court ? (intuition de Romain, cas Henderson +43 % le 19/11)
+    hi = [(r["actual"] - p["exp"], p) for _, r, p in played
+          if p.get("usesProps") and p.get("hist", 0) > 0 and p["exp"] >= 1.2 * p["hist"]]
+    if len(hi) > 2:
+        d = [x for x, _ in hi]
+        z = st.mean(d) / (st.stdev(d) / math.sqrt(len(d)))
+        out.append(_item(
+            "props_hausse", "Quand les props dépassent l'historique de 20 % ou plus, faut-il viser encore plus haut ?",
+            f"ces joueurs font {st.mean(d):+.1f} pts de plus que les props ({len(d)} joueurs)", z, len(d), len(d) / n_nights,
+            "pousser leur projection au-delà des props (par exemple la moitié de l'écart observé)" if z > 0
+            else "rien à faire : les props suffisent"))
+
     # 5. Grosses projections sans props (le cas Gafford, Hyland).
     big = [(r["actual"] - p["exp"], p) for _, r, p in played if not p.get("usesProps") and p.get("exp", 0) >= 25]
     if len(big) > 2:
