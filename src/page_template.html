@@ -477,7 +477,8 @@ function findSwaps(team, base) {
 
 // ---- Mission du jour : dépasser son L10 de X points et marquer au moins Y points ----
 let mission = store.get("mission", { d: 7, min: 20, open: false });
-const l10 = p => mean(p.last.slice(0, 10).map(g => g.s));
+// L10 officiel Sorare (moyenne des 10 derniers matchs joués, arrondie) ; à défaut, notre calcul.
+const l10 = p => p.l10 !== undefined && p.l10 !== null ? p.l10 : mean(p.last.slice(0, 10).map(g => g.s));
 function simRaw(p, n) {  // scores bruts simulés (sans bonus de carte ni correction d'équipe), s'il joue
   const g = G[p.game], league = D.calib.league_team_pts, slope = D.calib.pace_slope, out = [];
   const tp = p.home ? g.homePts : g.awayPts, pace = 1 + slope * (tp / league - 1);
@@ -496,7 +497,7 @@ function missionCard() {
     <div class="small" style="margin:6px 0">Dépasser son L10 de <input id="m-d" type="number" step="1" value="${mission.d}" style="width:4em">
       pts et marquer au moins <input id="m-min" type="number" step="1" value="${mission.min}" style="width:4em"> pts fantasy, sur les matchs de la prochaine nuit.</div>
     <div class="plist" id="m-list"></div>
-    <div class="src">L10 = moyenne de ses 10 derniers matchs joués (score Sorare recalculé, sans bonus de carte). Chance = chance de jouer × chance de dépasser le seuil le plus haut des deux, d'après la même simulation que les équipes (sans la correction d'équipe). Seuls tes joueurs sont listés.</div></details>`;
+    <div class="src">L10 = celui affiché par Sorare : moyenne de ses 10 derniers matchs joués, sans les matchs manqués (vérifié le 20/11 sur l'API Sorare), sans bonus de carte. Chance = chance de jouer × chance de dépasser le seuil le plus haut des deux, d'après la même simulation que les équipes (sans la correction d'équipe). Seuls tes joueurs sont listés.</div></details>`;
 }
 function renderMission() {
   const box = document.getElementById("m-list"); if (!box) return;

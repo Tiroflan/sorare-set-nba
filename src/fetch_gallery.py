@@ -43,7 +43,7 @@ query Players($slugs: [String!]!) {
     rawPlayerGameScores(last: 15)
     nextClassicFixtureProjectedScore
     activeInjuries { status kind expectedEndDate }
-    ... on NBAPlayer { activeClub { code } }
+    ... on NBAPlayer { activeClub { code } l10: averageScore(type: LAST_TEN_PLAYED_SO5_AVERAGE_SCORE) }
   }
 }
 """
@@ -100,7 +100,7 @@ def main() -> None:
     known = {}
     if pf.exists() and time.time() - pf.stat().st_mtime < PLAYERS_MAX_AGE_H * 3600:
         known = {p["slug"]: p for p in json.loads(pf.read_text(encoding="utf-8"))}
-    todo = [s_ for s_ in slugs if s_ not in known]
+    todo = [s_ for s_ in slugs if s_ not in known or "l10" not in known[s_]]  # l10 ajouté le 20/11
     print(f"{len(todo)} fiches joueurs à lire ({len(slugs) - len(todo)} déjà à jour)")
     fresh = {p["slug"]: p for p in fetch_players(todo)} if todo else {}
     players = [known.get(s_) or fresh[s_] for s_ in slugs if s_ in known or s_ in fresh]

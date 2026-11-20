@@ -101,6 +101,7 @@ def main():
             "histVals": {k: round(v, 2) for k, v in p["hist_vals"].items()},
             "upside": round(p["upside"], 3),
             "teamK": round(p.get("team_k", 1.0), 3),
+            "l10": p.get("l10_sorare"),
         })
     games = []
     for g in sorted(sched, key=lambda g: g["tip_utc"]):

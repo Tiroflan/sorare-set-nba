@@ -150,6 +150,7 @@ def build_player(p, games_hist, bonus, edition, game, lineup, inj_espn, now_utc)
         "comp_rates": comp,
         "slug": p["slug"], "name": p["displayName"], "team": team,
         "sorare_proj": p.get("nextClassicFixtureProjectedScore"),  # projection officielle Sorare, pour comparer
+        "l10_sorare": p.get("l10"),  # moyenne officielle des 10 derniers matchs joués (missions)
         "opp": game["away"] if home else game["home"], "home": home,
         "night": game["night"], "tip_utc": game["tip_utc"], "game_key": f"{game['away']}@{game['home']}:{game['night']}",
         "stars": float(p["setStars"]), "bonus": bonus, "edition": edition,
