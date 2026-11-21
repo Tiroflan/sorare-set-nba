@@ -147,6 +147,42 @@ def bovada_props(events) -> dict:
     return out
 
 
+PINNACLE_STATS = {"Total Points": "pts", "Total Rebounds": "reb", "Total Assists": "ast", "Total Threes Made": "tpm"}
+
+
+def pinnacle_props() -> dict:
+    """Props joueurs de Pinnacle (une ligne par stat), même format que bovada_props.
+    Ajouté le 21/11 : Bovada ne répond plus aux serveurs de GitHub. Pinnacle ne dit pas dans
+    quelle équipe joue le joueur : on garde les deux équipes du match."""
+    matchups = _get(f"{PINNACLE}/matchups")
+    markets = _get(f"{PINNACLE}/markets/straight")
+    by_id = {}
+    for m in matchups:
+        sp = m.get("special") or {}
+        if m.get("type") != "special" or sp.get("category") != "Player Props":
+            continue
+        mt = re.match(r"(.+) (Total (?:Points|Rebounds|Assists|Threes Made))$", sp.get("description", ""))
+        if not mt:
+            continue
+        side = {p["id"]: p["name"] for p in m.get("participants", [])}
+        teams = tuple(TEAMS.get(p.get("name")) for p in (m.get("parent") or {}).get("participants", []))
+        by_id[m["id"]] = (mt.group(1), PINNACLE_STATS[mt.group(2)], side, teams)
+    out = {}
+    for k in markets:
+        info = by_id.get(k.get("matchupId"))
+        if not info or k.get("period") != 0 or k.get("type") != "total":
+            continue
+        name, stat, side, teams = info
+        pr = {side.get(x["participantId"]): x for x in k.get("prices", [])}
+        if "Over" not in pr or "Under" not in pr:
+            continue
+        h = float(pr["Over"]["points"])
+        po, pu = implied(str(pr["Over"]["price"])), implied(str(pr["Under"]["price"]))
+        p = out.setdefault(norm(name), {"name": name, "team": None, "teams": [t for t in teams if t], "lines": {}, "book": "Pinnacle"})
+        p["lines"].setdefault(stat, []).append((h, po / (po + pu), str(pr["Over"]["price"]), str(pr["Under"]["price"])))
+    return out
+
+
 def _fit_normal(lines):
     """Seuil h, P(X > h) = p  =>  h = mu + sd * z, avec z = quantile(1 - p)."""
     pts = [(h, NormalDist().inv_cdf(min(max(1 - p, 0.01), 0.99))) for h, p in lines]
@@ -220,6 +256,15 @@ def fetch_all():
         except Exception:
             pass
         time.sleep(20)
+    # Pinnacle en complément (et en secours quand Bovada ne répond pas) : Bovada reste prioritaire
+    # joueur par joueur, car il donne plusieurs seuils par stat.
+    try:
+        pin = pinnacle_props()
+        n_bov = len(props)
+        props = {**pin, **{k: dict(v, book="Bovada") for k, v in props.items()}}
+        print(f"  props Pinnacle : {len(pin)} joueurs ; Bovada : {n_bov}")
+    except Exception as e:
+        print(f"  props Pinnacle indisponibles ({e})")
     if props:
         PROPS_CACHE.parent.mkdir(exist_ok=True)
         PROPS_CACHE.write_text(json.dumps({"at": time.time(), "props": props}, ensure_ascii=False), encoding="utf-8")

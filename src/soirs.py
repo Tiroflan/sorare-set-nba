@@ -176,12 +176,13 @@ def load_pool(nights: int):
         pl["comps"], pl["uses_props"] = hist_comps, False
         pl["exp"] = pl["hist_exp"]
         prop = props.get(norm(p["displayName"]))
-        if prop and espn.code(prop["team"]) == team:
-            comps = breakdown(pl, odds.expected_stats(prop), prop["lines"])
+        same_team = prop and ((prop.get("team") and espn.code(prop["team"]) == team) or team in (prop.get("teams") or []))
+        if same_team:
+            comps = breakdown(pl, odds.expected_stats(prop), prop["lines"], prop.get("book", "Bovada"))
             raw = sum(c["pts"] for c in comps)
             # Au moins une stat vraiment tirée des cotes : sinon (marché publié mais
             # inexploitable) on garde l'historique ajusté au match.
-            if raw > 0 and any(c["src"] == "Bovada" for c in comps):
+            if raw > 0 and any(c["src"] in ("Bovada", "Pinnacle") for c in comps):
                 # Les cotes intègrent déjà rythme et blowout : pas de facteur de contexte.
                 pl["comps"], pl["uses_props"] = comps, True
                 pl["exp"] = raw * (1 + pl["bonus"])

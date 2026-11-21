@@ -202,7 +202,7 @@ LABELS = {"pts": "Points", "tpm": "Paniers à 3 pts", "reb": "Rebonds", "ast": "
           "stl": "Interceptions", "blk": "Contres", "tov": "Balles perdues"}
 
 
-def breakdown(pl, prop_stats, prop_lines):
+def breakdown(pl, prop_stats, prop_lines, book="Bovada"):
     """Estimation stat par stat, avec sa source. prop_stats/prop_lines peuvent être vides."""
     comps = []
     for k in ("pts", "tpm", "reb", "ast", "stl", "blk", "tov"):
@@ -210,7 +210,7 @@ def breakdown(pl, prop_stats, prop_lines):
         if k in prop_stats:
             val = prop_stats[k]
             lines = [{"h": h, "p": round(p, 3), "over": o, "under": u} for h, p, o, u in sorted(prop_lines[k])]
-            src = "Bovada"
+            src = book
         else:
             val = rate * pl["est_min"]
             lines = []

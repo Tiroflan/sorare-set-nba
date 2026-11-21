@@ -155,7 +155,7 @@ const palierOf = t => D.targets.indexOf(t) + 1;
 // Ce que veut dire chaque tag (infobulle, fiche joueur, glossaire).
 const TAGS = [
   ["props", "props +12 % vs historique",
-   "Deux estimations du même joueur : l'une tirée des cotes Bovada de ce soir (retenue), l'autre de son historique (production par minute sur ses 10 derniers matchs, ajustée au match). +12 % = les cotes attendent 12 % de points Sorare en plus que l'historique. Les cotes voient ce que l'historique ignore : coéquipier absent, adversaire faible, changement de rôle. Au-delà de ±25 %, c'est un vrai signal : sur nos 2 premières nuits, les écarts forts allaient dans le bon sens. Le détail stat par stat est dans sa fiche."],
+   "Deux estimations du même joueur : l'une tirée des cotes des bookmakers de ce soir, Bovada ou Pinnacle (retenue), l'autre de son historique (production par minute sur ses 10 derniers matchs, ajustée au match). +12 % = les cotes attendent 12 % de points Sorare en plus que l'historique. Les cotes voient ce que l'historique ignore : coéquipier absent, adversaire faible, changement de rôle. Au-delà de ±25 %, c'est un vrai signal : sur nos 2 premières nuits, les écarts forts allaient dans le bon sens. Le détail stat par stat est dans sa fiche."],
   ["back-to-back", "back-to-back",
    "Son équipe a joué la veille. Risque de minutes réduites ou de repos ; déjà dans les cotes quand il y a des props."],
   ["PROMU", "PROMU titulaire",
@@ -258,7 +258,7 @@ function playerLine(p, action) {
       ${badges(p)}
     </div>
     <div class="num"><b>${p.exp.toFixed(0)}</b><div class="small muted">${(p.exp / p.stars).toFixed(1)}/★</div>
-      <span class="srcpill ${p.usesProps ? "books" : "hist"}" title="${p.usesProps ? "Projection tirée des cotes Bovada" : "Pas de cotes : projection sur l'historique"}">${p.usesProps ? "cotes" : "historique"}</span></div>
+      <span class="srcpill ${p.usesProps ? "books" : "hist"}" title="${p.usesProps ? "Projection tirée des cotes des bookmakers (Bovada ou Pinnacle)" : "Pas de cotes : projection sur l'historique"}">${p.usesProps ? "cotes" : "historique"}</span></div>
     ${action || ""}
   </div>`;
 }
@@ -605,7 +605,7 @@ function openDetail(id) {
       <tr><td><b>Total brut</b></td><td></td>${p.usesProps ? "<td></td>" : ""}<td></td><td class="r"><b>${n1(raw)}</b></td></tr></table>
     <div class="src" style="margin-top:4px">Bonus double-double non compté (1 point au plus).</div>
 
-    ${lines ? `<h3>Cotes Bovada utilisées</h3>
+    ${lines ? `<h3>Cotes des bookmakers utilisées</h3>
       <div class="src">Cote « plus » / cote « moins », puis probabilité « plus » une fois la marge du bookmaker retirée.
         Points : loi normale ajustée sur ces seuils. Rebonds, passes, 3 pts : loi de Poisson.</div>
       <table class="t">${lines}</table>` : `<h3>Cotes joueur</h3><div class="small muted">Pas de props publiées pour ce joueur : estimation sur l'historique.</div>`}
@@ -801,7 +801,7 @@ function renderMethod() {
         <tr><td style="width:34%"><b>x/★</b></td><td class="small">Points estimés par étoile dépensée : le rapport qualité-prix du joueur.</td></tr>
         <tr><td style="width:34%"><b>figée</b></td><td class="small">Heure où l'équipe se verrouille : le premier coup d'envoi parmi ses 5 joueurs, heure de Paris.</td></tr>
         <tr><td style="width:34%"><b>Palier</b></td><td class="small">Seuil de points du Set (240, 270, 290…). Le sélecteur en haut change le classement des équipes.</td></tr>
-        <tr><td style="width:34%"><b>props</b></td><td class="small">Cotes des bookmakers sur les stats d'un joueur (plus ou moins de X points, rebonds, passes, 3 pts). Source : Bovada.</td></tr>
+        <tr><td style="width:34%"><b>props</b></td><td class="small">Cotes des bookmakers sur les stats d'un joueur (plus ou moins de X points, rebonds, passes, 3 pts). Sources : Bovada (plusieurs seuils par stat), sinon Pinnacle (un seuil).</td></tr>
         <tr><td style="width:34%"><b>historique</b></td><td class="small">Production du joueur par minute sur ses 10 derniers matchs, multipliée par ses minutes estimées.</td></tr>
         <tr><td style="width:34%"><b>spread</b></td><td class="small">Écart de points attendu par les bookmakers entre les deux équipes. Gros spread = risque de match plié, donc de titulaires sortis tôt (blowout).</td></tr>
         <tr><td style="width:34%"><b>total</b></td><td class="small">Total de points attendu dans le match. Haut = rythme rapide, plus de stats pour tout le monde.</td></tr>
@@ -818,12 +818,12 @@ function renderMethod() {
         <tr><td>Calendrier, blessures (Out, Day-To-Day)</td><td>ESPN</td></tr>
         <tr><td>Compos probables du soir, incertains</td><td>RotoWire</td></tr>
         <tr><td>Spread et total des matchs</td><td>Pinnacle, sinon Bovada, ESPN, RotoWire</td></tr>
-        <tr><td>Props points, rebonds, passes, 3 pts</td><td>Bovada</td></tr>
+        <tr><td>Props points, rebonds, passes, 3 pts</td><td>Bovada, sinon Pinnacle</td></tr>
         <tr><td>Interceptions, contres, balles perdues</td><td>historique du joueur (10 derniers matchs)</td></tr>
         <tr><td>Bonus des cartes</td><td>ta galerie + barème confirmé (Shiny 5 %, Holo 10 %, variante 15 %)</td></tr>
       </table></div>
     <div class="card"><b>Comment un score est estimé</b>
-      <div class="small">1. Chaque stat est estimée : par les cotes Bovada quand elles existent, sinon par la production
+      <div class="small">1. Chaque stat est estimée : par les cotes des bookmakers (Bovada, sinon Pinnacle) quand elles existent, sinon par la production
         par minute du joueur sur ses 10 derniers matchs × ses minutes estimées.<br>
         2. Sans cotes, on ajuste au contexte : rythme (points attendus de l'équipe) et blowout (minutes perdues
         si le match se plie). Avec cotes, le contexte est déjà dans la ligne.<br>
