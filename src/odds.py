@@ -268,7 +268,7 @@ def fetch_all():
     if props:
         PROPS_CACHE.parent.mkdir(exist_ok=True)
         PROPS_CACHE.write_text(json.dumps({"at": time.time(), "props": props}, ensure_ascii=False), encoding="utf-8")
-        print(f"  props Bovada : {len(props)} joueurs")
+        print(f"  props en tout : {len(props)} joueurs")
     elif PROPS_CACHE.exists():
         c = json.loads(PROPS_CACHE.read_text(encoding="utf-8"))
         age = (time.time() - c["at"]) / 3600
