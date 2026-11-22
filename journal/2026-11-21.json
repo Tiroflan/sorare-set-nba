@@ -296,15 +296,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 25.7,
-   "sd": 13.67,
-   "raw": 25.7,
-   "hist": 26.35,
+   "exp": 24.4,
+   "sd": 12.94,
+   "raw": 24.4,
+   "hist": 26.43,
    "usesProps": true,
    "estMin": 28.3,
    "sdMin": 6.0,
@@ -312,29 +312,29 @@
    "starter": true,
    "promoted": true,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.023,
    "reasons": [
     "PROMU titulaire",
-    "props -2% vs historique"
+    "props -8% vs historique"
    ],
    "upside": 0.181,
    "sorare": 14.1,
    "comps": {
-    "pts": 9.28,
-    "tpm": 1.8,
-    "reb": 5.35,
-    "ast": 2.8,
+    "pts": 8.67,
+    "tpm": 1.65,
+    "reb": 5.47,
+    "ast": 2.24,
     "stl": 1.68,
     "blk": 0.14,
     "tov": 0.7
    },
    "histComps": {
-    "pts": 9.78,
+    "pts": 9.81,
     "tpm": 2.3,
-    "reb": 5.61,
+    "reb": 5.62,
     "ast": 2.3,
-    "stl": 1.72,
+    "stl": 1.73,
     "blk": 0.14,
     "tov": 0.72
    }
@@ -1399,15 +1399,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 10.44,
+   "exp": 10.47,
    "sd": 9.98,
-   "raw": 9.95,
-   "hist": 10.44,
+   "raw": 9.97,
+   "hist": 10.47,
    "usesProps": false,
    "estMin": 13.6,
    "sdMin": 4.2,
@@ -1415,7 +1415,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.023,
    "reasons": [],
    "upside": 0.327,
@@ -1430,10 +1430,10 @@
     "tov": 1.07
    },
    "histComps": {
-    "pts": 4.58,
-    "tpm": 0.59,
-    "reb": 2.49,
-    "ast": 0.59,
+    "pts": 4.6,
+    "tpm": 0.6,
+    "reb": 2.5,
+    "ast": 0.6,
     "stl": 0.7,
     "blk": 0.3,
     "tov": 1.1
@@ -2211,15 +2211,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 16.1,
-   "sd": 7.73,
-   "raw": 16.1,
-   "hist": 14.97,
+   "exp": 16.0,
+   "sd": 7.66,
+   "raw": 16.0,
+   "hist": 15.01,
    "usesProps": true,
    "estMin": 23,
    "sdMin": 5.2,
@@ -2227,31 +2227,31 @@
    "starter": true,
    "promoted": true,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.023,
    "reasons": [
     "PROMU titulaire",
-    "props +8% vs historique"
+    "props +7% vs historique"
    ],
    "upside": 0.212,
    "sorare": 14.3,
    "comps": {
-    "pts": 7.32,
-    "tpm": 1.1,
-    "reb": 4.45,
+    "pts": 7.06,
+    "tpm": 1.19,
+    "reb": 4.4,
     "ast": 0.59,
     "stl": 0.89,
     "blk": 0.0,
     "tov": 0.59
    },
    "histComps": {
-    "pts": 6.85,
+    "pts": 6.87,
     "tpm": 1.22,
-    "reb": 3.65,
-    "ast": 0.6,
-    "stl": 0.91,
+    "reb": 3.66,
+    "ast": 0.61,
+    "stl": 0.92,
     "blk": 0.0,
-    "tov": 0.6
+    "tov": 0.61
    }
   },
   "jose-alvarado-19980412": {
@@ -2977,15 +2977,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 14.0,
+   "exp": 14.04,
    "sd": 11.84,
-   "raw": 13.33,
-   "hist": 14.0,
+   "raw": 13.37,
+   "hist": 14.04,
    "usesProps": false,
    "estMin": 11.6,
    "sdMin": 5.3,
@@ -2993,7 +2993,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.023,
    "reasons": [],
    "upside": 0.329,
@@ -3008,10 +3008,10 @@
     "tov": 0.24
    },
    "histComps": {
-    "pts": 4.84,
+    "pts": 4.85,
     "tpm": 1.07,
-    "reb": 2.62,
-    "ast": 1.8,
+    "reb": 2.63,
+    "ast": 1.81,
     "stl": 0.25,
     "blk": 0.49,
     "tov": 0.25
@@ -3599,15 +3599,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 28.7,
-   "sd": 10.8,
-   "raw": 28.7,
-   "hist": 25.03,
+   "exp": 27.4,
+   "sd": 10.28,
+   "raw": 27.4,
+   "hist": 25.11,
    "usesProps": true,
    "estMin": 23.8,
    "sdMin": 5.1,
@@ -3615,29 +3615,29 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.011,
    "reasons": [
-    "props +15% vs historique"
+    "props +9% vs historique"
    ],
    "upside": 0.18,
    "sorare": 16.18,
    "comps": {
-    "pts": 12.42,
+    "pts": 12.01,
     "tpm": 0.3,
-    "reb": 8.95,
-    "ast": 2.45,
+    "reb": 8.7,
+    "ast": 2.09,
     "stl": 0.4,
     "blk": 1.0,
     "tov": 1.29
    },
    "histComps": {
-    "pts": 10.4,
+    "pts": 10.43,
     "tpm": 0.3,
-    "reb": 7.98,
+    "reb": 8.0,
     "ast": 2.12,
     "stl": 0.41,
-    "blk": 1.01,
+    "blk": 1.02,
     "tov": 1.31
    }
   },
@@ -3936,15 +3936,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 40.64,
-   "sd": 24.4,
-   "raw": 38.7,
-   "hist": 26.14,
+   "exp": 40.21,
+   "sd": 24.08,
+   "raw": 38.3,
+   "hist": 26.21,
    "usesProps": true,
    "estMin": 28.8,
    "sdMin": 4.8,
@@ -3952,27 +3952,27 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 0.974,
    "reasons": [
-    "props +55% vs historique"
+    "props +53% vs historique"
    ],
    "upside": 0.232,
    "sorare": 25.63,
    "comps": {
-    "pts": 21.99,
-    "tpm": 3.05,
+    "pts": 21.19,
+    "tpm": 3.0,
     "reb": 3.65,
-    "ast": 6.4,
+    "ast": 6.65,
     "stl": 0.63,
     "blk": 0.1,
     "tov": 1.26
    },
    "histComps": {
-    "pts": 12.57,
-    "tpm": 2.35,
-    "reb": 3.58,
-    "ast": 3.98,
+    "pts": 12.61,
+    "tpm": 2.36,
+    "reb": 3.59,
+    "ast": 3.99,
     "stl": 0.62,
     "blk": 0.1,
     "tov": 1.23
@@ -4081,15 +4081,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.62,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 62% (recalé sur nos bilans)",
-   "exp": 4.31,
+   "exp": 4.32,
    "sd": 3.31,
-   "raw": 4.31,
-   "hist": 4.31,
+   "raw": 4.32,
+   "hist": 4.32,
    "usesProps": false,
    "estMin": 8,
    "sdMin": 3.0,
@@ -4097,7 +4097,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.023,
    "reasons": [
     "banc, joue 62% des matchs"
@@ -4114,7 +4114,7 @@
     "tov": 0.64
    },
    "histComps": {
-    "pts": 2.95,
+    "pts": 2.96,
     "tpm": 0.66,
     "reb": 0.66,
     "ast": 0.49,
@@ -4273,15 +4273,15 @@
    "opp": "SAC",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 23.2,
-   "sd": 11.64,
-   "raw": 23.2,
-   "hist": 17.53,
+   "exp": 22.0,
+   "sd": 11.01,
+   "raw": 22.0,
+   "hist": 17.58,
    "usesProps": true,
    "estMin": 19.4,
    "sdMin": 5.2,
@@ -4289,30 +4289,30 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.003,
+   "pace": 1.005,
    "blow": 1.023,
    "reasons": [
-    "props +32% vs historique"
+    "props +25% vs historique"
    ],
    "upside": 0.231,
    "sorare": 12.77,
    "comps": {
-    "pts": 11.73,
-    "tpm": 2.85,
-    "reb": 4.05,
+    "pts": 12.1,
+    "tpm": 2.75,
+    "reb": 2.84,
     "ast": 1.04,
     "stl": 0.66,
     "blk": 0.19,
     "tov": 0.19
    },
    "histComps": {
-    "pts": 7.86,
+    "pts": 7.89,
     "tpm": 2.24,
-    "reb": 2.91,
+    "reb": 2.92,
     "ast": 1.07,
     "stl": 0.68,
-    "blk": 0.19,
-    "tov": 0.19
+    "blk": 0.2,
+    "tov": 0.2
    }
   },
   "santi-aldama-20010110": {
@@ -5233,15 +5233,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.548,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 4 fois sur ses 10 derniers matchs, compté 55% (recalé sur nos bilans)",
-   "exp": 3.25,
+   "exp": 3.26,
    "sd": 4.35,
-   "raw": 3.25,
-   "hist": 3.25,
+   "raw": 3.26,
+   "hist": 3.26,
    "usesProps": false,
    "estMin": 13.8,
    "sdMin": 7.7,
@@ -5249,7 +5249,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.023,
    "reasons": [
     "banc, joue 55% des matchs"
@@ -5272,7 +5272,7 @@
     "ast": 0.46,
     "stl": 0.31,
     "blk": 0.0,
-    "tov": 0.76
+    "tov": 0.77
    }
   },
   "bennedict-mathurin-20020619": {
@@ -5377,15 +5377,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.764,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 76% (recalé sur nos bilans)",
-   "exp": 4.49,
+   "exp": 4.51,
    "sd": 6.26,
-   "raw": 4.49,
-   "hist": 4.49,
+   "raw": 4.51,
+   "hist": 4.51,
    "usesProps": false,
    "estMin": 9.4,
    "sdMin": 8.1,
@@ -5393,7 +5393,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.023,
    "reasons": [
     "banc, joue 76% des matchs"
@@ -5425,15 +5425,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 4.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 33.6,
-   "sd": 11.24,
-   "raw": 33.6,
-   "hist": 36.32,
+   "exp": 33.9,
+   "sd": 11.3,
+   "raw": 33.9,
+   "hist": 36.43,
    "usesProps": true,
    "estMin": 36.4,
    "sdMin": 3.0,
@@ -5441,7 +5441,7 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 0.974,
    "reasons": [
     "back-to-back",
@@ -5450,22 +5450,22 @@
    "upside": 0.115,
    "sorare": 36.02,
    "comps": {
-    "pts": 22.17,
-    "tpm": 3.05,
-    "reb": 3.2,
-    "ast": 6.25,
+    "pts": 22.56,
+    "tpm": 3.0,
+    "reb": 3.3,
+    "ast": 6.05,
     "stl": 1.07,
     "blk": 0.19,
     "tov": 4.28
    },
    "histComps": {
-    "pts": 23.47,
-    "tpm": 3.37,
-    "reb": 3.01,
-    "ast": 6.82,
-    "stl": 0.97,
+    "pts": 23.54,
+    "tpm": 3.38,
+    "reb": 3.02,
+    "ast": 6.84,
+    "stl": 0.98,
     "blk": 0.17,
-    "tov": 3.9
+    "tov": 3.91
    }
   },
   "deandre-hunter-19971202": {
@@ -5474,47 +5474,46 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 22.6,
-   "sd": 11.53,
-   "raw": 22.6,
-   "hist": 24.85,
-   "usesProps": true,
+   "exp": 24.92,
+   "sd": 16.14,
+   "raw": 24.92,
+   "hist": 24.92,
+   "usesProps": false,
    "estMin": 36.4,
    "sdMin": 3.0,
    "role": "titulaire",
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 0.974,
    "reasons": [
-    "back-to-back",
-    "props -9% vs historique"
+    "back-to-back"
    ],
-   "upside": 0.189,
+   "upside": 0.237,
    "sorare": 23.41,
    "comps": {
-    "pts": 13.43,
-    "tpm": 2.05,
-    "reb": 4.4,
+    "pts": 17.9,
+    "tpm": 2.53,
+    "reb": 4.25,
     "ast": 1.82,
     "stl": 0.51,
     "blk": 0.2,
     "tov": 1.52
    },
    "histComps": {
-    "pts": 16.29,
-    "tpm": 2.3,
-    "reb": 3.87,
+    "pts": 16.34,
+    "tpm": 2.31,
+    "reb": 3.88,
     "ast": 1.66,
-    "stl": 0.46,
+    "stl": 0.47,
     "blk": 0.18,
-    "tov": 1.38
+    "tov": 1.39
    }
   },
   "deandre-jordan-19880721": {
@@ -5668,15 +5667,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 0.836,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 84% (recalé sur nos bilans)",
-   "exp": 16.26,
+   "exp": 16.31,
    "sd": 10.22,
-   "raw": 15.49,
-   "hist": 16.26,
+   "raw": 15.53,
+   "hist": 16.31,
    "usesProps": false,
    "estMin": 17,
    "sdMin": 6.0,
@@ -5684,7 +5683,7 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.023,
    "reasons": [
     "banc, joue 84% des matchs",
@@ -5702,10 +5701,10 @@
     "tov": 1.15
    },
    "histComps": {
-    "pts": 4.89,
+    "pts": 4.9,
     "tpm": 0.0,
-    "reb": 5.5,
-    "ast": 1.46,
+    "reb": 5.51,
+    "ast": 1.47,
     "stl": 0.49,
     "blk": 0.85,
     "tov": 1.1
@@ -5717,15 +5716,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 9.56,
+   "exp": 9.59,
    "sd": 9.68,
-   "raw": 9.56,
-   "hist": 9.56,
+   "raw": 9.59,
+   "hist": 9.59,
    "usesProps": false,
    "estMin": 14.8,
    "sdMin": 7.2,
@@ -5733,7 +5732,7 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.023,
    "reasons": [
     "back-to-back"
@@ -5750,9 +5749,9 @@
     "tov": 0.43
    },
    "histComps": {
-    "pts": 4.25,
+    "pts": 4.27,
     "tpm": 0.9,
-    "reb": 1.22,
+    "reb": 1.23,
     "ast": 0.65,
     "stl": 0.82,
     "blk": 0.16,
@@ -5863,15 +5862,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.404,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 40% (recalé sur nos bilans)",
-   "exp": 8.99,
+   "exp": 9.01,
    "sd": 13.65,
-   "raw": 8.99,
-   "hist": 8.99,
+   "raw": 9.01,
+   "hist": 9.01,
    "usesProps": false,
    "estMin": 14.8,
    "sdMin": 8.1,
@@ -5879,7 +5878,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.023,
    "reasons": [
     "banc, joue 40% des matchs"
@@ -5896,13 +5895,13 @@
     "tov": 0.6
    },
    "histComps": {
-    "pts": 2.87,
+    "pts": 2.88,
     "tpm": 0.19,
-    "reb": 2.1,
-    "ast": 0.76,
-    "stl": 0.76,
+    "reb": 2.11,
+    "ast": 0.77,
+    "stl": 0.77,
     "blk": 0.38,
-    "tov": 0.57
+    "tov": 0.58
    }
   },
   "jordan-poole-19990619": {
@@ -5960,15 +5959,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 27.09,
-   "sd": 11.96,
-   "raw": 25.8,
-   "hist": 23.62,
+   "exp": 26.36,
+   "sd": 11.6,
+   "raw": 25.1,
+   "hist": 23.69,
    "usesProps": true,
    "estMin": 31.6,
    "sdMin": 6.7,
@@ -5976,28 +5975,28 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.011,
    "reasons": [
     "back-to-back",
-    "props +15% vs historique"
+    "props +11% vs historique"
    ],
    "upside": 0.193,
    "sorare": 21.94,
    "comps": {
-    "pts": 11.92,
-    "tpm": 1.7,
-    "reb": 4.6,
+    "pts": 11.69,
+    "tpm": 1.65,
+    "reb": 4.15,
     "ast": 2.01,
     "stl": 1.07,
     "blk": 0.8,
     "tov": 0.94
    },
    "histComps": {
-    "pts": 10.38,
+    "pts": 10.41,
     "tpm": 1.01,
-    "reb": 3.92,
-    "ast": 1.9,
+    "reb": 3.93,
+    "ast": 1.91,
     "stl": 1.01,
     "blk": 0.76,
     "tov": 0.89
@@ -6009,15 +6008,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 13.67,
+   "exp": 13.71,
    "sd": 14.19,
-   "raw": 13.67,
-   "hist": 13.67,
+   "raw": 13.71,
+   "hist": 13.71,
    "usesProps": false,
    "estMin": 16.6,
    "sdMin": 7.9,
@@ -6025,7 +6024,7 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.023,
    "reasons": [
     "back-to-back"
@@ -6042,13 +6041,13 @@
     "tov": 1.81
    },
    "histComps": {
-    "pts": 8.06,
+    "pts": 8.08,
     "tpm": 1.07,
     "reb": 0.91,
-    "ast": 3.37,
+    "ast": 3.38,
     "stl": 0.5,
     "blk": 0.16,
-    "tov": 1.73
+    "tov": 1.74
    }
   },
   "precious-achiuwa-19990919": {
@@ -6057,15 +6056,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 2.0,
    "bonus": 0.0,
-   "pct": 0.5,
-   "pctSrc": "RotoWire : incertain (Ques), probabilité affichée 50%",
-   "exp": 16.16,
+   "pct": 1.0,
+   "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
+   "exp": 16.21,
    "sd": 17.96,
-   "raw": 16.16,
-   "hist": 16.16,
+   "raw": 16.21,
+   "hist": 16.21,
    "usesProps": false,
    "estMin": 19.6,
    "sdMin": 10.8,
@@ -6073,7 +6072,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 1.011,
    "reasons": [],
    "upside": 0.354,
@@ -6088,9 +6087,9 @@
     "tov": 0.96
    },
    "histComps": {
-    "pts": 6.4,
+    "pts": 6.42,
     "tpm": 0.23,
-    "reb": 4.44,
+    "reb": 4.46,
     "ast": 0.68,
     "stl": 0.76,
     "blk": 0.91,
@@ -6299,15 +6298,15 @@
    "opp": "BOS",
    "game": "BOS@SAC:2026-11-21",
    "tip": "2026-11-22T03:00Z",
-   "recorded": "2026-11-21T23:52Z",
+   "recorded": "2026-11-22T02:21Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 28.0,
-   "sd": 9.16,
-   "raw": 28.0,
-   "hist": 27.76,
+   "exp": 29.3,
+   "sd": 9.55,
+   "raw": 29.3,
+   "hist": 27.84,
    "usesProps": true,
    "estMin": 33.6,
    "sdMin": 5.7,
@@ -6315,30 +6314,30 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.935,
+   "pace": 0.938,
    "blow": 0.974,
    "reasons": [
     "back-to-back",
-    "props +1% vs historique"
+    "props +5% vs historique"
    ],
    "upside": 0.09,
    "sorare": 27.68,
    "comps": {
-    "pts": 17.77,
-    "tpm": 2.5,
-    "reb": 3.2,
-    "ast": 2.6,
+    "pts": 17.95,
+    "tpm": 2.55,
+    "reb": 3.8,
+    "ast": 2.77,
     "stl": 1.13,
     "blk": 0.51,
     "tov": 2.47
    },
    "histComps": {
-    "pts": 17.3,
-    "tpm": 2.43,
-    "reb": 3.46,
-    "ast": 2.52,
+    "pts": 17.35,
+    "tpm": 2.44,
+    "reb": 3.47,
+    "ast": 2.53,
     "stl": 1.03,
-    "blk": 0.46,
+    "blk": 0.47,
     "tov": 2.25
    }
   },
@@ -6440,519 +6439,141 @@
   }
  },
  "teams": {
-  "recorded": "2026-11-21T23:52Z",
+  "recorded": "2026-11-22T02:21Z",
   "list": [
    {
     "slugs": [
      "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
+     "anthony-black-20040120",
+     "franz-wagner-20010827",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Daniss Jenkins",
+     "Anthony Black",
+     "Franz Wagner",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 203.0,
+    "p": {
+     "150": 0.8442,
+     "180": 0.6332,
+     "210": 0.3823,
+     "240": 0.1895,
+     "270": 0.0735,
+     "290": 0.0315
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "keyonte-george-20031108",
+     "franz-wagner-20010827",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Keyonte George",
+     "Franz Wagner",
+     "Davion Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 204.0,
+    "p": {
+     "150": 0.8617,
+     "180": 0.6562,
+     "210": 0.3947,
+     "240": 0.1853,
+     "270": 0.069,
+     "290": 0.0303
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
      "anthony-black-20040120",
      "keyonte-george-20031108",
      "ausar-thompson-20030130",
-     "victor-wembanyama-20040104"
+     "franz-wagner-20010827"
     ],
     "names": [
      "Payton Pritchard",
      "Anthony Black",
      "Keyonte George",
      "Ausar Thompson",
-     "Victor Wembanyama"
+     "Franz Wagner"
     ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.0,
+    "stars": 15.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.9,
     "p": {
-     "150": 0.8873,
-     "180": 0.7005,
-     "210": 0.4512,
-     "240": 0.2368,
-     "270": 0.1053,
-     "290": 0.0565
+     "150": 0.8413,
+     "180": 0.6193,
+     "210": 0.3717,
+     "240": 0.1812,
+     "270": 0.0687,
+     "290": 0.0332
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
-     "anthony-black-20040120",
-     "lamelo-ball-20010822",
-     "ausar-thompson-20030130",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Anthony Black",
-     "LaMelo Ball",
-     "Ausar Thompson",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.7,
-    "p": {
-     "150": 0.8993,
-     "180": 0.7053,
-     "210": 0.4487,
-     "240": 0.2362,
-     "270": 0.0973,
-     "290": 0.0463
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "brice-sensabaugh-20031030",
+     "kevin-huerter-19980827",
      "anthony-black-20040120",
      "anthony-davis-19930311",
-     "victor-wembanyama-20040104"
+     "franz-wagner-20010827"
     ],
     "names": [
      "Payton Pritchard",
-     "Brice Sensabaugh",
+     "Kevin Huerter",
      "Anthony Black",
      "Anthony Davis",
-     "Victor Wembanyama"
+     "Franz Wagner"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 213.8,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 204.3,
     "p": {
-     "150": 0.9065,
-     "180": 0.718,
-     "210": 0.4543,
-     "240": 0.2355,
-     "270": 0.0945,
-     "290": 0.0502
+     "150": 0.866,
+     "180": 0.641,
+     "210": 0.3715,
+     "240": 0.1788,
+     "270": 0.0645,
+     "290": 0.03
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
-     "brice-sensabaugh-20031030",
      "anthony-black-20040120",
+     "ausar-thompson-20030130",
      "franz-wagner-20010827",
-     "victor-wembanyama-20040104"
+     "nickeil-alexander-walker-19980902"
     ],
     "names": [
      "Payton Pritchard",
-     "Brice Sensabaugh",
      "Anthony Black",
+     "Ausar Thompson",
      "Franz Wagner",
-     "Victor Wembanyama"
+     "Nickeil Alexander-Walker"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 211.9,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.9,
     "p": {
-     "150": 0.8853,
-     "180": 0.6955,
-     "210": 0.455,
-     "240": 0.2348,
-     "270": 0.1012,
-     "290": 0.0518
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "anthony-black-20040120",
-     "keyonte-george-20031108",
-     "desmond-bane-19980625",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Anthony Black",
-     "Keyonte George",
-     "Desmond Bane",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 211.8,
-    "p": {
-     "150": 0.8992,
-     "180": 0.7002,
-     "210": 0.4412,
-     "240": 0.23,
-     "270": 0.0917,
-     "290": 0.0423
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "anthony-black-20040120",
-     "lamelo-ball-20010822",
-     "keyonte-george-20031108",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Anthony Black",
-     "LaMelo Ball",
-     "Keyonte George",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 213.4,
-    "p": {
-     "150": 0.8953,
-     "180": 0.7037,
-     "210": 0.4578,
-     "240": 0.2272,
-     "270": 0.0917,
-     "290": 0.0428
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "anthony-black-20040120",
-     "ausar-thompson-20030130",
-     "desmond-bane-19980625",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Anthony Black",
-     "Ausar Thompson",
-     "Desmond Bane",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 211.2,
-    "p": {
-     "150": 0.8835,
-     "180": 0.6917,
-     "210": 0.443,
-     "240": 0.2255,
-     "270": 0.103,
-     "290": 0.0545
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "andre-drummond-19930810",
-     "anthony-black-20040120",
-     "franz-wagner-20010827",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Andre Drummond",
-     "Anthony Black",
-     "Franz Wagner",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T00:30Z",
-    "mu": 213.7,
-    "p": {
-     "150": 0.9102,
-     "180": 0.7202,
-     "210": 0.4528,
-     "240": 0.222,
-     "270": 0.086,
-     "290": 0.0388
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "anthony-black-20040120",
-     "davion-mitchell-19980905",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Anthony Black",
-     "Davion Mitchell",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 216.0,
-    "p": {
-     "150": 0.9283,
-     "180": 0.7437,
-     "210": 0.4618,
-     "240": 0.2213,
-     "270": 0.0827,
-     "290": 0.0343
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "anthony-black-20040120",
-     "keyonte-george-20031108",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Anthony Black",
-     "Keyonte George",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 213.1,
-    "p": {
-     "150": 0.9085,
-     "180": 0.7133,
-     "210": 0.4518,
-     "240": 0.2183,
-     "270": 0.0842,
-     "290": 0.0402
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "keyonte-george-20031108",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "Keyonte George",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.8,
-    "p": {
-     "150": 0.8747,
-     "180": 0.68,
-     "210": 0.4213,
-     "240": 0.2168,
-     "270": 0.0877,
-     "290": 0.0413
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "lamelo-ball-20010822",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "LaMelo Ball",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 210.6,
-    "p": {
-     "150": 0.8805,
-     "180": 0.68,
-     "210": 0.4262,
-     "240": 0.2165,
-     "270": 0.086,
-     "290": 0.0402
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "nickeil-alexander-walker-19980902",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "Nickeil Alexander-Walker",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.9,
-    "p": {
-     "150": 0.8857,
-     "180": 0.6868,
-     "210": 0.4265,
-     "240": 0.216,
-     "270": 0.0893,
-     "290": 0.0462
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "desmond-bane-19980625",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "Desmond Bane",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.0,
-    "p": {
-     "150": 0.88,
-     "180": 0.6788,
-     "210": 0.4252,
-     "240": 0.2153,
-     "270": 0.086,
-     "290": 0.044
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "anthony-black-20040120",
-     "ausar-thompson-20030130",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Anthony Black",
-     "Ausar Thompson",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.5,
-    "p": {
-     "150": 0.9037,
-     "180": 0.7012,
-     "210": 0.4382,
-     "240": 0.2147,
-     "270": 0.0843,
-     "290": 0.0412
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "davion-mitchell-19980905",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "Davion Mitchell",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.6,
-    "p": {
-     "150": 0.9065,
-     "180": 0.7,
-     "210": 0.4328,
-     "240": 0.2143,
-     "270": 0.0847,
-     "290": 0.0418
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "aday-mara-20050407",
-     "anthony-black-20040120",
-     "cooper-flagg-20061221",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Aday Mara",
-     "Anthony Black",
-     "Cooper Flagg",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 213.7,
-    "p": {
-     "150": 0.9047,
-     "180": 0.7233,
-     "210": 0.4453,
-     "240": 0.2142,
-     "270": 0.0823,
-     "290": 0.0385
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "ausar-thompson-20030130",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "Ausar Thompson",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.2,
-    "p": {
-     "150": 0.87,
-     "180": 0.6598,
-     "210": 0.4228,
-     "240": 0.2137,
-     "270": 0.0887,
-     "290": 0.0465
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "anthony-black-20040120",
-     "lamelo-ball-20010822",
-     "desmond-bane-19980625",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Anthony Black",
-     "LaMelo Ball",
-     "Desmond Bane",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.6,
-    "p": {
-     "150": 0.8947,
-     "180": 0.7038,
-     "210": 0.4488,
-     "240": 0.2133,
-     "270": 0.082,
-     "290": 0.038
+     "150": 0.8365,
+     "180": 0.6112,
+     "210": 0.3623,
+     "240": 0.1783,
+     "270": 0.0662,
+     "290": 0.0342
     }
    },
    {
@@ -6960,107 +6581,350 @@
      "payton-pritchard-19980128",
      "jared-mccain-20040220",
      "anthony-black-20040120",
-     "cooper-flagg-20061221",
-     "victor-wembanyama-20040104"
+     "anthony-davis-19930311",
+     "franz-wagner-20010827"
     ],
     "names": [
      "Payton Pritchard",
      "Jared McCain",
      "Anthony Black",
-     "Cooper Flagg",
-     "Victor Wembanyama"
+     "Anthony Davis",
+     "Franz Wagner"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 203.5,
     "p": {
-     "150": 0.902,
-     "180": 0.7058,
-     "210": 0.4415,
-     "240": 0.2123,
-     "270": 0.0863,
-     "290": 0.0415
+     "150": 0.8527,
+     "180": 0.6298,
+     "210": 0.3845,
+     "240": 0.178,
+     "270": 0.0682,
+     "290": 0.026
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
      "anthony-black-20040120",
-     "ty-jerome-19970708",
-     "keyonte-george-20031108",
-     "victor-wembanyama-20040104"
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
     ],
     "names": [
      "Payton Pritchard",
+     "Daniss Jenkins",
      "Anthony Black",
-     "Ty Jerome",
-     "Keyonte George",
-     "Victor Wembanyama"
+     "Bam Adebayo",
+     "Cooper Flagg"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.6,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.6,
     "p": {
-     "150": 0.9095,
-     "180": 0.7178,
-     "210": 0.4483,
-     "240": 0.2118,
-     "270": 0.0852,
-     "290": 0.0427
+     "150": 0.8423,
+     "180": 0.6202,
+     "210": 0.3677,
+     "240": 0.1775,
+     "270": 0.0632,
+     "290": 0.0275
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
-     "anthony-black-20040120",
-     "ty-jerome-19970708",
-     "ausar-thompson-20030130",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Anthony Black",
-     "Ty Jerome",
-     "Ausar Thompson",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.0,
-    "p": {
-     "150": 0.8962,
-     "180": 0.6922,
-     "210": 0.43,
-     "240": 0.2107,
-     "270": 0.083,
-     "290": 0.0395
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "andre-drummond-19930810",
+     "aday-mara-20050407",
      "anthony-black-20040120",
      "anthony-davis-19930311",
-     "victor-wembanyama-20040104"
+     "franz-wagner-20010827"
     ],
     "names": [
      "Payton Pritchard",
-     "Andre Drummond",
+     "Aday Mara",
      "Anthony Black",
      "Anthony Davis",
-     "Victor Wembanyama"
+     "Franz Wagner"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T00:30Z",
-    "mu": 215.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 205.2,
     "p": {
-     "150": 0.9257,
-     "180": 0.7362,
-     "210": 0.458,
-     "240": 0.2103,
-     "270": 0.0763,
-     "290": 0.0325
+     "150": 0.8757,
+     "180": 0.6657,
+     "210": 0.3953,
+     "240": 0.1762,
+     "270": 0.0583,
+     "290": 0.023
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
+     "anthony-black-20040120",
+     "anthony-davis-19930311",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Daniss Jenkins",
+     "Anthony Black",
+     "Anthony Davis",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 203.6,
+    "p": {
+     "150": 0.857,
+     "180": 0.6482,
+     "210": 0.3853,
+     "240": 0.1755,
+     "270": 0.0628,
+     "290": 0.0247
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "desmond-bane-19980625",
+     "franz-wagner-20010827",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Desmond Bane",
+     "Franz Wagner",
+     "Davion Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 203.3,
+    "p": {
+     "150": 0.8648,
+     "180": 0.6428,
+     "210": 0.3735,
+     "240": 0.1747,
+     "270": 0.0585,
+     "290": 0.0272
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "desmond-bane-19980625",
+     "ausar-thompson-20030130",
+     "franz-wagner-20010827"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Desmond Bane",
+     "Ausar Thompson",
+     "Franz Wagner"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.2,
+    "p": {
+     "150": 0.824,
+     "180": 0.6075,
+     "210": 0.361,
+     "240": 0.1745,
+     "270": 0.0723,
+     "290": 0.0357
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "keyonte-george-20031108",
+     "franz-wagner-20010827",
+     "nickeil-alexander-walker-19980902"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Keyonte George",
+     "Franz Wagner",
+     "Nickeil Alexander-Walker"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.7,
+    "p": {
+     "150": 0.8392,
+     "180": 0.6147,
+     "210": 0.373,
+     "240": 0.172,
+     "270": 0.0668,
+     "290": 0.029
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "keyonte-george-20031108",
+     "franz-wagner-20010827",
+     "darryn-peterson-20070117"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Keyonte George",
+     "Franz Wagner",
+     "Darryn Peterson"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.8,
+    "p": {
+     "150": 0.8397,
+     "180": 0.6263,
+     "210": 0.3737,
+     "240": 0.1715,
+     "270": 0.0642,
+     "290": 0.0303
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "keyonte-george-20031108",
+     "ausar-thompson-20030130",
+     "anthony-davis-19930311"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Keyonte George",
+     "Ausar Thompson",
+     "Anthony Davis"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.6,
+    "p": {
+     "150": 0.853,
+     "180": 0.616,
+     "210": 0.3657,
+     "240": 0.1713,
+     "270": 0.0612,
+     "290": 0.0265
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "jared-mccain-20040220",
+     "anthony-black-20040120",
+     "franz-wagner-20010827",
+     "bam-adebayo-19970718"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Jared McCain",
+     "Anthony Black",
+     "Franz Wagner",
+     "Bam Adebayo"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.4,
+    "p": {
+     "150": 0.8408,
+     "180": 0.614,
+     "210": 0.3682,
+     "240": 0.1705,
+     "270": 0.0638,
+     "290": 0.029
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "keyonte-george-20031108",
+     "anthony-davis-19930311",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Keyonte George",
+     "Anthony Davis",
+     "Davion Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 204.6,
+    "p": {
+     "150": 0.876,
+     "180": 0.6465,
+     "210": 0.3792,
+     "240": 0.1702,
+     "270": 0.0545,
+     "290": 0.0215
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "franz-wagner-20010827",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Franz Wagner",
+     "Davion Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 203.3,
+    "p": {
+     "150": 0.8542,
+     "180": 0.6273,
+     "210": 0.369,
+     "240": 0.1695,
+     "270": 0.0685,
+     "290": 0.0308
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "anthony-davis-19930311",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Anthony Davis",
+     "Davion Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 203.9,
+    "p": {
+     "150": 0.873,
+     "180": 0.637,
+     "210": 0.3685,
+     "240": 0.1682,
+     "270": 0.061,
+     "290": 0.028
     }
    },
    {
@@ -7068,188 +6932,26 @@
      "payton-pritchard-19980128",
      "kevin-huerter-19980827",
      "anthony-black-20040120",
-     "cooper-flagg-20061221",
-     "victor-wembanyama-20040104"
+     "franz-wagner-20010827",
+     "bam-adebayo-19970718"
     ],
     "names": [
      "Payton Pritchard",
      "Kevin Huerter",
      "Anthony Black",
-     "Cooper Flagg",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.7,
-    "p": {
-     "150": 0.8945,
-     "180": 0.6927,
-     "210": 0.431,
-     "240": 0.2103,
-     "270": 0.0858,
-     "290": 0.0423
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "tre-jones-20000108",
-     "anthony-black-20040120",
-     "franz-wagner-20010827",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Tre Jones",
-     "Anthony Black",
      "Franz Wagner",
-     "Victor Wembanyama"
+     "Bam Adebayo"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.6,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 201.2,
     "p": {
-     "150": 0.8887,
-     "180": 0.6903,
-     "210": 0.4342,
-     "240": 0.2098,
-     "270": 0.078,
-     "290": 0.0338
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "brice-sensabaugh-20031030",
-     "anthony-black-20040120",
-     "cooper-flagg-20061221",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Brice Sensabaugh",
-     "Anthony Black",
-     "Cooper Flagg",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.0,
-    "p": {
-     "150": 0.8803,
-     "180": 0.6818,
-     "210": 0.4178,
-     "240": 0.2092,
-     "270": 0.0863,
-     "290": 0.0393
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "anthony-black-20040120",
-     "desmond-bane-19980625",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Anthony Black",
-     "Desmond Bane",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.4,
-    "p": {
-     "150": 0.9008,
-     "180": 0.7,
-     "210": 0.4283,
-     "240": 0.2083,
-     "270": 0.0758,
-     "290": 0.0357
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "brice-sensabaugh-20031030",
-     "anthony-black-20040120",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Brice Sensabaugh",
-     "Anthony Black",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.1,
-    "p": {
-     "150": 0.8853,
-     "180": 0.6682,
-     "210": 0.4117,
-     "240": 0.208,
-     "270": 0.0807,
-     "290": 0.0403
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "daniss-jenkins-20010817",
-     "cooper-flagg-20061221",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Daniss Jenkins",
-     "Cooper Flagg",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 214.2,
-    "p": {
-     "150": 0.9092,
-     "180": 0.714,
-     "210": 0.4318,
-     "240": 0.2072,
-     "270": 0.0788,
-     "290": 0.0372
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "daniss-jenkins-20010817",
-     "anthony-black-20040120",
-     "darryn-peterson-20070117",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Daniss Jenkins",
-     "Anthony Black",
-     "Darryn Peterson",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 208.9,
-    "p": {
-     "150": 0.8842,
-     "180": 0.6838,
-     "210": 0.4208,
-     "240": 0.2067,
-     "270": 0.0852,
-     "290": 0.0428
+     "150": 0.8492,
+     "180": 0.6233,
+     "210": 0.3612,
+     "240": 0.1672,
+     "270": 0.0608,
+     "290": 0.0282
     }
    },
    {
@@ -7257,161 +6959,80 @@
      "payton-pritchard-19980128",
      "christian-braun-20010417",
      "anthony-black-20040120",
-     "ausar-thompson-20030130",
-     "victor-wembanyama-20040104"
+     "franz-wagner-20010827",
+     "cooper-flagg-20061221"
     ],
     "names": [
      "Payton Pritchard",
      "Christian Braun",
      "Anthony Black",
-     "Ausar Thompson",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 207.0,
-    "p": {
-     "150": 0.8673,
-     "180": 0.6552,
-     "210": 0.4035,
-     "240": 0.2067,
-     "270": 0.0835,
-     "290": 0.0432
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "mikal-bridges-19960830",
-     "anthony-black-20040120",
-     "anthony-davis-19930311",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Mikal Bridges",
-     "Anthony Black",
-     "Anthony Davis",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T00:30Z",
-    "mu": 212.9,
-    "p": {
-     "150": 0.9118,
-     "180": 0.7115,
-     "210": 0.4298,
-     "240": 0.2053,
-     "270": 0.0785,
-     "290": 0.0367
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "anthony-black-20040120",
-     "nickeil-alexander-walker-19980902",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Anthony Black",
-     "Nickeil Alexander-Walker",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 213.2,
-    "p": {
-     "150": 0.9167,
-     "180": 0.7182,
-     "210": 0.4363,
-     "240": 0.2052,
-     "270": 0.0747,
-     "290": 0.0333
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "kevin-huerter-19980827",
-     "daniss-jenkins-20010817",
-     "franz-wagner-20010827",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Kevin Huerter",
-     "Daniss Jenkins",
      "Franz Wagner",
-     "Victor Wembanyama"
+     "Cooper Flagg"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 208.6,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.9,
     "p": {
-     "150": 0.872,
-     "180": 0.6572,
-     "210": 0.402,
-     "240": 0.2048,
-     "270": 0.086,
-     "290": 0.0422
-    }
-   },
-   {
-    "slugs": [
-     "payton-pritchard-19980128",
-     "darius-garland-20000126",
-     "anthony-black-20040120",
-     "lamelo-ball-20010822",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Payton Pritchard",
-     "Darius Garland",
-     "Anthony Black",
-     "LaMelo Ball",
-     "Victor Wembanyama"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 213.9,
-    "p": {
-     "150": 0.917,
-     "180": 0.7195,
-     "210": 0.448,
-     "240": 0.204,
-     "270": 0.075,
-     "290": 0.0313
+     "150": 0.8427,
+     "180": 0.6187,
+     "210": 0.3642,
+     "240": 0.1665,
+     "270": 0.0618,
+     "290": 0.0295
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
      "brice-sensabaugh-20031030",
-     "ausar-thompson-20030130",
-     "franz-wagner-20010827",
-     "victor-wembanyama-20040104"
+     "anthony-black-20040120",
+     "anthony-davis-19930311",
+     "franz-wagner-20010827"
     ],
     "names": [
      "Payton Pritchard",
      "Brice Sensabaugh",
-     "Ausar Thompson",
+     "Anthony Black",
+     "Anthony Davis",
+     "Franz Wagner"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.7,
+    "p": {
+     "150": 0.8383,
+     "180": 0.6175,
+     "210": 0.3648,
+     "240": 0.1658,
+     "270": 0.0605,
+     "290": 0.0272
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "isaiah-hartenstein-19980505",
+     "franz-wagner-20010827",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Isaiah Hartenstein",
      "Franz Wagner",
-     "Victor Wembanyama"
+     "Davion Mitchell"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 207.1,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 202.3,
     "p": {
      "150": 0.8685,
-     "180": 0.6488,
-     "210": 0.3957,
-     "240": 0.204,
-     "270": 0.0893,
-     "290": 0.0422
+     "180": 0.6512,
+     "210": 0.3705,
+     "240": 0.1647,
+     "270": 0.0548,
+     "290": 0.0217
     }
    },
    {
@@ -7419,107 +7040,458 @@
      "payton-pritchard-19980128",
      "daniss-jenkins-20010817",
      "anthony-black-20040120",
-     "onyeka-okongwu-20001211",
-     "victor-wembanyama-20040104"
+     "franz-wagner-20010827",
+     "davion-mitchell-19980905"
     ],
     "names": [
      "Payton Pritchard",
      "Daniss Jenkins",
      "Anthony Black",
-     "Onyeka Okongwu",
-     "Victor Wembanyama"
+     "Franz Wagner",
+     "Davion Mitchell"
     ],
-    "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.9,
+    "stars": 15.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 201.1,
     "p": {
-     "150": 0.8852,
-     "180": 0.6827,
-     "210": 0.4185,
-     "240": 0.2025,
-     "270": 0.0748,
-     "290": 0.0373
+     "150": 0.847,
+     "180": 0.6155,
+     "210": 0.3573,
+     "240": 0.1637,
+     "270": 0.0583,
+     "290": 0.0248
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
-     "brice-sensabaugh-20031030",
+     "anthony-black-20040120",
      "keyonte-george-20031108",
-     "anthony-davis-19930311",
-     "victor-wembanyama-20040104"
+     "bam-adebayo-19970718",
+     "davion-mitchell-19980905"
     ],
     "names": [
      "Payton Pritchard",
-     "Brice Sensabaugh",
+     "Anthony Black",
      "Keyonte George",
-     "Anthony Davis",
-     "Victor Wembanyama"
+     "Bam Adebayo",
+     "Davion Mitchell"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 209.6,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 201.5,
     "p": {
-     "150": 0.8942,
-     "180": 0.6745,
-     "210": 0.4092,
-     "240": 0.2022,
-     "270": 0.0815,
-     "290": 0.0397
+     "150": 0.8588,
+     "180": 0.6327,
+     "210": 0.3627,
+     "240": 0.1635,
+     "270": 0.055,
+     "290": 0.0217
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
-     "mikal-bridges-19960830",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "franz-wagner-20010827",
+     "darryn-peterson-20070117"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Franz Wagner",
+     "Darryn Peterson"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.1,
+    "p": {
+     "150": 0.8257,
+     "180": 0.5927,
+     "210": 0.351,
+     "240": 0.1632,
+     "270": 0.0663,
+     "290": 0.0332
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
+     "keyonte-george-20031108",
+     "franz-wagner-20010827",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Daniss Jenkins",
+     "Keyonte George",
+     "Franz Wagner",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 198.7,
+    "p": {
+     "150": 0.8245,
+     "180": 0.596,
+     "210": 0.35,
+     "240": 0.1623,
+     "270": 0.0622,
+     "290": 0.0317
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "bam-adebayo-19970718",
+     "davion-mitchell-19980905"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Bam Adebayo",
+     "Davion Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.8,
+    "p": {
+     "150": 0.8565,
+     "180": 0.6258,
+     "210": 0.3553,
+     "240": 0.1622,
+     "270": 0.0635,
+     "290": 0.0283
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "franz-wagner-20010827",
+     "onyeka-okongwu-20001211"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Franz Wagner",
+     "Onyeka Okongwu"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.9,
+    "p": {
+     "150": 0.835,
+     "180": 0.6033,
+     "210": 0.3522,
+     "240": 0.1618,
+     "270": 0.0632,
+     "290": 0.0305
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "christian-braun-20010417",
+     "anthony-black-20040120",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Christian Braun",
+     "Anthony Black",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 198.4,
+    "p": {
+     "150": 0.8375,
+     "180": 0.6118,
+     "210": 0.3552,
+     "240": 0.1618,
+     "270": 0.0557,
+     "290": 0.0228
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
+     "ausar-thompson-20030130",
+     "franz-wagner-20010827",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Daniss Jenkins",
+     "Ausar Thompson",
+     "Franz Wagner",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 198.0,
+    "p": {
+     "150": 0.8155,
+     "180": 0.5932,
+     "210": 0.344,
+     "240": 0.1613,
+     "270": 0.0692,
+     "290": 0.0325
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
+     "desmond-bane-19980625",
+     "franz-wagner-20010827",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Daniss Jenkins",
+     "Desmond Bane",
+     "Franz Wagner",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 198.0,
+    "p": {
+     "150": 0.8227,
+     "180": 0.5932,
+     "210": 0.3433,
+     "240": 0.1612,
+     "270": 0.0575,
+     "290": 0.024
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "daniss-jenkins-20010817",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "anthony-davis-19930311"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Daniss Jenkins",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Anthony Davis"
+    ],
+    "stars": 15.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 197.7,
+    "p": {
+     "150": 0.8165,
+     "180": 0.5832,
+     "210": 0.3415,
+     "240": 0.1612,
+     "270": 0.061,
+     "290": 0.0278
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "aday-mara-20050407",
      "anthony-black-20040120",
      "franz-wagner-20010827",
-     "victor-wembanyama-20040104"
+     "bam-adebayo-19970718"
     ],
     "names": [
      "Payton Pritchard",
-     "Mikal Bridges",
+     "Aday Mara",
      "Anthony Black",
      "Franz Wagner",
-     "Victor Wembanyama"
+     "Bam Adebayo"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T00:30Z",
-    "mu": 211.1,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 202.1,
     "p": {
-     "150": 0.8932,
-     "180": 0.6925,
-     "210": 0.4242,
-     "240": 0.202,
-     "270": 0.0763,
-     "290": 0.0345
+     "150": 0.8582,
+     "180": 0.633,
+     "210": 0.3667,
+     "240": 0.1608,
+     "270": 0.0575,
+     "290": 0.0252
     }
    },
    {
     "slugs": [
      "payton-pritchard-19980128",
-     "darius-garland-20000126",
+     "jared-mccain-20040220",
      "anthony-black-20040120",
-     "darryn-peterson-20070117",
-     "victor-wembanyama-20040104"
+     "anthony-davis-19930311",
+     "bam-adebayo-19970718"
     ],
     "names": [
      "Payton Pritchard",
-     "Darius Garland",
+     "Jared McCain",
      "Anthony Black",
-     "Darryn Peterson",
-     "Victor Wembanyama"
+     "Anthony Davis",
+     "Bam Adebayo"
     ],
     "stars": 16.0,
-    "lock": "2026-11-22T01:00Z",
-    "mu": 212.3,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 201.0,
     "p": {
-     "150": 0.9098,
-     "180": 0.7092,
-     "210": 0.4287,
-     "240": 0.2018,
-     "270": 0.0713,
-     "290": 0.0322
+     "150": 0.8522,
+     "180": 0.6223,
+     "210": 0.3662,
+     "240": 0.1608,
+     "270": 0.0507,
+     "290": 0.0212
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "ivica-zubac-19970318",
+     "anthony-black-20040120",
+     "franz-wagner-20010827",
+     "bam-adebayo-19970718"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Ivica Zubac",
+     "Anthony Black",
+     "Franz Wagner",
+     "Bam Adebayo"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 198.3,
+    "p": {
+     "150": 0.8265,
+     "180": 0.604,
+     "210": 0.353,
+     "240": 0.1608,
+     "270": 0.0607,
+     "290": 0.0267
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "klay-thompson-19900208",
+     "anthony-black-20040120",
+     "anthony-davis-19930311",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Klay Thompson",
+     "Anthony Black",
+     "Anthony Davis",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 199.7,
+    "p": {
+     "150": 0.8443,
+     "180": 0.6258,
+     "210": 0.3642,
+     "240": 0.1607,
+     "270": 0.0537,
+     "290": 0.0217
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "ausar-thompson-20030130",
+     "isaiah-hartenstein-19980505",
+     "franz-wagner-20010827"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Ausar Thompson",
+     "Isaiah Hartenstein",
+     "Franz Wagner"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 198.2,
+    "p": {
+     "150": 0.8263,
+     "180": 0.5847,
+     "210": 0.3423,
+     "240": 0.1607,
+     "270": 0.0593,
+     "290": 0.0268
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "ivica-zubac-19970318",
+     "anthony-black-20040120",
+     "anthony-davis-19930311",
+     "franz-wagner-20010827"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Ivica Zubac",
+     "Anthony Black",
+     "Anthony Davis",
+     "Franz Wagner"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 201.4,
+    "p": {
+     "150": 0.8457,
+     "180": 0.6203,
+     "210": 0.3527,
+     "240": 0.1605,
+     "270": 0.0575,
+     "290": 0.0262
+    }
+   },
+   {
+    "slugs": [
+     "payton-pritchard-19980128",
+     "anthony-black-20040120",
+     "keyonte-george-20031108",
+     "franz-wagner-20010827",
+     "onyeka-okongwu-20001211"
+    ],
+    "names": [
+     "Payton Pritchard",
+     "Anthony Black",
+     "Keyonte George",
+     "Franz Wagner",
+     "Onyeka Okongwu"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-22T03:00Z",
+    "mu": 200.7,
+    "p": {
+     "150": 0.849,
+     "180": 0.6277,
+     "210": 0.3617,
+     "240": 0.1605,
+     "270": 0.0567,
+     "290": 0.0233
     }
    }
   ]
@@ -7610,9 +7582,9 @@
    },
    "odds": {
     "spread_home": 12.0,
-    "total": 216.5,
+    "total": 217.5,
     "book": "Pinnacle",
-    "recorded": "2026-11-21T23:52Z"
+    "recorded": "2026-11-22T02:21Z"
    }
   }
  },
