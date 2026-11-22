@@ -99,6 +99,7 @@ nav { overflow-x: auto; scrollbar-width: none; }
 nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 8px; flex: 1 0 auto; }
 details.card summary { cursor: pointer; list-style-position: inside; }
 details.card[open] summary { margin-bottom: 6px; }
+.early { font-size: 11px; cursor: help; }
 </style>
 </head>
 <body>
@@ -250,11 +251,14 @@ function renderMeta() {
   if (on) on.scrollIntoView({ inline: "center", block: "nearest" });
 }
 
+// Match qui commence avant minuit à Paris (après-midi ou début de soirée aux États-Unis) : l'équipe se fige tôt.
+const isEarly = p => { const hr = +new Date(p.tip).toLocaleString("fr-FR", { hour: "numeric", hour12: false, timeZone: "Europe/Paris" }).replace(/\D/g, ""); return hr >= 8; };
+const earlyMark = p => isEarly(p) ? ` <span class="early" title="Match avant minuit (heure de Paris) : une équipe avec ce joueur se fige tôt">⏰</span>` : "";
 function playerLine(p, action) {
   return `<div class="pl row">
     <div class="grow tap" data-detail="${p.id}">
       <div class="name">${esc(p.name)} <span class="stars">${stars(p.stars)}</span></div>
-      <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}</div>
+      <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}${earlyMark(p)}</div>
       ${badges(p)}
     </div>
     <div class="num"><b>${p.exp.toFixed(0)}</b><div class="small muted">${(p.exp / p.stars).toFixed(1)}/★</div>
@@ -288,7 +292,7 @@ function renderTeams() {
         <div class="row"><div class="grow small"><b>Équipe ${k + 1}</b> · <span class="${pClass(s.p[target])}"><b>${fmtP(s.p[target])}</b></span>
           <span class="muted">· plafond ${s.p90} pts · ${stars(ps.reduce((a, p) => a + p.stars, 0))}</span></div>
           <button class="act" data-pload="${k}">Charger</button></div>
-        <div class="small">${ps.map(p => `<span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)}`).join(" · ")}</div></div>`; }).join("")}
+        <div class="small">${ps.map(p => `<span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)}${earlyMark(p)}`).join(" · ")}</div></div>`; }).join("")}
       <div class="src">Équipes choisies l'une après l'autre parmi les joueurs restants ; chances supposées indépendantes (aucun joueur commun). Nombre d'équipes calculé en simulant toute la fin du set (gain espéré : 100 € à 270, 1000 € à 290), avec 4 tentatives par palier et retour au palier 1 après 4 échecs.</div></div>`
     : "";
   const nightChips = `<div class="paliers">${[["all", "Sur les 2 nuits"], ...nightsAll.map(n => [n, `Seulement la ${nightLabel(n)}`])]
@@ -439,7 +443,7 @@ function findFill(team) {
         <div class="row"><div class="grow small"><b>${split(c)}</b> <span class="muted">· ${stars(c.add.reduce((a, p) => a + p.stars, 0))} utilisées</span></div>
           <div class="num ${pClass(c.r[target])}"><b>${fmtP(c.r[target])}</b></div>
           <button class="act" data-fill="${i}">Prendre</button></div>
-        ${c.add.map(p => `<div class="small"><span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)} <span class="muted">· ${p.exp.toFixed(0)} pts · ${p.when}${p.pct < 1 ? ` · joue ${Math.round(p.pct * 100)} %` : ""}</span>${isBoom(p) ? ` <span class="badge hot">explosif</span>` : ""}</div>`).join("")}
+        ${c.add.map(p => `<div class="small"><span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)} <span class="muted">· ${p.exp.toFixed(0)} pts · ${p.when}${earlyMark(p)}${p.pct < 1 ? ` · joue ${Math.round(p.pct * 100)} %` : ""}</span>${isBoom(p) ? ` <span class="badge hot">explosif</span>` : ""}</div>`).join("")}
       </div>`).join("") : `<div class="small muted" style="margin-top:6px">Aucune combinaison possible avec ces étoiles.</div>`}</div>`;
     box.querySelectorAll("[data-fill]").forEach(b => b.onclick = () => {
       mine = [...team, ...shown[+b.dataset.fill].add].map(p => p.id); store.set("mine", mine); renderMine();
