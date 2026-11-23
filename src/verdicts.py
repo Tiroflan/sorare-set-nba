@@ -298,6 +298,106 @@ def compute():
             z, len(d), len(d) / max(1, len({b['night'] for b, j in nights if j.get('absences')})),
             "coder le report : ajouter des minutes aux coéquipiers sans props (mesuré le 23/11 : +4,5 min en moyenne)"
             if z > 0 else "rien à faire : l'historique récent suffit"))
+    # Banc d'essai face aux paris : affiché seulement une fois concluant (python src/verdicts.py --paris pour tout voir).
+    out += [it for it in compute_paris(nights) if it["verdict"] == "on peut conclure"]
+    return out
+
+
+# ---------- Banc d'essai face aux paris (side project, décidé le 23/11) ----------
+# Paris fictifs, 1 unité par pari, règles figées le 23/11 : ne pas les retoucher en cours de route.
+# Cotes stockées dans le journal à partir du 24/11 (dernier passage avant chaque match). Point prévu vers le 23/12.
+SIGMA_MARGIN = 12.0  # même valeur que model.SIGMA_MARGIN : écart final autour du spread
+VALUE_EDGE = 0.03    # on ne parie que si notre proba x cote décimale dépasse 1,03
+PROP_GAP = 0.15      # props : seulement si notre historique s'écarte de la ligne d'au moins 15 % (et 1 unité)
+
+
+def _dec(american):
+    a = 100.0 if str(american).upper() == "EVEN" else float(american)
+    return 1 + (a / 100 if a > 0 else 100 / -a)
+
+
+def _implied(american):
+    return 1 / _dec(american)
+
+
+def compute_paris(nights=None):
+    from statistics import NormalDist
+    nights = nights if nights is not None else _load()
+    out = []
+
+    # Vainqueur : notre proba (estimation de la veille, sans cotes) contre celle de la cote Pinnacle.
+    rows = []
+    for b, _ in nights:
+        for x in (b.get("matchs") or {}).get("lignes", []):
+            o, e = x.get("odds") or {}, x.get("est") or {}
+            if o.get("ml_home") is None or e.get("spread_home") is None or x.get("real_spread") in (None, 0):
+                continue
+            ih, ia = _implied(o["ml_home"]), _implied(o["ml_away"])
+            rows.append((b["night"], NormalDist().cdf(-e["spread_home"] / SIGMA_MARGIN), ih / (ih + ia),
+                         x["real_spread"] < 0, o["ml_home"], o["ml_away"]))
+    if len(rows) > 2:
+        d = [(pm - y) ** 2 - (po - y) ** 2 for _, po, pm, y, _, _ in rows]
+        sd = st.stdev(d)
+        z = st.mean(d) / (sd / math.sqrt(len(d))) if sd > 0 else None
+        bets = []
+        for _, po, _, y, mh, ma in rows:
+            if po * _dec(mh) > 1 + VALUE_EDGE:
+                bets.append(_dec(mh) - 1 if y else -1)
+            elif (1 - po) * _dec(ma) > 1 + VALUE_EDGE:
+                bets.append(_dec(ma) - 1 if not y else -1)
+        b_our = st.mean((po - y) ** 2 for _, po, _, y, _, _ in rows)
+        b_mkt = st.mean((pm - y) ** 2 for _, _, pm, y, _, _ in rows)
+        roi = f", {sum(bets):+.1f} unités ({sum(bets) / len(bets):+.0%} par pari)" if bets else ""
+        out.append(_item(
+            "paris_vainqueur", "Notre probabilité de victoire bat-elle celle de la cote Pinnacle ?",
+            f"erreur de probabilité (Brier, plus bas = mieux) : nous {b_our:.3f}, cote {b_mkt:.3f} sur {len(rows)} matchs ; "
+            f"paris fictifs quand on voit {VALUE_EDGE:.0%} de valeur : {len(bets)} paris{roi}",
+            z, len(rows), len(rows) / max(1, len({n for n, *_ in rows})),
+            "nous faisons mieux que la cote : la question des paris sur le vainqueur se pose" if (z or 0) > 0
+            else "la cote fait mieux : se fier aux cotes, pas de pari"))
+    else:
+        out.append(_item("paris_vainqueur", "Notre probabilité de victoire bat-elle celle de la cote Pinnacle ?",
+                         "cotes de victoire stockées depuis le 24/11 : pas encore de match joué", None, 0, 1, ""))
+
+    # Props : quand notre historique (ajusté rythme et blowout) s'écarte nettement de la ligne,
+    # le côté qu'il désigne passe-t-il plus souvent que ne le dit la cote (marge retirée) ?
+    hits, exp_, var, profit, n = 0, 0.0, 0.0, 0.0, 0
+    nights_with = set()
+    for b, j in nights:
+        rows_b = {r["slug"]: r for r in b["joueurs"]}
+        for slug, p in j["players"].items():
+            r = rows_b.get(slug)
+            if not p.get("lines") or not r or not r.get("played") or not r.get("min") or not r.get("stats"):
+                continue
+            for k, ls in p["lines"].items():
+                hist, actual = (p.get("histComps") or {}).get(k), r["stats"].get(k)
+                if hist is None or actual is None or not ls:
+                    continue
+                h, po, over, under = min(ls, key=lambda l: abs(l[1] - 0.5))  # ligne principale
+                if abs(hist - h) < max(PROP_GAP * h, 1.0) or actual == h:
+                    continue
+                is_over = hist > h
+                ps = po if is_over else 1 - po
+                win = actual > h if is_over else actual < h
+                hits += win
+                exp_ += ps
+                var += ps * (1 - ps)
+                profit += _dec(over if is_over else under) - 1 if win else -1
+                n += 1
+                nights_with.add(b["night"])
+    if n > 2:
+        z = (hits - exp_) / math.sqrt(var)
+        out.append(_item(
+            "paris_props", "Quand notre historique s'écarte nettement des props, a-t-il raison contre la cote ?",
+            f"côté désigné par l'historique gagnant {hits / n:.0%} des fois, la cote en promettait {exp_ / n:.0%} "
+            f"({n} lignes, écart de {PROP_GAP:.0%} ou plus) ; paris fictifs : {profit:+.1f} unités ({profit / n:+.0%} par pari)",
+            z, n, n / max(1, len(nights_with)),
+            "l'historique voit quelque chose que la cote rate : s'en servir pour corriger les props dans Sorare, "
+            "et la question des paris sur les props se pose" if z > 0
+            else "la cote a raison : coller aux props, ne pas parier contre"))
+    else:
+        out.append(_item("paris_props", "Quand notre historique s'écarte nettement des props, a-t-il raison contre la cote ?",
+                         "prix des props stockés depuis le 24/11 : pas encore de match joué", None, 0, 1, ""))
     return out
 
 
@@ -367,4 +467,5 @@ def show(items):
 
 
 if __name__ == "__main__":
-    show(compute())
+    import sys
+    show(compute_paris() if "--paris" in sys.argv else compute())

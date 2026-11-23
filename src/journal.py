@@ -49,6 +49,10 @@ def record(pool, results, targets, now=None, sched=None, absences=None):
             "comps": {c["k"]: round(c["val"], 2) for c in p["comps"]},
             "histComps": {k: round(v, 2) for k, v in p.get("hist_vals", {}).items()},
         }
+        # Lignes des props (seuil, P(plus de) sans marge, cote plus, cote moins) : verdict « paris_props ».
+        lines = {c["k"]: [[l["h"], l["p"], l["over"], l["under"]] for l in c["lines"]] for c in p["comps"] if c.get("lines")}
+        if lines:
+            j["players"][p["slug"]]["lines"] = lines
     teams_by_night = {}
     for r, mu, combo in results:
         lock = min(combo, key=lambda p: p["tip_utc"])
@@ -67,6 +71,8 @@ def record(pool, results, targets, now=None, sched=None, absences=None):
         j = files.setdefault(g["night"], _load(g["night"]))
         e = j.setdefault("games", {}).setdefault(f"{g['away']}@{g['home']}", {"tip": g["tip_utc"]})
         line = {"spread_home": g["spread_home"], "total": g["total"], "book": g.get("book"), "recorded": stamp}
+        if g.get("ml_home") is not None and g.get("ml_away") is not None:
+            line["ml_home"], line["ml_away"] = g["ml_home"], g["ml_away"]
         e["est" if str(g.get("book") or "").startswith("estimation") else "odds"] = line
         # Absences annoncées par ESPN avant le match, par équipe : pour mesurer plus tard si les
         # coéquipiers d'un absent font mieux que leur projection sur l'historique (report de minutes).

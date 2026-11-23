@@ -76,6 +76,7 @@ def load_pool(nights: int):
             s["spread_home"] = bl["spread_home"] if bl["spread_home"] is not None else s["spread_home"]
             s["total"] = bl["total"] or s["total"]
             s["book"] = bl["book"]
+            s["ml_home"], s["ml_away"] = bl.get("ml_home"), bl.get("ml_away")
         elif s["spread_home"] is not None:
             s["book"] = "ESPN"
     lineups = {}

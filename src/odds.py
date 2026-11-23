@@ -53,7 +53,7 @@ def implied(american) -> float:
 # ---------- lignes de match ----------
 
 def pinnacle_lines() -> dict:
-    """{(away, home): {"spread_home", "total", "book"}} pour les matchs déjà cotés."""
+    """{(away, home): {"spread_home", "total", "book", "ml_home", "ml_away"}} pour les matchs déjà cotés."""
     matchups = _get(f"{PINNACLE}/matchups")
     markets = _get(f"{PINNACLE}/markets/straight")
     games = {}
@@ -74,6 +74,9 @@ def pinnacle_lines() -> dict:
                 entry["spread_home"] = p.get("points")
             if mk["type"] == "total" and p.get("designation") == "over":
                 entry["total"] = p.get("points")
+            # Cotes de victoire, gardées pour le journal (verdict « paris_vainqueur »), pas pour le modèle.
+            if mk["type"] == "moneyline" and p.get("designation") in ("home", "away"):
+                entry["ml_" + p["designation"]] = p.get("price")
     return {k: v for k, v in out.items() if v["spread_home"] is not None or v["total"] is not None}
 
 
