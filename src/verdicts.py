@@ -107,7 +107,7 @@ def compute():
     # 1. Équipes proposées : la mieux classée pour 240 de chaque soir (une par soir, indépendantes).
     actual = {(b["night"], r["slug"]): (r["actual"] or 0.0) for b, _ in nights for r in b["joueurs"]}
     jall = {b["night"]: j for b, j in nights}
-    zs, gaps = [], []
+    zs, gaps, split = [], [], []
     for b, j in nights:
         teams = (j.get("teams") or {}).get("list") or []
         if not teams:
@@ -115,26 +115,37 @@ def compute():
         t = max(teams, key=lambda t: t["p"]["240"])
         nxt = (date.fromisoformat(b["night"]) + timedelta(days=1)).isoformat()
         jn = jall.get(nxt)
-        pts, var, ok = 0.0, 0.0, True
+        pts, var, fin, ok = 0.0, 0.0, 0.0, True
         for s in t["slugs"]:
             if (b["night"], s) in actual:
+                p = j["players"].get(s, {})
                 pts += actual[(b["night"], s)]
-                var += _var(j["players"].get(s, {}))
             elif jn and (nxt, s) in actual:
+                p = jn["players"].get(s, {})
                 pts += actual[(nxt, s)]
-                var += _var(jn["players"].get(s, {}))
             else:
                 ok = False
+                continue
+            var += _var(p)
+            fin += p.get("exp", 0) * p.get("pct", 1)
         if ok and var > 0:
             zs.append((pts - t["mu"]) / math.sqrt(var))
             gaps.append(pts - t["mu"])
+            if b["night"] >= "2026-11-18":
+                split.append((pts - fin, fin - t["mu"]))
     z = sum(zs) / math.sqrt(len(zs)) if zs else None
+    # Découpage (diagnostic du 23/11, src/diag_equipes.py) : joueurs sous leur dernière projection,
+    # ou projection revue à la baisse entre le choix et le match (forfait, props plus basses).
+    detail = (f" ; depuis la correction du 18/11 ({len(split)} soirs) : {st.mean(a for a, _ in split):+.0f} pts "
+              f"de joueurs sous leur dernière projection et {st.mean(g for _, g in split):+.0f} pts de forfaits "
+              f"et de projections revues à la baisse après le choix") if split else ""
     out.append(_item(
         "equipes", "Les équipes proposées font-elles leur projection ?",
         f"meilleure équipe de chaque soir : {st.mean(gaps):+.0f} pts en moyenne sur {len(gaps)} soirs "
-        f"({sum(g < 0 for g in gaps)} sous la projection)" if gaps else "pas encore de soir complet",
+        f"({sum(g < 0 for g in gaps)} sous la projection){detail}" if gaps else "pas encore de soir complet",
         z, len(zs), 1,
-        "chercher quels joueurs ou quel type de projection l'optimiseur surestime, puis corriger le choix des équipes"))
+        "relancer python src/diag_equipes.py : si les joueurs sont sous leur dernière projection, renforcer "
+        "TEAM_SHRINK ; si ce sont les forfaits après le choix, revoir LATE_NEWS_OUT"))
 
     # 2. Fourchette depuis l'élargissement : 68 % des joueurs dans ±1 écart-type.
     rec = [(r, p) for n, r, p in played if n >= RECAL_DATE and p.get("sd", 0) > 0]
@@ -254,29 +265,93 @@ def compute():
     gl = [x for b, _ in nights for x in (b.get("matchs") or {}).get("lignes", [])
           if x.get("est") and x.get("odds") and x.get("real_spread") is not None]
     if len(gl) > 2:
+        per = len(gl) / max(1, len({b['night'] for b, _ in nights if (b.get('matchs') or {}).get('lignes')}))
+        win = lambda sp, real: (sp < 0) == (real < 0)
+        w_est = sum(win(x["est"]["spread_home"], x["real_spread"]) for x in gl)
+        w_odd = sum(win(x["odds"]["spread_home"], x["real_spread"]) for x in gl)
         dd = [abs(x["est"]["spread_home"] - x["real_spread"]) - abs(x["odds"]["spread_home"] - x["real_spread"]) for x in gl]
         z = st.mean(dd) / (st.stdev(dd) / math.sqrt(len(dd)))
         out.append(_item(
             "matchs", "Nos estimations de match font-elles aussi bien que les bookmakers ?",
-            f"sur l'écart final, {st.mean(dd):+.1f} pt d'erreur en plus que les cotes ({len(dd)} matchs)",
-            z, len(dd), len(dd) / max(1, len({b['night'] for b, _ in nights if (b.get('matchs') or {}).get('lignes')})),
+            f"sur l'écart final, {st.mean(dd):+.1f} pt d'erreur en plus que les cotes ({len(dd)} matchs) ; "
+            f"vainqueur trouvé {w_est / len(gl):.0%} des fois, contre {w_odd / len(gl):.0%} pour les cotes",
+            z, len(dd), per,
             "si nettement moins bien : se méfier des soirs sans cotes (baisser leurs chances affichées)"))
+        dt = [abs(x["est"]["total"] - x["real_total"]) - abs(x["odds"]["total"] - x["real_total"]) for x in gl]
+        zt = st.mean(dt) / (st.stdev(dt) / math.sqrt(len(dt)))
+        out.append(_item(
+            "matchs_total", "Notre total de points d'un match vaut-il celui des bookmakers ?",
+            f"{st.mean(dt):+.1f} pt d'erreur en plus que les cotes ({len(dt)} matchs ; notre estimation date de la veille, "
+            f"les cotes du coup d'envoi)", zt, len(dt), per,
+            "rapprocher nos totaux de la moyenne de la ligue (SHRINK_GAMES plus grand dans team_ratings.py)" if zt > 0
+            else "rien à changer"))
+
+    # 11. Report de minutes : un titulaire (24 min ou plus d'habitude) absent ce soir alors qu'il jouait
+    # au match d'avant. Ses coéquipiers projetés sur l'historique (sans props) font-ils mieux que prévu ?
+    fresh = _fresh_absences(nights)
+    if len(fresh) > 2:
+        d = [x for x in fresh]
+        z = st.mean(d) / (st.stdev(d) / math.sqrt(len(d)))
+        out.append(_item(
+            "report", "Quand un titulaire vient de se blesser, ses coéquipiers sans props font-ils mieux que prévu ?",
+            f"{st.mean(d):+.1f} pts au-dessus de leur projection ({len(d)} joueurs, absences suivies depuis le 18/11)",
+            z, len(d), len(d) / max(1, len({b['night'] for b, j in nights if j.get('absences')})),
+            "coder le report : ajouter des minutes aux coéquipiers sans props (mesuré le 23/11 : +4,5 min en moyenne)"
+            if z > 0 else "rien à faire : l'historique récent suffit"))
+    return out
+
+
+def _fresh_absences(nights):
+    """Écarts réel - projection des joueurs sans props dont un titulaire vient de se déclarer absent."""
+    usual, absn, played = {}, {}, set()
+    for b, j in nights:
+        for p in j["players"].values():
+            usual[p["name"]] = max(usual.get(p["name"], 0), p.get("estMin", 0))
+        played |= {(b["night"], r["name"]) for r in b["joueurs"] if r["played"]}
+        if not j.get("absences"):
+            continue
+        for k in j.get("games") or {}:
+            for t in k.split("@"):
+                absn[(t, b["night"])] = set(j["absences"].get(t, []))
+    by_team = {}
+    for t, n in sorted(absn, key=lambda x: x[1]):
+        by_team.setdefault(t, []).append(n)
+    out = []
+    for b, j in nights:
+        n = b["night"]
+        rows = {r["slug"]: r for r in b["joueurs"]}
+        for t, ns in by_team.items():
+            if n not in ns or ns.index(n) == 0:
+                continue
+            before = absn[(t, ns[ns.index(n) - 1])]
+            new_out = {x for x in absn[(t, n)] - before if usual.get(x, 0) >= 24}
+            back = {x for x in before - absn[(t, n)] if usual.get(x, 0) >= 24 and (n, x) in played}
+            if not new_out or back:
+                continue
+            for s, p in j["players"].items():
+                r = rows.get(s)
+                if p["team"] == t and r and r["played"] and not p.get("usesProps") and p["pct"] > 0:
+                    out.append(r["actual"] - p["exp"])
     return out
 
 
 # Chantiers décidés ou proposés, hors statistiques, pour ne pas les perdre de vue.
 A_FAIRE = [
-    "Titulaire qui revient le soir même : rabaisser les minutes du remplaçant qui a joué gros pendant son absence "
-    "(proposé le 16/11, à faire)",
-    "Recaler les projections sur l'historique (réel = 4,3 + 0,83 x prévu au 16/11) : reporté par Romain le 16/11",
-    "Report de minutes après une blessure (idée reprise de Sowin le 18/11) : les absences ESPN sont enregistrées par "
-    "équipe dans le journal depuis le 18/11 ; vers le 25/11, mesurer si les joueurs sans props d'une équipe privée "
-    "d'un titulaire font mieux que leur projection, avant de coder un report",
-    "Équipes surestimées (établi le 18/11) : le diagnostic donne 2,5 pts sur 23 dus à la sélection (pente 0,87 dans un "
-    "niveau d'étoiles), le reste aux mêmes stars présentes partout (Wembanyama -8 pts par équipe à lui seul). "
-    "Correction appliquée le 18/11 (TEAM_SHRINK et team_offset) : à réévaluer quand le verdict « équipes » "
-    "aura 10 soirs depuis le 18/11 ; si le trou disparaît, la correction s'efface d'elle-même",
+    "Report de minutes après une blessure : mesuré le 23/11 sur 20 joueurs, les coéquipiers sans props d'un titulaire "
+    "qui vient de se blesser jouent +4,5 min de plus que prévu. Suivi par le verdict « report » : coder le report "
+    "quand il passe à z = 2,5",
+    "Équipes surestimées : diagnostic refait le 23/11 (src/diag_equipes.py). Depuis la correction du 18/11, les joueurs "
+    "font presque leur dernière projection (-2 pts par équipe contre -13 avant) ; le trou vient surtout de forfaits "
+    "annoncés après le choix (Smith 19/11, Towns 20/11) et des props du lendemain plus basses que l'historique. "
+    "Risque de forfait tardif ajouté le 23/11 (LATE_NEWS_OUT 3 %). Réévaluer quand le verdict « équipes » aura "
+    "10 soirs depuis le 18/11",
 ]
+# Chantiers fermés, pour ne pas les rouvrir sans nouvelles données :
+# - 23/11, titulaire qui revient : ses coéquipiers sans props ne font pas moins que prévu (22 joueurs, -0,2 min,
+#   +0,5 pt). Pas de correction.
+# - 23/11, recalage global des projections sur l'historique : testé hors échantillon (appris du 12 au 16/11, testé
+#   sur 325 joueurs ensuite), pas de gain net (erreur moyenne 7,13 -> 7,32, écart quadratique 9,34 -> 9,28).
+#   Le seul vrai défaut est la queue haute, suivie par le verdict « hist25 ».
 
 
 def show(items):

@@ -39,6 +39,11 @@ SD_WIDEN_HIST = 1.4
 #    sont un peu gonflées par hasard, et l'optimiseur les attrape) ;
 # 2. le trou restant mesuré sur les équipes proposées est retiré du score simulé (verdicts.team_offset).
 TEAM_SHRINK = 0.87
+# Forfait tardif (mesuré le 23/11) : un joueur sans info du jour (pas de compo RotoWire, aucun blessé
+# signalé) peut encore être déclaré forfait avant son match. Sur 285 joueurs du lendemain projetés
+# 25 pts ou plus et sûrs au moment où l'équipe se figeait, 8 n'ont pas joué (2,8 %). Dans les
+# meilleures équipes, 3 forfaits de ce type en 10 soirs (Kessler 16/11, Smith 19/11, Towns 20/11).
+LATE_NEWS_OUT = 0.03
 # Testé et écarté le 16/11 : un aléa commun aux joueurs d'un même match.
 # Corrélation des surprises entre coéquipiers -0,03 (1 193 paires), entre adversaires -0,03.
 # -------------------------------------------------------------------------
@@ -121,6 +126,9 @@ def build_player(p, games_hist, bonus, edition, game, lineup, inj_espn, now_utc)
                 pct_src += (f". Fin de banc : entré en jeu {seen} fois sur ses {len(recent_games)} derniers matchs, "
                             f"compté {pct:.0%} (recalé sur nos bilans)")
                 reasons.append(f"banc, joue {pct:.0%} des matchs")
+        if pct >= 1 and not lineup:
+            pct = 1 - LATE_NEWS_OUT
+            pct_src += f". Pas encore de compo du jour : {LATE_NEWS_OUT:.0%} de risque de forfait tardif (mesuré)"
 
     promoted = bool(starter) and usual < PROMO_MAX_USUAL_MIN
     top3 = st.mean(sorted(mins, reverse=True)[:3])
