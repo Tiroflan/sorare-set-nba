@@ -52,6 +52,7 @@ Conséquence pratique : on ne suit activement que les hypothèses dont l'effet e
 
 - Chaque matin, la routine de 7h30 écrit le briefing. Quand Romain demande « le bilan » dans une conversation, Claude relit ce briefing, la dernière note du lundi et les échéances traitées, au lieu de tout relancer.
 - Chaque lundi, la note d'analyse est dans `notes/AAAA-MM-JJ.md`.
+- Sur la page, la cloche et la bannière en haut affichent le fil `notes/nouvelles.json`. Chaque routine y ajoute ses nouvelles, en tête du fichier (les plus récentes d'abord) : `{"date": "AAAA-MM-JJ", "type": ..., "titre": ..., "texte": ..., "lien": ...}`. Types : `etabli`, `refute`, `correction` (modèle changé), `proposition` (attend le oui de Romain), `echeance`, `note`, `alerte` (run en échec, source cassée). Un titre court, un texte de 2 ou 3 phrases avec le chiffre, un lien GitHub vers le détail si utile (`https://github.com/Tiroflan/sorare-set-nba/blob/main/...`). Seulement ce qui change quelque chose : pas de nouvelle « rien de neuf ».
 
 ## 8. Pour le set suivant
 

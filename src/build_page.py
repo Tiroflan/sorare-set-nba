@@ -211,6 +211,12 @@ def render(data):
     except Exception as e:
         print(f"Verdicts non calculés : {e!r}")
         data["verdicts"] = []
+    try:  # fil de nouvelles écrit par la routine du matin et la passe du lundi (METHODE.md)
+        news = json.loads((ROOT / "notes" / "nouvelles.json").read_text(encoding="utf-8"))
+        data["nouvelles"] = sorted(news, key=lambda n: n["date"], reverse=True)[:30]
+    except Exception as e:
+        print(f"Nouvelles non chargées : {e!r}")
+        data["nouvelles"] = []
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False))
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(html, encoding="utf-8")

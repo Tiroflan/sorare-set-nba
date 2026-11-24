@@ -100,6 +100,22 @@ nav button { font-size: 12.5px; white-space: nowrap; padding: 9px 8px; flex: 1 0
 details.card summary { cursor: pointer; list-style-position: inside; }
 details.card[open] summary { margin-bottom: 6px; }
 .early { font-size: 11px; cursor: help; }
+.bell { position: relative; font-size: 15px; }
+.bell .dot { position: absolute; top: -3px; right: -3px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px;
+  background: var(--bad); color: #fff; font-size: 10.5px; font-weight: 700; line-height: 17px; text-align: center; }
+.news-new { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; font: inherit; color: var(--ink);
+  background: var(--card); border: 1px solid var(--accent); border-radius: 12px; padding: 8px 12px; margin: 2px 0 6px; cursor: pointer; }
+.news-new .grow { font-size: 13px; }
+.news-item { padding: 10px 0; border-top: 1px solid var(--line); }
+.news-item:first-of-type { border-top: 0; }
+.news-item.unread .news-t::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); margin-right: 6px; vertical-align: middle; }
+.news-t { font-weight: 600; }
+.ntype { display: inline-block; font-size: 10.5px; font-weight: 600; border-radius: 999px; padding: 0 7px; margin-right: 6px;
+  background: var(--chip); color: var(--muted); }
+.ntype.etabli { color: var(--good); } .ntype.refute { color: var(--bad); } .ntype.correction { color: var(--accent); }
+.ntype.proposition { background: var(--accent); color: var(--accent-ink); } .ntype.alerte { background: var(--bad); color: #fff; }
+.ntype.echeance { color: var(--warn); }
 </style>
 </head>
 <body>
@@ -107,8 +123,10 @@ details.card[open] summary { margin-bottom: 6px; }
   <div class="grow"><h1>Set NBA Planner</h1>
     <div class="sub" id="meta"></div>
     <div class="sub" id="upd-status"></div></div>
+  <button class="icon bell" id="bell" aria-label="Nouvelles">🔔<span class="dot hidden" id="bell-n"></span></button>
   <button class="act" id="upd">Mettre à jour</button>
 </header>
+<div id="news-banner"></div>
 <div class="paliers" id="paliers"></div>
 <nav id="tabs">
   <button data-tab="teams" class="on">Équipes</button>
@@ -994,7 +1012,46 @@ document.getElementById("upd").onclick = () => ghToken() ? launchUpdate() : toke
 resumeIfRunning();
 document.getElementById("upd").oncontextmenu = e => { e.preventDefault(); tokenSetup(); };
 
-renderMeta(); show("teams");
+// ---- Nouvelles : fil écrit par la routine du matin et la passe du lundi (notes/nouvelles.json) ----
+const NEWS = D.nouvelles || [];
+const NTYPE = { etabli: "Établi", refute: "Écarté", correction: "Modèle changé", proposition: "À valider",
+  echeance: "Échéance", note: "Note", alerte: "Alerte" };
+const newsId = n => n.date + "|" + n.titre;
+const fmtDay = d => new Date(d + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "numeric" });
+function newsUnread() { const seen = new Set(store.get("newsSeen", [])); return NEWS.filter(n => !seen.has(newsId(n))); }
+function renderNewsBadge() {
+  const un = newsUnread(), dot = document.getElementById("bell-n");
+  dot.textContent = un.length; dot.classList.toggle("hidden", !un.length);
+  document.getElementById("bell").classList.toggle("hidden", !NEWS.length);
+  const top = un[0];
+  document.getElementById("news-banner").innerHTML = top ? `<button class="news-new" id="news-open">
+    <span class="ntype ${top.type}">${NTYPE[top.type] || "Info"}</span>
+    <span class="grow">${esc(top.titre)}</span>
+    <span class="small muted">${un.length > 1 ? `+${un.length - 1} ›` : "›"}</span></button>` : "";
+  const b = document.getElementById("news-open");
+  if (b) b.onclick = openNews;
+}
+function openNews() {
+  const unread = new Set(newsUnread().map(newsId));
+  document.getElementById("sheetbody").innerHTML = `
+    <div class="row"><div class="grow"><h2>Nouvelles</h2>
+      <div class="small muted">Ce que la routine du matin et la passe du lundi ont trouvé ou changé</div></div>
+      <button class="icon" id="close" aria-label="Fermer">×</button></div>
+    <div class="card">${NEWS.map(n => `<div class="news-item${unread.has(newsId(n)) ? " unread" : ""}">
+      <div class="small muted"><span class="ntype ${n.type}">${NTYPE[n.type] || "Info"}</span>${fmtDay(n.date)}</div>
+      <div class="news-t" style="margin-top:3px">${esc(n.titre)}</div>
+      <div class="small" style="margin-top:2px">${esc(n.texte)}</div>
+      ${n.lien ? `<a class="src" href="${esc(n.lien)}" target="_blank" rel="noopener">Lire le détail</a>` : ""}
+    </div>`).join("") || `<div class="muted small">Rien pour l'instant.</div>`}</div>
+    <div class="src">« À valider » : réponds oui ou non à Claude dans une conversation.</div>`;
+  document.getElementById("sheet").classList.add("open");
+  document.getElementById("close").onclick = closeDetail;
+  store.set("newsSeen", NEWS.map(newsId));
+  renderNewsBadge();
+}
+document.getElementById("bell").onclick = openNews;
+
+renderMeta(); renderNewsBadge(); show("teams");
 document.addEventListener("click", e => { if (e.target.id === "upd-set") { e.preventDefault(); tokenSetup(); } });
 </script>
 </body>

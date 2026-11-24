@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2026-11-25",
+    "type": "echeance",
+    "titre": "Échéance due : équipes surestimées",
+    "texte": "Le verdict « équipes » est tranché : la meilleure équipe de chaque soir fait 34 pts de moins que prévu en moyenne sur 11 soirs (z = -3,12). La routine de demain matin lance le diagnostic ; une correction éventuelle passera lundi 30/11.",
+    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
+  },
+  {
+    "date": "2026-11-25",
+    "type": "etabli",
+    "titre": "Registre ouvert : 3 faits établis, 3 pistes écartées",
+    "texte": "Établi : les props font mieux que l'historique, on fait mieux que la projection Sorare, les équipes proposées font moins que prévu. Écarté : aléa commun d'un même match, titulaire qui revient, recalage global.",
+    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
+  },
+  {
+    "date": "2026-11-25",
+    "type": "note",
+    "titre": "Nouvelle façon de travailler",
+    "texte": "Tes questions finissent par une proposition, tu dis oui ou non. Le modèle ne change plus que le lundi, en lot. Chaque lundi à 8h45, une passe d'analyste cherche de nouvelles pistes et écrit sa note ici. Première le 30/11.",
+    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/METHODE.md"
+  }
+]
