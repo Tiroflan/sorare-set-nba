@@ -28,7 +28,7 @@ import history
 import odds
 import rotowire
 import team_ratings
-from model import (ADJ_LOW_TOTAL, ADJ_PROPS_SURGE, ADJ_UNDERDOG, SD_WIDEN_HIST, SD_WIDEN_PROPS, TEAM_SHRINK, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
+from model import (vol_factor, ADJ_LOW_TOTAL, ADJ_PROPS_SURGE, ADJ_UNDERDOG, SD_WIDEN_HIST, SD_WIDEN_PROPS, TEAM_SHRINK, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
                    simulate_team)
 from phase0_faisabilite import edition_bonus, p_normal
 
@@ -168,6 +168,8 @@ def load_pool(nights: int):
         e_sim = expected_score(pl, ctx, calib)  # centre "naturel" de la simulation
         sd_rate = (sum((r - pl["rate"]) ** 2 for r in pl["rates"]) / len(pl["rates"])) ** 0.5
         pl["sd"] = math.hypot(sd_rate * pl["est_min"], pl["rate"] * pl["sd_min"]) * (1 + pl["bonus"])
+        pl["vol_k"] = vol_factor(pl)  # irrégularité rapprochée de la moyenne (voir VOL_SHRINK)
+        pl["sd"] *= pl["vol_k"]
         pace, blow = context_factors(pl, ctx, calib)
         pl["pace"], pl["blow"] = pace, blow
         # Estimation historique, stat par stat, ajustée au contexte du match.

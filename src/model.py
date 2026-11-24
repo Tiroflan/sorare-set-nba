@@ -52,6 +52,20 @@ ADJ_PROPS_SURGE = 1.07      # props à +20 % ou plus de l'historique : mesuré +
 # 25 pts ou plus et sûrs au moment où l'équipe se figeait, 8 n'ont pas joué (2,8 %). Dans les
 # meilleures équipes, 3 forfaits de ce type en 10 soirs (Kessler 16/11, Smith 19/11, Towns 20/11).
 LATE_NEWS_OUT = 0.03
+# Irrégularité de chaque joueur rapprochée de moitié de la moyenne (mesuré le 24/11 sur 1 130 joueurs rejoués) :
+# estimée sur 15 matchs, elle exagérait les écarts (réguliers prévus ±35 %, réels ±38 % ; irréguliers prévus ±77 %,
+# réels ±60 %). Avec ce rapprochement, chaque tiers retombe près de 10 % au-dessus du 90e centile et sous le 10e.
+VOL_MEAN = 0.434   # irrégularité moyenne : hypot(écart-type du rendement / rendement, écart-type des minutes / minutes)
+VOL_SHRINK = 0.5
+
+
+def vol_factor(pl):
+    """Coefficient appliqué à l'écart d'un tirage à la projection, pour rapprocher l'irrégularité du joueur de la moyenne."""
+    if not pl.get("rates") or not pl.get("rate") or not pl.get("est_min"):
+        return 1.0
+    sd_rate = (sum((r - pl["rate"]) ** 2 for r in pl["rates"]) / len(pl["rates"])) ** 0.5
+    v = (((sd_rate / pl["rate"]) ** 2 + (pl["sd_min"] / max(1, pl["est_min"])) ** 2) ** 0.5)
+    return (VOL_MEAN + VOL_SHRINK * (v - VOL_MEAN)) / v if v > 0 else 1.0
 # Testé et écarté le 16/11 : un aléa commun aux joueurs d'un même match.
 # Corrélation des surprises entre coéquipiers -0,03 (1 193 paires), entre adversaires -0,03.
 # -------------------------------------------------------------------------
@@ -249,7 +263,7 @@ def widen(x, pl):
     if c <= 0:
         return x
     up, dn = DISP_PROPS if pl.get("uses_props") else DISP_HIST
-    d = x / c - 1
+    d = (x / c - 1) * pl.get("vol_k", 1.0)
     return c * (1 + (up if d > 0 else dn) * d)
 
 

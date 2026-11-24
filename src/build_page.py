@@ -101,6 +101,7 @@ def main():
             "histVals": {k: round(v, 2) for k, v in p["hist_vals"].items()},
             "upside": round(p["upside"], 3),
             "teamK": round(p.get("team_k", 1.0), 3),
+            "volK": round(p.get("vol_k", 1.0), 3),
             "l10": p.get("l10_sorare"),
         })
     games = []

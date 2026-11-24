@@ -465,6 +465,8 @@ def _fresh_absences(nights):
 
 # Chantiers décidés ou proposés, hors statistiques, pour ne pas les perdre de vue.
 A_FAIRE = [
+    "Irrégularité des joueurs rapprochée de moitié de la moyenne le 24/11 (VOL_SHRINK) : le tag explosif en dépend ; "
+    "s'il ne fait toujours pas mieux que le hasard d'ici le 5/12, le retirer",
     "Trois pistes appliquées à moitié le 24/11 (petit total -2 %, outsider +4 %, élan props +7 %, model.py ADJ_*) : "
     "les verdicts disent chaque matin s'il faut les garder, les pousser ou les retirer",
     "Report de minutes après une blessure : mesuré le 23/11 sur 20 joueurs, les coéquipiers sans props d'un titulaire "

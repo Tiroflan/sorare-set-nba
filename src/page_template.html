@@ -211,7 +211,7 @@ function bucket(m) { const b = D.calib.buckets; for (let i = 0; i < b.length; i+
 // Élargissement mesuré sur le journal : les explosions sont plus fréquentes que ne le dit l'historique.
 function widen(x, p) {
   if (!D.disp || p.exp <= 0) return x;
-  const [up, dn] = p.usesProps ? D.disp.props : D.disp.hist, d = x / p.exp - 1;
+  const [up, dn] = p.usesProps ? D.disp.props : D.disp.hist, d = (x / p.exp - 1) * (p.volK || 1);
   return p.exp * (1 + (d > 0 ? up : dn) * d);
 }
 function simulate(team, n) {

@@ -17,7 +17,7 @@ import random
 import statistics as st
 from pathlib import Path
 
-from model import DISP_HIST, DISP_PROPS, sorare_score
+from model import DISP_HIST, DISP_PROPS, sorare_score, vol_factor
 
 ROOT = Path(__file__).resolve().parent.parent
 N = 3000
@@ -61,7 +61,8 @@ def sample(c, rng, disp=None):
     up, dn = props if c["props"] else hist
     mr = st.mean(c["rates"])
     m = min(48.0, max(0.0, rng.gauss(c["est_min"] * c["blow"], c["sd_min"])))
-    d = (rng.choice(c["rates"]) / mr) * (m / (c["est_min"] * c["blow"])) - 1
+    d = ((rng.choice(c["rates"]) / mr) * (m / (c["est_min"] * c["blow"])) - 1) * vol_factor(
+        {"rates": c["rates"], "rate": mr, "sd_min": c["sd_min"], "est_min": c["est_min"]})
     return c["exp"] * (1 + (up if d > 0 else dn) * d)
 
 
