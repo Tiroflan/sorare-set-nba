@@ -464,20 +464,55 @@ def _fresh_absences(nights):
 
 
 # Chantiers décidés ou proposés, hors statistiques, pour ne pas les perdre de vue.
-A_FAIRE = [
-    "Irrégularité des joueurs rapprochée de moitié de la moyenne le 24/11 (VOL_SHRINK) : le tag explosif en dépend ; "
-    "s'il ne fait toujours pas mieux que le hasard d'ici le 5/12, le retirer",
-    "Trois pistes appliquées à moitié le 24/11 (petit total -2 %, outsider +4 %, élan props +7 %, model.py ADJ_*) : "
-    "les verdicts disent chaque matin s'il faut les garder, les pousser ou les retirer",
-    "Report de minutes après une blessure : mesuré le 23/11 sur 20 joueurs, les coéquipiers sans props d'un titulaire "
-    "qui vient de se blesser jouent +4,5 min de plus que prévu. Suivi par le verdict « report » : coder le report "
-    "quand il passe à z = 2,5",
-    "Équipes surestimées : diagnostic refait le 23/11 (src/diag_equipes.py). Depuis la correction du 18/11, les joueurs "
-    "font presque leur dernière projection (-2 pts par équipe contre -13 avant) ; le trou vient surtout de forfaits "
-    "annoncés après le choix (Smith 19/11, Towns 20/11) et des props du lendemain plus basses que l'historique. "
-    "Risque de forfait tardif ajouté le 23/11 (LATE_NEWS_OUT 3 %). Réévaluer quand le verdict « équipes » aura "
-    "10 soirs depuis le 18/11",
+# Échéancier (règles dans METHODE.md). Une échéance est due quand sa date est passée OU quand le verdict
+# nommé atteint « on peut conclure ». Le jour venu, la routine du matin fait l'analyse décrite, écrit le
+# résultat dans CONNAISSANCES.md, puis retire l'échéance d'ici ou la redate. Une correction du modèle qui
+# en découle attend la passe du lundi (sauf bug).
+ECHEANCES = [
+    {"date": "2026-11-28", "verdict": "equipes", "sujet": "Équipes surestimées",
+     "contexte": "diagnostic du 23/11 : depuis la correction du 18/11, les joueurs font presque leur dernière "
+                 "projection ; le trou vient surtout des forfaits annoncés après le choix et des props du "
+                 "lendemain plus basses. LATE_NEWS_OUT 3 % ajouté le 23/11",
+     "analyse": "python src/diag_equipes.py (10 soirs depuis le 18/11) : joueurs sous leur dernière projection "
+                "-> renforcer TEAM_SHRINK ; forfaits après le choix -> revoir LATE_NEWS_OUT"},
+    {"date": "2026-11-30", "verdict": None, "sujet": "Trois pistes appliquées à moitié le 24/11",
+     "contexte": "petit total -2 %, outsider +4 %, élan props +7 % (model.py ADJ_*)",
+     "analyse": "relire les verdicts props_hausse, petit total et outsider sur les nuits depuis le 24/11 : "
+                "garder, pousser à l'effet plein ou retirer ; redater au lundi suivant si trop tôt"},
+    {"date": "2026-12-05", "verdict": "explosif", "sujet": "Irrégularité rapprochée de la moyenne (VOL_SHRINK)",
+     "contexte": "le tag explosif en dépend",
+     "analyse": "si le verdict explosif ne fait toujours pas mieux que le hasard, retirer le tag"},
+    {"date": None, "verdict": "report", "sujet": "Report de minutes après une blessure",
+     "contexte": "mesuré le 23/11 : +4,5 min pour les coéquipiers sans props d'un titulaire qui vient de se blesser",
+     "analyse": "coder le report de minutes"},
+    {"date": "2026-12-23", "verdict": None, "sujet": "Banc d'essai face aux paris",
+     "contexte": "règles figées le 23/11, ne pas les retoucher",
+     "analyse": "python src/verdicts.py --paris : faire le point sur paris_vainqueur et paris_props"},
 ]
+
+
+def _due(e, today, concluded):
+    return (e["date"] is not None and e["date"] <= today) or (e["verdict"] in concluded)
+
+
+def echeances(items=None, today=None):
+    """Échéances dues aujourd'hui (date passée ou verdict tranché), puis les autres."""
+    today = today or date.today().isoformat()
+    concluded = {it["key"] for it in (items or []) if it["verdict"] == "on peut conclure"}
+    due = [e for e in ECHEANCES if _due(e, today, concluded)]
+    return due, [e for e in ECHEANCES if e not in due]
+
+
+def _label(e):
+    quand = []
+    if e["date"]:
+        quand.append(f"le {e['date'][8:]}/{e['date'][5:7]}")
+    if e["verdict"]:
+        quand.append(f"dès que le verdict « {e['verdict']} » est tranché")
+    return f"{e['sujet']} ({' ou '.join(quand)}) : {e['analyse']}"
+
+
+A_FAIRE = [_label(e) for e in ECHEANCES]  # lu par build_page.py
 # Chantiers fermés, pour ne pas les rouvrir sans nouvelles données :
 # - 23/11, titulaire qui revient : ses coéquipiers sans props ne font pas moins que prévu (22 joueurs, -0,2 min,
 #   +0,5 pt). Pas de correction.
@@ -493,9 +528,14 @@ def show(items):
               + (f" Reste : {it['reste']}." if it["reste"] else "")
               + (f" Si confirmé : {it['action']}." if it["verdict"] != "trop tôt" else ""))
     print("\nz mesure l'écart en nombre d'« écarts de hasard » : 2,5 ou plus = conclusion, 1,5 à 2,5 = tendance.")
-    print("\n**Chantiers en attente**")
-    for a in A_FAIRE:
-        print(f"- {a}")
+    due, later = echeances(items)
+    if due:
+        print("\n**Échéances dues : analyse à faire maintenant**")
+        for e in due:
+            print(f"- {_label(e)}. Contexte : {e['contexte']}")
+    print("\n**Échéancier**")
+    for e in later:
+        print(f"- {_label(e)}")
 
 
 if __name__ == "__main__":
