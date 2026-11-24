@@ -22,8 +22,10 @@ BENCH_MAX_USUAL_MIN = 20  # sous 20 min d'habitude et pas titulaire : chance de 
 # Chance de jouer d'une fin de banc = BENCH_PCT_A + BENCH_PCT_B x taux d'apparition récent.
 # Recalé le 17/11 sur 211 cas (5 nuits) : le taux brut prévoyait 54 %, 63 % ont joué ; 21 % prévus -> 41 % joués
 # chez les moins présents (matchs manqués sur blessure comptés comme non joués).
-BENCH_PCT_A = 0.26
-BENCH_PCT_B = 0.72
+# Puis trop généreux : du 17 au 23/11, 55 % prévus, 48 % ont joué (240 cas, z = -2,5). Le 24/11, mi-chemin
+# entre la part brute (0 + 1 x taux) et le recalage du 17/11 (0,26 + 0,72 x taux), décidé avec Romain.
+BENCH_PCT_A = 0.13
+BENCH_PCT_B = 0.86
 # Élargissement de la simulation (haut, bas), réglé le 16/11 sur 379 joueurs rejoués
 # (src/calib_check.py) : sans lui, 17,7 % des joueurs passaient au-dessus du 90e centile
 # simulé et 12,1 % sous le 10e ; avec, 11,3 % et 8,7 %. Les explosions sont plus

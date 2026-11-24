@@ -137,7 +137,8 @@ def main():
                 f"{k} {v:.0%}" for k, v in model.P_PLAY_ROTOWIRE.items()),
             "Fin de banc (pas titulaire, moins de 20 min d'habitude)": (
                 f"chance de jouer = {model.BENCH_PCT_A:.0%} + {model.BENCH_PCT_B:g} x part de ses 10 derniers matchs "
-                "où il est entré en jeu (recalé le 17/11 sur 211 cas : la part brute prévoyait 54 %, 63 % ont joué)"),
+                "où il est entré en jeu (part brute : 54 % prévus, 63 % joués ; recalage du 17/11 : 55 % prévus, 48 % joués ; "
+                "depuis le 24/11, mi-chemin entre les deux)"),
             "Remplaçant promu": f"titulaire ce soir et moins de {model.PROMO_MAX_USUAL_MIN} min d'habitude",
             "Match sans cotes": ("points de chaque équipe estimés d'après ses matchs joués (attaque x défense adverse, "
                                  "avantage du terrain mesuré) ; sur la saison, écart final estimé à 12,2 pts près "

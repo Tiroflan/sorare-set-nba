@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 J = ROOT / "journal"
 SOLID, TREND = 2.5, 1.5
 RECAL_DATE = "2026-11-16"  # premier soir projeté avec la simulation élargie
-BENCH_RECAL = "2026-11-17"  # premier soir avec la chance de jouer des fins de banc recalée
+BENCH_RECAL = "2026-11-24"  # premier soir avec la règle des fins de banc du 24/11 (mi-chemin)
 
 
 def _load():
@@ -204,7 +204,7 @@ def compute():
     unc = [r for b, _ in nights if b["night"] >= BENCH_RECAL for r in b["joueurs"] if 0 < r["pct"] < 0.7]
     if not unc:
         out.append(_item("presence", "La chance de jouer des incertains est-elle juste ?",
-                         "règle des fins de banc recalée le 17/11 : pas encore de soir joué avec la nouvelle règle", None, 0, 1,
+                         "règle des fins de banc revue le 24/11 : pas encore de soir joué avec la nouvelle règle", None, 0, 1,
                          "réajuster BENCH_PCT_A et BENCH_PCT_B"))
     if unc:
         exp_ = sum(r["pct"] for r in unc)
@@ -213,7 +213,7 @@ def compute():
         out.append(_item(
             "presence", "La chance de jouer des incertains est-elle juste ?",
             f"{exp_ / len(unc):.0%} prévu, {obs / len(unc):.0%} ont joué ({len(unc)} joueurs)", z, len(unc),
-            len(unc) / n_nights, "réajuster BENCH_PCT_A et BENCH_PCT_B (recalage des fins de banc du 17/11)"))
+            len(unc) / n_nights, "réajuster BENCH_PCT_A et BENCH_PCT_B (règle des fins de banc du 24/11)"))
 
     # 7. Rythme : les joueurs à l'historique des matchs rapides et lents sont-ils bien dosés ?
     fast, slow = [], []
