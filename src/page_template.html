@@ -173,6 +173,12 @@ const TAGS = [
    "Probabilité qu'il joue. On prend la première source disponible : 1. le % de RotoWire le soir même (titulaires et incertains) ; 2. le statut RotoWire sans % (Prob 85 %, Ques 50 %, Doubt 20 %, Out 0 %) ; 3. ESPN : Out 0 %, Day-To-Day 60 % ; 4. Sorare : OUT 0 % ; 5. fin de banc : part de ses 10 derniers matchs où il est entré ; 6. sinon 100 %. Dans le reste des simulations, il marque 0 point. Sa fiche dit quelle source a servi."],
   ["carte", "carte +10 %",
    "Bonus de ta carte (Shiny +5 %, Holo +10 %, variante +15 %), déjà appliqué au score affiché. Ne pas surpondérer : 40 pts à 0 % valent mieux que 30 pts à +15 %."],
+  ["petit total", "petit total -2 %",
+   "Match à 220 pts ou moins selon les cotes : projection baissée de 2 %. Sur nos nuits du 12 au 23/11, ces joueurs faisaient moins que prévu (-0,9 pt) ; on applique la moitié de l'effet et on vérifie chaque matin (verdict « petit total »)."],
+  ["outsider", "outsider +4 %",
+   "Son équipe est outsider de 8 pts ou plus : projection montée de 4 %. Sur nos nuits du 12 au 23/11, ces joueurs faisaient mieux que prévu (+1,8 pt), sans doute parce que les titulaires de l'équipe menée restent sur le terrain ; moitié de l'effet appliquée, vérifiée chaque matin."],
+  ["élan props", "élan props +7 %",
+   "Les cotes l'attendent à +20 % ou plus de son historique : projection montée de 7 % de plus. Sur nos nuits, ces joueurs dépassaient encore les cotes (+3,4 à +3,9 pts) ; moitié de l'effet appliquée, vérifiée chaque matin (verdict « props en forte hausse »)."],
   ["plafond", "plafond",
    "Score que l'équipe dépasse une fois sur 10 dans la simulation (90e centile). Utile pour viser un palier haut : à chance égale, préfère l'équipe au plafond le plus haut. Le tri « plafond » de l'onglet Équipes les classe ainsi."],
   ["explosif", "explosif",
@@ -187,6 +193,8 @@ function badges(p) {
     let cls = "";
     if (r.startsWith("PROMU")) cls = "hot";
     else if (r.startsWith("props")) cls = r.includes("+") ? "up" : "down";
+    else if (r.startsWith("élan") || r.startsWith("outsider")) cls = "up";
+    else if (r.startsWith("petit total")) cls = "down";
     else if (r.includes("Out") || r.includes("Day") || r.includes("RotoWire")) cls = "down";
     out.push(`<span class="badge ${cls}" title="${esc(tagInfo(r))}">${esc(r)}</span>`);
   }

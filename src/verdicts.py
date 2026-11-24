@@ -188,8 +188,8 @@ def compute():
         out.append(_item(
             "props_hausse", "Quand les props dépassent l'historique de 20 % ou plus, faut-il viser encore plus haut ?",
             f"ces joueurs font {st.mean(d):+.1f} pts de plus que les props ({len(d)} joueurs)", z, len(d), len(d) / n_nights,
-            "pousser leur projection au-delà des props (par exemple la moitié de l'écart observé)" if z > 0
-            else "rien à faire : les props suffisent"))
+            "(moitié appliquée depuis le 24/11 : ADJ_PROPS_SURGE) passer à l'effet plein" if z > 0
+            else "retirer ADJ_PROPS_SURGE (appliqué depuis le 24/11)"))
 
     # 5. Grosses projections sans props (le cas Gafford, Hyland).
     big = [(r["actual"] - p["exp"], p) for _, r, p in played if not p.get("usesProps") and p.get("exp", 0) >= 25]
@@ -276,9 +276,9 @@ def compute():
     allz = [z_ for z_, _ in zz]
     for key, question, f, act in (
             ("petit_total", "Les joueurs des matchs à petit total (220 ou moins) font-ils moins que prévu ?",
-             lambda c: c[0] is not None and c[0] <= 220, "renforcer l'effet rythme pour les matchs à petit total"),
+             lambda c: c[0] is not None and c[0] <= 220, "(moitié appliquée depuis le 24/11 : ADJ_LOW_TOTAL) si l'écart reste négatif, passer à l'effet plein ; s'il s'inverse, retirer"),
             ("outsider", "Les joueurs d'une équipe outsider de 8 pts ou plus font-ils mieux que prévu ?",
-             lambda c: c[1] is not None and c[1] >= 8, "réduire l'effet blowout pour l'équipe qui perd (ses titulaires restent sur le terrain)")):
+             lambda c: c[1] is not None and c[1] >= 8, "(moitié appliquée depuis le 24/11 : ADJ_UNDERDOG) si l'écart reste positif, passer à l'effet plein ; s'il s'inverse, retirer")):
         g = [z_ for z_, c in zz if f(c)]
         o = [z_ for z_, c in zz if not f(c)]
         if len(g) <= 10 or len(o) <= 10:
@@ -465,6 +465,8 @@ def _fresh_absences(nights):
 
 # Chantiers décidés ou proposés, hors statistiques, pour ne pas les perdre de vue.
 A_FAIRE = [
+    "Trois pistes appliquées à moitié le 24/11 (petit total -2 %, outsider +4 %, élan props +7 %, model.py ADJ_*) : "
+    "les verdicts disent chaque matin s'il faut les garder, les pousser ou les retirer",
     "Report de minutes après une blessure : mesuré le 23/11 sur 20 joueurs, les coéquipiers sans props d'un titulaire "
     "qui vient de se blesser jouent +4,5 min de plus que prévu. Suivi par le verdict « report » : coder le report "
     "quand il passe à z = 2,5",

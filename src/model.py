@@ -41,6 +41,12 @@ SD_WIDEN_HIST = 1.4
 #    sont un peu gonflées par hasard, et l'optimiseur les attrape) ;
 # 2. le trou restant mesuré sur les équipes proposées est retiré du score simulé (verdicts.team_offset).
 TEAM_SHRINK = 0.87
+# Pistes de l'analyse du 24/11, appliquées à la MOITIÉ de l'effet mesuré (demande de Romain : ne pas perdre de
+# nuits à attendre). Suivies sur les nuits suivantes (verdicts petit_total, outsider, props_hausse) : on les
+# garde, on les pousse à l'effet plein si le reste d'écart se confirme, on les retire s'il s'inverse.
+ADJ_LOW_TOTAL = 0.98        # match à 220 pts ou moins : mesuré -0,9 pt (environ -4 %)
+ADJ_UNDERDOG = 1.04         # équipe outsider de 8 pts ou plus : mesuré +1,8 pt (environ +8 %)
+ADJ_PROPS_SURGE = 1.07      # props à +20 % ou plus de l'historique : mesuré +3,4 à +3,9 pts (environ +15 %)
 # Forfait tardif (mesuré le 23/11) : un joueur sans info du jour (pas de compo RotoWire, aucun blessé
 # signalé) peut encore être déclaré forfait avant son match. Sur 285 joueurs du lendemain projetés
 # 25 pts ou plus et sûrs au moment où l'équipe se figeait, 8 n'ont pas joué (2,8 %). Dans les

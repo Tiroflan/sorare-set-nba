@@ -28,7 +28,7 @@ import history
 import odds
 import rotowire
 import team_ratings
-from model import (SD_WIDEN_HIST, SD_WIDEN_PROPS, TEAM_SHRINK, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
+from model import (ADJ_LOW_TOTAL, ADJ_PROPS_SURGE, ADJ_UNDERDOG, SD_WIDEN_HIST, SD_WIDEN_PROPS, TEAM_SHRINK, upside, breakdown, build_player, context_factors, expected_score, game_context, norm,
                    simulate_team)
 from phase0_faisabilite import edition_bonus, p_normal
 
@@ -189,6 +189,17 @@ def load_pool(nights: int):
                 pl["exp"] = raw * (1 + pl["bonus"])
                 pl["reasons"].append(f"props {pl['exp'] / pl['hist_exp'] - 1:+.0%} vs historique")
         # La simulation garde la forme de l'historique, recentrée sur l'estimation retenue.
+        # Pistes du 24/11, à moitié de l'effet mesuré (voir ADJ_* dans model.py), affichées en tag.
+        my_spread = ctx["spread_home"] if pl["home"] else -ctx["spread_home"]
+        if ctx["total"] and ctx["total"] <= 220:
+            pl["exp"] *= ADJ_LOW_TOTAL
+            pl["reasons"].append(f"petit total {ADJ_LOW_TOTAL - 1:+.0%}")
+        if ctx["has_odds"] and my_spread >= 8:
+            pl["exp"] *= ADJ_UNDERDOG
+            pl["reasons"].append(f"outsider {ADJ_UNDERDOG - 1:+.0%}")
+        if pl["uses_props"] and pl["hist_exp"] > 0 and pl["exp"] >= 1.2 * pl["hist_exp"]:
+            pl["exp"] *= ADJ_PROPS_SURGE
+            pl["reasons"].append(f"élan props {ADJ_PROPS_SURGE - 1:+.0%}")
         pl["scale"] = pl["exp"] / e_sim if e_sim > 0 else 1.0
         pl["sd"] *= pl["scale"] * (SD_WIDEN_PROPS if pl["uses_props"] else SD_WIDEN_HIST)
         pl["upside"] = upside(pl)
