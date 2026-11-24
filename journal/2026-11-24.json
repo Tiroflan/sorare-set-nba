@@ -7,7 +7,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -81,14 +81,14 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 30.68,
-   "sd": 10.18,
-   "raw": 30.68,
+   "exp": 30.47,
+   "sd": 10.11,
+   "raw": 30.47,
    "hist": 28.24,
    "usesProps": true,
    "estMin": 34.6,
@@ -100,7 +100,7 @@
    "pace": 0.945,
    "blow": 0.98,
    "reasons": [
-    "props +7% vs historique",
+    "props +6% vs historique",
     "petit total -2%",
     "outsider +4%"
    ],
@@ -110,7 +110,7 @@
     "pts": 16.26,
     "tpm": 0.87,
     "reb": 6.65,
-    "ast": 3.05,
+    "ast": 2.95,
     "stl": 1.35,
     "blk": 0.48,
     "tov": 2.61
@@ -144,9 +144,9 @@
     "ast": [
      [
       2.5,
-      0.586,
-      "-168",
-      "126"
+      0.567,
+      "-154",
+      "116"
      ]
     ]
    }
@@ -157,7 +157,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -225,14 +225,14 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.5,
    "bonus": 0.1,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 32.99,
-   "sd": 13.86,
-   "raw": 29.99,
+   "exp": 32.77,
+   "sd": 13.76,
+   "raw": 29.79,
    "hist": 37.4,
    "usesProps": true,
    "estMin": 35.8,
@@ -244,16 +244,16 @@
    "pace": 0.95,
    "blow": 1.002,
    "reasons": [
-    "props -10% vs historique",
+    "props -11% vs historique",
     "petit total -2%"
    ],
    "upside": 0.22,
    "sorare": 34.24,
    "comps": {
-    "pts": 14.19,
+    "pts": 14.2,
     "tpm": 1.6,
-    "reb": 4.75,
-    "ast": 4.65,
+    "reb": 4.55,
+    "ast": 4.7,
     "stl": 2.22,
     "blk": 0.91,
     "tov": 3.64
@@ -271,9 +271,9 @@
     "pts": [
      [
       14.5,
-      0.472,
+      0.473,
       "-102",
-      "-130"
+      "-129"
      ]
     ],
     "tpm": [
@@ -287,17 +287,17 @@
     "reb": [
      [
       4.5,
-      0.513,
-      "-122",
-      "-109"
+      0.477,
+      "-104",
+      "-127"
      ]
     ],
     "ast": [
      [
       4.5,
-      0.496,
-      "-113",
-      "-117"
+      0.508,
+      "-119",
+      "-111"
      ]
     ]
    }
@@ -308,14 +308,14 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 4.5,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 42.38,
-   "sd": 9.61,
-   "raw": 40.36,
+   "exp": 42.27,
+   "sd": 9.59,
+   "raw": 40.26,
    "hist": 43.35,
    "usesProps": true,
    "estMin": 33.6,
@@ -334,7 +334,7 @@
    "upside": 0.064,
    "sorare": 43.36,
    "comps": {
-    "pts": 21.26,
+    "pts": 21.24,
     "tpm": 0.68,
     "reb": 10.0,
     "ast": 1.95,
@@ -355,8 +355,8 @@
     "pts": [
      [
       21.5,
-      0.485,
-      "-108",
+      0.484,
+      "-107",
       "-123"
      ]
     ],
@@ -376,7 +376,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.56,
@@ -426,14 +426,14 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 29.99,
-   "sd": 14.0,
-   "raw": 29.99,
+   "exp": 29.89,
+   "sd": 13.95,
+   "raw": 29.89,
    "hist": 33.73,
    "usesProps": true,
    "estMin": 31,
@@ -445,16 +445,16 @@
    "pace": 0.964,
    "blow": 1.002,
    "reasons": [
-    "props -9% vs historique",
+    "props -10% vs historique",
     "petit total -2%"
    ],
    "upside": 0.179,
    "sorare": 37.68,
    "comps": {
-    "pts": 10.37,
+    "pts": 10.44,
     "tpm": 0.0,
     "reb": 7.95,
-    "ast": 4.6,
+    "ast": 4.55,
     "stl": 1.89,
     "blk": 0.89,
     "tov": 2.29
@@ -472,9 +472,9 @@
     "pts": [
      [
       10.5,
-      0.487,
-      "-109",
-      "-122"
+      0.494,
+      "-112",
+      "-118"
      ]
     ],
     "reb": [
@@ -488,8 +488,8 @@
     "ast": [
      [
       4.5,
-      0.483,
-      "-107",
+      0.482,
+      "-106",
       "-124"
      ]
     ]
@@ -501,7 +501,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -549,7 +549,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -617,7 +617,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.474,
@@ -665,7 +665,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -714,7 +714,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -780,7 +780,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
@@ -830,7 +830,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.56,
@@ -879,7 +879,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -953,7 +953,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.302,
@@ -1002,7 +1002,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 4.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1085,14 +1085,14 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 29.12,
-   "sd": 9.86,
-   "raw": 29.12,
+   "exp": 28.81,
+   "sd": 9.75,
+   "raw": 28.81,
    "hist": 28.03,
    "usesProps": true,
    "estMin": 29.3,
@@ -1105,7 +1105,7 @@
    "blow": 1.018,
    "reasons": [
     "PROMU titulaire",
-    "props -0% vs historique",
+    "props -1% vs historique",
     "outsider +4%"
    ],
    "upside": 0.143,
@@ -1113,7 +1113,7 @@
    "comps": {
     "pts": 9.31,
     "tpm": 0.14,
-    "reb": 7.1,
+    "reb": 6.85,
     "ast": 2.74,
     "stl": 0.82,
     "blk": 2.06,
@@ -1140,9 +1140,9 @@
     "reb": [
      [
       7.5,
-      0.414,
-      "126",
-      "-168"
+      0.381,
+      "145",
+      "-196"
      ]
     ]
    }
@@ -1153,14 +1153,14 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 29.2,
-   "sd": 14.42,
-   "raw": 29.2,
+   "exp": 29.3,
+   "sd": 14.47,
+   "raw": 29.3,
    "hist": 32.09,
    "usesProps": true,
    "estMin": 38,
@@ -1181,7 +1181,7 @@
     "pts": 15.21,
     "tpm": 2.1,
     "reb": 4.1,
-    "ast": 4.55,
+    "ast": 4.6,
     "stl": 1.42,
     "blk": 0.0,
     "tov": 1.75
@@ -1223,9 +1223,9 @@
     "ast": [
      [
       4.5,
-      0.481,
-      "-106",
-      "-125"
+      0.483,
+      "-107",
+      "-124"
      ]
     ]
    }
@@ -1236,7 +1236,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1285,7 +1285,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1343,14 +1343,14 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 32.1,
-   "sd": 13.31,
-   "raw": 30.58,
+   "exp": 31.8,
+   "sd": 13.19,
+   "raw": 30.28,
    "hist": 33.9,
    "usesProps": true,
    "estMin": 35.4,
@@ -1362,13 +1362,13 @@
    "pace": 0.95,
    "blow": 1.002,
    "reasons": [
-    "props -3% vs historique",
+    "props -4% vs historique",
     "petit total -2%"
    ],
    "upside": 0.104,
    "sorare": 34.71,
    "comps": {
-    "pts": 17.42,
+    "pts": 17.06,
     "tpm": 3.4,
     "reb": 3.9,
     "ast": 2.85,
@@ -1389,9 +1389,9 @@
     "pts": [
      [
       17.5,
-      0.494,
-      "-112",
-      "-118"
+      0.467,
+      "100",
+      "-133"
      ]
     ],
     "tpm": [
@@ -1426,7 +1426,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -1475,7 +1475,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 0.388,
@@ -1524,14 +1524,14 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 5.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 40.67,
-   "sd": 13.94,
-   "raw": 40.67,
+   "exp": 40.57,
+   "sd": 13.9,
+   "raw": 40.57,
    "hist": 45.14,
    "usesProps": true,
    "estMin": 36.2,
@@ -1549,10 +1549,10 @@
    "upside": 0.134,
    "sorare": 44.55,
    "comps": {
-    "pts": 22.93,
+    "pts": 22.89,
     "tpm": 1.3,
-    "reb": 6.55,
-    "ast": 6.9,
+    "reb": 6.75,
+    "ast": 6.7,
     "stl": 1.45,
     "blk": 0.48,
     "tov": 3.28
@@ -1570,9 +1570,9 @@
     "pts": [
      [
       22.5,
-      0.525,
-      "-128",
-      "-103"
+      0.523,
+      "-127",
+      "-104"
      ]
     ],
     "tpm": [
@@ -1586,17 +1586,17 @@
     "reb": [
      [
       6.5,
-      0.479,
-      "-105",
-      "-126"
+      0.516,
+      "-123",
+      "-107"
      ]
     ],
     "ast": [
      [
       6.5,
-      0.538,
-      "-136",
-      "102"
+      0.508,
+      "-119",
+      "-111"
      ]
     ]
    }
@@ -1607,7 +1607,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
@@ -1656,7 +1656,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1704,7 +1704,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 0.388,
@@ -1731,7 +1731,7 @@
    "sorare": 13.78,
    "comps": {
     "pts": 10.91,
-    "tpm": 2.3,
+    "tpm": 2.35,
     "reb": 1.6,
     "ast": 1.2,
     "stl": 0.8,
@@ -1759,9 +1759,9 @@
     "tpm": [
      [
       2.5,
-      0.41,
-      "128",
-      "-171"
+      0.413,
+      "126",
+      "-169"
      ]
     ]
    }
@@ -1772,7 +1772,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1800,7 +1800,7 @@
     "pts": 11.18,
     "tpm": 1.8,
     "reb": 4.25,
-    "ast": 3.9,
+    "ast": 3.85,
     "stl": 0.91,
     "blk": 0.52,
     "tov": 2.35
@@ -1842,9 +1842,9 @@
     "ast": [
      [
       3.5,
-      0.551,
-      "-144",
-      "108"
+      0.539,
+      "-136",
+      "103"
      ]
     ]
    }
@@ -1855,7 +1855,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.818,
@@ -1904,7 +1904,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1952,7 +1952,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2000,7 +2000,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2075,7 +2075,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2124,7 +2124,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2191,7 +2191,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.56,
@@ -2241,7 +2241,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2267,7 +2267,7 @@
    "upside": 0.121,
    "sorare": 32.2,
    "comps": {
-    "pts": 14.73,
+    "pts": 14.71,
     "tpm": 2.35,
     "reb": 4.2,
     "ast": 4.05,
@@ -2288,9 +2288,9 @@
     "pts": [
      [
       14.5,
-      0.521,
-      "-126",
-      "-105"
+      0.519,
+      "-125",
+      "-106"
      ]
     ],
     "tpm": [
@@ -2325,7 +2325,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2373,7 +2373,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.56,
@@ -2422,7 +2422,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2468,7 +2468,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.732,
@@ -2517,7 +2517,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.904,
@@ -2566,7 +2566,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.56,
@@ -2615,14 +2615,14 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 23.37,
-   "sd": 7.53,
-   "raw": 22.26,
+   "exp": 23.26,
+   "sd": 7.5,
+   "raw": 22.15,
    "hist": 22.44,
    "usesProps": true,
    "estMin": 24.2,
@@ -2634,13 +2634,13 @@
    "pace": 0.994,
    "blow": 1.019,
    "reasons": [
-    "props +0% vs historique",
+    "props -0% vs historique",
     "outsider +4%"
    ],
    "upside": 0.13,
    "sorare": 17.22,
    "comps": {
-    "pts": 10.23,
+    "pts": 10.12,
     "tpm": 1.12,
     "reb": 3.15,
     "ast": 3.06,
@@ -2661,9 +2661,9 @@
     "pts": [
      [
       10.5,
-      0.473,
-      "-102",
-      "-129"
+      0.462,
+      "102",
+      "-136"
      ]
     ],
     "reb": [
@@ -2682,7 +2682,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2749,7 +2749,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.15,
    "pct": 0.818,
@@ -2798,7 +2798,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -2823,7 +2823,7 @@
    "upside": 0.211,
    "sorare": 22.54,
    "comps": {
-    "pts": 12.17,
+    "pts": 12.18,
     "tpm": 2.0,
     "reb": 5.35,
     "ast": 1.22,
@@ -2844,9 +2844,9 @@
     "pts": [
      [
       12.5,
-      0.467,
-      "100",
-      "-133"
+      0.468,
+      "-100",
+      "-132"
      ]
     ],
     "tpm": [
@@ -2873,7 +2873,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2940,7 +2940,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3023,7 +3023,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.646,
@@ -3072,7 +3072,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.732,
@@ -3121,7 +3121,7 @@
    "opp": "WAS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3169,7 +3169,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.818,
@@ -3218,7 +3218,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 0.0,
@@ -3267,7 +3267,7 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -3316,7 +3316,7 @@
    "opp": "ORL",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.474,
@@ -3365,14 +3365,14 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 30.78,
-   "sd": 11.12,
-   "raw": 30.78,
+   "exp": 30.58,
+   "sd": 11.05,
+   "raw": 30.58,
    "hist": 26.2,
    "usesProps": true,
    "estMin": 31.6,
@@ -3391,10 +3391,10 @@
    "upside": 0.136,
    "sorare": 35.18,
    "comps": {
-    "pts": 14.89,
-    "tpm": 2.1,
+    "pts": 14.55,
+    "tpm": 2.05,
     "reb": 2.45,
-    "ast": 7.8,
+    "ast": 7.95,
     "stl": 1.29,
     "blk": 0.0,
     "tov": 2.66
@@ -3412,17 +3412,17 @@
     "pts": [
      [
       15.5,
-      0.448,
-      "109",
-      "-144"
+      0.419,
+      "123",
+      "-165"
      ]
     ],
     "tpm": [
      [
       1.5,
-      0.623,
-      "-200",
-      "148"
+      0.605,
+      "-183",
+      "137"
      ]
     ],
     "reb": [
@@ -3436,9 +3436,9 @@
     "ast": [
      [
       7.5,
-      0.519,
-      "-125",
-      "-106"
+      0.538,
+      "-136",
+      "102"
      ]
     ]
    }
@@ -3449,7 +3449,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -3498,7 +3498,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3544,7 +3544,7 @@
    "opp": "DET",
    "game": "DET@ORL:2026-11-24",
    "tip": "2026-11-25T00:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -3569,8 +3569,8 @@
    "upside": 0.193,
    "sorare": 22.8,
    "comps": {
-    "pts": 10.44,
-    "tpm": 2.45,
+    "pts": 10.54,
+    "tpm": 2.35,
     "reb": 3.6,
     "ast": 1.41,
     "stl": 0.38,
@@ -3590,17 +3590,17 @@
     "pts": [
      [
       10.5,
-      0.494,
-      "-112",
-      "-118"
+      0.504,
+      "-117",
+      "-113"
      ]
     ],
     "tpm": [
      [
       2.5,
-      0.443,
-      "111",
-      "-147"
+      0.421,
+      "122",
+      "-162"
      ]
     ],
     "reb": [
@@ -3619,7 +3619,7 @@
    "opp": "DAL",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3665,7 +3665,7 @@
    "opp": "BOS",
    "game": "BOS@WAS:2026-11-24",
    "tip": "2026-11-25T01:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
@@ -3715,14 +3715,14 @@
    "opp": "DEN",
    "game": "DAL@DEN:2026-11-24",
    "tip": "2026-11-25T03:00Z",
-   "recorded": "2026-11-24T20:15Z",
+   "recorded": "2026-11-24T22:14Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 17.26,
-   "sd": 9.22,
-   "raw": 17.26,
+   "exp": 17.47,
+   "sd": 9.33,
+   "raw": 17.47,
    "hist": 20.36,
    "usesProps": true,
    "estMin": 23.4,
@@ -3734,7 +3734,7 @@
    "pace": 0.994,
    "blow": 1.019,
    "reasons": [
-    "props -18% vs historique",
+    "props -17% vs historique",
     "outsider +4%"
    ],
    "upside": 0.19,
@@ -3742,7 +3742,7 @@
    "comps": {
     "pts": 7.86,
     "tpm": 1.2,
-    "reb": 3.7,
+    "reb": 3.85,
     "ast": 1.08,
     "stl": 0.54,
     "blk": 0.54,
@@ -3769,943 +3769,25 @@
     "tpm": [
      [
       1.5,
-      0.333,
-      "181",
-      "-250"
+      0.33,
+      "183",
+      "-252"
      ]
     ],
     "reb": [
      [
       3.5,
-      0.51,
-      "-120",
-      "-110"
+      0.54,
+      "-137",
+      "103"
      ]
     ]
    }
   }
  },
  "teams": {
-  "recorded": "2026-11-24T20:15Z",
+  "recorded": "2026-11-24T22:14Z",
   "list": [
-   {
-    "slugs": [
-     "moussa-diabate-20020121",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "cooper-flagg-20061221",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Moussa Diabaté",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Cooper Flagg",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 195.5,
-    "p": {
-     "150": 0.7678,
-     "180": 0.525,
-     "210": 0.2842,
-     "240": 0.1312,
-     "270": 0.0435,
-     "290": 0.0173
-    }
-   },
-   {
-    "slugs": [
-     "buddy-hield-19921217",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Buddy Hield",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.1,
-    "p": {
-     "150": 0.7322,
-     "180": 0.4988,
-     "210": 0.2788,
-     "240": 0.1302,
-     "270": 0.0477,
-     "290": 0.0237
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Stephon Castle",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.9,
-    "p": {
-     "150": 0.7483,
-     "180": 0.5072,
-     "210": 0.2858,
-     "240": 0.1292,
-     "270": 0.0493,
-     "290": 0.0268
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 195.2,
-    "p": {
-     "150": 0.7557,
-     "180": 0.5143,
-     "210": 0.2898,
-     "240": 0.1283,
-     "270": 0.047,
-     "290": 0.023
-    }
-   },
-   {
-    "slugs": [
-     "naz-reid-19990826",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Naz Reid",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 194.5,
-    "p": {
-     "150": 0.7545,
-     "180": 0.5078,
-     "210": 0.2733,
-     "240": 0.1245,
-     "270": 0.0443,
-     "290": 0.0203
-    }
-   },
-   {
-    "slugs": [
-     "miles-bridges-19980321",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Miles Bridges",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 194.9,
-    "p": {
-     "150": 0.7628,
-     "180": 0.5115,
-     "210": 0.281,
-     "240": 0.1235,
-     "270": 0.0417,
-     "290": 0.0183
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "miles-bridges-19980321",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Miles Bridges",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 195.9,
-    "p": {
-     "150": 0.7753,
-     "180": 0.5332,
-     "210": 0.2888,
-     "240": 0.1227,
-     "270": 0.042,
-     "290": 0.0197
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "naz-reid-19990826",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Naz Reid",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 195.4,
-    "p": {
-     "150": 0.7813,
-     "180": 0.5253,
-     "210": 0.2833,
-     "240": 0.121,
-     "270": 0.0408,
-     "290": 0.0168
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "naz-reid-19990826",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Naz Reid",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.1,
-    "p": {
-     "150": 0.745,
-     "180": 0.499,
-     "210": 0.2725,
-     "240": 0.1205,
-     "270": 0.044,
-     "290": 0.0198
-    }
-   },
-   {
-    "slugs": [
-     "buddy-hield-19921217",
-     "jaden-mcdaniels-20000929",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Buddy Hield",
-     "Jaden McDaniels",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.0,
-    "p": {
-     "150": 0.7377,
-     "180": 0.49,
-     "210": 0.271,
-     "240": 0.1203,
-     "270": 0.047,
-     "290": 0.0233
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "darius-garland-20000126",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Darius Garland",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.4,
-    "p": {
-     "150": 0.7437,
-     "180": 0.5027,
-     "210": 0.2667,
-     "240": 0.1203,
-     "270": 0.041,
-     "290": 0.0178
-    }
-   },
-   {
-    "slugs": [
-     "miles-bridges-19980321",
-     "naz-reid-19990826",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Miles Bridges",
-     "Naz Reid",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 195.1,
-    "p": {
-     "150": 0.7715,
-     "180": 0.5153,
-     "210": 0.285,
-     "240": 0.1177,
-     "270": 0.0353,
-     "290": 0.0118
-    }
-   },
-   {
-    "slugs": [
-     "miles-bridges-19980321",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Miles Bridges",
-     "Stephon Castle",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.6,
-    "p": {
-     "150": 0.7398,
-     "180": 0.495,
-     "210": 0.2693,
-     "240": 0.1175,
-     "270": 0.042,
-     "290": 0.0197
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "davion-mitchell-19980905",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Davion Mitchell",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.1,
-    "p": {
-     "150": 0.7425,
-     "180": 0.5052,
-     "210": 0.2665,
-     "240": 0.1173,
-     "270": 0.0427,
-     "290": 0.021
-    }
-   },
-   {
-    "slugs": [
-     "jarrett-allen-19980421",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "cooper-flagg-20061221",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jarrett Allen",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Cooper Flagg",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.2,
-    "p": {
-     "150": 0.7388,
-     "180": 0.5,
-     "210": 0.2762,
-     "240": 0.1172,
-     "270": 0.0427,
-     "290": 0.0233
-    }
-   },
-   {
-    "slugs": [
-     "jarrett-allen-19980421",
-     "jaden-mcdaniels-20000929",
-     "caleb-martin-19950928",
-     "cooper-flagg-20061221",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jarrett Allen",
-     "Jaden McDaniels",
-     "Caleb Martin",
-     "Cooper Flagg",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 194.1,
-    "p": {
-     "150": 0.7535,
-     "180": 0.5052,
-     "210": 0.271,
-     "240": 0.1168,
-     "270": 0.041,
-     "290": 0.0173
-    }
-   },
-   {
-    "slugs": [
-     "naz-reid-19990826",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Naz Reid",
-     "Stephon Castle",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.2,
-    "p": {
-     "150": 0.7398,
-     "180": 0.4918,
-     "210": 0.2658,
-     "240": 0.1168,
-     "270": 0.0437,
-     "290": 0.0193
-    }
-   },
-   {
-    "slugs": [
-     "stephon-castle-20041101",
-     "darius-garland-20000126",
-     "caleb-martin-19950928",
-     "donovan-clingan-20040223",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Stephon Castle",
-     "Darius Garland",
-     "Caleb Martin",
-     "Donovan Clingan",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.7,
-    "p": {
-     "150": 0.7597,
-     "180": 0.5117,
-     "210": 0.2737,
-     "240": 0.1163,
-     "270": 0.0457,
-     "290": 0.0217
-    }
-   },
-   {
-    "slugs": [
-     "miles-bridges-19980321",
-     "naz-reid-19990826",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Miles Bridges",
-     "Naz Reid",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.8,
-    "p": {
-     "150": 0.7502,
-     "180": 0.4973,
-     "210": 0.2663,
-     "240": 0.1163,
-     "270": 0.044,
-     "290": 0.0183
-    }
-   },
-   {
-    "slugs": [
-     "buddy-hield-19921217",
-     "darius-garland-20000126",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Buddy Hield",
-     "Darius Garland",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 191.5,
-    "p": {
-     "150": 0.7223,
-     "180": 0.4815,
-     "210": 0.264,
-     "240": 0.1163,
-     "270": 0.0423,
-     "290": 0.0202
-    }
-   },
-   {
-    "slugs": [
-     "brayden-burries-20050918",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "cooper-flagg-20061221",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Brayden Burries",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Cooper Flagg",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.9,
-    "p": {
-     "150": 0.7558,
-     "180": 0.5,
-     "210": 0.2683,
-     "240": 0.1162,
-     "270": 0.038,
-     "290": 0.0153
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "miles-bridges-19980321",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Miles Bridges",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.6,
-    "p": {
-     "150": 0.7605,
-     "180": 0.5048,
-     "210": 0.2703,
-     "240": 0.1155,
-     "270": 0.0442,
-     "290": 0.0183
-    }
-   },
-   {
-    "slugs": [
-     "buddy-hield-19921217",
-     "miles-bridges-19980321",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Buddy Hield",
-     "Miles Bridges",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.7,
-    "p": {
-     "150": 0.7425,
-     "180": 0.5048,
-     "210": 0.2718,
-     "240": 0.1143,
-     "270": 0.0397,
-     "290": 0.0178
-    }
-   },
-   {
-    "slugs": [
-     "daniel-gafford-19981001",
-     "jaden-mcdaniels-20000929",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Daniel Gafford",
-     "Jaden McDaniels",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.6,
-    "p": {
-     "150": 0.7533,
-     "180": 0.4895,
-     "210": 0.2595,
-     "240": 0.114,
-     "270": 0.0447,
-     "290": 0.0198
-    }
-   },
-   {
-    "slugs": [
-     "naz-reid-19990826",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "davion-mitchell-19980905",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Naz Reid",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Davion Mitchell",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.3,
-    "p": {
-     "150": 0.7458,
-     "180": 0.4868,
-     "210": 0.2493,
-     "240": 0.114,
-     "270": 0.0377,
-     "290": 0.0175
-    }
-   },
-   {
-    "slugs": [
-     "stephon-castle-20041101",
-     "darius-garland-20000126",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Stephon Castle",
-     "Darius Garland",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 191.4,
-    "p": {
-     "150": 0.723,
-     "180": 0.4837,
-     "210": 0.2673,
-     "240": 0.1133,
-     "270": 0.0458,
-     "290": 0.02
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "stephon-castle-20041101",
-     "darius-garland-20000126",
-     "caleb-martin-19950928",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Stephon Castle",
-     "Darius Garland",
-     "Caleb Martin",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.4,
-    "p": {
-     "150": 0.747,
-     "180": 0.4857,
-     "210": 0.256,
-     "240": 0.1125,
-     "270": 0.0425,
-     "290": 0.02
-    }
-   },
-   {
-    "slugs": [
-     "buddy-hield-19921217",
-     "naz-reid-19990826",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Buddy Hield",
-     "Naz Reid",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 192.3,
-    "p": {
-     "150": 0.7328,
-     "180": 0.4908,
-     "210": 0.2623,
-     "240": 0.1125,
-     "270": 0.0445,
-     "290": 0.0188
-    }
-   },
-   {
-    "slugs": [
-     "keegan-murray-20000819",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Keegan Murray",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 190.1,
-    "p": {
-     "150": 0.7188,
-     "180": 0.4777,
-     "210": 0.2602,
-     "240": 0.1125,
-     "270": 0.041,
-     "290": 0.0228
-    }
-   },
-   {
-    "slugs": [
-     "kyle-kuzma-19950724",
-     "stephon-castle-20041101",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Kyle Kuzma",
-     "Stephon Castle",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 190.2,
-    "p": {
-     "150": 0.7293,
-     "180": 0.4835,
-     "210": 0.2558,
-     "240": 0.1125,
-     "270": 0.043,
-     "290": 0.0223
-    }
-   },
-   {
-    "slugs": [
-     "jaden-mcdaniels-20000929",
-     "naz-reid-19990826",
-     "caleb-martin-19950928",
-     "james-harden-19890826",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Jaden McDaniels",
-     "Naz Reid",
-     "Caleb Martin",
-     "James Harden",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 193.1,
-    "p": {
-     "150": 0.7428,
-     "180": 0.4893,
-     "210": 0.2583,
-     "240": 0.1123,
-     "270": 0.0408,
-     "290": 0.0188
-    }
-   },
-   {
-    "slugs": [
-     "collin-gillespie-19990625",
-     "jaden-mcdaniels-20000929",
-     "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Collin Gillespie",
-     "Jaden McDaniels",
-     "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 190.2,
-    "p": {
-     "150": 0.7238,
-     "180": 0.4735,
-     "210": 0.2523,
-     "240": 0.1122,
-     "270": 0.0405,
-     "290": 0.0198
-    }
-   },
-   {
-    "slugs": [
-     "matas-buzelis-20041013",
-     "jaden-mcdaniels-20000929",
-     "caleb-martin-19950928",
-     "cooper-flagg-20061221",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Matas Buzelis",
-     "Jaden McDaniels",
-     "Caleb Martin",
-     "Cooper Flagg",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 16.0,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 194.7,
-    "p": {
-     "150": 0.7645,
-     "180": 0.5075,
-     "210": 0.263,
-     "240": 0.1115,
-     "270": 0.0373,
-     "290": 0.0173
-    }
-   },
-   {
-    "slugs": [
-     "naz-reid-19990826",
-     "stephon-castle-20041101",
-     "darius-garland-20000126",
-     "caleb-martin-19950928",
-     "karl-anthony-towns-19951115"
-    ],
-    "names": [
-     "Naz Reid",
-     "Stephon Castle",
-     "Darius Garland",
-     "Caleb Martin",
-     "Karl-Anthony Towns"
-    ],
-    "stars": 15.5,
-    "lock": "2026-11-25T03:00Z",
-    "mu": 191.6,
-    "p": {
-     "150": 0.7415,
-     "180": 0.49,
-     "210": 0.247,
-     "240": 0.1113,
-     "270": 0.04,
-     "290": 0.0175
-    }
-   },
    {
     "slugs": [
      "jaden-mcdaniels-20000929",
@@ -4725,147 +3807,849 @@
     "lock": "2026-11-25T03:00Z",
     "mu": 192.2,
     "p": {
-     "150": 0.7393,
-     "180": 0.4942,
-     "210": 0.2648,
-     "240": 0.1112,
-     "270": 0.0418,
-     "290": 0.0215
+     "150": 0.7367,
+     "180": 0.4873,
+     "210": 0.2667,
+     "240": 0.1127,
+     "270": 0.0398,
+     "290": 0.0165
+    }
+   },
+   {
+    "slugs": [
+     "stephon-castle-20041101",
+     "darius-garland-20000126",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Stephon Castle",
+     "Darius Garland",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 190.7,
+    "p": {
+     "150": 0.7285,
+     "180": 0.4762,
+     "210": 0.254,
+     "240": 0.1045,
+     "270": 0.0327,
+     "290": 0.0138
+    }
+   },
+   {
+    "slugs": [
+     "naz-reid-19990826",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Naz Reid",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 191.5,
+    "p": {
+     "150": 0.7208,
+     "180": 0.4683,
+     "210": 0.2452,
+     "240": 0.1027,
+     "270": 0.0327,
+     "290": 0.0128
     }
    },
    {
     "slugs": [
      "miles-bridges-19980321",
      "stephon-castle-20041101",
-     "darius-garland-20000126",
      "caleb-martin-19950928",
-     "karl-anthony-towns-19951115"
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
     ],
     "names": [
      "Miles Bridges",
      "Stephon Castle",
-     "Darius Garland",
      "Caleb Martin",
-     "Karl-Anthony Towns"
+     "Bam Adebayo",
+     "Cooper Flagg"
     ],
-    "stars": 15.5,
+    "stars": 16.0,
     "lock": "2026-11-25T03:00Z",
     "mu": 192.1,
     "p": {
-     "150": 0.7478,
-     "180": 0.5035,
-     "210": 0.2615,
-     "240": 0.1112,
-     "270": 0.038,
-     "290": 0.0183
+     "150": 0.7405,
+     "180": 0.4897,
+     "210": 0.2475,
+     "240": 0.1008,
+     "270": 0.0338,
+     "290": 0.0153
     }
    },
    {
     "slugs": [
-     "jalen-green-20020209",
      "jaden-mcdaniels-20000929",
+     "darius-garland-20000126",
      "caleb-martin-19950928",
      "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
+     "cooper-flagg-20061221"
     ],
     "names": [
-     "Jalen Green",
      "Jaden McDaniels",
+     "Darius Garland",
      "Caleb Martin",
      "Bam Adebayo",
-     "Karl-Anthony Towns"
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 191.7,
+    "p": {
+     "150": 0.7363,
+     "180": 0.4752,
+     "210": 0.2397,
+     "240": 0.099,
+     "270": 0.0328,
+     "290": 0.0143
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "miles-bridges-19980321",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Miles Bridges",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 193.1,
+    "p": {
+     "150": 0.7492,
+     "180": 0.4888,
+     "210": 0.25,
+     "240": 0.0982,
+     "270": 0.0308,
+     "290": 0.0128
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "naz-reid-19990826",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Naz Reid",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 192.4,
+    "p": {
+     "150": 0.7523,
+     "180": 0.4823,
+     "210": 0.2475,
+     "240": 0.0968,
+     "270": 0.0262,
+     "290": 0.01
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "donovan-clingan-20040223",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Donovan Clingan",
+     "Shai Gilgeous-Alexander"
     ],
     "stars": 16.0,
     "lock": "2026-11-25T03:00Z",
     "mu": 190.4,
     "p": {
-     "150": 0.7235,
-     "180": 0.4727,
-     "210": 0.251,
-     "240": 0.1112,
-     "270": 0.0428,
-     "290": 0.0203
+     "150": 0.7352,
+     "180": 0.4787,
+     "210": 0.2362,
+     "240": 0.0958,
+     "270": 0.032,
+     "290": 0.013
     }
    },
    {
     "slugs": [
-     "charles-bassey-20001028",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "donovan-clingan-20040223",
+     "james-harden-19890826",
+     "bam-adebayo-19970718"
+    ],
+    "names": [
+     "Stephon Castle",
+     "Caleb Martin",
+     "Donovan Clingan",
+     "James Harden",
+     "Bam Adebayo"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 185.5,
+    "p": {
+     "150": 0.683,
+     "180": 0.4283,
+     "210": 0.2187,
+     "240": 0.0957,
+     "270": 0.03,
+     "290": 0.0143
+    }
+   },
+   {
+    "slugs": [
+     "naz-reid-19990826",
+     "darius-garland-20000126",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Naz Reid",
+     "Darius Garland",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 190.9,
+    "p": {
+     "150": 0.736,
+     "180": 0.4733,
+     "210": 0.2423,
+     "240": 0.0955,
+     "270": 0.0277,
+     "290": 0.0112
+    }
+   },
+   {
+    "slugs": [
+     "buddy-hield-19921217",
      "stephon-castle-20041101",
      "caleb-martin-19950928",
      "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
+     "shai-gilgeous-alexander-19980712"
     ],
     "names": [
-     "Charles Bassey",
+     "Buddy Hield",
      "Stephon Castle",
      "Caleb Martin",
      "Bam Adebayo",
-     "Karl-Anthony Towns"
+     "Shai Gilgeous-Alexander"
     ],
     "stars": 16.0,
     "lock": "2026-11-25T03:00Z",
-    "mu": 189.7,
+    "mu": 187.3,
+    "p": {
+     "150": 0.7062,
+     "180": 0.4457,
+     "210": 0.2292,
+     "240": 0.0925,
+     "270": 0.0307,
+     "290": 0.0128
+    }
+   },
+   {
+    "slugs": [
+     "stephon-castle-20041101",
+     "michael-porter-jr-19980629",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Stephon Castle",
+     "Michael Porter Jr.",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 187.6,
+    "p": {
+     "150": 0.6908,
+     "180": 0.4418,
+     "210": 0.2222,
+     "240": 0.0918,
+     "270": 0.0287,
+     "290": 0.0112
+    }
+   },
+   {
+    "slugs": [
+     "stephon-castle-20041101",
+     "ty-jerome-19970708",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Stephon Castle",
+     "Ty Jerome",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 189.1,
     "p": {
      "150": 0.7217,
-     "180": 0.4755,
-     "210": 0.257,
-     "240": 0.1112,
-     "270": 0.038,
-     "290": 0.017
+     "180": 0.4483,
+     "210": 0.2253,
+     "240": 0.0913,
+     "270": 0.0282,
+     "290": 0.0133
     }
    },
    {
     "slugs": [
-     "kyle-kuzma-19950724",
      "jaden-mcdaniels-20000929",
+     "stephon-castle-20041101",
      "caleb-martin-19950928",
-     "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
+     "donovan-clingan-20040223",
+     "bam-adebayo-19970718"
     ],
     "names": [
-     "Kyle Kuzma",
      "Jaden McDaniels",
+     "Stephon Castle",
      "Caleb Martin",
-     "Bam Adebayo",
-     "Karl-Anthony Towns"
+     "Donovan Clingan",
+     "Bam Adebayo"
     ],
-    "stars": 16.0,
+    "stars": 15.5,
     "lock": "2026-11-25T03:00Z",
-    "mu": 191.1,
+    "mu": 186.1,
     "p": {
-     "150": 0.74,
-     "180": 0.488,
-     "210": 0.256,
-     "240": 0.1108,
-     "270": 0.0393,
-     "290": 0.0173
+     "150": 0.6995,
+     "180": 0.4423,
+     "210": 0.2217,
+     "240": 0.0913,
+     "270": 0.0315,
+     "290": 0.0143
     }
    },
    {
     "slugs": [
-     "meleek-thomas-20060806",
-     "jaden-mcdaniels-20000929",
+     "miles-bridges-19980321",
+     "naz-reid-19990826",
      "caleb-martin-19950928",
      "bam-adebayo-19970718",
-     "karl-anthony-towns-19951115"
+     "cooper-flagg-20061221"
     ],
     "names": [
-     "Meleek Thomas",
-     "Jaden McDaniels",
+     "Miles Bridges",
+     "Naz Reid",
      "Caleb Martin",
      "Bam Adebayo",
-     "Karl-Anthony Towns"
+     "Cooper Flagg"
     ],
     "stars": 16.0,
     "lock": "2026-11-25T03:00Z",
-    "mu": 190.7,
+    "mu": 192.3,
     "p": {
-     "150": 0.7253,
-     "180": 0.4657,
-     "210": 0.2443,
-     "240": 0.1107,
-     "270": 0.0402,
-     "290": 0.0188
+     "150": 0.75,
+     "180": 0.4903,
+     "210": 0.2415,
+     "240": 0.0902,
+     "270": 0.0227,
+     "290": 0.0097
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "caleb-martin-19950928",
+     "donovan-clingan-20040223",
+     "james-harden-19890826",
+     "bam-adebayo-19970718"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Caleb Martin",
+     "Donovan Clingan",
+     "James Harden",
+     "Bam Adebayo"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 186.4,
+    "p": {
+     "150": 0.6965,
+     "180": 0.4462,
+     "210": 0.222,
+     "240": 0.0897,
+     "270": 0.0298,
+     "290": 0.0127
+    }
+   },
+   {
+    "slugs": [
+     "buddy-hield-19921217",
+     "jaden-mcdaniels-20000929",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Buddy Hield",
+     "Jaden McDaniels",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 188.2,
+    "p": {
+     "150": 0.7235,
+     "180": 0.457,
+     "210": 0.2228,
+     "240": 0.0887,
+     "270": 0.0295,
+     "290": 0.0122
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "james-harden-19890826",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Stephon Castle",
+     "Caleb Martin",
+     "James Harden",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 188.4,
+    "p": {
+     "150": 0.7058,
+     "180": 0.4558,
+     "210": 0.2315,
+     "240": 0.0885,
+     "270": 0.029,
+     "290": 0.012
+    }
+   },
+   {
+    "slugs": [
+     "stephon-castle-20041101",
+     "darius-garland-20000126",
+     "caleb-martin-19950928",
+     "donovan-clingan-20040223",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Stephon Castle",
+     "Darius Garland",
+     "Caleb Martin",
+     "Donovan Clingan",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 188.9,
+    "p": {
+     "150": 0.7368,
+     "180": 0.4783,
+     "210": 0.2393,
+     "240": 0.0883,
+     "270": 0.0203,
+     "290": 0.0073
+    }
+   },
+   {
+    "slugs": [
+     "miles-bridges-19980321",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "donovan-mitchell-19960907"
+    ],
+    "names": [
+     "Miles Bridges",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Donovan Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 186.8,
+    "p": {
+     "150": 0.7083,
+     "180": 0.453,
+     "210": 0.2308,
+     "240": 0.0883,
+     "270": 0.0277,
+     "290": 0.0108
+    }
+   },
+   {
+    "slugs": [
+     "miles-bridges-19980321",
+     "darius-garland-20000126",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Miles Bridges",
+     "Darius Garland",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 191.6,
+    "p": {
+     "150": 0.7423,
+     "180": 0.4732,
+     "210": 0.2243,
+     "240": 0.0882,
+     "270": 0.0262,
+     "290": 0.0102
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "naz-reid-19990826",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Naz Reid",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 188.3,
+    "p": {
+     "150": 0.7153,
+     "180": 0.4513,
+     "210": 0.2255,
+     "240": 0.0882,
+     "270": 0.0285,
+     "290": 0.0125
+    }
+   },
+   {
+    "slugs": [
+     "miles-bridges-19980321",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "donovan-clingan-20040223",
+     "bam-adebayo-19970718"
+    ],
+    "names": [
+     "Miles Bridges",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Donovan Clingan",
+     "Bam Adebayo"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 186.0,
+    "p": {
+     "150": 0.6932,
+     "180": 0.44,
+     "210": 0.2152,
+     "240": 0.088,
+     "270": 0.0265,
+     "290": 0.0115
+    }
+   },
+   {
+    "slugs": [
+     "miles-bridges-19980321",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "james-harden-19890826",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Miles Bridges",
+     "Stephon Castle",
+     "Caleb Martin",
+     "James Harden",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 188.3,
+    "p": {
+     "150": 0.724,
+     "180": 0.4658,
+     "210": 0.224,
+     "240": 0.0877,
+     "270": 0.0275,
+     "290": 0.0097
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "donovan-mitchell-19960907"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Donovan Mitchell"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 187.0,
+    "p": {
+     "150": 0.6973,
+     "180": 0.432,
+     "210": 0.217,
+     "240": 0.0877,
+     "270": 0.0272,
+     "290": 0.013
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "miles-bridges-19980321",
+     "naz-reid-19990826",
+     "stephon-castle-20041101",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Miles Bridges",
+     "Naz Reid",
+     "Stephon Castle",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 194.3,
+    "p": {
+     "150": 0.7882,
+     "180": 0.5007,
+     "210": 0.229,
+     "240": 0.0858,
+     "270": 0.0212,
+     "290": 0.0082
+    }
+   },
+   {
+    "slugs": [
+     "moussa-diabate-20020121",
+     "naz-reid-19990826",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Moussa Diabaté",
+     "Naz Reid",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 186.5,
+    "p": {
+     "150": 0.6962,
+     "180": 0.4445,
+     "210": 0.2105,
+     "240": 0.0858,
+     "270": 0.0237,
+     "290": 0.0078
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "naz-reid-19990826",
+     "stephon-castle-20041101",
+     "darius-garland-20000126",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Naz Reid",
+     "Stephon Castle",
+     "Darius Garland",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 192.9,
+    "p": {
+     "150": 0.76,
+     "180": 0.4762,
+     "210": 0.229,
+     "240": 0.0857,
+     "270": 0.023,
+     "290": 0.0087
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "miles-bridges-19980321",
+     "caleb-martin-19950928",
+     "donovan-clingan-20040223",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Miles Bridges",
+     "Caleb Martin",
+     "Donovan Clingan",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 191.2,
+    "p": {
+     "150": 0.7693,
+     "180": 0.4963,
+     "210": 0.2433,
+     "240": 0.0857,
+     "270": 0.0205,
+     "290": 0.0063
+    }
+   },
+   {
+    "slugs": [
+     "jaden-mcdaniels-20000929",
+     "ty-jerome-19970708",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Jaden McDaniels",
+     "Ty Jerome",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 190.0,
+    "p": {
+     "150": 0.7285,
+     "180": 0.4607,
+     "210": 0.225,
+     "240": 0.0857,
+     "270": 0.0253,
+     "290": 0.0108
+    }
+   },
+   {
+    "slugs": [
+     "buddy-hield-19921217",
+     "darius-garland-20000126",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "shai-gilgeous-alexander-19980712"
+    ],
+    "names": [
+     "Buddy Hield",
+     "Darius Garland",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Shai Gilgeous-Alexander"
+    ],
+    "stars": 16.0,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 186.8,
+    "p": {
+     "150": 0.7002,
+     "180": 0.4462,
+     "210": 0.2217,
+     "240": 0.0857,
+     "270": 0.024,
+     "290": 0.009
+    }
+   },
+   {
+    "slugs": [
+     "moussa-diabate-20020121",
+     "stephon-castle-20041101",
+     "caleb-martin-19950928",
+     "bam-adebayo-19970718",
+     "cooper-flagg-20061221"
+    ],
+    "names": [
+     "Moussa Diabaté",
+     "Stephon Castle",
+     "Caleb Martin",
+     "Bam Adebayo",
+     "Cooper Flagg"
+    ],
+    "stars": 15.5,
+    "lock": "2026-11-25T03:00Z",
+    "mu": 186.3,
+    "p": {
+     "150": 0.6972,
+     "180": 0.4385,
+     "210": 0.2208,
+     "240": 0.0855,
+     "270": 0.0283,
+     "290": 0.0118
     }
    }
   ]
@@ -4883,8 +4667,8 @@
     "spread_home": 2.5,
     "total": 212.5,
     "book": "Pinnacle",
-    "recorded": "2026-11-24T20:15Z",
-    "ml_home": 116,
+    "recorded": "2026-11-24T22:14Z",
+    "ml_home": 115,
     "ml_away": -125
    }
   },
@@ -4900,9 +4684,9 @@
     "spread_home": 10.5,
     "total": 218.5,
     "book": "Pinnacle",
-    "recorded": "2026-11-24T20:15Z",
-    "ml_home": 339,
-    "ml_away": -392
+    "recorded": "2026-11-24T22:14Z",
+    "ml_home": 350,
+    "ml_away": -405
    }
   },
   "DAL@DEN": {
@@ -4917,9 +4701,9 @@
     "spread_home": -8.0,
     "total": 233.5,
     "book": "Pinnacle",
-    "recorded": "2026-11-24T20:15Z",
-    "ml_home": -280,
-    "ml_away": 242
+    "recorded": "2026-11-24T22:14Z",
+    "ml_home": -292,
+    "ml_away": 252
    }
   }
  },
