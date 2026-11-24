@@ -23,6 +23,13 @@ ROOT = Path(__file__).resolve().parent.parent
 N = 3000
 
 
+def _ts(iso):
+    """Dates comparées en vrai : en texte, « 18:00:00Z » passait avant « 18:00Z » et le match
+    lui-même entrait dans l'historique d'avant-match (corrigé le 24/11)."""
+    from datetime import datetime
+    return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+
+
 def cases():
     """Joueurs entrés en jeu, avec ce que le modèle savait au moment de la projection."""
     hist = json.loads((ROOT / "data" / "history.json").read_text(encoding="utf-8"))
@@ -35,7 +42,7 @@ def cases():
             if not r["played"] or not p or r["actual"] is None:
                 continue
             games = [g for g in hist.get(r["slug"], {}).get("games", [])
-                     if (g.get("minsPlayed") or 0) > 0 and g["basketballGame"]["date"] < r["tip"]]
+                     if (g.get("minsPlayed") or 0) > 0 and _ts(g["basketballGame"]["date"]) < _ts(r["tip"])]
             rates = [sorare_score(g) / g["minsPlayed"] for g in games if g["minsPlayed"] >= 8]
             if len(rates) < 3 or not p["estMin"]:
                 continue

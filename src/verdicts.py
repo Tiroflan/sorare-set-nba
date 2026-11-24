@@ -261,6 +261,34 @@ def compute():
         out.append(_item("sorare", "Faisons-nous mieux que la projection officielle de Sorare ?",
                          "projection Sorare enregistrée depuis le 18/11 : premier bilan demain", None, 0, 1, ""))
 
+    # 11 et 12. Pistes de l'analyse du 24/11 (« qu'est-ce qui annonce une explosion ? ») : matchs à petit
+    # total et équipes très outsiders. Écart au projeté, en écarts-types, contre tous les autres joueurs.
+    jg = {b["night"]: (j.get("games") or {}) for b, j in nights}
+    def ctx(n, p):
+        g = jg.get(n, {}).get((p.get("game") or "").split(":")[0], {})
+        line = g.get("odds") or g.get("est") or {}
+        sh = line.get("spread_home")
+        home = (p.get("game") or "@").split(":")[0].split("@")[-1] == p.get("team")
+        return line.get("total"), (None if sh is None else (sh if home else -sh))
+    # Trouvées en fouillant 26 critères sur les nuits du 12 au 23/11 : jugées seulement sur les nuits suivantes,
+    # qui n'ont pas servi à les trouver (sinon un z de 2,5 peut sortir par hasard).
+    zz = [((r["actual"] - p["exp"]) / p["sd"], ctx(n, p)) for n, r, p in played if p.get("sd") and n >= "2026-11-24"]
+    allz = [z_ for z_, _ in zz]
+    for key, question, f, act in (
+            ("petit_total", "Les joueurs des matchs à petit total (220 ou moins) font-ils moins que prévu ?",
+             lambda c: c[0] is not None and c[0] <= 220, "renforcer l'effet rythme pour les matchs à petit total"),
+            ("outsider", "Les joueurs d'une équipe outsider de 8 pts ou plus font-ils mieux que prévu ?",
+             lambda c: c[1] is not None and c[1] >= 8, "réduire l'effet blowout pour l'équipe qui perd (ses titulaires restent sur le terrain)")):
+        g = [z_ for z_, c in zz if f(c)]
+        o = [z_ for z_, c in zz if not f(c)]
+        if len(g) <= 10 or len(o) <= 10:
+            out.append(_item(key, question, "piste du 24/11 (sur les nuits passées : petit total -0,9 pt, z -2,6 ; outsider +1,8 pt, z +2,3), "
+                             "à confirmer sur les nuits suivantes", None, 0, 1, act))
+        else:
+            z = (st.mean(g) - st.mean(o)) / math.sqrt(st.pvariance(allz) * (1 / len(g) + 1 / len(o)))
+            out.append(_item(key, question, f"écart moyen {st.mean(g):+.2f} écart-type contre {st.mean(o):+.2f} pour les autres ({len(g)} joueurs)",
+                             z, len(g), len(g) / n_nights, act))
+
     # 9. Nos estimations de match (sans cotes) contre les vraies cotes, sur l'écart final.
     gl = [x for b, _ in nights for x in (b.get("matchs") or {}).get("lignes", [])
           if x.get("est") and x.get("odds") and x.get("real_spread") is not None]
