@@ -116,6 +116,74 @@ details.card[open] summary { margin-bottom: 6px; }
 .ntype.etabli { color: var(--good); } .ntype.refute { color: var(--bad); } .ntype.correction { color: var(--accent); }
 .ntype.proposition { background: var(--accent); color: var(--accent-ink); } .ntype.alerte { background: var(--bad); color: #fff; }
 .ntype.echeance { color: var(--warn); }
+
+/* ---- Refonte du 25/11 : interactions, profondeur, couleurs des scores ---- */
+:root { --shadow: 0 1px 2px rgba(28,27,26,.05), 0 3px 10px rgba(28,27,26,.05); --hover: color-mix(in oklab, var(--accent) 7%, var(--card)); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --shadow: none; --hover: color-mix(in oklab, var(--accent) 12%, var(--card)); } }
+:root[data-theme="dark"] { --shadow: none; --hover: color-mix(in oklab, var(--accent) 12%, var(--card)); }
+button, summary, a, .tap, [data-detail], select { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .45; }
+.badge[title], .early, .srcpill[title] { cursor: help; }
+button, .tap, .pl, .card, a { transition: background-color .15s, border-color .15s, color .15s, box-shadow .15s, transform .1s; }
+button:not(:disabled):active { transform: scale(.96); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+.card { box-shadow: var(--shadow); }
+.num, table, .big, .score, .stars { font-variant-numeric: tabular-nums; }
+a { color: var(--accent); }
+@media (hover: hover) {
+  nav button:not(.on):hover, .paliers button:not(.on):hover, .filters button:not(.on):hover { border-color: var(--accent); color: var(--accent); }
+  nav button:not(.on):hover { background: var(--hover); }
+  button.act:not(:disabled):hover { border-color: var(--accent); color: var(--accent); }
+  button.act.primary:not(:disabled):hover { color: var(--accent-ink); filter: brightness(1.08); }
+  button.icon:not(:disabled):hover { background: var(--accent); color: var(--accent-ink); }
+  .plist .pl:hover { background: var(--hover); }
+  .tap:hover .name { color: var(--accent); }
+  details.card summary:hover { color: var(--accent); }
+  .news-new:hover { background: var(--hover); }
+  a:hover { text-decoration: underline; }
+}
+.plist .pl { margin: 0 -14px; padding-left: 14px; padding-right: 14px; }
+.card.plist { padding-top: 4px; padding-bottom: 4px; }
+#sheet.open { animation: fade .18s ease-out; }
+#sheet.open .panel { animation: rise .22s cubic-bezier(.2,.8,.2,1); }
+@keyframes fade { from { background: rgba(0,0,0,0); } }
+@keyframes rise { from { transform: translateY(40px); opacity: .4; } }
+@media (prefers-reduced-motion: reduce) { #sheet.open, #sheet.open .panel { animation: none; } * { transition: none !important; } }
+/* Score : pastille colorée. Projection seule = tranches de points (une teinte) ; réel = écart à la projection. */
+.score { display: inline-block; min-width: 2.4em; padding: 2px 7px; border-radius: 8px; text-align: center;
+  font-weight: 700; font-size: 16px; line-height: 1.35; background: var(--chip); }
+.score.lg { font-size: 30px; padding: 2px 12px; border-radius: 12px; }
+.team-tag { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+  font-size: 11px; font-weight: 700; letter-spacing: .02em; background: var(--chip); color: var(--muted); }
+.pl.mine { box-shadow: inset 3px 0 0 var(--accent); }
+.gauge { height: 6px; border-radius: 999px; background: var(--chip); overflow: hidden; margin: 6px 0 2px; }
+.gauge i { display: block; height: 100%; border-radius: 999px; }
+.gauge i.pct-good { background: var(--good); } .gauge i.pct-mid { background: var(--warn); } .gauge i.pct-low { background: var(--bad); }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.chips span { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--muted); white-space: nowrap; }
+.chips span b { color: var(--ink); font-weight: 600; }
+.rank { font-size: 12px; font-weight: 700; color: var(--muted); margin-right: 6px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
+.tile { background: var(--chip); border-radius: 10px; padding: 7px 8px; min-width: 0; }
+.tile .v { font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tile .k { font-size: 11px; line-height: 1.25; color: var(--muted); }
+.spark { display: flex; align-items: flex-end; gap: 3px; height: 92px; position: relative; margin: 10px 0 4px; }
+.spark .bar { flex: 1; min-width: 0; border-radius: 4px 4px 0 0; position: relative; }
+.spark .bar:hover { outline: 2px solid var(--ink); outline-offset: 1px; }
+.spark .proj { position: absolute; left: 0; right: 0; border-top: 2px dashed var(--ink); opacity: .55; pointer-events: none; }
+.spark .proj span { position: absolute; right: 0; top: -17px; font-size: 11px; background: var(--bg); padding: 0 4px; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+.pbar { background-repeat: no-repeat; }
+.searchwrap { position: relative; }
+.searchwrap input { padding-left: 34px; }
+.searchwrap::before { content: "⌕"; position: absolute; left: 12px; top: 50%; transform: translateY(-52%); font-size: 18px; color: var(--muted); pointer-events: none; }
+.filterbar { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 8px 0 2px; }
+.filterbar button { flex: 0 0 auto; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
+  padding: 5px 11px; font: inherit; font-size: 13px; }
+.filterbar button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.filterbar .sep { flex: 0 0 1px; background: var(--line); margin: 4px 2px; }
+@media (hover: hover) { .filterbar button:not(.on):hover { border-color: var(--accent); color: var(--accent); } }
 </style>
 </head>
 <body>
@@ -170,6 +238,18 @@ const pClass = x => x >= 0.25 ? "pct-good" : x >= 0.1 ? "pct-mid" : "pct-low";
 const stars = s => s.toFixed(1).replace(".0", "") + "★";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const palierOf = t => D.targets.indexOf(t) + 1;
+// Couleurs des scores, selon le contexte (cadrage du 25/11).
+// Projection seule : tranches de points, une seule teinte du clair au foncé.
+const mixBg = (v, p) => `background:color-mix(in oklab, var(${v}) ${p}%, var(--card))`;
+const PROJ_TIERS = [[50, 52], [40, 40], [30, 28], [20, 16]];
+const projStyle = x => { const t = PROJ_TIERS.find(([m]) => x >= m); return t ? mixBg("--accent", t[1]) : "background:var(--chip)"; };
+// Score réel contre projection : vert au-dessus, rouge en dessous, gris à ±10 % ; intensité selon l'écart.
+const vsStyle = (a, e) => { const d = (a - e) / Math.max(e, 10);
+  if (Math.abs(d) < 0.1) return "background:var(--chip)";
+  return mixBg(d > 0 ? "--good" : "--bad", Math.round(18 + Math.min(1, (Math.abs(d) - 0.1) / 0.5) * 40)); };
+const vsArrow = (a, e) => { const d = (a - e) / Math.max(e, 10); return Math.abs(d) < 0.1 ? "" : d > 0 ? " ▲" : " ▼"; };
+const scorePill = (x, cls = "") => `<span class="score ${cls}" style="${projStyle(x)}">${Math.round(x)}</span>`;
+const gauge = p => `<div class="gauge"><i class="${pClass(p)}" style="width:${Math.max(2, Math.round(p * 100))}%"></i></div>`;
 
 // Ce que veut dire chaque tag (infobulle, fiche joueur, glossaire).
 const TAGS = [
@@ -281,13 +361,14 @@ function renderMeta() {
 const isEarly = p => { const hr = +new Date(p.tip).toLocaleString("fr-FR", { hour: "numeric", hour12: false, timeZone: "Europe/Paris" }).replace(/\D/g, ""); return hr >= 8; };
 const earlyMark = p => isEarly(p) ? ` <span class="early" title="Match avant minuit (heure de Paris) : une équipe avec ce joueur se fige tôt">⏰</span>` : "";
 function playerLine(p, action) {
-  return `<div class="pl row">
+  return `<div class="pl row${action && mine.includes(p.id) ? " mine" : ""}">
+    <div class="team-tag tap" data-detail="${p.id}" aria-hidden="true">${esc(p.team)}</div>
     <div class="grow tap" data-detail="${p.id}">
       <div class="name">${esc(p.name)} <span class="stars">${stars(p.stars)}</span></div>
-      <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}${earlyMark(p)}</div>
+      <div class="small muted">${p.home ? "vs" : "@"} ${p.opp} · ${p.when}${earlyMark(p)}</div>
       ${badges(p)}
     </div>
-    <div class="num"><b>${p.exp.toFixed(0)}</b><div class="small muted">${(p.exp / p.stars).toFixed(1)}/★</div>
+    <div class="num">${scorePill(p.exp)}<div class="small muted" style="margin-top:2px">${(p.exp / p.stars).toFixed(1)}/★</div>
       <span class="srcpill ${p.usesProps ? "books" : "hist"}" title="${p.usesProps ? "Projection tirée des cotes des bookmakers (Bovada ou Pinnacle)" : "Pas de cotes : projection sur l'historique"}">${p.usesProps ? "cotes" : "historique"}</span></div>
     ${action || ""}
   </div>`;
@@ -345,12 +426,14 @@ function renderTeams() {
       const st = ps.reduce((a, p) => a + p.stars, 0);
       return `<div class="card">
         <div class="row">
-          <div class="grow"><span class="big ${pClass(t.p[target])}">${fmtP(t.p[target])}</span>
+          <div class="grow"><span class="rank">#${i + 1}</span><span class="big ${pClass(t.p[target])}">${fmtP(t.p[target])}</span>
             <span class="muted small"> pour ${target}${next ? ` · ${fmtP(t.p[next])} pour ${next}` : ""}</span></div>
-          <button class="act" data-load="${i}">Charger</button>
+          <button class="act primary" data-load="${i}">Charger</button>
         </div>
-        <div class="small muted">Moyenne ${t.mu.toFixed(0)} pts${t.p90 ? ` · plafond ${t.p90} pts` : ""} · ${stars(st)} · figée ${lock.when} · ${ps.filter(p => p.usesProps).length}/5 aux cotes</div>
-        <div class="plist">${ps.map(p => playerLine(p)).join("")}</div>
+        ${gauge(t.p[target])}
+        <div class="chips"><span>Moyenne <b>${t.mu.toFixed(0)}</b></span>${t.p90 ? `<span title="${esc(tagInfo("plafond"))}">Plafond <b>${t.p90}</b></span>` : ""}
+          <span><b>${stars(st)}</b></span><span>🔒 <b>${esc(lock.when)}</b></span><span>${ps.filter(p => p.usesProps).length}/5 aux cotes</span></div>
+        <div class="plist" style="margin-top:6px">${ps.map(p => playerLine(p)).join("")}</div>
       </div>`;
     }).join("");
   document.querySelectorAll("[data-ts]").forEach(b => b.onclick = () => {
@@ -563,14 +646,15 @@ function renderPlayers() {
       && (!q || p.name.toLowerCase().includes(q) || p.team.toLowerCase() === q))
     .sort((a, b) => byScore ? b.exp - a.exp : b.exp / b.stars - a.exp / a.stars).slice(0, 80);
   const full = mine.length >= 5;
-  el.innerHTML = missionCard() + `<input type="search" id="q" placeholder="Rechercher un joueur ou une équipe (ex. SAS)" value="${esc(query)}">
-    <div class="filters">${["all", ...nights].map(n =>
+  const total = P.filter(p => p.pct > 0).length;
+  el.innerHTML = missionCard() + `<div class="searchwrap"><input type="search" id="q" placeholder="Joueur ou équipe (ex. SAS)" value="${esc(query)}"></div>
+    <div class="filterbar">${[["star", "Tri : pts par ★"], ["score", "Tri : score"]].map(([k, l]) =>
+      `<button data-sort="${k}" class="${k === playerSort ? "on" : ""}">${l}</button>`).join("")}<span class="sep"></span>${["all", ...nights].map(n =>
       `<button data-n="${n}" class="${n === nightFilter ? "on" : ""}">${n === "all" ? "Tous les soirs" : chip(n)}</button>`).join("")}</div>
-    <div class="filters">${["all", ...starLevels].map(v =>
+    <div class="filterbar">${["all", ...starLevels].map(v =>
       `<button data-st="${v}" class="${String(v) === String(starFilter) ? "on" : ""}">${v === "all" ? "Toutes ★" : stars(v)}</button>`).join("")}</div>
-    <div class="filters">${[["star", "Tri : points par étoile"], ["score", "Tri : score estimé"]].map(([k, l]) =>
-      `<button data-sort="${k}" class="${k === playerSort ? "on" : ""}">${l}</button>`).join("")}</div>
-    <p class="small muted">Le chiffre en gras est le score estimé s'il joue, bonus de carte compris ; dessous, les points par étoile et la source.</p>
+    <div class="row small muted" style="margin:8px 0 0"><div class="grow">${list.length < total ? `${list.length} joueurs sur ${total}` : `${total} joueurs`}${mine.length ? ` · ${mine.length}/5 dans ton équipe` : ""}</div>
+      <div class="legend" title="Pastille : score estimé s'il joue, bonus de carte compris, colorée par tranches de points. Dessous : points par étoile et source.">${[[20, "20"], [30, "30"], [40, "40"], [50, "50+"]].map(([x, l]) => `<span><i style="${projStyle(x)}"></i>${l}</span>`).join("")}</div></div>
     <div class="card plist">${list.map(p => playerLine(p, mine.includes(p.id)
       ? `<button class="icon" disabled aria-label="Déjà pris">✓</button>`
       : `<button class="icon" data-add="${p.id}" ${full ? "disabled" : ""} aria-label="Ajouter">+</button>`)).join("")}</div>`;
@@ -608,15 +692,21 @@ function openDetail(id) {
   const lines = p.comps.filter(c => c.lines.length).map(c => `
     <tr><td colspan="3"><b>${c.label}</b> → moyenne ajustée ${n2(c.val)}</td></tr>
     ${c.lines.map(l => `<tr><td>plus de ${n1(l.h)}</td><td class="r">${odd(l.over)} / ${odd(l.under)}</td>
-      <td class="r">${Math.round(l.p * 100)} %</td></tr>`).join("")}`).join("");
+      <td class="r pbar" style="background-image:linear-gradient(90deg, color-mix(in oklab, var(--accent) 22%, transparent) ${Math.round(l.p * 100)}%, transparent ${Math.round(l.p * 100)}%)">${Math.round(l.p * 100)} %</td></tr>`).join("")}`).join("");
   const teamPts = p.home ? g.homePts : g.awayPts;
   document.getElementById("sheetbody").innerHTML = `
     <div class="row"><div class="grow"><h2>${esc(p.name)} <span class="stars">${stars(p.stars)}</span></h2>
       <div class="small muted">${p.team} ${p.home ? "vs" : "@"} ${p.opp} · ${p.when}${p.bonus ? ` · carte ${esc(p.edition)} +${Math.round(p.bonus * 100)} %` : ""}</div></div>
       <button class="icon" id="close" aria-label="Fermer">×</button></div>
-    <div class="card"><div><span class="big">${p.exp.toFixed(0)}</span>
-      <span class="muted small"> pts estimés · ${(p.exp / p.stars).toFixed(1)} par étoile</span></div>
-      <div class="formula">${formula}</div>
+    <div class="card"><div class="row">${scorePill(p.exp, "lg")}
+      <div class="grow small muted">pts estimés s'il joue<br>bonus de carte compris</div></div>
+      <div class="tiles">
+        <div class="tile"><div class="v">${(p.exp / p.stars).toFixed(1)}</div><div class="k">pts par étoile</div></div>
+        <div class="tile"><div class="v ${pClass(p.pct >= 0.9 ? 1 : p.pct >= 0.6 ? 0.15 : 0)}">${Math.round(p.pct * 100)} %</div><div class="k">chance de jouer</div></div>
+        <div class="tile"><div class="v">${Math.round(p.estMin)}</div><div class="k">minutes estimées</div></div>
+        <div class="tile"><div class="v">${Math.round(p.hist)}</div><div class="k">historique seul</div></div>
+      </div>
+      <div class="formula" style="margin-top:8px">${formula}</div>
       <div class="formula">Historique seul : ${n1(p.hist)} pts${p.usesProps
         ? ` · les cotes attendent ${p.exp >= p.hist ? "+" : "−"}${Math.abs(Math.round((p.exp / p.hist - 1) * 100))} % (projection retenue : les cotes)` : ""}</div>
       ${p.upside !== undefined ? `<div class="formula">Grosse soirée : ${Math.round(p.upside * 100)} % de chances de faire ${Math.round(1.4 * p.exp)} pts ou plus (1,4 fois la projection), s'il joue</div>` : ""}</div>
@@ -654,9 +744,17 @@ function openDetail(id) {
       Points attendus de ${p.team} : ${n1(teamPts)}${p.usesProps ? "" : `, d'où × ${n2(p.pace)} de rythme`}.</div>
 
     <h3>15 derniers matchs (score Sorare recalculé)</h3>
+    ${(() => { const raw0 = p.exp / (1 + p.bonus), ms = [...p.last].reverse(), top = Math.max(raw0, ...ms.map(m => m.s), 10) * 1.1;
+      const day = m => m.d.split("-").reverse().slice(0, 2).join("/");
+      return ms.length ? `<div class="legend"><span><i style="${mixBg("--good", 45)}"></i>au-dessus de la projection</span>
+          <span><i style="background:var(--chip)"></i>à ±10 %</span><span><i style="${mixBg("--bad", 45)}"></i>en dessous</span></div>
+        <div class="spark" role="img" aria-label="Scores des ${ms.length} derniers matchs, du plus ancien au plus récent, comparés à la projection de ${Math.round(raw0)} pts">
+          ${ms.map(m => `<div class="bar" style="height:${Math.max(3, m.s / top * 100)}%;${vsStyle(m.s, raw0)}" title="${day(m)} : ${n1(m.s)} pts en ${m.min} min"></div>`).join("")}
+          <div class="proj" style="bottom:${raw0 / top * 100}%"><span>projection ${Math.round(raw0)}</span></div></div>
+        <div class="src">Du plus ancien (à gauche) au plus récent. Projection sans bonus de carte, pour comparer au score brut.</div>` : ""; })()}
     <table class="t"><tr><th>Date</th><th class="r">Min</th><th class="r">Score</th></tr>
       ${p.last.map(m => `<tr><td>${m.d.split("-").reverse().slice(0, 2).join("/")}</td><td class="r">${m.min}</td>
-        <td class="r">${n1(m.s)}</td></tr>`).join("")}</table>
+        <td class="r"><span class="score" style="font-size:13px;${vsStyle(m.s, p.exp / (1 + p.bonus))}">${n1(m.s)}${vsArrow(m.s, p.exp / (1 + p.bonus))}</span></td></tr>`).join("")}</table>
     <div class="src" style="margin-top:6px">Source : API publique Sorare (stats officielles des matchs), barème Sorare appliqué.</div>`;
   document.getElementById("sheet").classList.add("open");
   document.getElementById("close").onclick = closeDetail;
