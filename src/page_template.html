@@ -182,6 +182,23 @@ a { color: var(--accent); }
 .filterbar button { flex: 0 0 auto; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
   padding: 5px 11px; font: inherit; font-size: 13px; }
 .filterbar button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.slot-add { display: flex; align-items: center; gap: 10px; width: calc(100% + 28px); margin: 0 -14px; padding: 10px 14px;
+  border: 0; border-top: 1px solid var(--line); background: none; color: var(--ink); font: inherit; font-size: 13.5px; text-align: left; }
+.slot-add:first-child { border-top: 0; }
+.slot-n { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+  border: 1.5px dashed var(--line); color: var(--muted); font-weight: 700; }
+@media (hover: hover) { .slot-add:hover { background: var(--hover); } .slot-add:hover .slot-n { border-color: var(--accent); color: var(--accent); } }
+.pal-bars { margin-top: 10px; }
+.pal-row { display: grid; grid-template-columns: 8.5em 1fr 3.6em; align-items: center; gap: 8px; padding: 3px 6px; border-radius: 8px; }
+.pal-row .gauge { margin: 0; }
+.pal-row.on { background: var(--hover); }
+.zbar { position: relative; height: 6px; border-radius: 999px; background: var(--chip); margin: 5px 0 2px; }
+.zbar i { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; }
+.zbar b { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--muted); opacity: .6; }
+.vpill { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+.vpill.ok { background: color-mix(in oklab, var(--good) 22%, var(--card)); color: var(--good); }
+.vpill.mid { background: color-mix(in oklab, var(--warn) 22%, var(--card)); color: var(--warn); }
+.vpill.no { background: var(--chip); color: var(--muted); }
 .filterbar .sep { flex: 0 0 1px; background: var(--line); margin: 4px 2px; }
 @media (hover: hover) { .filterbar button:not(.on):hover { border-color: var(--accent); color: var(--accent); } }
 </style>
@@ -458,19 +475,25 @@ function renderMine() {
   const slots = [];
   for (let i = 0; i < 5; i++) {
     const p = team[i];
-    slots.push(p ? playerLine(p, `<button class="icon" data-rm="${p.id}" aria-label="Retirer">×</button>`)
-      : `<div class="slot-empty">Place libre : ajoute un joueur depuis l'onglet Joueurs</div>`);
+    slots.push(p ? playerLine(p, `<button class="icon" data-rm="${p.id}" aria-label="Retirer" title="Retirer">×</button>`)
+      : `<button class="slot-add" data-goto="players"><span class="slot-n">${i + 1}</span>Ajouter un joueur<span class="muted"> depuis l'onglet Joueurs</span></button>`);
   }
-  const lock = lockOf(team);
+  const lock = lockOf(team), over = st > D.starCap;
+  const proj = team.reduce((a, p) => a + p.exp * p.pct, 0);
   el.innerHTML = `<div class="card">
-      <div class="row"><div class="grow"><b>Mon équipe</b>
-        <div class="small muted">${stars(st)} / ${D.starCap}★${lock ? ` · figée ${lock.when}` : ""}</div></div>
+      <div class="row"><div class="grow"><b>Mon équipe</b> <span class="small muted">${team.length}/5</span></div>
         ${team.length ? `<button class="act" id="clear">Vider</button>` : ""}</div>
-      ${st > D.starCap ? `<div class="warn">Plafond dépassé de ${stars(st - D.starCap)}</div>` : ""}
-      <div class="plist">${slots.join("")}</div>
+      <div class="row small" style="margin-top:8px"><div class="grow">Étoiles</div>
+        <div class="${over ? "pct-low" : ""}"><b>${stars(st)}</b> <span class="muted">/ ${D.starCap}★${over ? "" : ` · reste ${stars(D.starCap - st)}`}</span></div></div>
+      <div class="gauge"><i style="width:${Math.min(100, st / D.starCap * 100)}%;background:${over ? "var(--bad)" : "var(--accent)"}"></i></div>
+      ${over ? `<div class="warn">Plafond dépassé de ${stars(st - D.starCap)}</div>` : ""}
+      ${team.length ? `<div class="chips">${lock ? `<span>🔒 <b>${esc(lock.when)}</b></span>` : ""}<span title="Somme des scores estimés, chacun pondéré par sa chance de jouer (avant correction d'équipe)">Projection <b>${Math.round(proj)}</b> pts</span>
+        <span>${team.filter(p => p.usesProps).length}/${team.length} aux cotes</span></div>` : ""}
+      <div class="plist" style="margin-top:6px">${slots.join("")}</div>
     </div>
     <div class="card" id="result">${team.length === 5 ? "Calcul…" : fillPrompt(team, st)}</div>
     <div id="swaps"></div>`;
+  el.querySelectorAll("[data-goto]").forEach(b => b.onclick = () => { show(b.dataset.goto); window.scrollTo({ top: 0 }); });
   el.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => {
     mine = mine.filter(id => id !== +b.dataset.rm); store.set("mine", mine); renderMine();
   });
@@ -483,9 +506,13 @@ function renderMine() {
     const r = simulate(team, 20000);
     document.getElementById("result").innerHTML = `
       <div><span class="big ${pClass(r[target])}">${fmtP(r[target])}</span>
-        <span class="muted small"> de chances d'atteindre ${target} · moyenne ${r.mean.toFixed(0)} pts · plafond ${r.p90.toFixed(0)} pts</span></div>
-      <table class="pal">${D.targets.map(t => `<tr><td>Palier ${palierOf(t)} · ${t} pts</td>
-        <td class="num ${pClass(r[t])}">${fmtP(r[t])}</td></tr>`).join("")}</table>
+        <span class="muted small"> de chances d'atteindre ${target}</span></div>
+      ${gauge(r[target])}
+      <div class="chips"><span>Moyenne <b>${r.mean.toFixed(0)}</b> pts</span><span title="${esc(tagInfo("plafond"))}">Plafond <b>${r.p90.toFixed(0)}</b> pts</span></div>
+      <div class="pal-bars">${D.targets.map(t => `<div class="pal-row${t === target ? " on" : ""}">
+        <div class="small">Palier ${palierOf(t)} <span class="muted">· ${t}</span></div>
+        <div class="gauge"><i class="${pClass(r[t])}" style="width:${Math.max(1, Math.round(r[t] * 100))}%"></i></div>
+        <div class="num small ${pClass(r[t])}"><b>${fmtP(r[t])}</b></div></div>`).join("")}</div>
       <div style="margin-top:10px"><button class="act primary" id="swapbtn">Chercher un meilleur remplaçant</button></div>`;
     document.getElementById("swapbtn").onclick = () => findSwaps(team, r);
   }, 30);
@@ -551,8 +578,10 @@ function findFill(team) {
       ${shown.length ? shown.map((c, i) => `<div class="pl" style="border-top:1px solid var(--line);padding:8px 0">
         <div class="row"><div class="grow small"><b>${split(c)}</b> <span class="muted">· ${stars(c.add.reduce((a, p) => a + p.stars, 0))} utilisées</span></div>
           <div class="num ${pClass(c.r[target])}"><b>${fmtP(c.r[target])}</b></div>
-          <button class="act" data-fill="${i}">Prendre</button></div>
-        ${c.add.map(p => `<div class="small"><span class="tap" data-detail="${p.id}">${esc(p.name)}</span> ${stars(p.stars)} <span class="muted">· ${p.exp.toFixed(0)} pts · ${p.when}${earlyMark(p)}${p.pct < 1 ? ` · joue ${Math.round(p.pct * 100)} %` : ""}</span>${isBoom(p) ? ` <span class="badge hot">explosif</span>` : ""}</div>`).join("")}
+          <button class="act primary" data-fill="${i}">Prendre</button></div>
+        ${gauge(c.r[target])}
+        ${c.add.map(p => `<div class="small row" style="gap:8px;margin-top:4px"><span class="score" style="font-size:12.5px;${projStyle(p.exp)}">${p.exp.toFixed(0)}</span>
+          <div class="grow"><span class="tap" data-detail="${p.id}">${esc(p.name)}</span> <span class="stars">${stars(p.stars)}</span> <span class="muted">· ${p.when}${earlyMark(p)}${p.pct < 1 ? ` · joue ${Math.round(p.pct * 100)} %` : ""}</span>${isBoom(p) ? ` <span class="badge hot">explosif</span>` : ""}</div></div>`).join("")}
       </div>`).join("") : `<div class="small muted" style="margin-top:6px">Aucune combinaison possible avec ces étoiles.</div>`}</div>`;
     box.querySelectorAll("[data-fill]").forEach(b => b.onclick = () => {
       mine = [...team, ...shown[+b.dataset.fill].add].map(p => p.id); store.set("mine", mine); renderMine();
@@ -577,10 +606,10 @@ function findSwaps(team, base) {
     const best = tries.filter(t => t.r[target] > base[target] + 0.01).sort((a, b) => b.r[target] - a.r[target]).slice(0, 5);
     box.innerHTML = `<div class="card"><b>Un seul changement</b>${best.length ? best.map((t, k) => `
       <div class="pl row" style="border-top:1px solid var(--line);padding:8px 0">
-        <div class="grow small"><span class="muted">${esc(t.out.name)}</span> → <b>${esc(t.c.name)}</b> ${stars(t.c.stars)}
-          <div class="muted">${t.c.when}</div></div>
-        <div class="num ${pClass(t.r[target])}"><b>${fmtP(t.r[target])}</b></div>
-        <button class="act" data-sw="${k}">Prendre</button></div>`).join("")
+        <div class="grow small"><span class="muted" style="text-decoration:line-through">${esc(t.out.name)}</span> → <b class="tap" data-detail="${t.c.id}">${esc(t.c.name)}</b> <span class="stars">${stars(t.c.stars)}</span>
+          <div class="muted">${t.c.when} · ${t.c.exp.toFixed(0)} pts au lieu de ${t.out.exp.toFixed(0)}</div></div>
+        <div class="num"><b class="${pClass(t.r[target])}">${fmtP(t.r[target])}</b><div class="small pct-good">+${Math.round((t.r[target] - base[target]) * 100)} %</div></div>
+        <button class="act primary" data-sw="${k}">Prendre</button></div>`).join("")
       : `<div class="small muted" style="margin-top:6px">Aucun remplacement simple ne fait mieux.</div>`}</div>`;
     box.querySelectorAll("[data-sw]").forEach(b => b.onclick = () => {
       const t = best[+b.dataset.sw]; mine = t.team.map(p => p.id); store.set("mine", mine); renderMine();
@@ -809,40 +838,44 @@ function renderBilan() {
   const fin = teams.filter(t => t.score !== null);
   const teamHtml = teams.map(t => {
     const passed = t.score !== null && t.score >= target;
-    return `<div class="pl row"><div class="grow"><div class="name" style="white-space:normal">${t.names.map(esc).join(", ")}</div>
-      <div class="small muted">${bilanNight === "all" ? nightLabel(t.night) + " · " : ""}figée ${esc(fr_lock(t.lock))} · prévu ${fmtP(t.p[target])}</div>
-      <div class="src">${t.pts.map((x, i) => `${esc(t.names[i].split(" ").slice(-1)[0])} ${x === null ? "…" : n1(x)}`).join(" · ")}</div></div>
+    return `<div class="pl row"><div class="grow">
+      <div class="small muted">${bilanNight === "all" ? nightLabel(t.night) + " · " : ""}figée ${esc(fr_lock(t.lock))} · prévu <b class="${pClass(t.p[target])}">${fmtP(t.p[target])}</b></div>
+      <div class="chips" style="margin-top:4px">${t.pts.map((x, i) => `<span style="${x === null ? "" : projStyle(x)};color:var(--ink)">${esc(t.names[i].split(" ").slice(-1)[0])} <b>${x === null ? "…" : Math.round(x)}</b></span>`).join("")}</div></div>
       <div class="num">${t.score === null ? `<span class="muted small">en attente</span>` :
-        `<b class="${passed ? "pct-good" : "pct-low"}">${n1(t.score)}</b><div class="small muted">${passed ? "passé" : "raté"}</div>`}</div></div>`; }).join("");
+        `<span class="score" style="${mixBg(passed ? "--good" : "--bad", 30)}">${Math.round(t.score)}</span><div class="small ${passed ? "pct-good" : "pct-low"}" style="margin-top:2px"><b>${passed ? "✓ passé" : "✗ raté"}</b></div>`}</div></div>`; }).join("");
 
   const sorted = [...pl].sort((a, c) => Math.abs(c.a - c.e) - Math.abs(a.a - a.e));
   const dnp = rows.filter(r => !r.pl && r.pct > 0).sort((a, c) => c.pct - a.pct);
   const line = r => `<div class="pl row"><div class="grow"><div class="name">${esc(r.n)} <span class="stars">${stars(r.s)}</span></div>
       <div class="small muted">${r.t} contre ${r.o} · ${n1(r.em)} → ${r.m} min · ${r.pr ? "props" : "historique"}${r.b ? ` · carte +${Math.round(r.b * 100)} %` : ""}</div>
       <div class="src">prévu → réel : ${STAT.map(([k]) => `${SHORT[k]} ${n1(r.c[k] || 0)}→${r.st[k]}`).join(" · ")}</div></div>
-      <div class="num"><b>${n1(r.a)}</b><div class="small muted">prévu ${n1(r.e)}</div>
+      <div class="num"><span class="score" style="${vsStyle(r.a, r.e)}">${n1(r.a)}${vsArrow(r.a, r.e)}</span><div class="small muted" style="margin-top:2px">prévu ${n1(r.e)}</div>
       <div class="small ${r.a >= r.e ? "pct-good" : "pct-low"}">${sgn(r.a - r.e)}</div></div></div>`;
 
   const V = D.verdicts || [], vCls = v => v === "on peut conclure" ? "pct-good" : v === "tendance" ? "pct-mid" : "muted";
   const verdictCard = V.length ? `<div class="card"><b>Ce qu'on peut conclure</b>
     <div class="small muted">Tous les soirs joués comptent. « Tendance » : à surveiller, pas prouvé. « On peut conclure » : moins d'une chance sur 80 que ce soit le hasard (score z de 2,5 ou plus). Le seuil est plus exigeant que d'habitude parce qu'on teste une dizaine de questions à la fois.</div>
-    ${V.map(v => `<div class="pl" style="border-top:1px solid var(--line);padding:8px 0">
-      <div class="row"><div class="grow small"><b>${esc(v.question)}</b></div><div class="small ${vCls(v.verdict)}"><b>${esc(v.verdict)}</b></div></div>
+    <div class="legend" style="margin-top:6px"><span>Barre : force de la preuve (|z|), repères à 1,5 (tendance) et 2,5 (conclusion)</span></div>
+    ${[...V].sort((a, b) => Math.abs(b.z || 0) - Math.abs(a.z || 0)).map(v => { const az = Math.abs(v.z || 0), k = v.verdict === "on peut conclure" ? "ok" : v.verdict === "tendance" ? "mid" : "no";
+      return `<div style="border-top:1px solid var(--line);padding:9px 0">
+      <div class="row" style="align-items:flex-start"><div class="grow small"><b>${esc(v.question)}</b></div><span class="vpill ${k}">${esc(v.verdict)}</span></div>
+      <div class="zbar" title="z = ${v.z === null ? "pas encore calculable" : v.z}"><i style="width:${Math.min(100, az / 4 * 100)}%;background:${k === "ok" ? "var(--good)" : k === "mid" ? "var(--warn)" : "var(--muted)"}"></i>
+        <b style="left:${1.5 / 4 * 100}%"></b><b style="left:${2.5 / 4 * 100}%"></b></div>
       <div class="small">${esc(v.chiffre)}${v.z !== null ? ` <span class="muted">(z = ${v.z})</span>` : ""}</div>
       ${v.reste ? `<div class="src">Reste : ${esc(v.reste)}</div>` : ""}
-      ${v.verdict !== "trop tôt" ? `<div class="src">Si ça se confirme : ${esc(v.action)}</div>` : ""}</div>`).join("")}
-    ${(D.aFaire || []).length ? `<div class="small" style="margin-top:6px"><b>Chantiers en attente</b></div>${D.aFaire.map(a => `<div class="src">${esc(a)}</div>`).join("")}` : ""}
+      ${v.verdict !== "trop tôt" ? `<div class="src">Si ça se confirme : ${esc(v.action)}</div>` : ""}</div>`; }).join("")}
+    ${(D.aFaire || []).length ? `<div class="small" style="margin-top:6px"><b>Échéancier</b> <span class="muted">(chaque analyse se fait seule le jour venu)</span></div>${D.aFaire.map(a => `<div class="src">${esc(a)}</div>`).join("")}` : ""}
   </div>` : "";
   el.innerHTML = verdictCard + `
     <div class="paliers">${chips.map(([k, l]) => `<button data-bn="${k}" class="${k === bilanNight ? "on" : ""}">${l}</button>`).join("")}</div>
     <div class="card"><b>Projection contre score réel</b>
       <div class="small muted">Dernière projection faite avant chaque match (bonus de carte compris), comparée au score marqué.</div>
-      <table class="pal">
-        <tr><td>Joueurs projetés / ont joué</td><td class="num">${rows.length} / ${pl.length}</td></tr>
-        <tr><td>Biais (réel − prévu, en moyenne)</td><td class="num"><b>${sgn(mean(err))}</b> pts</td></tr>
-        <tr><td>Écart moyen par joueur</td><td class="num"><b>${n1(mean(err.map(Math.abs)))}</b> pts</td></tr>
-        <tr><td>Dans la fourchette ±1 écart-type</td><td class="num"><b>${fmtP(mean(z))}</b> <span class="small muted">(68 % attendu)</span></td></tr>
-      </table>
+      <div class="tiles">
+        <div class="tile" title="Réel moins prévu, en moyenne : proche de 0 = ni trop optimiste ni trop prudent"><div class="v">${sgn(mean(err))}</div><div class="k">biais par joueur (pts)</div></div>
+        <div class="tile"><div class="v">${n1(mean(err.map(Math.abs)))}</div><div class="k">écart moyen par joueur (pts)</div></div>
+        <div class="tile" title="Part des joueurs tombés dans la fourchette ±1 écart-type : 68 % attendu"><div class="v ${Math.abs(mean(z) - 0.68) <= 0.05 ? "pct-good" : "pct-mid"}">${fmtP(mean(z))}</div><div class="k">dans la fourchette (68 % visé)</div></div>
+        <div class="tile"><div class="v">${pl.length}</div><div class="k">ont joué sur ${rows.length} projetés</div></div>
+      </div>
       <div class="src" style="margin-top:6px">Biais proche de 0 : le modèle n'est ni trop optimiste ni trop prudent.
         Fourchette proche de 68 % : les probabilités d'équipe partent d'une dispersion juste.
         ${pl.length < 200 ? "Moins de 200 joueurs : à lire comme une tendance, pas une preuve." : ""}</div></div>
