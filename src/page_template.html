@@ -170,7 +170,7 @@ const TAGS = [
   ["RotoWire", "RotoWire Ques",
    "Dans la liste des incertains de RotoWire pour ce soir. On prend le % affiché par RotoWire ; sans %, Prob (probable) = 85 %, Ques (incertain) = 50 %, Doubt (douteux) = 20 %, Out ou OFS (absent) = 0 %."],
   ["joue", "joue 60 %",
-   "Probabilité qu'il joue. On prend la première source disponible : 1. le % de RotoWire le soir même (titulaires et incertains) ; 2. le statut RotoWire sans % (Prob 85 %, Ques 50 %, Doubt 20 %, Out 0 %) ; 3. ESPN : Out 0 %, Day-To-Day 60 % ; 4. Sorare : OUT 0 % ; 5. fin de banc : part de ses 10 derniers matchs où il est entré ; 6. sinon 97 % tant que RotoWire n'a pas publié la compo de son équipe (3 % de forfaits tardifs mesurés sur nos bilans), puis 100 %. Ce 97 % par défaut n'est pas affiché en tag pour ne pas encombrer. Dans le reste des simulations, il marque 0 point. Sa fiche dit quelle source a servi."],
+   "Probabilité qu'il joue. On prend la première source disponible : 1. le % de RotoWire le soir même (titulaires et incertains) ; 2. le statut RotoWire sans % (Prob 85 %, Ques 50 %, Doubt 20 %, Out 0 %) ; 3. ESPN : Out 0 %, Day-To-Day 60 % ; 4. Sorare : OUT 0 % ; 5. fin de banc : part de ses 10 derniers matchs où il est entré ; 6. sinon 97 % tant que RotoWire n'a pas publié la compo de son équipe (3 % de forfaits tardifs mesurés sur nos bilans), puis 100 %. Le tag « joue 97 % » disparaît donc quand la compo RotoWire de l'équipe tombe. Dans le reste des simulations, il marque 0 point. Sa fiche dit quelle source a servi."],
   ["carte", "carte +10 %",
    "Bonus de ta carte (Shiny +5 %, Holo +10 %, variante +15 %), déjà appliqué au score affiché. Ne pas surpondérer : 40 pts à 0 % valent mieux que 30 pts à +15 %."],
   ["petit total", "petit total -2 %",
@@ -199,8 +199,7 @@ function badges(p) {
     out.push(`<span class="badge ${cls}" title="${esc(tagInfo(r))}">${esc(r)}</span>`);
   }
   if (isBoom(p)) out.push(`<span class="badge hot" title="${esc(tagInfo("explosif"))}">explosif</span>`);
-  // 97 % = risque de forfait tardif par défaut (pas encore de compo RotoWire) : pas de tag, c'est le cas de presque tout le monde.
-  if (p.pct < 0.965) out.push(`<span class="badge down" title="${esc(tagInfo("joue"))}">joue ${Math.round(p.pct * 100)} %</span>`);
+  if (p.pct < 1) out.push(`<span class="badge down" title="${esc(tagInfo("joue"))}">joue ${Math.round(p.pct * 100)} %</span>`);
   if (p.bonus > 0) out.push(`<span class="badge" title="${esc(tagInfo("carte"))}">carte +${Math.round(p.bonus * 100)} %</span>`);
   return out.length ? `<div class="badges">${out.join("")}</div>` : "";
 }
