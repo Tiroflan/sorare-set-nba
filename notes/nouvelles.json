@@ -2,6 +2,13 @@
   {
     "date": "2026-11-25",
     "type": "echeance",
+    "titre": "Équipes surestimées : la cause en deux morceaux",
+    "texte": "Sur -32 pts par soir, -13 viennent des joueurs choisis (biais de sélection : -1,8 pt contre leur projection, quand les autres font +0,7) et -19 du glissement entre le choix et le match. Lundi 30/11 : renforcer TEAM_SHRINK si le test hors échantillon confirme ; LATE_NEWS_OUT n'a qu'un soir mesuré, trop tôt pour y toucher.",
+    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
+  },
+  {
+    "date": "2026-11-25",
+    "type": "echeance",
     "titre": "Échéance due : équipes surestimées",
     "texte": "Le verdict « équipes » est tranché : la meilleure équipe de chaque soir fait 34 pts de moins que prévu en moyenne sur 11 soirs (z = -3,12). La routine de demain matin lance le diagnostic ; une correction éventuelle passera lundi 30/11.",
     "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
