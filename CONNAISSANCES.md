@@ -6,7 +6,8 @@ Registre tenu par la routine du matin et la passe du lundi (voir METHODE.md). Ch
 
 - **Les props des bookmakers font mieux que l'historique** : plus proches du réel de 0,42 pt en moyenne, 760 joueurs, z = 3,97 (25/11). On les utilise déjà, rien à changer.
 - **Nos projections font mieux que la projection officielle de Sorare** : plus proches du réel de 0,50 pt, 786 joueurs, z = 3,07 (25/11).
-- **Les équipes proposées font moins que leur projection** : meilleure équipe de chaque soir, -34 pts en moyenne sur 11 soirs, z = -3,12 (25/11). Cause à trancher par l'échéance « Équipes surestimées », due maintenant.
+- **Les équipes proposées font moins que leur projection** : meilleure équipe de chaque soir, -32 pts en moyenne sur 12 soirs, z = -3,11 (25/11).
+- **Cause du trou des équipes, en deux morceaux** (échéance traitée le 25/11, `python src/diag_equipes.py`, 12 soirs du 12 au 23/11) : sur -32,3 pts par soir, -13,0 viennent des joueurs eux-mêmes (sous leur projection finale) et -19,2 du glissement (forfaits et projections revues à la baisse entre le choix et le match). La part joueurs est stable avant et après la correction du 18/11 (-12,6 puis -13,4) : c'est un biais de sélection, les joueurs choisis font -1,78 pt contre leur projection (238 cas, z = -1,93) quand les autres font +0,72 (2 888 cas, z = 3,86), soit 2,5 pts d'écart par joueur malgré TEAM_SHRINK 0,87. Le glissement s'est creusé depuis le 18/11 (-25,2 contre -13,3 avant), mais LATE_NEWS_OUT (3 %, ajouté le 23/11) n'a qu'un soir mesuré (23/11, glissement 0) : trop tôt pour le juger. Correction proposée à la passe du lundi 30/11 (voir l'échéancier).
 
 ## Réfuté ou sans effet (ne pas rouvrir sans nouvelles données)
 

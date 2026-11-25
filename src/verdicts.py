@@ -469,12 +469,14 @@ def _fresh_absences(nights):
 # résultat dans CONNAISSANCES.md, puis retire l'échéance d'ici ou la redate. Une correction du modèle qui
 # en découle attend la passe du lundi (sauf bug).
 ECHEANCES = [
-    {"date": "2026-11-28", "verdict": "equipes", "sujet": "Équipes surestimées",
-     "contexte": "diagnostic du 23/11 : depuis la correction du 18/11, les joueurs font presque leur dernière "
-                 "projection ; le trou vient surtout des forfaits annoncés après le choix et des props du "
-                 "lendemain plus basses. LATE_NEWS_OUT 3 % ajouté le 23/11",
-     "analyse": "python src/diag_equipes.py (10 soirs depuis le 18/11) : joueurs sous leur dernière projection "
-                "-> renforcer TEAM_SHRINK ; forfaits après le choix -> revoir LATE_NEWS_OUT"},
+    {"date": "2026-11-30", "verdict": None, "sujet": "Équipes surestimées : correction",
+     "contexte": "diagnostic du 25/11 (12 soirs) : trou -32,3 pts par soir = joueurs -13,0 (biais de sélection : "
+                 "choisis -1,78 pt contre leur projection, z -1,93, autres +0,72) + glissement -19,2 ; "
+                 "LATE_NEWS_OUT 3 % n'a qu'un soir mesuré (23/11, glissement 0)",
+     "analyse": "renforcer TEAM_SHRINK (0,87) : remesurer la pente sur les soirs depuis le 18/11 pour que les joueurs "
+                "choisis tombent sur leur projection, appliquer si le test hors échantillon confirme ; relancer "
+                "python src/diag_equipes.py et relire le glissement des soirs depuis le 23/11 avant de toucher "
+                "LATE_NEWS_OUT (garder 3 % si trop peu de soirs)"},
     {"date": "2026-11-30", "verdict": None, "sujet": "Trois pistes appliquées à moitié le 24/11",
      "contexte": "petit total -2 %, outsider +4 %, élan props +7 % (model.py ADJ_*)",
      "analyse": "relire les verdicts props_hausse, petit total et outsider sur les nuits depuis le 24/11 : "
