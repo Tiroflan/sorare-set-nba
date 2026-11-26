@@ -165,4 +165,4 @@ def show(o):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1] if len(sys.argv) > 1 else espn.us_tonight())
+    run(sys.argv[1] if len(sys.argv) > 1 else espn.us_tonight().isoformat())
