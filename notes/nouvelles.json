@@ -1,30 +1,44 @@
 [
-  {
-    "date": "2026-11-25",
-    "type": "echeance",
-    "titre": "Équipes surestimées : la cause en deux morceaux",
-    "texte": "Sur -32 pts par soir, -13 viennent des joueurs choisis (biais de sélection : -1,8 pt contre leur projection, quand les autres font +0,7) et -19 du glissement entre le choix et le match. Lundi 30/11 : renforcer TEAM_SHRINK si le test hors échantillon confirme ; LATE_NEWS_OUT n'a qu'un soir mesuré, trop tôt pour y toucher.",
-    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
-  },
-  {
-    "date": "2026-11-25",
-    "type": "echeance",
-    "titre": "Échéance due : équipes surestimées",
-    "texte": "Le verdict « équipes » est tranché : la meilleure équipe de chaque soir fait 34 pts de moins que prévu en moyenne sur 11 soirs (z = -3,12). La routine de demain matin lance le diagnostic ; une correction éventuelle passera lundi 30/11.",
-    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
-  },
-  {
-    "date": "2026-11-25",
-    "type": "etabli",
-    "titre": "Registre ouvert : 3 faits établis, 3 pistes écartées",
-    "texte": "Établi : les props font mieux que l'historique, on fait mieux que la projection Sorare, les équipes proposées font moins que prévu. Écarté : aléa commun d'un même match, titulaire qui revient, recalage global.",
-    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
-  },
-  {
-    "date": "2026-11-25",
-    "type": "note",
-    "titre": "Nouvelle façon de travailler",
-    "texte": "Tes questions finissent par une proposition, tu dis oui ou non. Le modèle ne change plus que le lundi, en lot. Chaque lundi à 8h45, une passe d'analyste cherche de nouvelles pistes et écrit sa note ici. Première le 30/11.",
-    "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/METHODE.md"
-  }
+ {
+  "date": "2026-11-26",
+  "type": "etabli",
+  "titre": "Fourchette trop large : c'est établi",
+  "texte": "71 % des joueurs tombent dans la fourchette ±1 écart-type sur 1203 joueurs depuis le 16/11, pour 68 % attendus (z = 2,59). Nos fourchettes sont un peu trop larges. La passe du lundi 30/11 relancera calib_check.py et réajustera DISP_PROPS, DISP_HIST, SD_WIDEN si le test hors échantillon confirme.",
+  "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/src/verdicts.py"
+ },
+ {
+  "date": "2026-11-26",
+  "type": "etabli",
+  "titre": "Probabilité de victoire : mieux que Pinnacle, sur très peu de matchs",
+  "texte": "Sur 19 matchs, notre erreur de probabilité (Brier) est de 0,178 contre 0,249 pour la cote Pinnacle (z = 3,79) ; 15 paris fictifs, +15,4 unités. L'échantillon est minuscule : rien ne change avant le point du banc d'essai le 23/12, règles figées.",
+  "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/src/verdicts.py"
+ },
+ {
+  "date": "2026-11-25",
+  "type": "echeance",
+  "titre": "Équipes surestimées : la cause en deux morceaux",
+  "texte": "Sur -32 pts par soir, -13 viennent des joueurs choisis (biais de sélection : -1,8 pt contre leur projection, quand les autres font +0,7) et -19 du glissement entre le choix et le match. Lundi 30/11 : renforcer TEAM_SHRINK si le test hors échantillon confirme ; LATE_NEWS_OUT n'a qu'un soir mesuré, trop tôt pour y toucher.",
+  "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
+ },
+ {
+  "date": "2026-11-25",
+  "type": "echeance",
+  "titre": "Échéance due : équipes surestimées",
+  "texte": "Le verdict « équipes » est tranché : la meilleure équipe de chaque soir fait 34 pts de moins que prévu en moyenne sur 11 soirs (z = -3,12). La routine de demain matin lance le diagnostic ; une correction éventuelle passera lundi 30/11.",
+  "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
+ },
+ {
+  "date": "2026-11-25",
+  "type": "etabli",
+  "titre": "Registre ouvert : 3 faits établis, 3 pistes écartées",
+  "texte": "Établi : les props font mieux que l'historique, on fait mieux que la projection Sorare, les équipes proposées font moins que prévu. Écarté : aléa commun d'un même match, titulaire qui revient, recalage global.",
+  "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/CONNAISSANCES.md"
+ },
+ {
+  "date": "2026-11-25",
+  "type": "note",
+  "titre": "Nouvelle façon de travailler",
+  "texte": "Tes questions finissent par une proposition, tu dis oui ou non. Le modèle ne change plus que le lundi, en lot. Chaque lundi à 8h45, une passe d'analyste cherche de nouvelles pistes et écrit sa note ici. Première le 30/11.",
+  "lien": "https://github.com/Tiroflan/sorare-set-nba/blob/main/METHODE.md"
+ }
 ]
