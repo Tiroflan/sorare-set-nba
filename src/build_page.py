@@ -16,7 +16,7 @@ import journal
 import model
 from model import SIGMA_MARGIN
 import strategie
-from soirs import PARIS, STAR_CAP, best_teams, disjoint_sets, load_pool
+from soirs import EXTRA_STAR_CAP, EXTRA_STAR_UNTIL, PARIS, STAR_CAP, best_teams, disjoint_sets, load_pool, star_cap
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = Path(__file__).resolve().parent / "page_template.html"
@@ -124,7 +124,8 @@ def main():
     data = {
         "generated": datetime.now(PARIS).strftime("%d/%m à %Hh%M"),
         "nights": args.nuits, "targets": TARGETS, "defaultTarget": DEFAULT_TARGET,
-        "starCap": STAR_CAP, "sigmaMargin": SIGMA_MARGIN,
+        "starCap": star_cap(min(p["night"] for p in pool)) if pool else STAR_CAP, "sigmaMargin": SIGMA_MARGIN,
+        "baseCap": STAR_CAP, "extraCap": EXTRA_STAR_CAP, "capUntil": EXTRA_STAR_UNTIL,
         "disp": {"props": model.DISP_PROPS, "hist": model.DISP_HIST}, "playMin": {str(k): v for k, v in PLAY_MIN.items()}, "boomCut": BOOM_CUT, "boomMinExp": BOOM_MIN_EXP,
         "calib": calib, "games": games, "players": players, "teams": teams,
         "parallel": {n: {str(t): [{"ids": [ids[p["slug"]] for p in c], "p": {str(x): round(r[x], 4) for x in TARGETS},

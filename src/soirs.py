@@ -5,7 +5,7 @@ blessures (ESPN), compos du soir (RotoWire), calibration blowout et rythme
 (data/calibration.json, voir calibrate.py).
 
 Règles prises en compte :
-- 5 joueurs, 16 étoiles au plus ;
+- 5 joueurs, 16 étoiles au plus (17 jusqu'au 4/12, voir EXTRA_STAR_UNTIL) ;
 - chaque joueur compte pour son premier match dans la fenêtre ;
 - l'équipe est figée au premier coup d'envoi parmi ses 5 joueurs.
 
@@ -34,6 +34,18 @@ from phase0_faisabilite import edition_bonus, p_normal
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 STAR_CAP = 16.0
+# Étoile bonus annoncée par Sorare : équipes à 17★ jusqu'au soir du 4 décembre inclus (date donnée de mémoire
+# par Romain le 27/11, à corriger ici si besoin). Le plafond dépend du soir où l'équipe se fige.
+EXTRA_STAR_CAP, EXTRA_STAR_UNTIL = 17.0, "2026-12-04"
+
+
+def star_cap(night: str) -> float:
+    """Plafond d'étoiles d'une équipe qui se fige le soir `night` (AAAA-MM-JJ, soir US)."""
+    return EXTRA_STAR_CAP if night <= EXTRA_STAR_UNTIL else STAR_CAP
+
+
+def team_cap(players) -> float:
+    return star_cap(min(p["night"] for p in players))
 N_SIM = 6000   # erreur de tirage d'environ ±0,5 point sur une chance de 20 %
 TOP_K = 250
 KEEP_PER_STAR_LEVEL = 6
@@ -258,10 +270,11 @@ def disjoint_sets(live, contexts, calib, targets, rng, n_sets=4, n_cand=8, n_sim
             mus = [p["exp"] * p["pct"] * p.get("team_k", 1.0) for p in short]
             vs = [p["sd"] ** 2 for p in short]
             st_ = [p["stars"] for p in short]
+            cap = team_cap(short) if short else STAR_CAP  # une seule nuit ici
 
             def scored():
                 for idx in itertools.combinations(range(len(short)), 5):
-                    if sum(st_[i] for i in idx) > STAR_CAP:
+                    if sum(st_[i] for i in idx) > cap:
                         continue
                     mu = sum(mus[i] for i in idx)
                     yield (mu + off - t) / math.sqrt(sum(vs[i] for i in idx) or 1), mu, idx
@@ -290,7 +303,7 @@ def best_teams(live, contexts, calib, targets, rng, top_k=TOP_K):
                 short[p["slug"]] = p
     teams = []
     for combo in itertools.combinations(list(short.values()), 5):
-        if sum(p["stars"] for p in combo) > STAR_CAP:
+        if sum(p["stars"] for p in combo) > team_cap(combo):
             continue
         mu = sum(p["exp"] * p["pct"] * p.get("team_k", 1.0) for p in combo)
         sd = math.sqrt(sum(p["sd"] ** 2 for p in combo))
@@ -346,7 +359,7 @@ def main():
         swaps = []
         for i, out in enumerate(team):
             rest = team[:i] + team[i + 1:]
-            budget = STAR_CAP - sum(p["stars"] for p in rest)
+            budget = team_cap(team) - sum(p["stars"] for p in rest)
             for cand in live:
                 if cand in team or cand["stars"] > budget:
                     continue

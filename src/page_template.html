@@ -360,6 +360,9 @@ function simulate(team, n) {
   return out;
 }
 const lockOf = team => team.reduce((a, p) => (!a || p.tip < a.tip) ? p : a, null);
+// Plafond d'étoiles selon le soir où l'équipe se fige (étoile bonus de Sorare jusqu'au capUntil inclus).
+const capFor = team => { if (!D.capUntil || !team.length) return D.starCap;
+  return lockOf(team).night <= D.capUntil ? D.extraCap : D.baseCap; };
 
 // ---- Rendu ----
 function renderMeta() {
@@ -478,15 +481,15 @@ function renderMine() {
     slots.push(p ? playerLine(p, `<button class="icon" data-rm="${p.id}" aria-label="Retirer" title="Retirer">×</button>`)
       : `<button class="slot-add" data-goto="players"><span class="slot-n">${i + 1}</span>Ajouter un joueur<span class="muted"> depuis l'onglet Joueurs</span></button>`);
   }
-  const lock = lockOf(team), over = st > D.starCap;
+  const cap = capFor(team), lock = lockOf(team), over = st > cap;
   const proj = team.reduce((a, p) => a + p.exp * p.pct, 0);
   el.innerHTML = `<div class="card">
       <div class="row"><div class="grow"><b>Mon équipe</b> <span class="small muted">${team.length}/5</span></div>
         ${team.length ? `<button class="act" id="clear">Vider</button>` : ""}</div>
       <div class="row small" style="margin-top:8px"><div class="grow">Étoiles</div>
-        <div class="${over ? "pct-low" : ""}"><b>${stars(st)}</b> <span class="muted">/ ${D.starCap}★${over ? "" : ` · reste ${stars(D.starCap - st)}`}</span></div></div>
-      <div class="gauge"><i style="width:${Math.min(100, st / D.starCap * 100)}%;background:${over ? "var(--bad)" : "var(--accent)"}"></i></div>
-      ${over ? `<div class="warn">Plafond dépassé de ${stars(st - D.starCap)}</div>` : ""}
+        <div class="${over ? "pct-low" : ""}"><b>${stars(st)}</b> <span class="muted">/ ${cap}★${over ? "" : ` · reste ${stars(cap - st)}`}</span></div></div>
+      <div class="gauge"><i style="width:${Math.min(100, st / cap * 100)}%;background:${over ? "var(--bad)" : "var(--accent)"}"></i></div>
+      ${over ? `<div class="warn">Plafond dépassé de ${stars(st - cap)}</div>` : ""}
       ${team.length ? `<div class="chips">${lock ? `<span>🔒 <b>${esc(lock.when)}</b></span>` : ""}<span title="Somme des scores estimés, chacun pondéré par sa chance de jouer (avant correction d'équipe)">Projection <b>${Math.round(proj)}</b> pts</span>
         <span>${team.filter(p => p.usesProps).length}/${team.length} aux cotes</span></div>` : ""}
       <div class="plist" style="margin-top:6px">${slots.join("")}</div>
@@ -520,7 +523,7 @@ function renderMine() {
 
 // ---- Compléter l'équipe : meilleures façons de remplir les places libres ----
 function fillPrompt(team, st) {
-  const k = 5 - team.length, budget = D.starCap - st;
+  const k = 5 - team.length, budget = capFor(team) - st;
   if (!team.length) return `<span class="muted">Choisis 5 joueurs pour voir tes chances, ou charge une équipe depuis l'onglet Équipes.</span>`;
   if (budget < k) return `<span class="muted">Plus assez d'étoiles : il reste ${stars(Math.max(0, budget))} pour ${k} joueur${k > 1 ? "s" : ""}.</span>`;
   return `<div class="small muted">Il reste ${stars(budget)} pour ${k} joueur${k > 1 ? "s" : ""}.</div>
@@ -537,7 +540,7 @@ function findFill(team) {
   const box = document.getElementById("swaps");
   box.innerHTML = `<div class="card muted">Recherche…</div>`;
   setTimeout(() => {
-    const k = 5 - team.length, budget = D.starCap - team.reduce((a, p) => a + p.stars, 0);
+    const k = 5 - team.length, budget = capFor(team) - team.reduce((a, p) => a + p.stars, 0);
     const keep = [0, 15, 8, 5, 4, 3][k];
     const byLevel = {};
     for (const p of P) if (p.pct > 0 && !team.includes(p) && p.stars <= budget) (byLevel[p.stars] = byLevel[p.stars] || []).push(p);
@@ -598,7 +601,7 @@ function findSwaps(team, base) {
     const tries = [];
     team.forEach((out, i) => {
       const rest = team.filter((_, j) => j !== i);
-      const budget = D.starCap - rest.reduce((a, p) => a + p.stars, 0);
+      const budget = capFor(team) - rest.reduce((a, p) => a + p.stars, 0);
       live.filter(c => c.stars <= budget).sort((a, b) => b.exp * b.pct - a.exp * a.pct).slice(0, 12)
         .forEach(c => tries.push({ out, c, team: [...rest, c] }));
     });
