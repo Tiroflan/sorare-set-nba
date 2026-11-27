@@ -361,8 +361,8 @@ function simulate(team, n) {
 }
 const lockOf = team => team.reduce((a, p) => (!a || p.tip < a.tip) ? p : a, null);
 // Plafond d'étoiles selon le soir où l'équipe se fige (étoile bonus de Sorare jusqu'au capUntil inclus).
-const capFor = team => { if (!D.capUntil || !team.length) return D.starCap;
-  return lockOf(team).night <= D.capUntil ? D.extraCap : D.baseCap; };
+// Selon l'heure à laquelle on valide l'équipe : 17★ avant le 4/12 à 10h30, 16★ après (une équipe validée avant reste valable).
+const capFor = () => !D.capUntil ? D.starCap : (Date.now() < Date.parse(D.capUntil) ? D.extraCap : D.baseCap);
 
 // ---- Rendu ----
 function renderMeta() {
@@ -439,7 +439,8 @@ function renderTeams() {
     <div class="src">4 tentatives par palier, et 4 échecs renvoient au palier 1. Mais on remonte à 240 en 4 à 5 soirs, et il en reste une cinquantaine jusqu'au 6 janvier : mieux vaut jouer chaque bon soir que garder une vie. Seuils calculés le 16/11 en simulant toute la fin du set.</div></div>` : "";
   const empty = list.length ? "" : `<div class="card muted small">Pas encore d'équipe calculée avec seulement des joueurs de cette nuit : elles apparaissent à la prochaine mise à jour.</div>`;
   document.getElementById("teams").innerHTML = whenCard + nightChips + parCard + sortChips + empty +
-    `<p class="small muted">Les 8 équipes sous ${D.starCap}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
+    (D.capUntil && Date.now() < Date.parse(D.capUntil) ? `<div class="card small"><b>Étoile bonus : équipes à ${D.extraCap}★</b> jusqu'au jeu. 4 déc. à 10h30. Une équipe validée avant reste valable même si elle joue après, tant que tu ne la modifies pas.</div>` : "") +
+    `<p class="small muted">Les 8 équipes sous ${capFor()}★ qui ont le plus de chances d'atteindre ${target} points. Sous chaque score : <span class="srcpill books">cotes</span> = projection tirée des bookmakers, <span class="srcpill hist">historique</span> = pas encore de cotes, projection sur ses 10 derniers matchs. Touche un joueur pour le détail ; glossaire dans Méthode.</p>` +
     list.map((t, i) => {
       const ps = t.ids.map(id => byId[id]).sort((a, b) => a.tip.localeCompare(b.tip));
       const lock = lockOf(ps);

@@ -34,14 +34,16 @@ from phase0_faisabilite import edition_bonus, p_normal
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 STAR_CAP = 16.0
-# Étoile bonus annoncée par Sorare : équipes à 17★ jusqu'au soir du 4 décembre inclus (date donnée de mémoire
-# par Romain le 27/11, à corriger ici si besoin). Le plafond dépend du soir où l'équipe se fige.
-EXTRA_STAR_CAP, EXTRA_STAR_UNTIL = 17.0, "2026-12-04"
+# Étoile bonus de Sorare (message lu par Romain le 27/11) : « live until December 4, 10:30 AM CET » ; une équipe à
+# 17★ validée avant reste valable ensuite si on ne la modifie pas. Le plafond dépend donc de l'heure où l'on valide
+# l'équipe, pas du soir où elle joue : 17★ tant qu'on est avant le 4/12 à 10h30 (heure de Paris), 16★ après.
+EXTRA_STAR_CAP, EXTRA_STAR_UNTIL = 17.0, "2026-12-04T10:30:00+01:00"
 
 
-def star_cap(night: str) -> float:
-    """Plafond d'étoiles d'une équipe qui se fige le soir `night` (AAAA-MM-JJ, soir US)."""
-    return EXTRA_STAR_CAP if night <= EXTRA_STAR_UNTIL else STAR_CAP
+def star_cap(night: str = "") -> float:
+    """Plafond d'étoiles pour une équipe validée maintenant (le soir où elle joue ne compte pas)."""
+    from datetime import datetime as _dt
+    return EXTRA_STAR_CAP if _dt.now(timezone.utc) < _dt.fromisoformat(EXTRA_STAR_UNTIL) else STAR_CAP
 
 
 def team_cap(players) -> float:
