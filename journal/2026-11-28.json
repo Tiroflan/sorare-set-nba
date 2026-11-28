@@ -7,7 +7,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -55,15 +55,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 31.56,
-   "sd": 12.67,
-   "raw": 31.56,
-   "hist": 31.23,
+   "exp": 31.65,
+   "sd": 12.77,
+   "raw": 31.65,
+   "hist": 31.08,
    "usesProps": true,
    "estMin": 36.6,
    "sdMin": 4.3,
@@ -71,10 +71,10 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 0.999,
    "reasons": [
-    "props +3% vs historique",
+    "props +4% vs historique",
     "petit total -2%"
    ],
    "upside": 0.165,
@@ -83,19 +83,19 @@
     "pts": 17.89,
     "tpm": 1.05,
     "reb": 7.3,
-    "ast": 3.7,
+    "ast": 3.75,
     "stl": 1.01,
     "blk": 0.5,
     "tov": 2.82
    },
    "histComps": {
-    "pts": 16.96,
-    "tpm": 0.98,
-    "reb": 7.71,
-    "ast": 3.41,
-    "stl": 0.98,
+    "pts": 16.88,
+    "tpm": 0.97,
+    "reb": 7.67,
+    "ast": 3.4,
+    "stl": 0.97,
     "blk": 0.48,
-    "tov": 2.73
+    "tov": 2.71
    },
    "lines": {
     "pts": [
@@ -125,9 +125,9 @@
     "ast": [
      [
       3.5,
-      0.51,
-      "-120",
-      "-110"
+      0.519,
+      "-125",
+      "-106"
      ]
     ]
    }
@@ -138,7 +138,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -220,15 +220,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 22.44,
-   "sd": 12.24,
+   "sd": 12.3,
    "raw": 22.44,
-   "hist": 23.7,
+   "hist": 23.58,
    "usesProps": true,
    "estMin": 25,
    "sdMin": 6.4,
@@ -236,7 +236,7 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.02,
    "reasons": [
     "props -3% vs historique",
@@ -254,13 +254,13 @@
     "tov": 0.99
    },
    "histComps": {
-    "pts": 10.48,
-    "tpm": 1.51,
-    "reb": 6.04,
-    "ast": 0.98,
+    "pts": 10.43,
+    "tpm": 1.5,
+    "reb": 6.01,
+    "ast": 0.97,
     "stl": 0.53,
-    "blk": 1.16,
-    "tov": 0.98
+    "blk": 1.15,
+    "tov": 0.97
    },
    "lines": {
     "pts": [
@@ -287,15 +287,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.1,
    "pct": 0.5,
    "pctSrc": "RotoWire : titulaire probable (Ques), probabilité affichée 50%",
    "exp": 31.8,
-   "sd": 15.29,
+   "sd": 15.36,
    "raw": 28.91,
-   "hist": 34.26,
+   "hist": 34.1,
    "usesProps": true,
    "estMin": 34,
    "sdMin": 3.3,
@@ -303,7 +303,7 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 0.999,
    "reasons": [
     "props -5% vs historique",
@@ -314,20 +314,20 @@
    "comps": {
     "pts": 14.52,
     "tpm": 1.65,
-    "reb": 4.3,
+    "reb": 4.35,
     "ast": 4.4,
     "stl": 1.95,
     "blk": 0.97,
     "tov": 3.6
    },
    "histComps": {
-    "pts": 14.3,
-    "tpm": 1.74,
-    "reb": 4.93,
-    "ast": 5.12,
+    "pts": 14.24,
+    "tpm": 1.73,
+    "reb": 4.91,
+    "ast": 5.09,
     "stl": 1.93,
     "blk": 0.96,
-    "tov": 3.57
+    "tov": 3.55
    },
    "lines": {
     "pts": [
@@ -349,9 +349,9 @@
     "reb": [
      [
       4.5,
-      0.428,
-      "118",
-      "-158"
+      0.435,
+      "115",
+      "-153"
      ]
     ],
     "ast": [
@@ -370,15 +370,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 4.5,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 43.63,
-   "sd": 15.56,
-   "raw": 41.55,
-   "hist": 47.92,
+   "exp": 43.84,
+   "sd": 15.71,
+   "raw": 41.75,
+   "hist": 47.69,
    "usesProps": true,
    "estMin": 34.8,
    "sdMin": 3.6,
@@ -386,10 +386,10 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 0.999,
    "reasons": [
-    "props -7% vs historique",
+    "props -6% vs historique",
     "petit total -2%"
    ],
    "upside": 0.147,
@@ -397,20 +397,20 @@
    "comps": {
     "pts": 23.25,
     "tpm": 0.8,
-    "reb": 10.25,
+    "reb": 10.4,
     "ast": 2.0,
     "stl": 1.0,
     "blk": 1.3,
     "tov": 1.9
    },
    "histComps": {
-    "pts": 26.5,
-    "tpm": 0.68,
-    "reb": 10.44,
-    "ast": 1.93,
-    "stl": 0.97,
-    "blk": 1.26,
-    "tov": 1.84
+    "pts": 26.37,
+    "tpm": 0.67,
+    "reb": 10.39,
+    "ast": 1.92,
+    "stl": 0.96,
+    "blk": 1.25,
+    "tov": 1.83
    },
    "lines": {
     "pts": [
@@ -432,9 +432,9 @@
     "reb": [
      [
       10.5,
-      0.45,
-      "108",
-      "-143"
+      0.465,
+      "101",
+      "-134"
      ]
     ]
    }
@@ -445,15 +445,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.56,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 56% (recalé sur nos bilans)",
-   "exp": 2.92,
+   "exp": 2.91,
    "sd": 2.16,
-   "raw": 2.78,
-   "hist": 2.98,
+   "raw": 2.77,
+   "hist": 2.97,
    "usesProps": false,
    "estMin": 5,
    "sdMin": 3.0,
@@ -461,7 +461,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.012,
    "reasons": [
     "banc, joue 56% des matchs",
@@ -479,9 +479,9 @@
     "tov": 0.2
    },
    "histComps": {
-    "pts": 1.57,
+    "pts": 1.56,
     "tpm": 0.0,
-    "reb": 1.18,
+    "reb": 1.17,
     "ast": 0.2,
     "stl": 0.0,
     "blk": 0.0,
@@ -494,7 +494,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -561,15 +561,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 16.76,
-   "sd": 7.58,
-   "raw": 16.76,
-   "hist": 16.0,
+   "exp": 16.17,
+   "sd": 7.35,
+   "raw": 16.17,
+   "hist": 15.92,
    "usesProps": true,
    "estMin": 23,
    "sdMin": 3.7,
@@ -577,16 +577,16 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.02,
    "reasons": [
-    "props +7% vs historique",
+    "props +4% vs historique",
     "petit total -2%"
    ],
    "upside": 0.171,
    "sorare": 15.24,
    "comps": {
-    "pts": 7.22,
+    "pts": 6.6,
     "tpm": 0.87,
     "reb": 4.76,
     "ast": 0.58,
@@ -595,21 +595,21 @@
     "tov": 0.87
    },
    "histComps": {
-    "pts": 6.23,
-    "tpm": 0.86,
-    "reb": 4.7,
+    "pts": 6.2,
+    "tpm": 0.85,
+    "reb": 4.68,
     "ast": 0.57,
     "stl": 0.48,
-    "blk": 0.86,
-    "tov": 0.86
+    "blk": 0.85,
+    "tov": 0.85
    },
    "lines": {
     "pts": [
      [
       7.5,
-      0.472,
-      "-102",
-      "-130"
+      0.411,
+      "128",
+      "-170"
      ]
     ]
    }
@@ -620,7 +620,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.1,
    "pct": 1.0,
@@ -666,7 +666,7 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -682,8 +682,8 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 0.994,
+   "pace": 0.979,
+   "blow": 0.991,
    "reasons": [
     "props +14% vs historique",
     "petit total -2%"
@@ -700,7 +700,7 @@
     "tov": 2.76
    },
    "histComps": {
-    "pts": 19.05,
+    "pts": 19.06,
     "tpm": 3.19,
     "reb": 3.81,
     "ast": 3.09,
@@ -749,7 +749,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.56,
@@ -797,7 +797,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.56,
@@ -845,15 +845,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 28.5,
-   "sd": 12.18,
+   "sd": 12.25,
    "raw": 28.5,
-   "hist": 36.02,
+   "hist": 35.82,
    "usesProps": true,
    "estMin": 31.7,
    "sdMin": 8.1,
@@ -861,11 +861,11 @@
    "starter": true,
    "promoted": true,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.02,
+   "pace": 1.029,
+   "blow": 1.021,
    "reasons": [
     "PROMU titulaire",
-    "props -21% vs historique"
+    "props -20% vs historique"
    ],
    "upside": 0.204,
    "sorare": 6.02,
@@ -879,13 +879,13 @@
     "tov": 1.81
    },
    "histComps": {
-    "pts": 19.36,
-    "tpm": 4.55,
-    "reb": 4.99,
-    "ast": 3.37,
-    "stl": 1.32,
-    "blk": 0.3,
-    "tov": 1.91
+    "pts": 19.25,
+    "tpm": 4.53,
+    "reb": 4.96,
+    "ast": 3.35,
+    "stl": 1.31,
+    "blk": 0.29,
+    "tov": 1.9
    },
    "lines": {
     "pts": [
@@ -912,15 +912,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90% (recalé sur nos bilans)",
-   "exp": 5.09,
+   "exp": 5.06,
    "sd": 5.34,
-   "raw": 5.09,
-   "hist": 5.19,
+   "raw": 5.06,
+   "hist": 5.17,
    "usesProps": false,
    "estMin": 8.6,
    "sdMin": 7.2,
@@ -928,7 +928,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.012,
    "reasons": [
     "banc, joue 90% des matchs",
@@ -946,10 +946,10 @@
     "tov": 0.2
    },
    "histComps": {
-    "pts": 2.25,
-    "tpm": 0.6,
-    "reb": 0.6,
-    "ast": 0.73,
+    "pts": 2.24,
+    "tpm": 0.59,
+    "reb": 0.59,
+    "ast": 0.72,
     "stl": 0.2,
     "blk": 0.14,
     "tov": 0.2
@@ -961,7 +961,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -1007,15 +1007,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 26.07,
-   "sd": 11.97,
-   "raw": 26.07,
-   "hist": 25.5,
+   "exp": 26.46,
+   "sd": 12.13,
+   "raw": 26.46,
+   "hist": 25.54,
    "usesProps": true,
    "estMin": 26.7,
    "sdMin": 3.9,
@@ -1023,11 +1023,11 @@
    "starter": true,
    "promoted": true,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 1.017,
+   "pace": 0.979,
+   "blow": 1.015,
    "reasons": [
     "PROMU titulaire",
-    "props +4% vs historique",
+    "props +6% vs historique",
     "petit total -2%"
    ],
    "upside": 0.196,
@@ -1036,16 +1036,16 @@
     "pts": 17.25,
     "tpm": 2.45,
     "reb": 3.18,
-    "ast": 4.2,
+    "ast": 4.5,
     "stl": 0.61,
     "blk": 0.49,
     "tov": 3.18
    },
    "histComps": {
-    "pts": 16.03,
+    "pts": 16.05,
     "tpm": 1.58,
     "reb": 3.16,
-    "ast": 4.85,
+    "ast": 4.86,
     "stl": 0.61,
     "blk": 0.49,
     "tov": 3.16
@@ -1070,9 +1070,9 @@
     "ast": [
      [
       4.5,
-      0.406,
-      "130",
-      "-174"
+      0.472,
+      "-102",
+      "-130"
      ]
     ]
    }
@@ -1083,15 +1083,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
    "pctSrc": "ESPN : Out. Castleton totaled five points (2-4 FG, 1-1 3Pt) and four rebounds in seven minutes during Tuesday's 132-116 preseason win over the Cavaliers.",
-   "exp": 2.27,
+   "exp": 2.25,
    "sd": 2.01,
-   "raw": 2.27,
-   "hist": 2.31,
+   "raw": 2.25,
+   "hist": 2.3,
    "usesProps": false,
    "estMin": 3.7,
    "sdMin": 3.1,
@@ -1099,7 +1099,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 1.012,
    "reasons": [
     "ESPN Out",
@@ -1132,15 +1132,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.302,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 2 fois sur ses 10 derniers matchs, compté 30% (recalé sur nos bilans)",
-   "exp": 4.09,
+   "exp": 4.06,
    "sd": 2.63,
-   "raw": 4.09,
-   "hist": 4.09,
+   "raw": 4.06,
+   "hist": 4.06,
    "usesProps": false,
    "estMin": 6.8,
    "sdMin": 3.6,
@@ -1148,7 +1148,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
+   "pace": 1.029,
    "blow": 1.012,
    "reasons": [
     "banc, joue 30% des matchs"
@@ -1165,13 +1165,13 @@
     "tov": 1.0
    },
    "histComps": {
-    "pts": 1.83,
+    "pts": 1.82,
     "tpm": 0.0,
-    "reb": 1.31,
-    "ast": 0.79,
+    "reb": 1.3,
+    "ast": 0.78,
     "stl": 0.52,
     "blk": 0.0,
-    "tov": 1.05
+    "tov": 1.04
    }
   },
   "deandre-ayton-19980723": {
@@ -1180,15 +1180,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 4.51,
+   "exp": 4.49,
    "sd": 3.61,
-   "raw": 4.51,
-   "hist": 4.61,
+   "raw": 4.49,
+   "hist": 4.58,
    "usesProps": false,
    "estMin": 8.4,
    "sdMin": 3.0,
@@ -1196,7 +1196,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.012,
    "reasons": [
     "petit total -2%"
@@ -1215,7 +1215,7 @@
    "histComps": {
     "pts": 1.25,
     "tpm": 0.0,
-    "reb": 2.42,
+    "reb": 2.41,
     "ast": 0.36,
     "stl": 0.09,
     "blk": 0.09,
@@ -1228,15 +1228,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 34.68,
-   "sd": 13.65,
-   "raw": 33.03,
-   "hist": 35.62,
+   "exp": 33.75,
+   "sd": 13.35,
+   "raw": 32.14,
+   "hist": 35.45,
    "usesProps": true,
    "estMin": 35.2,
    "sdMin": 3.0,
@@ -1244,16 +1244,16 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 0.999,
    "reasons": [
-    "props -1% vs historique",
+    "props -3% vs historique",
     "petit total -2%"
    ],
    "upside": 0.128,
    "sorare": 30.06,
    "comps": {
-    "pts": 19.71,
+    "pts": 18.82,
     "tpm": 3.55,
     "reb": 3.8,
     "ast": 3.55,
@@ -1262,21 +1262,21 @@
     "tov": 1.8
    },
    "histComps": {
-    "pts": 19.25,
-    "tpm": 4.56,
-    "reb": 3.77,
-    "ast": 3.27,
-    "stl": 1.29,
+    "pts": 19.15,
+    "tpm": 4.54,
+    "reb": 3.75,
+    "ast": 3.26,
+    "stl": 1.28,
     "blk": 0.1,
-    "tov": 1.79
+    "tov": 1.78
    },
    "lines": {
     "pts": [
      [
       19.5,
-      0.514,
-      "-122",
-      "-108"
+      0.453,
+      "106",
+      "-141"
      ]
     ],
     "tpm": [
@@ -1298,9 +1298,9 @@
     "ast": [
      [
       3.5,
-      0.472,
-      "-102",
-      "-130"
+      0.475,
+      "-103",
+      "-128"
      ]
     ]
    }
@@ -1311,15 +1311,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 5.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 44.1,
-   "sd": 17.43,
-   "raw": 44.1,
-   "hist": 47.82,
+   "exp": 43.81,
+   "sd": 17.39,
+   "raw": 43.81,
+   "hist": 47.59,
    "usesProps": true,
    "estMin": 36.4,
    "sdMin": 3.0,
@@ -1327,7 +1327,7 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 0.999,
    "reasons": [
     "props -6% vs historique",
@@ -1338,20 +1338,20 @@
    "comps": {
     "pts": 25.04,
     "tpm": 1.5,
-    "reb": 6.8,
-    "ast": 7.3,
+    "reb": 6.5,
+    "ast": 7.35,
     "stl": 1.36,
     "blk": 0.58,
     "tov": 3.2
    },
    "histComps": {
-    "pts": 26.0,
-    "tpm": 1.25,
-    "reb": 7.32,
-    "ast": 8.18,
-    "stl": 1.35,
-    "blk": 0.58,
-    "tov": 3.17
+    "pts": 25.88,
+    "tpm": 1.24,
+    "reb": 7.29,
+    "ast": 8.15,
+    "stl": 1.34,
+    "blk": 0.57,
+    "tov": 3.16
    },
    "lines": {
     "pts": [
@@ -1365,25 +1365,25 @@
     "tpm": [
      [
       1.5,
-      0.449,
-      "108",
-      "-144"
+      0.443,
+      "111",
+      "-147"
      ]
     ],
     "reb": [
      [
       6.5,
-      0.523,
-      "-127",
-      "-104"
+      0.473,
+      "-102",
+      "-129"
      ]
     ],
     "ast": [
      [
       7.5,
-      0.449,
+      0.45,
       "108",
-      "-144"
+      "-143"
      ]
     ]
    }
@@ -1394,14 +1394,14 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 29.72,
-   "sd": 11.53,
-   "raw": 28.3,
+   "exp": 29.19,
+   "sd": 11.33,
+   "raw": 27.8,
    "hist": 30.3,
    "usesProps": true,
    "estMin": 30.2,
@@ -1413,15 +1413,15 @@
    "pace": 1.023,
    "blow": 0.97,
    "reasons": [
-    "props -2% vs historique"
+    "props -4% vs historique"
    ],
    "upside": 0.184,
    "sorare": 26.76,
    "comps": {
     "pts": 13.21,
     "tpm": 2.65,
-    "reb": 2.95,
-    "ast": 5.0,
+    "reb": 2.8,
+    "ast": 4.75,
     "stl": 0.79,
     "blk": 0.49,
     "tov": 1.18
@@ -1455,17 +1455,17 @@
     "reb": [
      [
       2.5,
-      0.569,
-      "-158",
-      "116"
+      0.525,
+      "-128",
+      "-103"
      ]
     ],
     "ast": [
      [
       4.5,
-      0.563,
-      "-152",
-      "114"
+      0.516,
+      "-123",
+      "-107"
      ]
     ]
    }
@@ -1476,15 +1476,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 14.87,
+   "exp": 14.8,
    "sd": 8.85,
-   "raw": 14.87,
-   "hist": 15.18,
+   "raw": 14.8,
+   "hist": 15.11,
    "usesProps": false,
    "estMin": 16.6,
    "sdMin": 4.3,
@@ -1492,7 +1492,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 1.012,
    "reasons": [
     "petit total -2%"
@@ -1509,9 +1509,9 @@
     "tov": 0.75
    },
    "histComps": {
-    "pts": 5.49,
+    "pts": 5.46,
     "tpm": 0.0,
-    "reb": 5.17,
+    "reb": 5.14,
     "ast": 0.96,
     "stl": 0.43,
     "blk": 0.75,
@@ -1524,7 +1524,7 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -1540,8 +1540,8 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 0.994,
+   "pace": 0.979,
+   "blow": 0.991,
    "reasons": [
     "props -10% vs historique",
     "petit total -2%"
@@ -1591,15 +1591,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.56,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 5 fois sur ses 10 derniers matchs, compté 56% (recalé sur nos bilans)",
-   "exp": 8.72,
+   "exp": 8.75,
    "sd": 8.08,
-   "raw": 8.72,
-   "hist": 8.9,
+   "raw": 8.75,
+   "hist": 8.93,
    "usesProps": false,
    "estMin": 13,
    "sdMin": 8.4,
@@ -1607,8 +1607,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 1.013,
+   "pace": 0.979,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 56% des matchs",
     "petit total -2%"
@@ -1625,12 +1625,12 @@
     "tov": 0.78
    },
    "histComps": {
-    "pts": 2.69,
+    "pts": 2.7,
     "tpm": 0.0,
-    "reb": 3.84,
-    "ast": 0.57,
+    "reb": 3.85,
+    "ast": 0.58,
     "stl": 0.19,
-    "blk": 0.57,
+    "blk": 0.58,
     "tov": 0.77
    }
   },
@@ -1640,7 +1640,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.646,
@@ -1688,7 +1688,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -1762,14 +1762,14 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.1,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 30.91,
-   "sd": 12.59,
-   "raw": 28.1,
+   "exp": 30.58,
+   "sd": 12.45,
+   "raw": 27.8,
    "hist": 28.79,
    "usesProps": true,
    "estMin": 30.4,
@@ -1781,14 +1781,14 @@
    "pace": 1.023,
    "blow": 0.97,
    "reasons": [
-    "props +7% vs historique"
+    "props +6% vs historique"
    ],
    "upside": 0.113,
    "sorare": 25.91,
    "comps": {
     "pts": 13.6,
     "tpm": 1.9,
-    "reb": 6.3,
+    "reb": 6.1,
     "ast": 1.82,
     "stl": 0.48,
     "blk": 0.86,
@@ -1823,9 +1823,9 @@
     "reb": [
      [
       6.5,
-      0.445,
-      "110",
-      "-146"
+      0.408,
+      "129",
+      "-172"
      ]
     ]
    }
@@ -1836,7 +1836,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.474,
@@ -1884,15 +1884,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.15,
    "pct": 0.75,
    "pctSrc": "RotoWire : titulaire probable (Prob), probabilité affichée 75%",
    "exp": 40.02,
-   "sd": 16.79,
+   "sd": 16.88,
    "raw": 34.8,
-   "hist": 41.07,
+   "hist": 40.86,
    "usesProps": true,
    "estMin": 28,
    "sdMin": 7.1,
@@ -1900,10 +1900,10 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.0,
+   "pace": 1.029,
+   "blow": 1.001,
    "reasons": [
-    "props -3% vs historique"
+    "props -2% vs historique"
    ],
    "upside": 0.184,
    "sorare": 24.97,
@@ -1917,12 +1917,12 @@
     "tov": 0.95
    },
    "histComps": {
-    "pts": 15.69,
-    "tpm": 2.4,
-    "reb": 7.85,
-    "ast": 2.62,
+    "pts": 15.61,
+    "tpm": 2.39,
+    "reb": 7.81,
+    "ast": 2.61,
     "stl": 0.87,
-    "blk": 1.2,
+    "blk": 1.19,
     "tov": 0.98
    },
    "lines": {
@@ -1958,15 +1958,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 26.14,
-   "sd": 13.02,
-   "raw": 24.89,
-   "hist": 21.98,
+   "exp": 28.19,
+   "sd": 14.1,
+   "raw": 26.84,
+   "hist": 21.87,
    "usesProps": true,
    "estMin": 28.6,
    "sdMin": 5.1,
@@ -1974,31 +1974,32 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 0.999,
    "reasons": [
-    "props +21% vs historique",
-    "petit total -2%"
+    "props +23% vs historique",
+    "petit total -2%",
+    "élan props +7%"
    ],
    "upside": 0.254,
    "sorare": 25.11,
    "comps": {
     "pts": 11.64,
     "tpm": 1.85,
-    "reb": 4.45,
+    "reb": 4.6,
     "ast": 4.65,
     "stl": 1.16,
     "blk": 0.43,
     "tov": 2.6
    },
    "histComps": {
-    "pts": 8.31,
-    "tpm": 1.43,
-    "reb": 5.02,
-    "ast": 3.73,
+    "pts": 8.27,
+    "tpm": 1.42,
+    "reb": 5.0,
+    "ast": 3.71,
     "stl": 1.15,
-    "blk": 0.43,
-    "tov": 2.58
+    "blk": 0.42,
+    "tov": 2.57
    },
    "lines": {
     "pts": [
@@ -2020,9 +2021,9 @@
     "reb": [
      [
       4.5,
-      0.462,
-      "102",
-      "-136"
+      0.485,
+      "-108",
+      "-123"
      ]
     ],
     "ast": [
@@ -2041,15 +2042,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.818,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 82% (recalé sur nos bilans)",
-   "exp": 3.94,
+   "exp": 3.92,
    "sd": 5.51,
-   "raw": 3.94,
-   "hist": 4.02,
+   "raw": 3.92,
+   "hist": 4.0,
    "usesProps": false,
    "estMin": 7,
    "sdMin": 10.6,
@@ -2057,7 +2058,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 1.012,
    "reasons": [
     "banc, joue 82% des matchs",
@@ -2075,9 +2076,9 @@
     "tov": 0.39
    },
    "histComps": {
-    "pts": 2.04,
+    "pts": 2.03,
     "tpm": 0.3,
-    "reb": 1.52,
+    "reb": 1.51,
     "ast": 0.22,
     "stl": 0.09,
     "blk": 0.04,
@@ -2090,7 +2091,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -2156,7 +2157,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.5,
@@ -2202,15 +2203,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 12.12,
+   "exp": 12.06,
    "sd": 8.09,
-   "raw": 12.12,
-   "hist": 12.36,
+   "raw": 12.06,
+   "hist": 12.31,
    "usesProps": false,
    "estMin": 15,
    "sdMin": 7.0,
@@ -2218,7 +2219,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 1.012,
    "reasons": [
     "petit total -2%"
@@ -2235,10 +2236,10 @@
     "tov": 0.31
    },
    "histComps": {
-    "pts": 5.13,
-    "tpm": 1.57,
-    "reb": 1.26,
-    "ast": 1.26,
+    "pts": 5.1,
+    "tpm": 1.56,
+    "reb": 1.25,
+    "ast": 1.25,
     "stl": 0.73,
     "blk": 0.21,
     "tov": 0.31
@@ -2250,15 +2251,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 31.9,
-   "sd": 14.61,
+   "sd": 14.68,
    "raw": 31.9,
-   "hist": 34.26,
+   "hist": 34.09,
    "usesProps": true,
    "estMin": 30.2,
    "sdMin": 6.6,
@@ -2266,10 +2267,10 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.0,
+   "pace": 1.029,
+   "blow": 1.001,
    "reasons": [
-    "props -7% vs historique"
+    "props -6% vs historique"
    ],
    "upside": 0.213,
    "sorare": 37.05,
@@ -2283,13 +2284,13 @@
     "tov": 3.8
    },
    "histComps": {
-    "pts": 11.8,
-    "tpm": 1.14,
-    "reb": 8.07,
-    "ast": 10.87,
+    "pts": 11.74,
+    "tpm": 1.13,
+    "reb": 8.03,
+    "ast": 10.81,
     "stl": 0.31,
     "blk": 0.72,
-    "tov": 3.93
+    "tov": 3.91
    },
    "lines": {
     "pts": [
@@ -2332,14 +2333,14 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 25.1,
-   "sd": 10.66,
-   "raw": 25.1,
+   "exp": 25.2,
+   "sd": 10.7,
+   "raw": 25.2,
    "hist": 26.84,
    "usesProps": true,
    "estMin": 25.8,
@@ -2358,7 +2359,7 @@
    "comps": {
     "pts": 9.08,
     "tpm": 1.45,
-    "reb": 5.2,
+    "reb": 5.25,
     "ast": 2.05,
     "stl": 1.43,
     "blk": 0.51,
@@ -2393,9 +2394,9 @@
     "reb": [
      [
       5.5,
-      0.419,
-      "123",
-      "-164"
+      0.431,
+      "117",
+      "-155"
      ]
     ]
    }
@@ -2406,7 +2407,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2467,9 +2468,9 @@
     "reb": [
      [
       5.5,
-      0.5,
+      0.498,
       "-114",
-      "-114"
+      "-116"
      ]
     ],
     "ast": [
@@ -2488,15 +2489,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 11.49,
+   "exp": 11.44,
    "sd": 9.58,
-   "raw": 10.95,
-   "hist": 11.73,
+   "raw": 10.89,
+   "hist": 11.67,
    "usesProps": false,
    "estMin": 21.4,
    "sdMin": 7.0,
@@ -2504,7 +2505,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.012,
    "reasons": [
     "petit total -2%"
@@ -2521,13 +2522,13 @@
     "tov": 1.17
    },
    "histComps": {
-    "pts": 5.74,
-    "tpm": 1.15,
-    "reb": 2.72,
-    "ast": 1.87,
+    "pts": 5.71,
+    "tpm": 1.14,
+    "reb": 2.71,
+    "ast": 1.86,
     "stl": 0.15,
     "blk": 0.0,
-    "tov": 1.15
+    "tov": 1.14
    }
   },
   "kyshawn-george-20031212": {
@@ -2536,15 +2537,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 30.48,
-   "sd": 12.45,
-   "raw": 30.48,
-   "hist": 34.23,
+   "exp": 30.97,
+   "sd": 12.72,
+   "raw": 30.97,
+   "hist": 34.07,
    "usesProps": true,
    "estMin": 38,
    "sdMin": 4.6,
@@ -2552,16 +2553,16 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 0.999,
    "reasons": [
-    "props -9% vs historique",
+    "props -7% vs historique",
     "petit total -2%"
    ],
    "upside": 0.145,
    "sorare": 32.54,
    "comps": {
-    "pts": 15.67,
+    "pts": 16.18,
     "tpm": 2.45,
     "reb": 4.5,
     "ast": 4.25,
@@ -2570,21 +2571,21 @@
     "tov": 2.48
    },
    "histComps": {
-    "pts": 18.06,
-    "tpm": 3.13,
-    "reb": 5.12,
-    "ast": 3.86,
+    "pts": 17.98,
+    "tpm": 3.12,
+    "reb": 5.09,
+    "ast": 3.84,
     "stl": 0.83,
     "blk": 1.15,
-    "tov": 2.4
+    "tov": 2.39
    },
    "lines": {
     "pts": [
      [
       15.5,
-      0.514,
-      "-122",
-      "-108"
+      0.559,
+      "-148",
+      "112"
      ]
     ],
     "tpm": [
@@ -2619,15 +2620,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.732,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 73% (recalé sur nos bilans)",
-   "exp": 4.46,
+   "exp": 4.47,
    "sd": 4.33,
-   "raw": 4.46,
-   "hist": 4.55,
+   "raw": 4.47,
+   "hist": 4.57,
    "usesProps": false,
    "estMin": 7.2,
    "sdMin": 6.2,
@@ -2635,8 +2636,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 1.013,
+   "pace": 0.979,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 73% des matchs",
     "petit total -2%"
@@ -2653,10 +2654,10 @@
     "tov": 0.21
    },
    "histComps": {
-    "pts": 2.47,
+    "pts": 2.48,
     "tpm": 0.42,
     "reb": 0.82,
-    "ast": 0.51,
+    "ast": 0.52,
     "stl": 0.1,
     "blk": 0.0,
     "tov": 0.21
@@ -2668,7 +2669,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.15,
    "pct": 0.732,
@@ -2727,15 +2728,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 31.92,
-   "sd": 13.83,
+   "sd": 13.9,
    "raw": 30.4,
-   "hist": 32.5,
+   "hist": 32.33,
    "usesProps": true,
    "estMin": 31.2,
    "sdMin": 3.6,
@@ -2743,10 +2744,10 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.0,
+   "pace": 1.029,
+   "blow": 1.001,
    "reasons": [
-    "props -2% vs historique"
+    "props -1% vs historique"
    ],
    "upside": 0.133,
    "sorare": 30.74,
@@ -2760,13 +2761,13 @@
     "tov": 1.92
    },
    "histComps": {
-    "pts": 18.6,
-    "tpm": 2.93,
-    "reb": 5.43,
-    "ast": 1.68,
+    "pts": 18.51,
+    "tpm": 2.91,
+    "reb": 5.41,
+    "ast": 1.67,
     "stl": 0.63,
-    "blk": 0.84,
-    "tov": 1.99
+    "blk": 0.83,
+    "tov": 1.98
    },
    "lines": {
     "pts": [
@@ -2801,15 +2802,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.15,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 30.43,
-   "sd": 13.76,
+   "sd": 13.75,
    "raw": 26.46,
-   "hist": 35.35,
+   "hist": 35.36,
    "usesProps": true,
    "estMin": 34.4,
    "sdMin": 4.7,
@@ -2817,8 +2818,8 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 0.994,
+   "pace": 0.979,
+   "blow": 0.991,
    "reasons": [
     "props -12% vs historique",
     "petit total -2%"
@@ -2868,7 +2869,7 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -2884,8 +2885,8 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 0.994,
+   "pace": 0.979,
+   "blow": 0.991,
    "reasons": [
     "props -4% vs historique",
     "petit total -2%"
@@ -2896,7 +2897,7 @@
     "pts": 18.93,
     "tpm": 2.6,
     "reb": 8.3,
-    "ast": 2.65,
+    "ast": 2.7,
     "stl": 1.08,
     "blk": 0.65,
     "tov": 2.27
@@ -2904,7 +2905,7 @@
    "histComps": {
     "pts": 19.94,
     "tpm": 2.62,
-    "reb": 8.49,
+    "reb": 8.5,
     "ast": 2.94,
     "stl": 1.05,
     "blk": 0.63,
@@ -2930,17 +2931,17 @@
     "reb": [
      [
       8.5,
-      0.449,
-      "108",
-      "-144"
+      0.447,
+      "109",
+      "-145"
      ]
     ],
     "ast": [
      [
       2.5,
-      0.494,
-      "-112",
-      "-118"
+      0.506,
+      "-118",
+      "-112"
      ]
     ]
    }
@@ -2951,15 +2952,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 22.57,
-   "sd": 10.03,
-   "raw": 21.5,
-   "hist": 24.51,
+   "exp": 22.89,
+   "sd": 10.22,
+   "raw": 21.8,
+   "hist": 24.37,
    "usesProps": true,
    "estMin": 24.4,
    "sdMin": 4.7,
@@ -2967,15 +2968,15 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.02,
+   "pace": 1.029,
+   "blow": 1.021,
    "reasons": [
-    "props -8% vs historique"
+    "props -6% vs historique"
    ],
    "upside": 0.135,
    "sorare": 28.63,
    "comps": {
-    "pts": 8.6,
+    "pts": 8.94,
     "tpm": 0.0,
     "reb": 5.7,
     "ast": 1.37,
@@ -2984,21 +2985,21 @@
     "tov": 1.1
    },
    "histComps": {
-    "pts": 10.43,
+    "pts": 10.37,
     "tpm": 0.0,
-    "reb": 5.36,
-    "ast": 1.45,
-    "stl": 0.73,
-    "blk": 1.45,
+    "reb": 5.33,
+    "ast": 1.44,
+    "stl": 0.72,
+    "blk": 1.44,
     "tov": 1.16
    },
    "lines": {
     "pts": [
      [
       8.5,
-      0.51,
-      "-120",
-      "-110"
+      0.544,
+      "-139",
+      "105"
      ]
     ],
     "reb": [
@@ -3017,7 +3018,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.0,
@@ -3065,15 +3066,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.15,
    "pct": 0.732,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 73% (recalé sur nos bilans)",
-   "exp": 17.45,
+   "exp": 17.36,
    "sd": 11.06,
-   "raw": 15.17,
-   "hist": 17.8,
+   "raw": 15.1,
+   "hist": 17.72,
    "usesProps": false,
    "estMin": 17,
    "sdMin": 5.9,
@@ -3081,7 +3082,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 1.012,
    "reasons": [
     "banc, joue 73% des matchs",
@@ -3099,10 +3100,10 @@
     "tov": 0.55
    },
    "histComps": {
-    "pts": 5.79,
+    "pts": 5.76,
     "tpm": 0.96,
-    "reb": 4.82,
-    "ast": 1.52,
+    "reb": 4.8,
+    "ast": 1.51,
     "stl": 0.27,
     "blk": 0.27,
     "tov": 0.55
@@ -3114,7 +3115,7 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
@@ -3162,15 +3163,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.75,
    "pctSrc": "RotoWire : incertain (Prob), probabilité affichée 75%",
-   "exp": 12.68,
+   "exp": 12.6,
    "sd": 8.67,
-   "raw": 12.68,
-   "hist": 12.68,
+   "raw": 12.6,
+   "hist": 12.6,
    "usesProps": false,
    "estMin": 12,
    "sdMin": 3.4,
@@ -3178,7 +3179,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
+   "pace": 1.029,
    "blow": 1.012,
    "reasons": [],
    "upside": 0.32,
@@ -3193,10 +3194,10 @@
     "tov": 0.41
    },
    "histComps": {
-    "pts": 6.13,
+    "pts": 6.09,
     "tpm": 0.75,
-    "reb": 3.01,
-    "ast": 0.86,
+    "reb": 2.99,
+    "ast": 0.85,
     "stl": 0.53,
     "blk": 0.1,
     "tov": 0.43
@@ -3208,7 +3209,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.646,
@@ -3256,15 +3257,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 14.05,
+   "exp": 13.97,
    "sd": 10.16,
-   "raw": 14.05,
-   "hist": 14.05,
+   "raw": 13.97,
+   "hist": 13.97,
    "usesProps": false,
    "estMin": 17.8,
    "sdMin": 5.5,
@@ -3272,8 +3273,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.02,
+   "pace": 1.029,
+   "blow": 1.021,
    "reasons": [],
    "upside": 0.306,
    "sorare": 14.85,
@@ -3287,11 +3288,11 @@
     "tov": 1.12
    },
    "histComps": {
-    "pts": 6.45,
+    "pts": 6.42,
     "tpm": 1.0,
-    "reb": 2.82,
-    "ast": 1.36,
-    "stl": 0.73,
+    "reb": 2.8,
+    "ast": 1.35,
+    "stl": 0.72,
     "blk": 0.45,
     "tov": 1.18
    }
@@ -3302,7 +3303,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.1,
    "pct": 1.0,
@@ -3368,15 +3369,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 11.67,
+   "exp": 11.69,
    "sd": 8.13,
-   "raw": 11.67,
-   "hist": 11.91,
+   "raw": 11.69,
+   "hist": 11.93,
    "usesProps": false,
    "estMin": 22.2,
    "sdMin": 5.3,
@@ -3384,8 +3385,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 1.017,
+   "pace": 0.979,
+   "blow": 1.015,
    "reasons": [
     "petit total -2%"
    ],
@@ -3401,9 +3402,9 @@
     "tov": 0.91
    },
    "histComps": {
-    "pts": 5.11,
+    "pts": 5.12,
     "tpm": 1.4,
-    "reb": 3.3,
+    "reb": 3.31,
     "ast": 1.0,
     "stl": 0.61,
     "blk": 0.0,
@@ -3416,15 +3417,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.75,
    "pctSrc": "RotoWire : incertain (Prob), probabilité affichée 75%",
-   "exp": 11.72,
+   "exp": 11.77,
    "sd": 8.02,
-   "raw": 11.72,
-   "hist": 11.96,
+   "raw": 11.77,
+   "hist": 12.01,
    "usesProps": false,
    "estMin": 15.4,
    "sdMin": 6.3,
@@ -3432,8 +3433,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 1.013,
+   "pace": 0.979,
+   "blow": 1.014,
    "reasons": [
     "petit total -2%"
    ],
@@ -3449,9 +3450,9 @@
     "tov": 0.98
    },
    "histComps": {
-    "pts": 3.79,
+    "pts": 3.8,
     "tpm": 0.0,
-    "reb": 4.43,
+    "reb": 4.45,
     "ast": 0.97,
     "stl": 0.33,
     "blk": 0.8,
@@ -3464,14 +3465,14 @@
    "opp": "MIL",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 4.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 47.0,
-   "sd": 15.77,
-   "raw": 47.0,
+   "exp": 47.2,
+   "sd": 15.84,
+   "raw": 47.2,
    "hist": 50.24,
    "usesProps": true,
    "estMin": 36.2,
@@ -3488,9 +3489,9 @@
    "upside": 0.153,
    "sorare": 49.88,
    "comps": {
-    "pts": 31.74,
+    "pts": 31.88,
     "tpm": 2.15,
-    "reb": 4.45,
+    "reb": 4.4,
     "ast": 5.6,
     "stl": 0.52,
     "blk": 0.94,
@@ -3509,9 +3510,9 @@
     "pts": [
      [
       32.5,
-      0.469,
-      "-101",
-      "-132"
+      0.475,
+      "-103",
+      "-128"
      ]
     ],
     "tpm": [
@@ -3519,15 +3520,15 @@
       2.5,
       0.368,
       "154",
-      "-210"
+      "-209"
      ]
     ],
     "reb": [
      [
       4.5,
-      0.462,
-      "102",
-      "-136"
+      0.452,
+      "107",
+      "-142"
      ]
     ],
     "ast": [
@@ -3546,14 +3547,14 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 16.77,
-   "sd": 7.63,
-   "raw": 15.97,
+   "exp": 16.36,
+   "sd": 7.44,
+   "raw": 15.58,
    "hist": 19.04,
    "usesProps": true,
    "estMin": 30.4,
@@ -3562,10 +3563,10 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 0.994,
+   "pace": 0.979,
+   "blow": 0.991,
    "reasons": [
-    "props -10% vs historique",
+    "props -12% vs historique",
     "petit total -2%"
    ],
    "upside": 0.221,
@@ -3573,7 +3574,7 @@
    "comps": {
     "pts": 5.36,
     "tpm": 1.35,
-    "reb": 4.3,
+    "reb": 4.0,
     "ast": 3.12,
     "stl": 1.04,
     "blk": 0.0,
@@ -3600,9 +3601,9 @@
     "reb": [
      [
       4.5,
-      0.425,
-      "120",
-      "-160"
+      0.374,
+      "150",
+      "-203"
      ]
     ]
    }
@@ -3613,7 +3614,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -3659,7 +3660,7 @@
    "opp": "PHI",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -3725,15 +3726,15 @@
    "opp": "BKN",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 8.04,
+   "exp": 8.07,
    "sd": 6.38,
-   "raw": 8.04,
-   "hist": 8.21,
+   "raw": 8.07,
+   "hist": 8.24,
    "usesProps": false,
    "estMin": 10.2,
    "sdMin": 6.0,
@@ -3741,8 +3742,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.976,
-   "blow": 1.013,
+   "pace": 0.979,
+   "blow": 1.014,
    "reasons": [
     "petit total -2%"
    ],
@@ -3758,8 +3759,8 @@
     "tov": 0.22
    },
    "histComps": {
-    "pts": 3.38,
-    "tpm": 0.65,
+    "pts": 3.39,
+    "tpm": 0.66,
     "reb": 2.17,
     "ast": 0.15,
     "stl": 0.36,
@@ -3773,15 +3774,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.13,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 0 fois sur ses 10 derniers matchs, compté 13% (recalé sur nos bilans)",
-   "exp": 10.78,
+   "exp": 10.71,
    "sd": 6.81,
-   "raw": 10.27,
-   "hist": 10.78,
+   "raw": 10.2,
+   "hist": 10.71,
    "usesProps": false,
    "estMin": 9.3,
    "sdMin": 4.5,
@@ -3789,7 +3790,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
+   "pace": 1.029,
    "blow": 1.012,
    "reasons": [
     "banc, joue 13% des matchs"
@@ -3806,11 +3807,11 @@
     "tov": 0.67
    },
    "histComps": {
-    "pts": 2.1,
+    "pts": 2.08,
     "tpm": 0.0,
-    "reb": 4.89,
-    "ast": 0.35,
-    "stl": 0.35,
+    "reb": 4.86,
+    "ast": 0.34,
+    "stl": 0.34,
     "blk": 0.7,
     "tov": 0.7
    }
@@ -3821,15 +3822,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 32.44,
-   "sd": 13.56,
-   "raw": 32.44,
-   "hist": 29.88,
+   "exp": 32.34,
+   "sd": 13.59,
+   "raw": 32.34,
+   "hist": 29.74,
    "usesProps": true,
    "estMin": 33.2,
    "sdMin": 5.3,
@@ -3837,7 +3838,7 @@
    "starter": true,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 0.999,
    "reasons": [
     "props +11% vs historique",
@@ -3848,20 +3849,20 @@
    "comps": {
     "pts": 15.48,
     "tpm": 1.95,
-    "reb": 2.65,
-    "ast": 8.1,
+    "reb": 2.5,
+    "ast": 8.15,
     "stl": 1.46,
     "blk": 0.0,
     "tov": 2.04
    },
    "histComps": {
-    "pts": 13.52,
-    "tpm": 1.97,
-    "reb": 1.97,
-    "ast": 7.88,
-    "stl": 1.41,
+    "pts": 13.45,
+    "tpm": 1.96,
+    "reb": 1.96,
+    "ast": 7.84,
+    "stl": 1.4,
     "blk": 0.0,
-    "tov": 1.97
+    "tov": 1.96
    },
    "lines": {
     "pts": [
@@ -3883,17 +3884,17 @@
     "reb": [
      [
       2.5,
-      0.5,
-      "-114",
-      "-114"
+      0.461,
+      "103",
+      "-136"
      ]
     ],
     "ast": [
      [
       8.5,
-      0.425,
-      "120",
-      "-160"
+      0.431,
+      "117",
+      "-155"
      ]
     ]
    }
@@ -3904,15 +3905,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 7.45,
+   "exp": 7.41,
    "sd": 8.29,
-   "raw": 7.45,
-   "hist": 7.6,
+   "raw": 7.41,
+   "hist": 7.57,
    "usesProps": false,
    "estMin": 11.8,
    "sdMin": 9.7,
@@ -3920,7 +3921,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.02,
    "reasons": [
     "petit total -2%"
@@ -3937,9 +3938,9 @@
     "tov": 0.4
    },
    "histComps": {
-    "pts": 4.47,
+    "pts": 4.45,
     "tpm": 0.73,
-    "reb": 0.96,
+    "reb": 0.95,
     "ast": 0.56,
     "stl": 0.39,
     "blk": 0.0,
@@ -3952,15 +3953,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
    "exp": 22.68,
-   "sd": 10.6,
+   "sd": 10.66,
    "raw": 21.6,
-   "hist": 23.85,
+   "hist": 23.71,
    "usesProps": true,
    "estMin": 20.4,
    "sdMin": 5.7,
@@ -3968,10 +3969,10 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
-   "blow": 1.02,
+   "pace": 1.029,
+   "blow": 1.021,
    "reasons": [
-    "props -5% vs historique"
+    "props -4% vs historique"
    ],
    "upside": 0.226,
    "sorare": 28.01,
@@ -3985,13 +3986,13 @@
     "tov": 1.56
    },
    "histComps": {
-    "pts": 11.55,
-    "tpm": 0.31,
-    "reb": 1.86,
-    "ast": 5.26,
-    "stl": 1.04,
-    "blk": 0.31,
-    "tov": 1.65
+    "pts": 11.48,
+    "tpm": 0.3,
+    "reb": 1.85,
+    "ast": 5.23,
+    "stl": 1.03,
+    "blk": 0.3,
+    "tov": 1.64
    },
    "lines": {
     "pts": [
@@ -4018,15 +4019,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.646,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 65% (recalé sur nos bilans)",
-   "exp": 3.07,
+   "exp": 3.06,
    "sd": 4.0,
-   "raw": 3.07,
-   "hist": 3.14,
+   "raw": 3.06,
+   "hist": 3.12,
    "usesProps": false,
    "estMin": 4.4,
    "sdMin": 5.8,
@@ -4034,7 +4035,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.012,
    "reasons": [
     "banc, joue 65% des matchs",
@@ -4067,15 +4068,15 @@
    "opp": "WAS",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 19.96,
-   "sd": 8.67,
-   "raw": 19.01,
-   "hist": 22.81,
+   "exp": 20.37,
+   "sd": 8.89,
+   "raw": 19.4,
+   "hist": 22.7,
    "usesProps": true,
    "estMin": 29.2,
    "sdMin": 4.1,
@@ -4083,16 +4084,16 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.993,
+   "pace": 0.988,
    "blow": 0.999,
    "reasons": [
-    "props -11% vs historique",
+    "props -8% vs historique",
     "petit total -2%"
    ],
    "upside": 0.218,
    "sorare": 13.55,
    "comps": {
-    "pts": 11.48,
+    "pts": 11.87,
     "tpm": 2.55,
     "reb": 4.05,
     "ast": 1.47,
@@ -4101,21 +4102,21 @@
     "tov": 1.38
    },
    "histComps": {
-    "pts": 13.43,
-    "tpm": 3.02,
-    "reb": 4.02,
-    "ast": 1.46,
+    "pts": 13.37,
+    "tpm": 3.0,
+    "reb": 4.0,
+    "ast": 1.45,
     "stl": 0.37,
     "blk": 0.0,
-    "tov": 1.37
+    "tov": 1.36
    },
    "lines": {
     "pts": [
      [
       11.5,
-      0.498,
-      "-114",
-      "-116"
+      0.537,
+      "-135",
+      "102"
      ]
     ],
     "tpm": [
@@ -4134,15 +4135,15 @@
    "opp": "ORL",
    "game": "ORL@WAS:2026-11-28",
    "tip": "2026-11-28T22:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90% (recalé sur nos bilans)",
-   "exp": 4.9,
+   "exp": 4.87,
    "sd": 5.27,
-   "raw": 4.9,
-   "hist": 5.0,
+   "raw": 4.87,
+   "hist": 4.97,
    "usesProps": false,
    "estMin": 7,
    "sdMin": 5.3,
@@ -4150,7 +4151,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.968,
+   "pace": 0.963,
    "blow": 1.012,
    "reasons": [
     "banc, joue 90% des matchs",
@@ -4168,9 +4169,9 @@
     "tov": 0.16
    },
    "histComps": {
-    "pts": 3.05,
+    "pts": 3.03,
     "tpm": 0.38,
-    "reb": 0.99,
+    "reb": 0.98,
     "ast": 0.3,
     "stl": 0.08,
     "blk": 0.0,
@@ -4183,15 +4184,15 @@
    "opp": "IND",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.646,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 65% (recalé sur nos bilans)",
-   "exp": 14.67,
+   "exp": 14.57,
    "sd": 9.93,
-   "raw": 14.67,
-   "hist": 14.67,
+   "raw": 14.57,
+   "hist": 14.57,
    "usesProps": false,
    "estMin": 18.6,
    "sdMin": 7.7,
@@ -4199,7 +4200,7 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 1.035,
+   "pace": 1.029,
    "blow": 1.012,
    "reasons": [
     "banc, joue 65% des matchs"
@@ -4216,13 +4217,13 @@
     "tov": 0.99
    },
    "histComps": {
-    "pts": 5.5,
-    "tpm": 0.6,
-    "reb": 3.27,
-    "ast": 2.08,
+    "pts": 5.47,
+    "tpm": 0.59,
+    "reb": 3.25,
+    "ast": 2.07,
     "stl": 0.45,
     "blk": 0.74,
-    "tov": 1.04
+    "tov": 1.03
    }
   },
   "a-j-green-19990927": {
@@ -4231,7 +4232,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.904,
@@ -4281,15 +4282,15 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 20.84,
+   "exp": 20.86,
    "sd": 11.8,
-   "raw": 20.84,
-   "hist": 20.84,
+   "raw": 20.86,
+   "hist": 20.86,
    "usesProps": false,
    "estMin": 30.2,
    "sdMin": 4.4,
@@ -4298,7 +4299,7 @@
    "promoted": false,
    "b2b": true,
    "pace": 1.016,
-   "blow": 1.0,
+   "blow": 1.001,
    "reasons": [
     "back-to-back"
    ],
@@ -4314,9 +4315,9 @@
     "tov": 1.01
    },
    "histComps": {
-    "pts": 9.51,
+    "pts": 9.52,
     "tpm": 1.03,
-    "reb": 3.99,
+    "reb": 4.0,
     "ast": 2.36,
     "stl": 0.82,
     "blk": 0.51,
@@ -4329,7 +4330,7 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.388,
@@ -4379,15 +4380,15 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.1,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 33.0,
-   "sd": 12.61,
+   "sd": 12.6,
    "raw": 30.0,
-   "hist": 29.74,
+   "hist": 29.77,
    "usesProps": true,
    "estMin": 31.6,
    "sdMin": 4.1,
@@ -4396,7 +4397,7 @@
    "promoted": false,
    "b2b": true,
    "pace": 1.016,
-   "blow": 1.0,
+   "blow": 1.001,
    "reasons": [
     "back-to-back",
     "props +11% vs historique"
@@ -4413,7 +4414,7 @@
     "tov": 2.56
    },
    "histComps": {
-    "pts": 14.66,
+    "pts": 14.67,
     "tpm": 2.22,
     "reb": 2.51,
     "ast": 6.66,
@@ -4454,14 +4455,14 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 22.98,
-   "sd": 13.68,
-   "raw": 22.98,
+   "exp": 23.4,
+   "sd": 13.93,
+   "raw": 23.4,
    "hist": 19.92,
    "usesProps": true,
    "estMin": 25,
@@ -4474,14 +4475,14 @@
    "blow": 1.005,
    "reasons": [
     "back-to-back",
-    "props +11% vs historique",
+    "props +13% vs historique",
     "outsider +4%"
    ],
    "upside": 0.239,
    "sorare": 14.76,
    "comps": {
-    "pts": 14.71,
-    "tpm": 2.85,
+    "pts": 15.15,
+    "tpm": 2.8,
     "reb": 1.78,
     "ast": 1.44,
     "stl": 0.33,
@@ -4501,17 +4502,17 @@
     "pts": [
      [
       14.5,
-      0.519,
-      "-125",
-      "-106"
+      0.559,
+      "-149",
+      "112"
      ]
     ],
     "tpm": [
      [
       2.5,
-      0.542,
-      "-138",
-      "104"
+      0.532,
+      "-132",
+      "-100"
      ]
     ]
    }
@@ -4522,7 +4523,7 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.732,
@@ -4559,10 +4560,10 @@
     "pts": 5.88,
     "tpm": 0.63,
     "reb": 1.79,
-    "ast": 3.79,
+    "ast": 3.78,
     "stl": 1.05,
     "blk": 0.32,
-    "tov": 1.27
+    "tov": 1.26
    }
   },
   "brayden-burries-20050918": {
@@ -4571,7 +4572,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 1.0,
@@ -4620,7 +4621,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.646,
@@ -4670,15 +4671,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.732,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 7 fois sur ses 10 derniers matchs, compté 73% (recalé sur nos bilans)",
-   "exp": 5.12,
+   "exp": 5.11,
    "sd": 5.55,
-   "raw": 5.12,
-   "hist": 5.23,
+   "raw": 5.11,
+   "hist": 5.21,
    "usesProps": false,
    "estMin": 9.8,
    "sdMin": 9.1,
@@ -4686,8 +4687,8 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.013,
+   "pace": 0.935,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 73% des matchs",
     "back-to-back",
@@ -4705,7 +4706,7 @@
     "tov": 0.48
    },
    "histComps": {
-    "pts": 1.75,
+    "pts": 1.74,
     "tpm": 0.19,
     "reb": 1.36,
     "ast": 0.51,
@@ -4720,15 +4721,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
    "exp": 16.88,
-   "sd": 9.57,
+   "sd": 9.62,
    "raw": 16.07,
-   "hist": 17.63,
+   "hist": 17.55,
    "usesProps": true,
    "estMin": 23.4,
    "sdMin": 6.6,
@@ -4736,8 +4737,8 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.017,
+   "pace": 0.935,
+   "blow": 1.015,
    "reasons": [
     "back-to-back",
     "props -2% vs historique",
@@ -4755,13 +4756,13 @@
     "tov": 1.55
    },
    "histComps": {
-    "pts": 8.28,
-    "tpm": 1.66,
-    "reb": 4.36,
-    "ast": 1.83,
+    "pts": 8.24,
+    "tpm": 1.65,
+    "reb": 4.34,
+    "ast": 1.82,
     "stl": 0.26,
     "blk": 0.35,
-    "tov": 1.48
+    "tov": 1.47
    },
    "lines": {
     "pts": [
@@ -4780,15 +4781,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 29.2,
-   "sd": 13.77,
-   "raw": 29.2,
-   "hist": 30.72,
+   "exp": 29.11,
+   "sd": 13.79,
+   "raw": 29.11,
+   "hist": 30.57,
    "usesProps": true,
    "estMin": 25.6,
    "sdMin": 4.5,
@@ -4796,8 +4797,8 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.017,
+   "pace": 0.935,
+   "blow": 1.015,
    "reasons": [
     "back-to-back",
     "props -3% vs historique",
@@ -4806,38 +4807,38 @@
    "upside": 0.184,
    "sorare": 29.41,
    "comps": {
-    "pts": 7.69,
+    "pts": 7.71,
     "tpm": 0.3,
-    "reb": 7.75,
+    "reb": 7.65,
     "ast": 5.1,
     "stl": 1.3,
     "blk": 1.3,
     "tov": 1.5
    },
    "histComps": {
-    "pts": 9.73,
-    "tpm": 0.29,
-    "reb": 7.35,
-    "ast": 4.87,
-    "stl": 1.24,
-    "blk": 1.24,
-    "tov": 1.43
+    "pts": 9.68,
+    "tpm": 0.28,
+    "reb": 7.31,
+    "ast": 4.84,
+    "stl": 1.23,
+    "blk": 1.23,
+    "tov": 1.42
    },
    "lines": {
     "pts": [
      [
       7.5,
-      0.519,
-      "-125",
-      "-106"
+      0.521,
+      "-126",
+      "-105"
      ]
     ],
     "reb": [
      [
       7.5,
-      0.51,
-      "-120",
-      "-110"
+      0.498,
+      "-114",
+      "-116"
      ]
     ]
    }
@@ -4848,7 +4849,7 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -4896,7 +4897,7 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -4946,14 +4947,14 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.388,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 39% (recalé sur nos bilans)",
-   "exp": 2.84,
+   "exp": 2.83,
    "sd": 1.91,
-   "raw": 2.7,
+   "raw": 2.69,
    "hist": 2.89,
    "usesProps": false,
    "estMin": 6.2,
@@ -4962,8 +4963,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.938,
-   "blow": 1.013,
+   "pace": 0.935,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 39% des matchs",
     "petit total -2%"
@@ -4980,9 +4981,9 @@
     "tov": 0.75
    },
    "histComps": {
-    "pts": 2.38,
+    "pts": 2.37,
     "tpm": 0.24,
-    "reb": 0.48,
+    "reb": 0.47,
     "ast": 0.71,
     "stl": 0.0,
     "blk": 0.0,
@@ -4995,7 +4996,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.732,
@@ -5044,15 +5045,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.388,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 3 fois sur ses 10 derniers matchs, compté 39% (recalé sur nos bilans)",
-   "exp": 9.41,
+   "exp": 9.38,
    "sd": 6.57,
-   "raw": 9.41,
-   "hist": 9.6,
+   "raw": 9.38,
+   "hist": 9.58,
    "usesProps": false,
    "estMin": 14.7,
    "sdMin": 5.7,
@@ -5060,8 +5061,8 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.013,
+   "pace": 0.935,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 39% des matchs",
     "back-to-back",
@@ -5081,7 +5082,7 @@
    "histComps": {
     "pts": 0.95,
     "tpm": 0.0,
-    "reb": 3.8,
+    "reb": 3.79,
     "ast": 1.9,
     "stl": 0.31,
     "blk": 0.31,
@@ -5094,15 +5095,15 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.1,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 30.14,
-   "sd": 13.73,
-   "raw": 27.4,
-   "hist": 30.23,
+   "exp": 30.8,
+   "sd": 14.02,
+   "raw": 28.0,
+   "hist": 30.24,
    "usesProps": true,
    "estMin": 26.8,
    "sdMin": 3.6,
@@ -5111,24 +5112,24 @@
    "promoted": false,
    "b2b": true,
    "pace": 1.016,
-   "blow": 1.02,
+   "blow": 1.021,
    "reasons": [
     "back-to-back",
-    "props -0% vs historique"
+    "props +2% vs historique"
    ],
    "upside": 0.264,
    "sorare": 31.74,
    "comps": {
-    "pts": 13.17,
+    "pts": 13.69,
     "tpm": 0.0,
-    "reb": 10.45,
+    "reb": 10.5,
     "ast": 1.94,
     "stl": 0.0,
     "blk": 0.71,
     "tov": 1.63
    },
    "histComps": {
-    "pts": 12.68,
+    "pts": 12.69,
     "tpm": 0.0,
     "reb": 10.89,
     "ast": 2.01,
@@ -5140,17 +5141,17 @@
     "pts": [
      [
       13.5,
-      0.468,
-      "100",
-      "-132"
+      0.519,
+      "-125",
+      "-106"
      ]
     ],
     "reb": [
      [
       10.5,
-      0.476,
-      "-104",
-      "-128"
+      0.481,
+      "-106",
+      "-125"
      ]
     ]
    }
@@ -5161,14 +5162,14 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 21.63,
-   "sd": 9.69,
-   "raw": 21.63,
+   "exp": 21.32,
+   "sd": 9.55,
+   "raw": 21.32,
    "hist": 21.08,
    "usesProps": true,
    "estMin": 22.7,
@@ -5182,7 +5183,7 @@
    "reasons": [
     "PROMU titulaire",
     "back-to-back",
-    "props -1% vs historique",
+    "props -3% vs historique",
     "outsider +4%"
    ],
    "upside": 0.181,
@@ -5190,7 +5191,7 @@
    "comps": {
     "pts": 9.22,
     "tpm": 1.09,
-    "reb": 6.45,
+    "reb": 6.2,
     "ast": 1.58,
     "stl": 0.48,
     "blk": 0.12,
@@ -5217,9 +5218,9 @@
     "reb": [
      [
       6.5,
-      0.462,
-      "102",
-      "-136"
+      0.423,
+      "121",
+      "-161"
      ]
     ]
    }
@@ -5230,7 +5231,7 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 0.904,
@@ -5264,7 +5265,7 @@
     "tov": 0.46
    },
    "histComps": {
-    "pts": 3.81,
+    "pts": 3.8,
     "tpm": 0.38,
     "reb": 3.52,
     "ast": 1.43,
@@ -5279,15 +5280,15 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.818,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 8 fois sur ses 10 derniers matchs, compté 82% (recalé sur nos bilans)",
-   "exp": 11.01,
+   "exp": 11.0,
    "sd": 10.54,
-   "raw": 11.01,
-   "hist": 11.01,
+   "raw": 11.0,
+   "hist": 11.0,
    "usesProps": false,
    "estMin": 11.8,
    "sdMin": 10.6,
@@ -5328,7 +5329,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.646,
@@ -5378,7 +5379,7 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 0.0,
@@ -5428,15 +5429,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.646,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 6 fois sur ses 10 derniers matchs, compté 65% (recalé sur nos bilans)",
-   "exp": 3.35,
+   "exp": 3.34,
    "sd": 3.02,
-   "raw": 3.35,
-   "hist": 3.42,
+   "raw": 3.34,
+   "hist": 3.41,
    "usesProps": false,
    "estMin": 5,
    "sdMin": 3.4,
@@ -5444,8 +5445,8 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.013,
+   "pace": 0.935,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 65% des matchs",
     "back-to-back",
@@ -5466,7 +5467,7 @@
     "pts": 1.45,
     "tpm": 0.29,
     "reb": 0.58,
-    "ast": 0.1,
+    "ast": 0.09,
     "stl": 0.29,
     "blk": 0.19,
     "tov": 0.29
@@ -5478,15 +5479,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 32.05,
-   "sd": 12.57,
-   "raw": 32.05,
-   "hist": 32.73,
+   "exp": 32.73,
+   "sd": 12.92,
+   "raw": 32.73,
+   "hist": 32.52,
    "usesProps": true,
    "estMin": 34.6,
    "sdMin": 4.0,
@@ -5494,17 +5495,17 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 0.994,
+   "pace": 0.935,
+   "blow": 0.991,
    "reasons": [
     "back-to-back",
-    "props -0% vs historique",
+    "props +3% vs historique",
     "petit total -2%"
    ],
    "upside": 0.141,
    "sorare": 31.2,
    "comps": {
-    "pts": 19.91,
+    "pts": 20.58,
     "tpm": 1.45,
     "reb": 6.25,
     "ast": 4.45,
@@ -5513,21 +5514,21 @@
     "tov": 3.31
    },
    "histComps": {
-    "pts": 21.76,
-    "tpm": 1.35,
-    "reb": 4.91,
-    "ast": 4.34,
-    "stl": 0.96,
-    "blk": 0.2,
-    "tov": 3.09
+    "pts": 21.62,
+    "tpm": 1.34,
+    "reb": 4.88,
+    "ast": 4.31,
+    "stl": 0.95,
+    "blk": 0.19,
+    "tov": 3.07
    },
    "lines": {
     "pts": [
      [
       19.5,
-      0.528,
-      "-130",
-      "-102"
+      0.573,
+      "-159",
+      "119"
      ]
     ],
     "tpm": [
@@ -5562,7 +5563,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -5610,7 +5611,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5659,15 +5660,15 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.1,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 27.5,
-   "sd": 11.21,
-   "raw": 25.0,
-   "hist": 27.72,
+   "exp": 27.28,
+   "sd": 11.12,
+   "raw": 24.8,
+   "hist": 27.73,
    "usesProps": true,
    "estMin": 24.2,
    "sdMin": 5.5,
@@ -5676,15 +5677,15 @@
    "promoted": false,
    "b2b": true,
    "pace": 1.016,
-   "blow": 1.02,
+   "blow": 1.021,
    "reasons": [
     "back-to-back",
-    "props -1% vs historique"
+    "props -2% vs historique"
    ],
    "upside": 0.19,
    "sorare": 22.28,
    "comps": {
-    "pts": 13.56,
+    "pts": 13.43,
     "tpm": 1.55,
     "reb": 3.83,
     "ast": 0.67,
@@ -5693,10 +5694,10 @@
     "tov": 0.96
    },
    "histComps": {
-    "pts": 13.79,
+    "pts": 13.8,
     "tpm": 1.29,
     "reb": 3.97,
-    "ast": 0.69,
+    "ast": 0.7,
     "stl": 1.0,
     "blk": 1.09,
     "tov": 1.0
@@ -5705,9 +5706,9 @@
     "pts": [
      [
       13.5,
-      0.506,
-      "-118",
-      "-112"
+      0.493,
+      "-112",
+      "-119"
      ]
     ],
     "tpm": [
@@ -5726,15 +5727,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.904,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN. Fin de banc : entré en jeu 9 fois sur ses 10 derniers matchs, compté 90% (recalé sur nos bilans)",
-   "exp": 8.66,
+   "exp": 8.64,
    "sd": 6.61,
-   "raw": 8.66,
-   "hist": 8.84,
+   "raw": 8.64,
+   "hist": 8.82,
    "usesProps": false,
    "estMin": 14.2,
    "sdMin": 6.9,
@@ -5742,8 +5743,8 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.013,
+   "pace": 0.935,
+   "blow": 1.014,
    "reasons": [
     "banc, joue 90% des matchs",
     "back-to-back",
@@ -5761,7 +5762,7 @@
     "tov": 0.26
    },
    "histComps": {
-    "pts": 3.27,
+    "pts": 3.26,
     "tpm": 0.75,
     "reb": 1.17,
     "ast": 1.09,
@@ -5776,7 +5777,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -5852,7 +5853,7 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.818,
@@ -5902,7 +5903,7 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -5950,15 +5951,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.0,
    "bonus": 0.1,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 32.99,
-   "sd": 14.03,
-   "raw": 29.99,
-   "hist": 29.33,
+   "exp": 33.2,
+   "sd": 14.21,
+   "raw": 30.18,
+   "hist": 29.15,
    "usesProps": true,
    "estMin": 31.6,
    "sdMin": 4.3,
@@ -5966,18 +5967,18 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 0.994,
+   "pace": 0.935,
+   "blow": 0.991,
    "reasons": [
     "back-to-back",
-    "props +15% vs historique",
+    "props +16% vs historique",
     "petit total -2%"
    ],
    "upside": 0.162,
    "sorare": 29.33,
    "comps": {
-    "pts": 18.58,
-    "tpm": 2.65,
+    "pts": 18.63,
+    "tpm": 2.8,
     "reb": 6.45,
     "ast": 1.71,
     "stl": 0.95,
@@ -5985,29 +5986,29 @@
     "tov": 2.19
    },
    "histComps": {
-    "pts": 15.79,
-    "tpm": 2.3,
-    "reb": 5.86,
-    "ast": 1.59,
-    "stl": 0.89,
+    "pts": 15.69,
+    "tpm": 2.29,
+    "reb": 5.82,
+    "ast": 1.58,
+    "stl": 0.88,
     "blk": 0.18,
-    "tov": 2.04
+    "tov": 2.03
    },
    "lines": {
     "pts": [
      [
       18.5,
-      0.506,
-      "-118",
-      "-112"
+      0.509,
+      "-120",
+      "-111"
      ]
     ],
     "tpm": [
      [
       2.5,
-      0.496,
-      "-114",
-      "-118"
+      0.53,
+      "-131",
+      "-101"
      ]
     ],
     "reb": [
@@ -6026,15 +6027,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 20.57,
+   "exp": 20.47,
    "sd": 12.19,
-   "raw": 20.57,
-   "hist": 20.99,
+   "raw": 20.47,
+   "hist": 20.89,
    "usesProps": false,
    "estMin": 26.2,
    "sdMin": 3.5,
@@ -6042,8 +6043,8 @@
    "starter": true,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.017,
+   "pace": 0.935,
+   "blow": 1.015,
    "reasons": [
     "back-to-back",
     "petit total -2%"
@@ -6060,13 +6061,13 @@
     "tov": 2.59
    },
    "histComps": {
-    "pts": 13.89,
-    "tpm": 2.37,
-    "reb": 1.85,
-    "ast": 3.29,
-    "stl": 0.72,
+    "pts": 13.82,
+    "tpm": 2.35,
+    "reb": 1.84,
+    "ast": 3.28,
+    "stl": 0.71,
     "blk": 0.1,
-    "tov": 2.47
+    "tov": 2.46
    }
   },
   "moritz-wagner-19970426": {
@@ -6075,15 +6076,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.5,
    "pctSrc": "RotoWire : incertain (Ques), probabilité affichée 50%",
-   "exp": 12.48,
+   "exp": 12.45,
    "sd": 8.34,
-   "raw": 12.48,
-   "hist": 12.74,
+   "raw": 12.45,
+   "hist": 12.7,
    "usesProps": false,
    "estMin": 14.6,
    "sdMin": 5.3,
@@ -6091,8 +6092,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.938,
-   "blow": 1.013,
+   "pace": 0.935,
+   "blow": 1.014,
    "reasons": [
     "petit total -2%"
    ],
@@ -6108,7 +6109,7 @@
     "tov": 0.97
    },
    "histComps": {
-    "pts": 7.06,
+    "pts": 7.04,
     "tpm": 0.92,
     "reb": 2.27,
     "ast": 1.35,
@@ -6123,7 +6124,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6149,7 +6150,7 @@
    "upside": 0.191,
    "sorare": 24.92,
    "comps": {
-    "pts": 8.82,
+    "pts": 8.8,
     "tpm": 1.7,
     "reb": 5.95,
     "ast": 2.62,
@@ -6170,9 +6171,9 @@
     "pts": [
      [
       8.5,
-      0.532,
-      "-132",
-      "100"
+      0.53,
+      "-131",
+      "-101"
      ]
     ],
     "tpm": [
@@ -6199,7 +6200,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6248,15 +6249,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 18.05,
+   "exp": 17.96,
    "sd": 12.81,
-   "raw": 18.05,
-   "hist": 18.42,
+   "raw": 17.96,
+   "hist": 18.32,
    "usesProps": false,
    "estMin": 23.2,
    "sdMin": 6.8,
@@ -6264,8 +6265,8 @@
    "starter": false,
    "promoted": false,
    "b2b": true,
-   "pace": 0.938,
-   "blow": 1.017,
+   "pace": 0.935,
+   "blow": 1.015,
    "reasons": [
     "back-to-back",
     "petit total -2%"
@@ -6282,11 +6283,11 @@
     "tov": 1.03
    },
    "histComps": {
-    "pts": 8.62,
-    "tpm": 1.47,
-    "reb": 3.72,
+    "pts": 8.57,
+    "tpm": 1.46,
+    "reb": 3.7,
     "ast": 1.37,
-    "stl": 0.49,
+    "stl": 0.48,
     "blk": 0.78,
     "tov": 0.98
    }
@@ -6297,15 +6298,15 @@
    "opp": "CHA",
    "game": "BKN@CHA:2026-11-28",
    "tip": "2026-11-28T23:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.5,
    "bonus": 0.05,
    "pct": 0.0,
    "pctSrc": "RotoWire : Out ce soir",
-   "exp": 22.68,
+   "exp": 22.57,
    "sd": 13.49,
-   "raw": 21.6,
-   "hist": 23.14,
+   "raw": 21.49,
+   "hist": 23.03,
    "usesProps": false,
    "estMin": 22.8,
    "sdMin": 4.0,
@@ -6313,8 +6314,8 @@
    "starter": false,
    "promoted": false,
    "b2b": false,
-   "pace": 0.938,
-   "blow": 1.017,
+   "pace": 0.935,
+   "blow": 1.015,
    "reasons": [
     "RotoWire Out",
     "petit total -2%"
@@ -6331,13 +6332,13 @@
     "tov": 1.2
    },
    "histComps": {
-    "pts": 12.51,
+    "pts": 12.45,
     "tpm": 1.58,
     "reb": 1.41,
-    "ast": 2.64,
-    "stl": 1.15,
+    "ast": 2.63,
+    "stl": 1.14,
     "blk": 0.35,
-    "tov": 1.15
+    "tov": 1.14
    }
   },
   "obi-toppin-19980304": {
@@ -6346,7 +6347,7 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
@@ -6379,10 +6380,10 @@
     "tov": 0.97
    },
    "histComps": {
-    "pts": 10.33,
+    "pts": 10.32,
     "tpm": 1.0,
     "reb": 3.89,
-    "ast": 2.0,
+    "ast": 1.99,
     "stl": 0.0,
     "blk": 0.0,
     "tov": 1.0
@@ -6394,7 +6395,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.0,
    "bonus": 0.0,
    "pct": 0.388,
@@ -6443,15 +6444,15 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "Pas dans la liste des incertains RotoWire, ni blessé chez ESPN",
-   "exp": 18.15,
+   "exp": 18.16,
    "sd": 9.94,
-   "raw": 18.15,
-   "hist": 18.15,
+   "raw": 18.16,
+   "hist": 18.16,
    "usesProps": false,
    "estMin": 20.8,
    "sdMin": 3.9,
@@ -6460,7 +6461,7 @@
    "promoted": false,
    "b2b": true,
    "pace": 1.016,
-   "blow": 1.02,
+   "blow": 1.021,
    "reasons": [
     "back-to-back"
    ],
@@ -6491,7 +6492,7 @@
    "opp": "OKC",
    "game": "OKC@MIL:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 2.0,
    "bonus": 0.05,
    "pct": 1.0,
@@ -6547,8 +6548,8 @@
     "ast": [
      [
       4.5,
-      0.41,
-      "128",
+      0.408,
+      "129",
       "-172"
      ]
     ]
@@ -6560,7 +6561,7 @@
    "opp": "CHI",
    "game": "IND@CHI:2026-11-28",
    "tip": "2026-11-29T01:00Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 1.5,
    "bonus": 0.0,
    "pct": 0.5,
@@ -6606,14 +6607,14 @@
    "opp": "HOU",
    "game": "PHI@HOU:2026-11-28",
    "tip": "2026-11-29T01:30Z",
-   "recorded": "2026-11-28T14:46Z",
+   "recorded": "2026-11-28T17:02Z",
    "stars": 3.5,
    "bonus": 0.0,
    "pct": 1.0,
    "pctSrc": "RotoWire : titulaire probable, probabilité affichée 100%",
-   "exp": 39.62,
-   "sd": 15.88,
-   "raw": 39.62,
+   "exp": 39.31,
+   "sd": 15.75,
+   "raw": 39.31,
    "hist": 33.79,
    "usesProps": true,
    "estMin": 37.4,
@@ -6626,16 +6627,16 @@
    "blow": 0.97,
    "reasons": [
     "back-to-back",
-    "props +13% vs historique",
+    "props +12% vs historique",
     "outsider +4%"
    ],
    "upside": 0.151,
    "sorare": 30.17,
    "comps": {
-    "pts": 17.08,
+    "pts": 16.84,
     "tpm": 1.8,
-    "reb": 6.4,
-    "ast": 4.9,
+    "reb": 6.35,
+    "ast": 4.95,
     "stl": 1.99,
     "blk": 0.42,
     "tov": 1.57
@@ -6653,9 +6654,9 @@
     "pts": [
      [
       17.5,
-      0.468,
-      "100",
-      "-132"
+      0.45,
+      "108",
+      "-143"
      ]
     ],
     "tpm": [
@@ -6669,52 +6670,25 @@
     "reb": [
      [
       6.5,
-      0.454,
-      "106",
-      "-140"
+      0.451,
+      "107",
+      "-143"
      ]
     ],
     "ast": [
      [
       4.5,
-      0.546,
-      "-140",
-      "106"
+      0.55,
+      "-143",
+      "108"
      ]
     ]
    }
   }
  },
  "teams": {
-  "recorded": "2026-11-28T14:46Z",
+  "recorded": "2026-11-28T17:02Z",
   "list": [
-   {
-    "slugs": [
-     "clint-capela-19940518",
-     "donovan-clingan-20040223",
-     "james-harden-19890826",
-     "donovan-mitchell-19960907",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Clint Capela",
-     "Donovan Clingan",
-     "James Harden",
-     "Donovan Mitchell",
-     "Victor Wembanyama"
-    ],
-    "stars": 16.5,
-    "lock": "2026-11-29T01:30Z",
-    "mu": 218.7,
-    "p": {
-     "150": 0.8658,
-     "180": 0.7053,
-     "210": 0.5032,
-     "240": 0.3202,
-     "270": 0.1737,
-     "290": 0.1097
-    }
-   },
    {
     "slugs": [
      "clint-capela-19940518",
@@ -6734,12 +6708,12 @@
     "lock": "2026-11-29T01:30Z",
     "mu": 218.9,
     "p": {
-     "150": 0.8678,
-     "180": 0.7058,
-     "210": 0.5002,
-     "240": 0.3192,
-     "270": 0.1808,
-     "290": 0.1163
+     "150": 0.8707,
+     "180": 0.7048,
+     "210": 0.4983,
+     "240": 0.322,
+     "270": 0.1818,
+     "290": 0.1173
     }
    },
    {
@@ -6759,176 +6733,68 @@
     ],
     "stars": 17.0,
     "lock": "2026-11-29T01:30Z",
-    "mu": 220.4,
+    "mu": 220.5,
     "p": {
-     "150": 0.8752,
-     "180": 0.7115,
-     "210": 0.512,
-     "240": 0.3177,
-     "270": 0.1722,
-     "290": 0.1103
-    }
-   },
-   {
-    "slugs": [
-     "dominick-barlow-20030526",
-     "donovan-clingan-20040223",
-     "donovan-mitchell-19960907",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Dominick Barlow",
-     "Donovan Clingan",
-     "Donovan Mitchell",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 17.0,
-    "lock": "2026-11-29T01:30Z",
-    "mu": 219.9,
-    "p": {
-     "150": 0.8755,
-     "180": 0.7137,
-     "210": 0.4995,
-     "240": 0.3127,
-     "270": 0.1743,
-     "290": 0.1063
+     "150": 0.8708,
+     "180": 0.7092,
+     "210": 0.5157,
+     "240": 0.3197,
+     "270": 0.1708,
+     "290": 0.1082
     }
    },
    {
     "slugs": [
      "clint-capela-19940518",
-     "immanuel-quickley-19990617",
-     "donovan-mitchell-19960907",
-     "bam-adebayo-19970718",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Clint Capela",
-     "Immanuel Quickley",
-     "Donovan Mitchell",
-     "Bam Adebayo",
-     "Victor Wembanyama"
-    ],
-    "stars": 17.0,
-    "lock": "2026-11-29T01:30Z",
-    "mu": 216.6,
-    "p": {
-     "150": 0.861,
-     "180": 0.6802,
-     "210": 0.4868,
-     "240": 0.3023,
-     "270": 0.1668,
-     "290": 0.0988
-    }
-   },
-   {
-    "slugs": [
-     "dominick-barlow-20030526",
      "donovan-clingan-20040223",
-     "donovan-mitchell-19960907",
-     "jaden-mcdaniels-20000929",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Dominick Barlow",
-     "Donovan Clingan",
-     "Donovan Mitchell",
-     "Jaden McDaniels",
-     "Victor Wembanyama"
-    ],
-    "stars": 17.0,
-    "lock": "2026-11-29T01:30Z",
-    "mu": 217.8,
-    "p": {
-     "150": 0.8723,
-     "180": 0.6968,
-     "210": 0.483,
-     "240": 0.3008,
-     "270": 0.166,
-     "290": 0.1058
-    }
-   },
-   {
-    "slugs": [
-     "clint-capela-19940518",
-     "immanuel-quickley-19990617",
      "james-harden-19890826",
      "donovan-mitchell-19960907",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Clint Capela",
-     "Immanuel Quickley",
+     "Donovan Clingan",
      "James Harden",
      "Donovan Mitchell",
      "Victor Wembanyama"
     ],
     "stars": 16.5,
     "lock": "2026-11-29T01:30Z",
-    "mu": 214.8,
+    "mu": 218.7,
     "p": {
-     "150": 0.849,
-     "180": 0.67,
-     "210": 0.4725,
-     "240": 0.2998,
-     "270": 0.1665,
-     "290": 0.104
+     "150": 0.8673,
+     "180": 0.7027,
+     "210": 0.5067,
+     "240": 0.3193,
+     "270": 0.1763,
+     "290": 0.1095
     }
    },
    {
     "slugs": [
-     "clint-capela-19940518",
-     "darius-garland-20000126",
+     "dominick-barlow-20030526",
+     "donovan-clingan-20040223",
      "donovan-mitchell-19960907",
      "bam-adebayo-19970718",
      "victor-wembanyama-20040104"
     ],
     "names": [
-     "Clint Capela",
-     "Darius Garland",
+     "Dominick Barlow",
+     "Donovan Clingan",
      "Donovan Mitchell",
      "Bam Adebayo",
      "Victor Wembanyama"
     ],
     "stars": 17.0,
     "lock": "2026-11-29T01:30Z",
-    "mu": 217.0,
+    "mu": 220.0,
     "p": {
-     "150": 0.8682,
-     "180": 0.693,
-     "210": 0.4882,
-     "240": 0.2985,
-     "270": 0.167,
-     "290": 0.1108
-    }
-   },
-   {
-    "slugs": [
-     "clint-capela-19940518",
-     "donovan-clingan-20040223",
-     "donovan-mitchell-19960907",
-     "jaden-mcdaniels-20000929",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Clint Capela",
-     "Donovan Clingan",
-     "Donovan Mitchell",
-     "Jaden McDaniels",
-     "Victor Wembanyama"
-    ],
-    "stars": 17.0,
-    "lock": "2026-11-29T01:30Z",
-    "mu": 218.3,
-    "p": {
-     "150": 0.8557,
-     "180": 0.6752,
-     "210": 0.4815,
-     "240": 0.2983,
-     "270": 0.173,
-     "290": 0.1095
+     "150": 0.8738,
+     "180": 0.7128,
+     "210": 0.5028,
+     "240": 0.3118,
+     "270": 0.172,
+     "290": 0.1063
     }
    },
    {
@@ -6948,95 +6814,230 @@
     ],
     "stars": 17.0,
     "lock": "2026-11-29T01:30Z",
-    "mu": 218.8,
+    "mu": 218.5,
     "p": {
-     "150": 0.8713,
-     "180": 0.6997,
-     "210": 0.4842,
-     "240": 0.297,
-     "270": 0.1612,
-     "290": 0.1042
+     "150": 0.8682,
+     "180": 0.699,
+     "210": 0.4838,
+     "240": 0.3068,
+     "270": 0.1683,
+     "290": 0.1065
+    }
+   },
+   {
+    "slugs": [
+     "clint-capela-19940518",
+     "immanuel-quickley-19990617",
+     "donovan-mitchell-19960907",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Clint Capela",
+     "Immanuel Quickley",
+     "Donovan Mitchell",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 216.7,
+    "p": {
+     "150": 0.8605,
+     "180": 0.6802,
+     "210": 0.4868,
+     "240": 0.3032,
+     "270": 0.1695,
+     "290": 0.1005
+    }
+   },
+   {
+    "slugs": [
+     "clint-capela-19940518",
+     "darius-garland-20000126",
+     "james-harden-19890826",
+     "donovan-mitchell-19960907",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Clint Capela",
+     "Darius Garland",
+     "James Harden",
+     "Donovan Mitchell",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.5,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 215.4,
+    "p": {
+     "150": 0.8538,
+     "180": 0.6778,
+     "210": 0.4765,
+     "240": 0.3025,
+     "270": 0.167,
+     "290": 0.1012
+    }
+   },
+   {
+    "slugs": [
+     "clint-capela-19940518",
+     "donovan-clingan-20040223",
+     "donovan-mitchell-19960907",
+     "jaden-mcdaniels-20000929",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Clint Capela",
+     "Donovan Clingan",
+     "Donovan Mitchell",
+     "Jaden McDaniels",
+     "Victor Wembanyama"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 218.4,
+    "p": {
+     "150": 0.865,
+     "180": 0.6917,
+     "210": 0.4763,
+     "240": 0.3008,
+     "270": 0.1687,
+     "290": 0.113
+    }
+   },
+   {
+    "slugs": [
+     "donovan-clingan-20040223",
+     "anfernee-simons-19990608",
+     "james-harden-19890826",
+     "donovan-mitchell-19960907",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Donovan Clingan",
+     "Anfernee Simons",
+     "James Harden",
+     "Donovan Mitchell",
+     "Victor Wembanyama"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 217.2,
+    "p": {
+     "150": 0.8617,
+     "180": 0.681,
+     "210": 0.4768,
+     "240": 0.2993,
+     "270": 0.1673,
+     "290": 0.1117
+    }
+   },
+   {
+    "slugs": [
+     "clint-capela-19940518",
+     "jrue-holiday-19900612",
+     "james-harden-19890826",
+     "victor-wembanyama-20040104",
+     "karl-anthony-towns-19951115"
+    ],
+    "names": [
+     "Clint Capela",
+     "Jrue Holiday",
+     "James Harden",
+     "Victor Wembanyama",
+     "Karl-Anthony Towns"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 215.0,
+    "p": {
+     "150": 0.8487,
+     "180": 0.6748,
+     "210": 0.4785,
+     "240": 0.2992,
+     "270": 0.1713,
+     "290": 0.11
+    }
+   },
+   {
+    "slugs": [
+     "clint-capela-19940518",
+     "darius-garland-20000126",
+     "donovan-mitchell-19960907",
+     "bam-adebayo-19970718",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Clint Capela",
+     "Darius Garland",
+     "Donovan Mitchell",
+     "Bam Adebayo",
+     "Victor Wembanyama"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 217.1,
+    "p": {
+     "150": 0.8695,
+     "180": 0.696,
+     "210": 0.4852,
+     "240": 0.2972,
+     "270": 0.1705,
+     "290": 0.1083
     }
    },
    {
     "slugs": [
      "clint-capela-19940518",
      "james-harden-19890826",
-     "stephon-castle-20041101",
+     "cedric-coward-20030911",
      "donovan-mitchell-19960907",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Clint Capela",
      "James Harden",
-     "Stephon Castle",
+     "Cedric Coward",
      "Donovan Mitchell",
      "Victor Wembanyama"
     ],
     "stars": 17.0,
     "lock": "2026-11-29T01:30Z",
-    "mu": 215.8,
+    "mu": 216.2,
     "p": {
-     "150": 0.8495,
-     "180": 0.6733,
-     "210": 0.47,
-     "240": 0.2962,
-     "270": 0.1663,
-     "290": 0.1048
-    }
-   },
-   {
-    "slugs": [
-     "kelel-ware-20040420",
-     "jakob-poeltl-19951015",
-     "james-harden-19890826",
-     "donovan-mitchell-19960907",
-     "victor-wembanyama-20040104"
-    ],
-    "names": [
-     "Kel'el Ware",
-     "Jakob Poeltl",
-     "James Harden",
-     "Donovan Mitchell",
-     "Victor Wembanyama"
-    ],
-    "stars": 17.0,
-    "lock": "2026-11-29T01:00Z",
-    "mu": 214.6,
-    "p": {
-     "150": 0.8507,
-     "180": 0.6763,
-     "210": 0.4733,
-     "240": 0.296,
-     "270": 0.1632,
-     "290": 0.1042
+     "150": 0.861,
+     "180": 0.6873,
+     "210": 0.4812,
+     "240": 0.2955,
+     "270": 0.1638,
+     "290": 0.1043
     }
    },
    {
     "slugs": [
      "dominick-barlow-20030526",
-     "james-harden-19890826",
-     "walker-kessler-20010726",
+     "donovan-clingan-20040223",
      "donovan-mitchell-19960907",
+     "jaden-mcdaniels-20000929",
      "victor-wembanyama-20040104"
     ],
     "names": [
      "Dominick Barlow",
-     "James Harden",
-     "Walker Kessler",
+     "Donovan Clingan",
      "Donovan Mitchell",
+     "Jaden McDaniels",
      "Victor Wembanyama"
     ],
     "stars": 17.0,
     "lock": "2026-11-29T01:30Z",
-    "mu": 218.5,
+    "mu": 217.9,
     "p": {
-     "150": 0.868,
-     "180": 0.6853,
-     "210": 0.475,
-     "240": 0.2948,
-     "270": 0.1597,
-     "290": 0.0973
+     "150": 0.8648,
+     "180": 0.683,
+     "210": 0.4733,
+     "240": 0.2947,
+     "270": 0.1587,
+     "290": 0.0982
     }
    },
    {
@@ -7058,12 +7059,120 @@
     "lock": "2026-11-29T01:30Z",
     "mu": 216.2,
     "p": {
-     "150": 0.8623,
-     "180": 0.6872,
-     "210": 0.4757,
-     "240": 0.2943,
-     "270": 0.1547,
-     "290": 0.0985
+     "150": 0.8713,
+     "180": 0.6922,
+     "210": 0.4753,
+     "240": 0.294,
+     "270": 0.1583,
+     "290": 0.0978
+    }
+   },
+   {
+    "slugs": [
+     "clint-capela-19940518",
+     "jakob-poeltl-19951015",
+     "james-harden-19890826",
+     "victor-wembanyama-20040104",
+     "karl-anthony-towns-19951115"
+    ],
+    "names": [
+     "Clint Capela",
+     "Jakob Poeltl",
+     "James Harden",
+     "Victor Wembanyama",
+     "Karl-Anthony Towns"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 215.4,
+    "p": {
+     "150": 0.8498,
+     "180": 0.6715,
+     "210": 0.4648,
+     "240": 0.294,
+     "270": 0.1655,
+     "290": 0.1063
+    }
+   },
+   {
+    "slugs": [
+     "dominick-barlow-20030526",
+     "donovan-clingan-20040223",
+     "james-harden-19890826",
+     "donovan-mitchell-19960907",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Dominick Barlow",
+     "Donovan Clingan",
+     "James Harden",
+     "Donovan Mitchell",
+     "Victor Wembanyama"
+    ],
+    "stars": 16.5,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 218.3,
+    "p": {
+     "150": 0.8713,
+     "180": 0.6927,
+     "210": 0.4803,
+     "240": 0.293,
+     "270": 0.1595,
+     "290": 0.1012
+    }
+   },
+   {
+    "slugs": [
+     "dominick-barlow-20030526",
+     "james-harden-19890826",
+     "ausar-thompson-20030130",
+     "donovan-mitchell-19960907",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Dominick Barlow",
+     "James Harden",
+     "Ausar Thompson",
+     "Donovan Mitchell",
+     "Victor Wembanyama"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-29T01:30Z",
+    "mu": 214.3,
+    "p": {
+     "150": 0.8477,
+     "180": 0.6633,
+     "210": 0.4618,
+     "240": 0.2927,
+     "270": 0.1523,
+     "290": 0.0965
+    }
+   },
+   {
+    "slugs": [
+     "jalen-suggs-20010603",
+     "donovan-clingan-20040223",
+     "darius-garland-20000126",
+     "donovan-mitchell-19960907",
+     "victor-wembanyama-20040104"
+    ],
+    "names": [
+     "Jalen Suggs",
+     "Donovan Clingan",
+     "Darius Garland",
+     "Donovan Mitchell",
+     "Victor Wembanyama"
+    ],
+    "stars": 17.0,
+    "lock": "2026-11-28T22:00Z",
+    "mu": 216.1,
+    "p": {
+     "150": 0.8635,
+     "180": 0.6867,
+     "210": 0.4755,
+     "240": 0.2918,
+     "270": 0.1592,
+     "290": 0.0987
     }
    }
   ]
@@ -7079,11 +7188,11 @@
    },
    "odds": {
     "spread_home": 4.0,
-    "total": 219.5,
+    "total": 218.0,
     "book": "Pinnacle",
-    "recorded": "2026-11-28T14:46Z",
-    "ml_home": 144,
-    "ml_away": -160
+    "recorded": "2026-11-28T17:02Z",
+    "ml_home": 142,
+    "ml_away": -158
    }
   },
   "BKN@CHA": {
@@ -7095,12 +7204,12 @@
     "recorded": "2026-11-27T23:56Z"
    },
    "odds": {
-    "spread_home": -6.0,
+    "spread_home": -7.0,
     "total": 212.0,
     "book": "Pinnacle",
-    "recorded": "2026-11-28T14:46Z",
-    "ml_home": -247,
-    "ml_away": 211
+    "recorded": "2026-11-28T17:02Z",
+    "ml_home": -256,
+    "ml_away": 223
    }
   },
   "IND@CHI": {
@@ -7112,12 +7221,12 @@
     "recorded": "2026-11-27T23:56Z"
    },
    "odds": {
-    "spread_home": -3.0,
-    "total": 234.0,
+    "spread_home": -2.0,
+    "total": 233.0,
     "book": "Pinnacle",
-    "recorded": "2026-11-28T14:46Z",
-    "ml_home": -143,
-    "ml_away": 126
+    "recorded": "2026-11-28T17:02Z",
+    "ml_home": -123,
+    "ml_away": 112
    }
   },
   "OKC@MIL": {
@@ -7132,9 +7241,9 @@
     "spread_home": 11.5,
     "total": 228.5,
     "book": "Pinnacle",
-    "recorded": "2026-11-28T14:46Z",
-    "ml_home": 422,
-    "ml_away": -553
+    "recorded": "2026-11-28T17:02Z",
+    "ml_home": 413,
+    "ml_away": -513
    }
   },
   "PHI@HOU": {
@@ -7149,9 +7258,9 @@
     "spread_home": -12.5,
     "total": 220.5,
     "book": "Pinnacle",
-    "recorded": "2026-11-28T14:46Z",
-    "ml_home": -506,
-    "ml_away": 408
+    "recorded": "2026-11-28T17:02Z",
+    "ml_home": -508,
+    "ml_away": 409
    }
   }
  },
@@ -7179,8 +7288,8 @@
    "Kon Knueppel"
   ],
   "IND": [
-   "T.J. McConnell",
    "Tyrese Haliburton",
+   "T.J. McConnell",
    "Ben Sheppard"
   ],
   "CHI": [
